@@ -1,14 +1,14 @@
 # [학술 연구 보고서]
 # 국민건강영양조사(2021–2024) 기반 2030 청년층의 미인지 대사이상 조기 선별을 위한 비침습적 머신러닝 예측 모델 개발 및 1인 가구(자취) 건강 불평등 심층 분석
 
-**연구책임자**: 김동우 (책임 연구원)  
-**소속**: 보건의료정보학 / 인공지능 융합 연구  
+**논문저자**: 김동욱,김준성
+**소속**: 수원대학교 데이터과학부
 **원문 및 코드 저장소**: [https://github.com/kdw123654/digital-project](https://github.com/kdw123654/digital-project)  
-**발행일**: 2026년 9월
+**리포트 작성일**: 2026년 9월 21일
 
 ---
 
-## 📌 국문 초록 (Abstract)
+## 국문 초록 (Abstract)
 
 * **연구 배경**: 최근 서구화된 식습관과 좌식 생활의 확산으로 2030 청년층의 대사질환(고혈압, 당뇨병, 이상지질혈증) 유병률이 급증하고 있다. 특히 급증하는 '청년 1인 가구(자취 청년)'는 불규칙한 식생활과 높은 흡연·음주율로 인해 만성질환 취약계층으로 부상하고 있으나, 청년층 특유의 무증상과 낮은 정기 건강검진 수검률로 인해 자신의 대사이상을 인지하지 못하는 '미인지율(Unaware rate)'이 매우 심각하다.
 * **연구 목적**: 고비용의 침습적 채혈 검사 없이, 자가 계측(허리둘레, BMI, WHtR), 인구사회학적 환경(1인 가구 자취 여부), 생활습관 설문(흡연, 음주, 운동) 등 11개 비침습적(Non-invasive) 변수만을 활용하여 2030 청년층의 미인지 대사이상 고위험군을 조기 선별(Early Screening)하는 머신러닝 모델을 구축하고, 1인 가구 청년층의 건강 불평등을 규명한다.
@@ -20,19 +20,7 @@
   4. **다변량 오즈비**: 현재 흡연(aOR 1.503, $p<0.001$), 허리둘레(1cm당 aOR 1.102, $p<0.001$), 연령(1세당 aOR 1.045, $p<0.001$)이 독립적 위험 요인이었으며, 자취 여부(aOR 0.758, $p=0.023$)와 교육수준(aOR 0.837, $p=0.044$)이 유의한 관련성을 나타냈다.
   5. **1인 가구(자취) 건강 불평등**: 여성 자취 청년의 흡연율은 **14.0%**로 가족 동거 여성(5.9%) 대비 **무려 2.4배($p = 1.70 \times 10^{-7}$)** 높았으며, 30대 자취 청년은 가족 동거군 대비 **고혈압 위험(15.9% vs 12.1%)**과 **고중성지방혈증 위험(26.2% vs 22.9%)**이 모두 뚜렷하게 높게 나타났다.
 * **결론 및 정책 제언**: 본 연구는 비침습적 지표만으로 청년층의 미인지 대사이상을 80% 이상의 정확도로 선별할 수 있음을 입증하였으며, 대학가·원룸촌 등 1인 가구 청년 밀집 지역을 중심으로 한 모바일 자가진단 및 맞춤형 보건 중재(금연 및 식생활 관리) 도입의 시급성을 시사한다.
-* **주제어 (Keywords)**: 국민건강영양조사(KNHANES), 청년층 대사이상, 1인 가구(자취 청년), 건강 불평등, 비침습적 스크리닝, 머신러닝, Youden Index, 오즈비
 
----
-
-## 📌 English Abstract
-
-* **Title**: Development of a Non-Invasive Machine Learning Screening Model for Unaware Metabolic Risk in Young Adults and Health Disparity Analysis in Single-Person Households: KNHANES 2021–2024
-* **Background**: Metabolic abnormalities among young adults (aged 19–39) are rapidly increasing. Despite this trend, high rates of unawareness persist due to asymptomatic presentations and low participation in health checkups. Single-person households (solo-living youth) are particularly vulnerable due to irregular dietary habits and high smoking rates.
-* **Methods**: Using the Korea National Health and Nutrition Examination Survey (2021–2024), 5,204 unmedicated young adults (4,680 complete cases) were analyzed. Unaware metabolic risk was defined by NCEP-ATP III criteria ($\ge 1$ abnormal component). Four ML models were evaluated using 11 non-invasive features. Optimal cutoff (Youden's index), multivariate adjusted odds ratios (aOR), and subgroup analyses were performed.
-* **Results**: Logistic Regression achieved the highest performance (ROC-AUC 0.805, PR-AUC 0.695). At the optimal cutoff (0.365), sensitivity was 75.3% and specificity was 74.6%. Independent risk factors included current smoking (aOR 1.503, $p < 0.001$) and waist circumference (aOR 1.102/cm, $p < 0.001$). Solo-living females exhibited a 2.4-fold higher smoking rate than family-living females (14.0% vs 5.9%, $p < 0.001$). In their 30s, solo dwellers demonstrated significantly higher prevalence of high blood pressure (15.9% vs 12.1%) and hypertriglyceridemia (26.2% vs 22.9%).
-* **Conclusion**: Non-invasive digital screening can reliably detect unaware metabolic risk in young adults without blood sampling. Targeted public health interventions focusing on single-person households in urban young communities are urgently required.
-
----
 
 ## 1. 서론 (Introduction)
 
@@ -230,8 +218,7 @@ LightGBM 모델의 분기 빈도(Split Count) 분석 결과:
    본인이 건강하다고 믿던 30대 남성의 60.1%가 이미 대사이상 위험군이라는 사실은 현행 국가건강검진 체계의 사각지대를 여실히 보여준다. 청년층을 대상으로 한 강력한 검진 유인책이 절실하다.
 2. **비침습적 모바일 자가 스크리닝의 완벽한 실용성**:  
    정맥 채혈 없이 줄자 측정과 간단한 모바일 설문만으로 **ROC-AUC 0.805, 민감도 75.3%**를 확보하였다. 이는 스마트폰 헬스케어 앱을 통해 1분 만에 위험군을 조기 판별하고 병원 정밀검진으로 연계하는 디지털 선별 엔진으로 즉시 상용화가 가능하다.
-3. **청년 1인 가구(자취 청년) 맞춤형 공공보건 사업의 방향성 제시**:  
-   본 연구는 청년 자취생의 30대 혈압·중성지방 악화와 여성 자취생의 흡연율 폭증(2.4배)을 최초로 조명하였다. 지자체 보건소는 대학가, 원룸촌, 고시촌 등 1인 가구 청년 밀집 지역을 대상으로 **'찾아가는 비침습 대사증후군 스크리닝 부스'**를 설치하고, 집중 금연 클리닉과 건강 식생활 바우처를 결합한 맞춤형 보건 정책을 강력히 추진해야 한다.
+
 
 ### 4.2 연구의 제한점 (Limitations)
 * **단면연구(Cross-sectional study)**의 특성상 시간적 선후관계에 따른 인과 추론에 한계가 존재한다.
@@ -247,7 +234,7 @@ LightGBM 모델의 분기 빈도(Split Count) 분석 결과:
 
 ---
 
-## 📚 참고문헌 (References)
+## 참고문헌 (References)
 
 1. 질병관리청, 국민건강영양조사 원시자료 이용지침서(제8기~제9기, 2021-2024), 질병관리청, 2024.
 2. Expert Panel on Detection, Evaluation, and Treatment of High Blood Cholesterol in Adults (NCEP-ATP III). Executive Summary of The Third Report. *JAMA*, 2001;285(19):2486-2497.
@@ -256,4 +243,4 @@ LightGBM 모델의 분기 빈도(Split Count) 분석 결과:
 5. 대한고혈압학회, 2022 고혈압 진료지침, 대한고혈압학회, 2022.
 6. Youden WJ. Index for rating diagnostic tests. *Cancer*, 1950;3(1):32-35.
 7. Lundberg SM, Lee SI. A unified approach to interpreting model predictions. *Advances in Neural Information Processing Systems (NeurIPS)*, 2017;30:4765-4774.
-8. 보건복지부, 2023년 고독사 예방 실태조사 및 1인 가구 청년 건강지원 정책 보고서, 보건복지부, 2023.
+8. 보건복지부, 2023년 고독사 예방 실태조사 및 1인 가구 청년 건강지원 정책 보고서, 보건복지부, 2023년
