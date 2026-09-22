@@ -1,0 +1,23 @@
+{
+  "original_source_sha256": {
+    "vortexnet.py": "fac75148123aec2fba38f5cf6e7cd65a20f557c96170ab40d905e661b06684de",
+    "complex_encoder.py": "9fa811483e09f11057b96df15e98be693d0e26b4dc0f5008b694c3e1b6076d1f",
+    "wave_engine.py": "b5c9da682cd8e3283f5054bde638033dac3a1220a5540241c3149875e83db1b7",
+    "singularity_detector.py": "6fee0788382db3b9d590b874af2dd0da2a748a413e5f8e802ece594c32596404",
+    "vortex_features.py": "58199ce314f4242fe50a654e890d512a3d2a44177fd6be28e1fda96246b4a81a",
+    "prediction_head.py": "7b1e24a93d2c817fac823340d931efaa0015931c154fb173e29d4867d242a9ac",
+    "physics.py": "cac0b0529b5097d761d28bdfdcba2522fd28336ecd97f0c463c6de67455b7f6b"
+  },
+  "packaged_sha256": {
+    "free_v01/physics.py": "cac0b0529b5097d761d28bdfdcba2522fd28336ecd97f0c463c6de67455b7f6b",
+    "vortex/model/complex_encoder.py": "10a8e8b0400e51a96d218b9c6b344729dc0e284273785756641501747b285128",
+    "vortex/model/prediction_head.py": "1a6f408e940393de50df4e48f6a9f33a659bcae89a5072b0ee86d2a36a139987",
+    "vortex/model/singularity_detector.py": "7c4ad41ef317b448e885415adda8a84343ac8996e137caabd3dd051dfb3070d9",
+    "vortex/model/vortexnet.py": "d61d85df5dcc5b83ad01e4d6507ca7f043fb588fab33f30a74d2bff92ff2dade",
+    "vortex/model/vortex_features.py": "2687d0d78255bb346fb5e2c59cb4979e12a643902d14847fd273a7efc337e2e4",
+    "vortex/model/wave_engine.py": "069d2385e4366a5396baa215153112e80b1c2f6d5af3b4cae1137cb2c8a3849c",
+    "vortex/utils/complex_ops.py": "f68928a29d82a6c0bbfe8143f98d98a8160e2a95b3a291f6145b3a23c1098e47",
+    "vortex/utils/__init__.py": "efed7e9899c02bd40017bbe0d127c8e61e2965dc63483050e63eac96475d663e"
+  },
+  "note": "Original source hashes verified before copying. Packaged files normalize line endings/trailing whitespace only."
+}

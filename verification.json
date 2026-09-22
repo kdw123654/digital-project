@@ -7,6 +7,10 @@
     0.0
   ],
   "contains_participant_rows": false,
-  "project_tests_passed": 63,
-  "portable_tests_passed": 3
+  "project_tests_passed": 65,
+  "portable_tests_passed": 3,
+  "all_years_oof_participants": 4068,
+  "all_years_oof_test_count_per_participant": 1,
+  "within_fold_psu_overlap": 0,
+  "family_specific_source_smoke_tests": "Vortex original forward and row isolation; FREE physical readout fit/predict; Portia STDP fit/predict passed"
 }
