@@ -1,0 +1,635 @@
+{
+  "format": "allowlisted-model-npz-v1",
+  "value": {
+    "type": "dict",
+    "items": [
+      [
+        "family",
+        "Portia_regularized"
+      ],
+      [
+        "model",
+        {
+          "type": "model",
+          "class": "GeneralizingPortia",
+          "attributes": {
+            "type": "dict",
+            "items": [
+              [
+                "plasticity",
+                0.003
+              ],
+              [
+                "C",
+                0.1
+              ],
+              [
+                "epochs",
+                4
+              ],
+              [
+                "seed",
+                42
+              ],
+              [
+                "neurons",
+                32
+              ],
+              [
+                "steps",
+                24
+              ],
+              [
+                "learning",
+                true
+              ],
+              [
+                "mechanism_scale",
+                0.15
+              ],
+              [
+                "feature_rank",
+                8
+              ],
+              [
+                "supervised_strength",
+                1.0
+              ],
+              [
+                "spectral_floor_ratio",
+                1.0
+              ],
+              [
+                "inference_batch",
+                256
+              ],
+              [
+                "fitted_",
+                true
+              ],
+              [
+                "n_features_in_",
+                72
+              ],
+              [
+                "input_mean",
+                {
+                  "type": "array",
+                  "key": "a0000"
+                }
+              ],
+              [
+                "input_scale",
+                {
+                  "type": "array",
+                  "key": "a0001"
+                }
+              ],
+              [
+                "input_mask",
+                {
+                  "type": "array",
+                  "key": "a0002"
+                }
+              ],
+              [
+                "input_weights",
+                {
+                  "type": "array",
+                  "key": "a0003"
+                }
+              ],
+              [
+                "mask",
+                {
+                  "type": "array",
+                  "key": "a0004"
+                }
+              ],
+              [
+                "sign",
+                {
+                  "type": "array",
+                  "key": "a0005"
+                }
+              ],
+              [
+                "recurrent",
+                {
+                  "type": "array",
+                  "key": "a0006"
+                }
+              ],
+              [
+                "threshold",
+                {
+                  "type": "array",
+                  "key": "a0007"
+                }
+              ],
+              [
+                "pulse_phase",
+                {
+                  "type": "array",
+                  "key": "a0008"
+                }
+              ],
+              [
+                "initial_recurrent",
+                {
+                  "type": "array",
+                  "key": "a0009"
+                }
+              ],
+              [
+                "initial_input_weights",
+                {
+                  "type": "array",
+                  "key": "a0010"
+                }
+              ],
+              [
+                "mechanism_mean",
+                {
+                  "type": "array",
+                  "key": "a0011"
+                }
+              ],
+              [
+                "mechanism_std",
+                {
+                  "type": "array",
+                  "key": "a0012"
+                }
+              ],
+              [
+                "residual_center",
+                {
+                  "type": "array",
+                  "key": "a0013"
+                }
+              ],
+              [
+                "mechanism_linear",
+                {
+                  "type": "array",
+                  "key": "a0014"
+                }
+              ],
+              [
+                "mechanism_components",
+                {
+                  "type": "array",
+                  "key": "a0015"
+                }
+              ],
+              [
+                "mechanism_pca_scale",
+                {
+                  "type": "array",
+                  "key": "a0016"
+                }
+              ],
+              [
+                "readout",
+                {
+                  "type": "list",
+                  "items": [
+                    {
+                      "type": "model",
+                      "class": "LogisticRegression",
+                      "attributes": {
+                        "type": "dict",
+                        "items": [
+                          [
+                            "penalty",
+                            "l2"
+                          ],
+                          [
+                            "dual",
+                            false
+                          ],
+                          [
+                            "tol",
+                            0.0001
+                          ],
+                          [
+                            "C",
+                            0.1
+                          ],
+                          [
+                            "fit_intercept",
+                            true
+                          ],
+                          [
+                            "intercept_scaling",
+                            1
+                          ],
+                          [
+                            "class_weight",
+                            null
+                          ],
+                          [
+                            "random_state",
+                            42
+                          ],
+                          [
+                            "solver",
+                            "lbfgs"
+                          ],
+                          [
+                            "max_iter",
+                            3000
+                          ],
+                          [
+                            "multi_class",
+                            "deprecated"
+                          ],
+                          [
+                            "verbose",
+                            0
+                          ],
+                          [
+                            "warm_start",
+                            false
+                          ],
+                          [
+                            "n_jobs",
+                            null
+                          ],
+                          [
+                            "l1_ratio",
+                            null
+                          ],
+                          [
+                            "n_features_in_",
+                            80
+                          ],
+                          [
+                            "classes_",
+                            {
+                              "type": "array",
+                              "key": "a0017"
+                            }
+                          ],
+                          [
+                            "n_iter_",
+                            {
+                              "type": "array",
+                              "key": "a0018"
+                            }
+                          ],
+                          [
+                            "coef_",
+                            {
+                              "type": "array",
+                              "key": "a0019"
+                            }
+                          ],
+                          [
+                            "intercept_",
+                            {
+                              "type": "array",
+                              "key": "a0020"
+                            }
+                          ]
+                        ]
+                      }
+                    },
+                    {
+                      "type": "model",
+                      "class": "LogisticRegression",
+                      "attributes": {
+                        "type": "dict",
+                        "items": [
+                          [
+                            "penalty",
+                            "l2"
+                          ],
+                          [
+                            "dual",
+                            false
+                          ],
+                          [
+                            "tol",
+                            0.0001
+                          ],
+                          [
+                            "C",
+                            0.1
+                          ],
+                          [
+                            "fit_intercept",
+                            true
+                          ],
+                          [
+                            "intercept_scaling",
+                            1
+                          ],
+                          [
+                            "class_weight",
+                            null
+                          ],
+                          [
+                            "random_state",
+                            42
+                          ],
+                          [
+                            "solver",
+                            "lbfgs"
+                          ],
+                          [
+                            "max_iter",
+                            3000
+                          ],
+                          [
+                            "multi_class",
+                            "deprecated"
+                          ],
+                          [
+                            "verbose",
+                            0
+                          ],
+                          [
+                            "warm_start",
+                            false
+                          ],
+                          [
+                            "n_jobs",
+                            null
+                          ],
+                          [
+                            "l1_ratio",
+                            null
+                          ],
+                          [
+                            "n_features_in_",
+                            80
+                          ],
+                          [
+                            "classes_",
+                            {
+                              "type": "array",
+                              "key": "a0021"
+                            }
+                          ],
+                          [
+                            "n_iter_",
+                            {
+                              "type": "array",
+                              "key": "a0022"
+                            }
+                          ],
+                          [
+                            "coef_",
+                            {
+                              "type": "array",
+                              "key": "a0023"
+                            }
+                          ],
+                          [
+                            "intercept_",
+                            {
+                              "type": "array",
+                              "key": "a0024"
+                            }
+                          ]
+                        ]
+                      }
+                    },
+                    {
+                      "type": "model",
+                      "class": "LogisticRegression",
+                      "attributes": {
+                        "type": "dict",
+                        "items": [
+                          [
+                            "penalty",
+                            "l2"
+                          ],
+                          [
+                            "dual",
+                            false
+                          ],
+                          [
+                            "tol",
+                            0.0001
+                          ],
+                          [
+                            "C",
+                            0.1
+                          ],
+                          [
+                            "fit_intercept",
+                            true
+                          ],
+                          [
+                            "intercept_scaling",
+                            1
+                          ],
+                          [
+                            "class_weight",
+                            null
+                          ],
+                          [
+                            "random_state",
+                            42
+                          ],
+                          [
+                            "solver",
+                            "lbfgs"
+                          ],
+                          [
+                            "max_iter",
+                            3000
+                          ],
+                          [
+                            "multi_class",
+                            "deprecated"
+                          ],
+                          [
+                            "verbose",
+                            0
+                          ],
+                          [
+                            "warm_start",
+                            false
+                          ],
+                          [
+                            "n_jobs",
+                            null
+                          ],
+                          [
+                            "l1_ratio",
+                            null
+                          ],
+                          [
+                            "n_features_in_",
+                            80
+                          ],
+                          [
+                            "classes_",
+                            {
+                              "type": "array",
+                              "key": "a0025"
+                            }
+                          ],
+                          [
+                            "n_iter_",
+                            {
+                              "type": "array",
+                              "key": "a0026"
+                            }
+                          ],
+                          [
+                            "coef_",
+                            {
+                              "type": "array",
+                              "key": "a0027"
+                            }
+                          ],
+                          [
+                            "intercept_",
+                            {
+                              "type": "array",
+                              "key": "a0028"
+                            }
+                          ]
+                        ]
+                      }
+                    },
+                    {
+                      "type": "model",
+                      "class": "LogisticRegression",
+                      "attributes": {
+                        "type": "dict",
+                        "items": [
+                          [
+                            "penalty",
+                            "l2"
+                          ],
+                          [
+                            "dual",
+                            false
+                          ],
+                          [
+                            "tol",
+                            0.0001
+                          ],
+                          [
+                            "C",
+                            0.1
+                          ],
+                          [
+                            "fit_intercept",
+                            true
+                          ],
+                          [
+                            "intercept_scaling",
+                            1
+                          ],
+                          [
+                            "class_weight",
+                            null
+                          ],
+                          [
+                            "random_state",
+                            42
+                          ],
+                          [
+                            "solver",
+                            "lbfgs"
+                          ],
+                          [
+                            "max_iter",
+                            3000
+                          ],
+                          [
+                            "multi_class",
+                            "deprecated"
+                          ],
+                          [
+                            "verbose",
+                            0
+                          ],
+                          [
+                            "warm_start",
+                            false
+                          ],
+                          [
+                            "n_jobs",
+                            null
+                          ],
+                          [
+                            "l1_ratio",
+                            null
+                          ],
+                          [
+                            "n_features_in_",
+                            80
+                          ],
+                          [
+                            "classes_",
+                            {
+                              "type": "array",
+                              "key": "a0029"
+                            }
+                          ],
+                          [
+                            "n_iter_",
+                            {
+                              "type": "array",
+                              "key": "a0030"
+                            }
+                          ],
+                          [
+                            "coef_",
+                            {
+                              "type": "array",
+                              "key": "a0031"
+                            }
+                          ],
+                          [
+                            "intercept_",
+                            {
+                              "type": "array",
+                              "key": "a0032"
+                            }
+                          ]
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ],
+              [
+                "plasticity_change_norm",
+                0.09072355926036835
+              ],
+              [
+                "mean_firing",
+                0.22690147158209148
+              ]
+            ]
+          }
+        }
+      ],
+      [
+        "config",
+        {
+          "type": "dict",
+          "items": [
+            [
+              "C",
+              0.1
+            ],
+            [
+              "mechanism_scale",
+              0.15
+            ]
+          ]
+        }
+      ]
+    ]
+  }
+}

@@ -1,0 +1,62 @@
+[
+  {
+    "model": "three_selected",
+    "component_probabilities": {
+      "glucose": 0.12184413402977391,
+      "bp": 0.12123218021913078,
+      "tg": 0.2129897762941266,
+      "low_hdl": 0.13913517561782054
+    },
+    "any_abnormality_probability": 0.47716929123010604,
+    "expected_abnormality_count": 0.5952012661608518,
+    "missing_inputs": [],
+    "research_only": true,
+    "note": "Single-fold research checkpoint; comparison uses five-fold OOF. No diagnostic or screening cutoff. living_alone means single-person household.",
+    "source_fold": 1,
+    "combiner": "context_stack",
+    "base_path": "inner_bag",
+    "includes_separate_LR_expert": false,
+    "base_model_evaluations": 9,
+    "external_model_calls": 0
+  },
+  {
+    "model": "three_selected",
+    "component_probabilities": {
+      "glucose": 0.11351717894404262,
+      "bp": 0.1291624278701397,
+      "tg": 0.1854845542410771,
+      "low_hdl": 0.12514482863310122
+    },
+    "any_abnormality_probability": 0.44989832176021294,
+    "expected_abnormality_count": 0.5533089896883607,
+    "missing_inputs": [],
+    "research_only": true,
+    "note": "Single-fold research checkpoint; comparison uses five-fold OOF. No diagnostic or screening cutoff. living_alone means single-person household.",
+    "source_fold": 2,
+    "combiner": "state_stack",
+    "base_path": "fullfit",
+    "includes_separate_LR_expert": false,
+    "base_model_evaluations": 3,
+    "external_model_calls": 0
+  },
+  {
+    "model": "LR_selected",
+    "component_probabilities": {
+      "glucose": 0.1260977341837435,
+      "bp": 0.11553878993852118,
+      "tg": 0.21714064360852064,
+      "low_hdl": 0.1466130143671182
+    },
+    "any_abnormality_probability": 0.4836176162182346,
+    "expected_abnormality_count": 0.6053901820979035,
+    "missing_inputs": [],
+    "research_only": true,
+    "note": "Single-fold research checkpoint; comparison uses five-fold OOF. No diagnostic or screening cutoff. living_alone means single-person household.",
+    "source_fold": 1,
+    "combiner": "context_stack",
+    "base_path": "inner_bag",
+    "includes_separate_LR_expert": true,
+    "base_model_evaluations": 3,
+    "external_model_calls": 0
+  }
+]

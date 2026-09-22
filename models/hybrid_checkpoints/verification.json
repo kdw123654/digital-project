@@ -1,0 +1,26 @@
+{
+  "check": "Reconstructed parameter-only model vs local checkpoint, all4068 rows, two views",
+  "results": [
+    {
+      "fold": 1,
+      "category": "three_selected",
+      "rows_checked_per_view": 4068,
+      "max_abs_difference_clean": 0.0,
+      "max_abs_difference_masked": 0.0
+    },
+    {
+      "fold": 2,
+      "category": "three_selected",
+      "rows_checked_per_view": 4068,
+      "max_abs_difference_clean": 0.0,
+      "max_abs_difference_masked": 0.0
+    },
+    {
+      "fold": 1,
+      "category": "LR_selected",
+      "rows_checked_per_view": 4068,
+      "max_abs_difference_clean": 0.0,
+      "max_abs_difference_masked": 0.0
+    }
+  ]
+}

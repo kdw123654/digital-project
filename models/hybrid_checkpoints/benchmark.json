@@ -1,0 +1,29 @@
+{
+  "scope": "Warm CPU one-thread, synthetic single-row input, input validation + preprocessing + all experts + combiner + calibration + output dict; excludes loading/JSON serialization/HTTP. 10 warmups,100 repeats; three separately timed methods.",
+  "platform": "Windows-11-10.0.22631-SP0",
+  "python": "3.13.1",
+  "processor": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
+  "results": [
+    {
+      "fold": 1,
+      "category": "three_selected",
+      "base_model_evaluations": 9,
+      "p50_ms": 14.693399996758671,
+      "p95_ms": 18.268075001833495
+    },
+    {
+      "fold": 2,
+      "category": "three_selected",
+      "base_model_evaluations": 3,
+      "p50_ms": 5.344499997590901,
+      "p95_ms": 7.15906999867002
+    },
+    {
+      "fold": 1,
+      "category": "LR_selected",
+      "base_model_evaluations": 3,
+      "p50_ms": 1.3820000021951273,
+      "p95_ms": 2.0533649974822765
+    }
+  ]
+}

@@ -1,0 +1,1333 @@
+{
+  "format": "allowlisted-model-npz-v1",
+  "value": {
+    "type": "dict",
+    "items": [
+      [
+        "family",
+        "Vortex_alternating"
+      ],
+      [
+        "model",
+        {
+          "type": "model",
+          "class": "VortexAlternating",
+          "attributes": {
+            "type": "dict",
+            "items": [
+              [
+                "C",
+                0.1
+              ],
+              [
+                "new_feature_scale",
+                0.2
+              ],
+              [
+                "latent_dim",
+                32
+              ],
+              [
+                "steps",
+                4
+              ],
+              [
+                "rounds",
+                12
+              ],
+              [
+                "encoder_lr",
+                0.0003
+              ],
+              [
+                "batch_size",
+                256
+              ],
+              [
+                "seed",
+                42
+              ],
+              [
+                "new_feature_dim",
+                32
+              ],
+              [
+                "projection_ridge",
+                0.01
+              ],
+              [
+                "encoder_decay",
+                0.001
+              ],
+              [
+                "readout_max_iter",
+                5000
+              ],
+              [
+                "model",
+                {
+                  "type": "wave",
+                  "config": {
+                    "input_dim": 72,
+                    "latent_dim": 32,
+                    "steps": 4,
+                    "dropout": 0.0
+                  },
+                  "state": {
+                    "type": "dict",
+                    "items": [
+                      [
+                        "dt_raw",
+                        {
+                          "type": "tensor",
+                          "key": "a0000"
+                        }
+                      ],
+                      [
+                        "damping_raw",
+                        {
+                          "type": "tensor",
+                          "key": "a0001"
+                        }
+                      ],
+                      [
+                        "encoder.0.weight",
+                        {
+                          "type": "tensor",
+                          "key": "a0002"
+                        }
+                      ],
+                      [
+                        "encoder.0.bias",
+                        {
+                          "type": "tensor",
+                          "key": "a0003"
+                        }
+                      ],
+                      [
+                        "encoder.1.weight",
+                        {
+                          "type": "tensor",
+                          "key": "a0004"
+                        }
+                      ],
+                      [
+                        "encoder.1.bias",
+                        {
+                          "type": "tensor",
+                          "key": "a0005"
+                        }
+                      ],
+                      [
+                        "amplitude.weight",
+                        {
+                          "type": "tensor",
+                          "key": "a0006"
+                        }
+                      ],
+                      [
+                        "amplitude.bias",
+                        {
+                          "type": "tensor",
+                          "key": "a0007"
+                        }
+                      ],
+                      [
+                        "phase.weight",
+                        {
+                          "type": "tensor",
+                          "key": "a0008"
+                        }
+                      ],
+                      [
+                        "phase.bias",
+                        {
+                          "type": "tensor",
+                          "key": "a0009"
+                        }
+                      ],
+                      [
+                        "unitary_evolution.W",
+                        {
+                          "type": "tensor",
+                          "key": "a0010"
+                        }
+                      ],
+                      [
+                        "non_linear_gp.alpha",
+                        {
+                          "type": "tensor",
+                          "key": "a0011"
+                        }
+                      ],
+                      [
+                        "wave_norm.weight",
+                        {
+                          "type": "tensor",
+                          "key": "a0012"
+                        }
+                      ],
+                      [
+                        "wave_norm.bias",
+                        {
+                          "type": "tensor",
+                          "key": "a0013"
+                        }
+                      ],
+                      [
+                        "proxy_norm.weight",
+                        {
+                          "type": "tensor",
+                          "key": "a0014"
+                        }
+                      ],
+                      [
+                        "proxy_norm.bias",
+                        {
+                          "type": "tensor",
+                          "key": "a0015"
+                        }
+                      ],
+                      [
+                        "raw_head.weight",
+                        {
+                          "type": "tensor",
+                          "key": "a0016"
+                        }
+                      ],
+                      [
+                        "raw_head.bias",
+                        {
+                          "type": "tensor",
+                          "key": "a0017"
+                        }
+                      ],
+                      [
+                        "wave_head.weight",
+                        {
+                          "type": "tensor",
+                          "key": "a0018"
+                        }
+                      ],
+                      [
+                        "topology_head.weight",
+                        {
+                          "type": "tensor",
+                          "key": "a0019"
+                        }
+                      ]
+                    ]
+                  }
+                }
+              ],
+              [
+                "projection",
+                {
+                  "type": "array",
+                  "key": "a0020"
+                }
+              ],
+              [
+                "residual_mean",
+                {
+                  "type": "array",
+                  "key": "a0021"
+                }
+              ],
+              [
+                "whitener",
+                {
+                  "type": "array",
+                  "key": "a0022"
+                }
+              ],
+              [
+                "projection_fit_n",
+                5214
+              ],
+              [
+                "coef",
+                {
+                  "type": "array",
+                  "key": "a0023"
+                }
+              ],
+              [
+                "intercept",
+                {
+                  "type": "array",
+                  "key": "a0024"
+                }
+              ],
+              [
+                "best_round",
+                8
+              ]
+            ]
+          }
+        }
+      ],
+      [
+        "config",
+        {
+          "type": "dict",
+          "items": [
+            [
+              "C",
+              0.1
+            ],
+            [
+              "new_feature_scale",
+              0.2
+            ]
+          ]
+        }
+      ],
+      [
+        "trial",
+        3
+      ],
+      [
+        "fit_seconds",
+        5.585459800000535
+      ],
+      [
+        "diagnostics",
+        {
+          "type": "dict",
+          "items": [
+            [
+              "best_round",
+              8
+            ],
+            [
+              "completed_encoder_epochs",
+              12
+            ],
+            [
+              "projection_fit_rows",
+              5214
+            ],
+            [
+              "readout_features",
+              104
+            ],
+            [
+              "phase_selected_change_norm",
+              0.2056610882282257
+            ],
+            [
+              "cayley_selected_change_norm",
+              0.15287838876247406
+            ],
+            [
+              "maximum_readout_mean_gradient",
+              8.941224493874523e-08
+            ],
+            [
+              "readout_convergence_warnings",
+              0
+            ],
+            [
+              "selection",
+              "validation_half_clean_half_mean_masked"
+            ]
+          ]
+        }
+      ],
+      [
+        "history",
+        {
+          "type": "list",
+          "items": [
+            {
+              "type": "dict",
+              "items": [
+                [
+                  "round",
+                  0
+                ],
+                [
+                  "readout",
+                  {
+                    "type": "dict",
+                    "items": [
+                      [
+                        "iterations",
+                        {
+                          "type": "list",
+                          "items": [
+                            125,
+                            128,
+                            160,
+                            122
+                          ]
+                        }
+                      ],
+                      [
+                        "convergence_warnings",
+                        0
+                      ],
+                      [
+                        "max_abs_mean_objective_gradient",
+                        7.477075768264367e-08
+                      ]
+                    ]
+                  }
+                ],
+                [
+                  "validation_score",
+                  0.33730823038663327
+                ],
+                [
+                  "validation_by_condition",
+                  {
+                    "type": "list",
+                    "items": [
+                      0.3494070792958363,
+                      0.32923895096497846,
+                      0.32070290226656756,
+                      0.3256862912007448
+                    ]
+                  }
+                ],
+                [
+                  "encoder_loss",
+                  0.3273083943183927
+                ],
+                [
+                  "encoder_gradient_norm_max",
+                  {
+                    "type": "dict",
+                    "items": [
+                      [
+                        "phase",
+                        0.12570784986019135
+                      ],
+                      [
+                        "cayley",
+                        0.2135990560054779
+                      ],
+                      [
+                        "gp",
+                        0.0033816301729530096
+                      ]
+                    ]
+                  }
+                ]
+              ]
+            },
+            {
+              "type": "dict",
+              "items": [
+                [
+                  "round",
+                  1
+                ],
+                [
+                  "readout",
+                  {
+                    "type": "dict",
+                    "items": [
+                      [
+                        "iterations",
+                        {
+                          "type": "list",
+                          "items": [
+                            129,
+                            128,
+                            148,
+                            139
+                          ]
+                        }
+                      ],
+                      [
+                        "convergence_warnings",
+                        0
+                      ],
+                      [
+                        "max_abs_mean_objective_gradient",
+                        5.0487121467997796e-08
+                      ]
+                    ]
+                  }
+                ],
+                [
+                  "validation_score",
+                  0.3397237159142896
+                ],
+                [
+                  "validation_by_condition",
+                  {
+                    "type": "list",
+                    "items": [
+                      0.3539087172247454,
+                      0.337099734451347,
+                      0.3203086103917461,
+                      0.3192077989684085
+                    ]
+                  }
+                ],
+                [
+                  "encoder_loss",
+                  0.32446180499700844
+                ],
+                [
+                  "encoder_gradient_norm_max",
+                  {
+                    "type": "dict",
+                    "items": [
+                      [
+                        "phase",
+                        0.2201072722673416
+                      ],
+                      [
+                        "cayley",
+                        0.3198487162590027
+                      ],
+                      [
+                        "gp",
+                        0.004725066013634205
+                      ]
+                    ]
+                  }
+                ]
+              ]
+            },
+            {
+              "type": "dict",
+              "items": [
+                [
+                  "round",
+                  2
+                ],
+                [
+                  "readout",
+                  {
+                    "type": "dict",
+                    "items": [
+                      [
+                        "iterations",
+                        {
+                          "type": "list",
+                          "items": [
+                            145,
+                            130,
+                            138,
+                            146
+                          ]
+                        }
+                      ],
+                      [
+                        "convergence_warnings",
+                        0
+                      ],
+                      [
+                        "max_abs_mean_objective_gradient",
+                        6.672769421681193e-08
+                      ]
+                    ]
+                  }
+                ],
+                [
+                  "validation_score",
+                  0.3453987615423648
+                ],
+                [
+                  "validation_by_condition",
+                  {
+                    "type": "list",
+                    "items": [
+                      0.3574559829780608,
+                      0.345791400320165,
+                      0.329787283143583,
+                      0.3244459368562588
+                    ]
+                  }
+                ],
+                [
+                  "encoder_loss",
+                  0.3217270042893759
+                ],
+                [
+                  "encoder_gradient_norm_max",
+                  {
+                    "type": "dict",
+                    "items": [
+                      [
+                        "phase",
+                        0.2804766297340393
+                      ],
+                      [
+                        "cayley",
+                        0.5016847848892212
+                      ],
+                      [
+                        "gp",
+                        0.007054484914988279
+                      ]
+                    ]
+                  }
+                ]
+              ]
+            },
+            {
+              "type": "dict",
+              "items": [
+                [
+                  "round",
+                  3
+                ],
+                [
+                  "readout",
+                  {
+                    "type": "dict",
+                    "items": [
+                      [
+                        "iterations",
+                        {
+                          "type": "list",
+                          "items": [
+                            141,
+                            139,
+                            142,
+                            134
+                          ]
+                        }
+                      ],
+                      [
+                        "convergence_warnings",
+                        0
+                      ],
+                      [
+                        "max_abs_mean_objective_gradient",
+                        8.941224493874523e-08
+                      ]
+                    ]
+                  }
+                ],
+                [
+                  "validation_score",
+                  0.34229072170996977
+                ],
+                [
+                  "validation_by_condition",
+                  {
+                    "type": "list",
+                    "items": [
+                      0.35628365158375186,
+                      0.34372743230524383,
+                      0.3279314540876689,
+                      0.3132344891156501
+                    ]
+                  }
+                ],
+                [
+                  "encoder_loss",
+                  0.3196848587965656
+                ],
+                [
+                  "encoder_gradient_norm_max",
+                  {
+                    "type": "dict",
+                    "items": [
+                      [
+                        "phase",
+                        0.3595041036605835
+                      ],
+                      [
+                        "cayley",
+                        0.6090578436851501
+                      ],
+                      [
+                        "gp",
+                        0.012085657566785812
+                      ]
+                    ]
+                  }
+                ]
+              ]
+            },
+            {
+              "type": "dict",
+              "items": [
+                [
+                  "round",
+                  4
+                ],
+                [
+                  "readout",
+                  {
+                    "type": "dict",
+                    "items": [
+                      [
+                        "iterations",
+                        {
+                          "type": "list",
+                          "items": [
+                            125,
+                            135,
+                            143,
+                            132
+                          ]
+                        }
+                      ],
+                      [
+                        "convergence_warnings",
+                        0
+                      ],
+                      [
+                        "max_abs_mean_objective_gradient",
+                        5.166510355324934e-08
+                      ]
+                    ]
+                  }
+                ],
+                [
+                  "validation_score",
+                  0.3368171816210538
+                ],
+                [
+                  "validation_by_condition",
+                  {
+                    "type": "list",
+                    "items": [
+                      0.34859599173815714,
+                      0.34291102170077764,
+                      0.32827181709896497,
+                      0.30393227571210846
+                    ]
+                  }
+                ],
+                [
+                  "encoder_loss",
+                  0.31776761874301657
+                ],
+                [
+                  "encoder_gradient_norm_max",
+                  {
+                    "type": "dict",
+                    "items": [
+                      [
+                        "phase",
+                        2.1648192405700684
+                      ],
+                      [
+                        "cayley",
+                        2.9229576587677
+                      ],
+                      [
+                        "gp",
+                        0.07113461941480637
+                      ]
+                    ]
+                  }
+                ]
+              ]
+            },
+            {
+              "type": "dict",
+              "items": [
+                [
+                  "round",
+                  5
+                ],
+                [
+                  "readout",
+                  {
+                    "type": "dict",
+                    "items": [
+                      [
+                        "iterations",
+                        {
+                          "type": "list",
+                          "items": [
+                            126,
+                            135,
+                            149,
+                            120
+                          ]
+                        }
+                      ],
+                      [
+                        "convergence_warnings",
+                        0
+                      ],
+                      [
+                        "max_abs_mean_objective_gradient",
+                        3.777800062234164e-08
+                      ]
+                    ]
+                  }
+                ],
+                [
+                  "validation_score",
+                  0.3398025744716071
+                ],
+                [
+                  "validation_by_condition",
+                  {
+                    "type": "list",
+                    "items": [
+                      0.354037186173638,
+                      0.34349350762829045,
+                      0.32639444422775854,
+                      0.3068159364526794
+                    ]
+                  }
+                ],
+                [
+                  "encoder_loss",
+                  0.3166288757743449
+                ],
+                [
+                  "encoder_gradient_norm_max",
+                  {
+                    "type": "dict",
+                    "items": [
+                      [
+                        "phase",
+                        0.2564277648925781
+                      ],
+                      [
+                        "cayley",
+                        0.3629109561443329
+                      ],
+                      [
+                        "gp",
+                        0.008020507171750069
+                      ]
+                    ]
+                  }
+                ]
+              ]
+            },
+            {
+              "type": "dict",
+              "items": [
+                [
+                  "round",
+                  6
+                ],
+                [
+                  "readout",
+                  {
+                    "type": "dict",
+                    "items": [
+                      [
+                        "iterations",
+                        {
+                          "type": "list",
+                          "items": [
+                            134,
+                            127,
+                            144,
+                            135
+                          ]
+                        }
+                      ],
+                      [
+                        "convergence_warnings",
+                        0
+                      ],
+                      [
+                        "max_abs_mean_objective_gradient",
+                        3.977653185832339e-08
+                      ]
+                    ]
+                  }
+                ],
+                [
+                  "validation_score",
+                  0.34162622750731764
+                ],
+                [
+                  "validation_by_condition",
+                  {
+                    "type": "list",
+                    "items": [
+                      0.35737522274501143,
+                      0.34339068476502166,
+                      0.3211719611626844,
+                      0.3130690508811656
+                    ]
+                  }
+                ],
+                [
+                  "encoder_loss",
+                  0.3142598225867942
+                ],
+                [
+                  "encoder_gradient_norm_max",
+                  {
+                    "type": "dict",
+                    "items": [
+                      [
+                        "phase",
+                        0.34037721157073975
+                      ],
+                      [
+                        "cayley",
+                        0.6136284470558167
+                      ],
+                      [
+                        "gp",
+                        0.009788213297724724
+                      ]
+                    ]
+                  }
+                ]
+              ]
+            },
+            {
+              "type": "dict",
+              "items": [
+                [
+                  "round",
+                  7
+                ],
+                [
+                  "readout",
+                  {
+                    "type": "dict",
+                    "items": [
+                      [
+                        "iterations",
+                        {
+                          "type": "list",
+                          "items": [
+                            155,
+                            130,
+                            139,
+                            136
+                          ]
+                        }
+                      ],
+                      [
+                        "convergence_warnings",
+                        0
+                      ],
+                      [
+                        "max_abs_mean_objective_gradient",
+                        3.5647556534293064e-08
+                      ]
+                    ]
+                  }
+                ],
+                [
+                  "validation_score",
+                  0.3466711797011638
+                ],
+                [
+                  "validation_by_condition",
+                  {
+                    "type": "list",
+                    "items": [
+                      0.363061413546281,
+                      0.34424494305366393,
+                      0.3330431971726927,
+                      0.31355469734178293
+                    ]
+                  }
+                ],
+                [
+                  "encoder_loss",
+                  0.31209588701758806
+                ],
+                [
+                  "encoder_gradient_norm_max",
+                  {
+                    "type": "dict",
+                    "items": [
+                      [
+                        "phase",
+                        0.28318148851394653
+                      ],
+                      [
+                        "cayley",
+                        0.4808293581008911
+                      ],
+                      [
+                        "gp",
+                        0.011508188210427761
+                      ]
+                    ]
+                  }
+                ]
+              ]
+            },
+            {
+              "type": "dict",
+              "items": [
+                [
+                  "round",
+                  8
+                ],
+                [
+                  "readout",
+                  {
+                    "type": "dict",
+                    "items": [
+                      [
+                        "iterations",
+                        {
+                          "type": "list",
+                          "items": [
+                            138,
+                            131,
+                            142,
+                            139
+                          ]
+                        }
+                      ],
+                      [
+                        "convergence_warnings",
+                        0
+                      ],
+                      [
+                        "max_abs_mean_objective_gradient",
+                        6.631605752983687e-08
+                      ]
+                    ]
+                  }
+                ],
+                [
+                  "validation_score",
+                  0.34727424156671777
+                ],
+                [
+                  "validation_by_condition",
+                  {
+                    "type": "list",
+                    "items": [
+                      0.3616629810229799,
+                      0.353238705867489,
+                      0.3291442970269243,
+                      0.3162735034369536
+                    ]
+                  }
+                ],
+                [
+                  "encoder_loss",
+                  0.31005744439489763
+                ],
+                [
+                  "encoder_gradient_norm_max",
+                  {
+                    "type": "dict",
+                    "items": [
+                      [
+                        "phase",
+                        0.38828155398368835
+                      ],
+                      [
+                        "cayley",
+                        0.6967744827270508
+                      ],
+                      [
+                        "gp",
+                        0.014545280486345291
+                      ]
+                    ]
+                  }
+                ]
+              ]
+            },
+            {
+              "type": "dict",
+              "items": [
+                [
+                  "round",
+                  9
+                ],
+                [
+                  "readout",
+                  {
+                    "type": "dict",
+                    "items": [
+                      [
+                        "iterations",
+                        {
+                          "type": "list",
+                          "items": [
+                            128,
+                            116,
+                            147,
+                            138
+                          ]
+                        }
+                      ],
+                      [
+                        "convergence_warnings",
+                        0
+                      ],
+                      [
+                        "max_abs_mean_objective_gradient",
+                        5.299769685013646e-08
+                      ]
+                    ]
+                  }
+                ],
+                [
+                  "validation_score",
+                  0.33808021348930084
+                ],
+                [
+                  "validation_by_condition",
+                  {
+                    "type": "list",
+                    "items": [
+                      0.3539443442083321,
+                      0.34544608875822647,
+                      0.3183985531108698,
+                      0.30280360644171234
+                    ]
+                  }
+                ],
+                [
+                  "encoder_loss",
+                  0.30885635626341684
+                ],
+                [
+                  "encoder_gradient_norm_max",
+                  {
+                    "type": "dict",
+                    "items": [
+                      [
+                        "phase",
+                        0.3456365764141083
+                      ],
+                      [
+                        "cayley",
+                        0.4827473759651184
+                      ],
+                      [
+                        "gp",
+                        0.009249340742826462
+                      ]
+                    ]
+                  }
+                ]
+              ]
+            },
+            {
+              "type": "dict",
+              "items": [
+                [
+                  "round",
+                  10
+                ],
+                [
+                  "readout",
+                  {
+                    "type": "dict",
+                    "items": [
+                      [
+                        "iterations",
+                        {
+                          "type": "list",
+                          "items": [
+                            144,
+                            123,
+                            139,
+                            133
+                          ]
+                        }
+                      ],
+                      [
+                        "convergence_warnings",
+                        0
+                      ],
+                      [
+                        "max_abs_mean_objective_gradient",
+                        4.14426863247113e-08
+                      ]
+                    ]
+                  }
+                ],
+                [
+                  "validation_score",
+                  0.33822768385889446
+                ],
+                [
+                  "validation_by_condition",
+                  {
+                    "type": "list",
+                    "items": [
+                      0.3561081941758551,
+                      0.34606629633391484,
+                      0.3116262564314408,
+                      0.3033489678604457
+                    ]
+                  }
+                ],
+                [
+                  "encoder_loss",
+                  0.30691142670764426
+                ],
+                [
+                  "encoder_gradient_norm_max",
+                  {
+                    "type": "dict",
+                    "items": [
+                      [
+                        "phase",
+                        0.2948259115219116
+                      ],
+                      [
+                        "cayley",
+                        0.38062289357185364
+                      ],
+                      [
+                        "gp",
+                        0.010258092544972897
+                      ]
+                    ]
+                  }
+                ]
+              ]
+            },
+            {
+              "type": "dict",
+              "items": [
+                [
+                  "round",
+                  11
+                ],
+                [
+                  "readout",
+                  {
+                    "type": "dict",
+                    "items": [
+                      [
+                        "iterations",
+                        {
+                          "type": "list",
+                          "items": [
+                            141,
+                            134,
+                            150,
+                            151
+                          ]
+                        }
+                      ],
+                      [
+                        "convergence_warnings",
+                        0
+                      ],
+                      [
+                        "max_abs_mean_objective_gradient",
+                        6.409290009498048e-08
+                      ]
+                    ]
+                  }
+                ],
+                [
+                  "validation_score",
+                  0.3336115010313587
+                ],
+                [
+                  "validation_by_condition",
+                  {
+                    "type": "list",
+                    "items": [
+                      0.3493917286191527,
+                      0.3466022626468841,
+                      0.306488191191743,
+                      0.30040336649206706
+                    ]
+                  }
+                ],
+                [
+                  "encoder_loss",
+                  0.3041107559702227
+                ],
+                [
+                  "encoder_gradient_norm_max",
+                  {
+                    "type": "dict",
+                    "items": [
+                      [
+                        "phase",
+                        0.3102644383907318
+                      ],
+                      [
+                        "cayley",
+                        0.4511156678199768
+                      ],
+                      [
+                        "gp",
+                        0.011743123643100262
+                      ]
+                    ]
+                  }
+                ]
+              ]
+            },
+            {
+              "type": "dict",
+              "items": [
+                [
+                  "round",
+                  12
+                ],
+                [
+                  "readout",
+                  {
+                    "type": "dict",
+                    "items": [
+                      [
+                        "iterations",
+                        {
+                          "type": "list",
+                          "items": [
+                            135,
+                            119,
+                            144,
+                            128
+                          ]
+                        }
+                      ],
+                      [
+                        "convergence_warnings",
+                        0
+                      ],
+                      [
+                        "max_abs_mean_objective_gradient",
+                        5.0916927145979026e-08
+                      ]
+                    ]
+                  }
+                ],
+                [
+                  "validation_score",
+                  0.33246941061074176
+                ],
+                [
+                  "validation_by_condition",
+                  {
+                    "type": "list",
+                    "items": [
+                      0.3474397463648671,
+                      0.34043747059017004,
+                      0.3119600482731722,
+                      0.300099705706507
+                    ]
+                  }
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        "validation_score",
+        0.34727424156671777
+      ],
+      [
+        "temperature",
+        1.1479812123694315
+      ]
+    ]
+  }
+}

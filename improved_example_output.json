@@ -1,0 +1,47 @@
+{
+  "vortex": {
+    "model": "vortex",
+    "fold": 1,
+    "component_probabilities": {
+      "glucose": 0.12841283293940925,
+      "bp": 0.13624870186969057,
+      "tg": 0.2188995771930174,
+      "low_hdl": 0.10022180250683127
+    },
+    "any_abnormality_probability": 0.4708949839528313,
+    "expected_abnormality_count": 0.5837829145089485,
+    "missing_inputs": [],
+    "research_only": true,
+    "note": "Probability comparison only; no diagnostic or screening cutoff selected. Single fold checkpoint; reported scores use pooled5fold OOF."
+  },
+  "physical": {
+    "model": "physical",
+    "fold": 1,
+    "component_probabilities": {
+      "glucose": 0.09707879875529062,
+      "bp": 0.13781309639601255,
+      "tg": 0.23033429009361986,
+      "low_hdl": 0.08651351792461129
+    },
+    "any_abnormality_probability": 0.45266208214293546,
+    "expected_abnormality_count": 0.5517397031695342,
+    "missing_inputs": [],
+    "research_only": true,
+    "note": "Probability comparison only; no diagnostic or screening cutoff selected. Single fold checkpoint; reported scores use pooled5fold OOF."
+  },
+  "portia": {
+    "model": "portia",
+    "fold": 1,
+    "component_probabilities": {
+      "glucose": 0.08083698836657932,
+      "bp": 0.11354579512381154,
+      "tg": 0.32903379563250956,
+      "low_hdl": 0.1539861594163035
+    },
+    "any_abnormality_probability": 0.5374837904521587,
+    "expected_abnormality_count": 0.6774027385392039,
+    "missing_inputs": [],
+    "research_only": true,
+    "note": "Probability comparison only; no diagnostic or screening cutoff selected. Single fold checkpoint; reported scores use pooled5fold OOF."
+  }
+}

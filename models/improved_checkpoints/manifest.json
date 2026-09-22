@@ -1,0 +1,138 @@
+{
+  "vortex": {
+    "family": "Vortex_improved",
+    "fold": 1,
+    "training_years": [
+      2021,
+      2022,
+      2023,
+      2024
+    ],
+    "fit_n": 2664,
+    "source_run": "model_candidates_v12_improved",
+    "temperature": 1.0608063231871983,
+    "config": {
+      "lr": 0.003,
+      "weight_decay": 0.001
+    },
+    "not_full_dataset_refit": true,
+    "constructor": {
+      "input_dim": 72,
+      "latent_dim": 32,
+      "steps": 4,
+      "dropout": 0.15
+    }
+  },
+  "physical": {
+    "family": "Physical_improved",
+    "fold": 1,
+    "training_years": [
+      2021,
+      2022,
+      2023,
+      2024
+    ],
+    "fit_n": 2664,
+    "source_run": "model_candidates_v12_improved",
+    "temperature": 1.0263327110480833,
+    "config": {
+      "C": 0.1,
+      "feature_scale": 0.3
+    },
+    "not_full_dataset_refit": true,
+    "attributes": {
+      "C": 0.1,
+      "feature_scale": 0.3,
+      "adaptation": 0.003,
+      "seed": 42,
+      "diagnostics": {
+        "coupling_relative_change": 0.04505767717034074,
+        "physical_raw_dim": 96,
+        "retained_novel_dim": 24,
+        "linear_residual_variance_fraction": 0.016281729143958392,
+        "feature_scale": 0.3,
+        "no_backpropagation_in_medium": true,
+        "adaptation_uses_labels": false
+      }
+    }
+  },
+  "portia": {
+    "family": "Portia_improved",
+    "fold": 1,
+    "training_years": [
+      2021,
+      2022,
+      2023,
+      2024
+    ],
+    "fit_n": 2664,
+    "source_run": "model_candidates_v12_improved",
+    "temperature": 1.0760689701984414,
+    "config": {
+      "C": 1.0,
+      "plasticity": 0.003
+    },
+    "not_full_dataset_refit": true,
+    "attributes": {
+      "plasticity": 0.003,
+      "C": 1.0,
+      "epochs": 4,
+      "seed": 42,
+      "neurons": 32,
+      "steps": 24,
+      "learning": true,
+      "mechanism_scale": 0.5,
+      "feature_rank": 24,
+      "supervised_strength": 1.0,
+      "fitted_": true,
+      "n_features_in_": 72,
+      "plasticity_change_norm": 0.09132231026887894,
+      "mean_firing": 0.2272113652000962,
+      "diagnostics": {
+        "mechanism": "sparse LIF/EI, finite rate pulses, label-modulated local STDP, homeostasis",
+        "patient_time_series": false,
+        "backpropagation": false,
+        "frozen_lr_anchor": false,
+        "learning_enabled": true,
+        "supervised_strength": 1.0,
+        "train_rows": 5328,
+        "neurons": 32,
+        "simulation_steps": 24,
+        "mean_firing": 0.2272113652000962,
+        "silent_neuron_fraction": 0.0,
+        "recurrent_change_norm": 0.09132231026887894,
+        "input_change_norm": 0.21227744221687317,
+        "plasticity_firing_change_fraction": 0.06476984797297297,
+        "plasticity_feature_mean_absolute_change": 0.031056543812155724,
+        "new_feature_rank": 24,
+        "original_basis_unchanged": true,
+        "history": [
+          {
+            "epoch": 1,
+            "mean_firing": 0.24447104791323468,
+            "recurrent_change_norm": 0.023652605712413788,
+            "input_change_norm": 0.05463309586048126
+          },
+          {
+            "epoch": 2,
+            "mean_firing": 0.23950116933965682,
+            "recurrent_change_norm": 0.04685734957456589,
+            "input_change_norm": 0.10804807394742966
+          },
+          {
+            "epoch": 3,
+            "mean_firing": 0.23496726156292994,
+            "recurrent_change_norm": 0.06912663578987122,
+            "input_change_norm": 0.16026684641838074
+          },
+          {
+            "epoch": 4,
+            "mean_firing": 0.23087843761782215,
+            "recurrent_change_norm": 0.09132231026887894,
+            "input_change_norm": 0.21227744221687317
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "version": "v15",
+  "default_fold": 1,
+  "default_category": "three_selected",
+  "source": "Actual selected outer-fold checkpoints; not a full-cohort refit. Comparison is pooled five-fold OOF.",
+  "examples": [
+    {
+      "fold": 1,
+      "category": "three_selected",
+      "meta": "fold1/three_selected",
+      "members": [
+        {
+          "preprocessor": "fold1/inner1",
+          "models": {
+            "0": "fold1/inner1/Vortex_alternating",
+            "1": "fold1/inner1/Physical_regularized",
+            "2": "fold1/inner1/Portia_regularized"
+          }
+        },
+        {
+          "preprocessor": "fold1/inner2",
+          "models": {
+            "0": "fold1/inner2/Vortex_alternating",
+            "1": "fold1/inner2/Physical_regularized",
+            "2": "fold1/inner2/Portia_regularized"
+          }
+        },
+        {
+          "preprocessor": "fold1/inner3",
+          "models": {
+            "0": "fold1/inner3/Vortex_alternating",
+            "1": "fold1/inner3/Physical_regularized",
+            "2": "fold1/inner3/Portia_regularized"
+          }
+        }
+      ]
+    },
+    {
+      "fold": 2,
+      "category": "three_selected",
+      "meta": "fold2/three_selected",
+      "members": [
+        {
+          "preprocessor": "fold2/fullfit",
+          "models": {
+            "0": "fold2/fullfit/Vortex_alternating",
+            "1": "fold2/fullfit/Physical_regularized",
+            "2": "fold2/fullfit/Portia_regularized"
+          }
+        }
+      ]
+    },
+    {
+      "fold": 1,
+      "category": "LR_selected",
+      "meta": "fold1/LR_selected",
+      "members": [
+        {
+          "preprocessor": "fold1/inner1",
+          "models": {
+            "3": "fold1/inner1/LR_tuned"
+          }
+        },
+        {
+          "preprocessor": "fold1/inner2",
+          "models": {
+            "3": "fold1/inner2/LR_tuned"
+          }
+        },
+        {
+          "preprocessor": "fold1/inner3",
+          "models": {
+            "3": "fold1/inner3/LR_tuned"
+          }
+        }
+      ]
+    }
+  ],
+  "contains_participant_rows": false,
+  "external_model_calls": 0
+}

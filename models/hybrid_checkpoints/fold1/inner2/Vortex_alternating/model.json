@@ -1,0 +1,288 @@
+{
+  "format": "allowlisted-model-npz-v1",
+  "value": {
+    "type": "dict",
+    "items": [
+      [
+        "family",
+        "Vortex_alternating"
+      ],
+      [
+        "model",
+        {
+          "type": "model",
+          "class": "VortexAlternating",
+          "attributes": {
+            "type": "dict",
+            "items": [
+              [
+                "C",
+                0.03
+              ],
+              [
+                "new_feature_scale",
+                0.05
+              ],
+              [
+                "latent_dim",
+                32
+              ],
+              [
+                "steps",
+                4
+              ],
+              [
+                "rounds",
+                0
+              ],
+              [
+                "encoder_lr",
+                0.0003
+              ],
+              [
+                "batch_size",
+                256
+              ],
+              [
+                "seed",
+                42
+              ],
+              [
+                "new_feature_dim",
+                32
+              ],
+              [
+                "projection_ridge",
+                0.01
+              ],
+              [
+                "encoder_decay",
+                0.001
+              ],
+              [
+                "readout_max_iter",
+                5000
+              ],
+              [
+                "model",
+                {
+                  "type": "wave",
+                  "config": {
+                    "input_dim": 72,
+                    "latent_dim": 32,
+                    "steps": 4,
+                    "dropout": 0.0
+                  },
+                  "state": {
+                    "type": "dict",
+                    "items": [
+                      [
+                        "dt_raw",
+                        {
+                          "type": "tensor",
+                          "key": "a0000"
+                        }
+                      ],
+                      [
+                        "damping_raw",
+                        {
+                          "type": "tensor",
+                          "key": "a0001"
+                        }
+                      ],
+                      [
+                        "encoder.0.weight",
+                        {
+                          "type": "tensor",
+                          "key": "a0002"
+                        }
+                      ],
+                      [
+                        "encoder.0.bias",
+                        {
+                          "type": "tensor",
+                          "key": "a0003"
+                        }
+                      ],
+                      [
+                        "encoder.1.weight",
+                        {
+                          "type": "tensor",
+                          "key": "a0004"
+                        }
+                      ],
+                      [
+                        "encoder.1.bias",
+                        {
+                          "type": "tensor",
+                          "key": "a0005"
+                        }
+                      ],
+                      [
+                        "amplitude.weight",
+                        {
+                          "type": "tensor",
+                          "key": "a0006"
+                        }
+                      ],
+                      [
+                        "amplitude.bias",
+                        {
+                          "type": "tensor",
+                          "key": "a0007"
+                        }
+                      ],
+                      [
+                        "phase.weight",
+                        {
+                          "type": "tensor",
+                          "key": "a0008"
+                        }
+                      ],
+                      [
+                        "phase.bias",
+                        {
+                          "type": "tensor",
+                          "key": "a0009"
+                        }
+                      ],
+                      [
+                        "unitary_evolution.W",
+                        {
+                          "type": "tensor",
+                          "key": "a0010"
+                        }
+                      ],
+                      [
+                        "non_linear_gp.alpha",
+                        {
+                          "type": "tensor",
+                          "key": "a0011"
+                        }
+                      ],
+                      [
+                        "wave_norm.weight",
+                        {
+                          "type": "tensor",
+                          "key": "a0012"
+                        }
+                      ],
+                      [
+                        "wave_norm.bias",
+                        {
+                          "type": "tensor",
+                          "key": "a0013"
+                        }
+                      ],
+                      [
+                        "proxy_norm.weight",
+                        {
+                          "type": "tensor",
+                          "key": "a0014"
+                        }
+                      ],
+                      [
+                        "proxy_norm.bias",
+                        {
+                          "type": "tensor",
+                          "key": "a0015"
+                        }
+                      ],
+                      [
+                        "raw_head.weight",
+                        {
+                          "type": "tensor",
+                          "key": "a0016"
+                        }
+                      ],
+                      [
+                        "raw_head.bias",
+                        {
+                          "type": "tensor",
+                          "key": "a0017"
+                        }
+                      ],
+                      [
+                        "wave_head.weight",
+                        {
+                          "type": "tensor",
+                          "key": "a0018"
+                        }
+                      ],
+                      [
+                        "topology_head.weight",
+                        {
+                          "type": "tensor",
+                          "key": "a0019"
+                        }
+                      ]
+                    ]
+                  }
+                }
+              ],
+              [
+                "projection",
+                {
+                  "type": "array",
+                  "key": "a0020"
+                }
+              ],
+              [
+                "residual_mean",
+                {
+                  "type": "array",
+                  "key": "a0021"
+                }
+              ],
+              [
+                "whitener",
+                {
+                  "type": "array",
+                  "key": "a0022"
+                }
+              ],
+              [
+                "projection_fit_n",
+                3608
+              ],
+              [
+                "coef",
+                {
+                  "type": "array",
+                  "key": "a0023"
+                }
+              ],
+              [
+                "intercept",
+                {
+                  "type": "array",
+                  "key": "a0024"
+                }
+              ],
+              [
+                "best_round",
+                0
+              ]
+            ]
+          }
+        }
+      ],
+      [
+        "config",
+        {
+          "type": "dict",
+          "items": [
+            [
+              "C",
+              0.03
+            ],
+            [
+              "new_feature_scale",
+              0.05
+            ]
+          ]
+        }
+      ]
+    ]
+  }
+}
