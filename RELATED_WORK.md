@@ -1,5 +1,7 @@
 # 단일 Event-Plastic Field와 선행 개념
 
+최신 v18은 기존 단일 셀에 검사 수치와 이상 소견의 공동 학습을 적용했다. 공유 표현에서 관련 목표를 함께 학습하는 접근은 [Caruana의 Multitask Learning](https://www.cs.cornell.edu/~caruana/mlj97.pdf)에 근거한다. 공동 학습 자체를 새로 발명했다는 주장은 없으며, 이번 손실 비율의 최적성도 선행 논문에서 보장하지 않는다. [KNHANES 공동 학습 비교](CLINICAL_MULTITASK.md).
+
 2026-09-23. 현재 제안은 **같은 복소장 안에서 발화가 반대칭 결합 상태를 바꾸고, 그 결합이 다음 Hermitian 전파에 들어가는 셀**이다. 별도 전문가 출력의 결합은 v15/v16의 이전 설계다. [현재 수식](MECHANISM.md), [실행 결과](COMPARISON.md), [이전 v15 문헌 비교](LEGACY_V15_RELATED_WORK.md).
 
 ## 가까운 선행연구와의 관계

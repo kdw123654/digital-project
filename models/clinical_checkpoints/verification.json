@@ -1,0 +1,50 @@
+[
+  {
+    "model": "EPF_classification",
+    "views": 13,
+    "CPU_export_vs_saved_CUDA_probability_max_error": 4.2282593776254984e-07,
+    "measurement_max_error": null
+  },
+  {
+    "model": "EPF_regression",
+    "views": 13,
+    "CPU_export_vs_saved_CUDA_probability_max_error": 2.81354092745989e-07,
+    "measurement_max_error": 5.32033972717727e-05
+  },
+  {
+    "model": "EPF_joint",
+    "views": 13,
+    "CPU_export_vs_saved_CUDA_probability_max_error": 3.7846828337961824e-07,
+    "measurement_max_error": 0.00012367918253630705
+  },
+  {
+    "model": "MLP_classification",
+    "views": 13,
+    "CPU_export_vs_saved_CUDA_probability_max_error": 1.657077294270337e-07,
+    "measurement_max_error": null
+  },
+  {
+    "model": "MLP_regression",
+    "views": 13,
+    "CPU_export_vs_saved_CUDA_probability_max_error": 1.476456644167179e-07,
+    "measurement_max_error": 2.3287041273079012e-05
+  },
+  {
+    "model": "MLP_joint",
+    "views": 13,
+    "CPU_export_vs_saved_CUDA_probability_max_error": 1.8010343505459048e-07,
+    "measurement_max_error": 3.240117479208493e-05
+  },
+  {
+    "model": "LR",
+    "views": 13,
+    "CPU_export_vs_saved_CUDA_probability_max_error": 0.0,
+    "measurement_max_error": null
+  },
+  {
+    "model": "Ridge",
+    "views": 13,
+    "CPU_export_vs_saved_CUDA_probability_max_error": 0.0,
+    "measurement_max_error": 0.0
+  }
+]

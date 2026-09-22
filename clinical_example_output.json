@@ -1,0 +1,34 @@
+{
+  "version": "clinical_multitask_v18",
+  "model": "EPF_joint",
+  "component_probabilities": {
+    "glucose": 0.15130411128163182,
+    "bp": 0.13612035730727948,
+    "tg": 0.2678062667507595,
+    "low_hdl": 0.09888527641058656
+  },
+  "any_abnormality_probability": 0.5162606333572577,
+  "screening": {
+    "0.9": {
+      "cutoff": 0.32209265581499336,
+      "positive": true
+    },
+    "0.95": {
+      "cutoff": 0.2599213012456284,
+      "positive": true
+    }
+  },
+  "research_only": true,
+  "source_fold": 1,
+  "source_seed": 42,
+  "single_shared_field": true,
+  "external_model_calls": 0,
+  "note": "Development sensitivity targets are not test guarantees. Continuous estimates are auxiliary research predictions, not measured values. Classification and regression heads are not forced to agree. living_alone is single-person household.",
+  "estimated_measurements": {
+    "glucose_mg_dL": 90.92055284279505,
+    "sbp_mmHg": 116.94617186682413,
+    "dbp_mmHg": 72.71611112856044,
+    "tg_mg_dL": 105.8747951224678,
+    "hdl_mg_dL": 52.020676967962935
+  }
+}

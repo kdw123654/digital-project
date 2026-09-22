@@ -1,0 +1,15 @@
+{
+  "base_preprocessor.npz": "9097033d9fa434785fbf59c9d1f78da7bae957e13b7d7df90c6a90214d84403e",
+  "EPF_classification.npz": "cd4e551d1262c2069d39eb9462cb16cc0107a5fb7273689807f79d2fb186fb0d",
+  "EPF_joint.npz": "aa08f8dd21a6809d6fa5a3ffb12dae815886506af363d0f6b3d45a0277711cbd",
+  "EPF_regression.npz": "ea7d5d2e8a0da155c9fac58c545204a5adc25d2788268925334bc8a3ce9d58b3",
+  "extra_preprocessor.npz": "cee6778133497dafcca752c76bc8e4abb02c1d96b9eae3d478fc5eda227103fa",
+  "linear.npz": "9cbbc8fb54df11cd8f3bf218ea60d903b881f363a822f3a859c2f58f0748f2e8",
+  "manifest.json": "98345641828ccca4efa3665d2c73b3af9abe1b042fdbbc891d0886c7f8b78cf3",
+  "MLP_classification.npz": "ff0d62be830e2a567b39999dcf49978c19956dbce070a24d1c271406230af663",
+  "MLP_joint.npz": "7ce8cf9afcb1087d44767aea2f217892e6e8113eb714377220f08b91897d4089",
+  "MLP_regression.npz": "eadce8abcb40e137c8c032fee0afa875d2de8b0865d8c96633781d34897047c2",
+  "target_transform.npz": "e2f5d2aca5276c5a2ce6951056cd28ce5ce9ac38f842735f1f5a5b6c278d7ff4",
+  "TRAINING_CODE.json": "8b9a88ad4d18e9da1bc77b2032985ae6aa102ba1aa7b1b8fbfd9dce3b9293893",
+  "verification.json": "9305a09f05de7ac6fa26ed2739fea5a37350c23e3bc3775373ebd92a9de480e8"
+}

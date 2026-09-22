@@ -1,0 +1,6 @@
+{
+  "fit_function_AST_matches_executed_source": true,
+  "fit_AST_sha256": "3478c89f03c4f1f97a0615978b5bc02134ed2b4e93ea4df1d93cf69f1d4f5bff",
+  "source_module": "metabolic.run_clinical_multitask",
+  "export_module": "models.clinical_training"
+}
