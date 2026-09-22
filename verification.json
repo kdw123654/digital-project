@@ -1,0 +1,12 @@
+{
+  "rows_checked": 4068,
+  "NN_max_abs_probability_difference": 0.0,
+  "LR_max_abs_probability_difference": 4.440892098500626e-16,
+  "sparse_clean_and_masked_max_abs_difference": [
+    0.0,
+    0.0
+  ],
+  "contains_participant_rows": false,
+  "project_tests_passed": 63,
+  "portable_tests_passed": 3
+}

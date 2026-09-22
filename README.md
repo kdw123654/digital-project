@@ -1,32 +1,47 @@
-# 2030 청년층 미인지 대사이상 조기 선별 머신러닝 모델
-> **Early Screening of Unaware Metabolic Risk in Young Adults (Ages 19–39) Using Non-Invasive Predictors: Machine Learning Analysis based on KNHANES (2021–2024)**
+# 모델 비교와 실행 파일
 
----
+**현재 NN 유지 · LR 기준 모델 유지 · 희소 구조를 후속 후보로 선택**했다.
 
-## 1. 연구 배경 및 목적
-- **연구 배경**: 최근 2030 청년층에서 대사이상(당뇨, 고혈압, 이상지질혈증) 발생 위험이 급증하고 있으나, 청년층은 무증상과 낮은 검진 수검률로 인해 본인의 위험 상태를 인지하지 못하는 비율(미인지율)이 높습니다.
-- **연구 목적**: 고가의 침습적(Invasive) 혈액 검사 없이, 자가 계측(허리둘레, BMI, WHtR) 및 생활습관 설문(음주, 흡연, 신체활동) 등 **비침습적(Non-invasive) 변수만을 활용하여 미인지 대사이상 고위험군을 조기 선별(Early Screening)**하는 머신러닝 예측 모델을 구축합니다.
+[비교 결과와 실패 원인·수정 내용](COMPARISON.md) · [실행 결과가 보이는 노트북](comparison.ipynb)
 
----
+| 포함 모델 | 용도 | 상태 |
+|---|---|---|
+| `nn` | 기존 그룹 NN, 네 소견·종합 위험 | 현재 모델, 765 parameters |
+| `lr` | 확장 기저 로지스틱4개 | 1차 비교 기준 모델, 292 parameters |
+| `sparse` | 입력 누락에 맞춘 희소 상태 갱신 | 2차 실험 후보, 서비스 교체 미적용 |
 
-## 2. 데이터 및 연구 대상자
-- **데이터 소스**: 질병관리청 국민건강영양조사(KNHANES) 최신 4개년도(2021~2024) 원시자료
-- **연구 대상자**: 만 19세 ~ 39세 청년 중 기진단 치료자(고혈압, 당뇨, 이상지질혈증 약물 복용자)를 제외한 미인지 대상자
+기존 `nn`은2차 증강 NN이 아니며 `lr`도2차 증강 LR이 아니다. 제공 가중치의 실험명·seed는 `models/config.json`에 명시했다.
+각 표는 세 seed 평균이고 제공 체크포인트는 지정된 한 seed이므로 수치가 완전히 같지는 않다.
 
----
+## 실행
 
-## 3. 목표변수(Target) 및 설명변수(Features)
-### 목표변수 (Target: 0 또는 1)
-다음 기준 중 1개 이상 만족 시 미인지 고위험군(Target = 1):
-1. **공복혈당**: `HE_glu >= 100 mg/dL`
-2. **혈압**: `HE_sbp >= 130 mmHg` 또는 `HE_dbp >= 85 mmHg`
-3. **중성지방**: `HE_TG >= 150 mg/dL`
-4. **HDL 콜레스테롤**: `HE_HDL_st2 < 40 mg/dL(남)` 또는 `< 50 mg/dL(여)`
+```bash
+pip install -r requirements.txt
+python models/predict.py --model nn --input example.json
+python models/predict.py --model lr --input example.json
 
-### 설명변수 (Non-invasive Features)
-- **인구사회학적 요인**: 연령(`age`), 성별(`sex`), 소득수준(`incm`), 교육수준(`edu`)
-- **신체 계측**: 체질량지수(`HE_BMI`), 허리둘레(`HE_wc`), 허리둘레-키 비율(`WHtR = HE_wc / HE_ht`)
-- **건강 행태**: 현재 흡연(`sm_presnt`), 월간 음주(`dr_month`), 유산소 신체활동(`pa_aerobic`)
+# 희소 후보/구조 코드 실행에는 torch가 추가로 필요
+pip install -r requirements-structures.txt
+python models/predict.py --model sparse --input example.json
+python -m unittest test_models.py -v
+```
 
----
+API 키와 외부 추론 호출은 없다. 예시는 가상 사례다. `WHtR`에는 허리둘레(cm)/신장(cm)을 입력한다.
+나이19–39세, 성별1/2는 필수이며 모르는 나머지 값은 생략/null로 전달한다. 현재 구현은 연구용이다.
+원시조사의 특수 결측 코드8/9/88/99를 직접 입력하지 않는다. `example.json`은 정리된 변수 값이다.
+정확한 변수 순서·범주값은 `models/predict.py`의 `FEATURES`, `CATEGORIES`, `EXTRA_CAT`에 있다.
+이식한 실행기는 연구용 최소 인터페이스이며 원래 API의 모든 입력 상호 일관성 검사·검토 게이트를 포함하지 않는다.
+`sparse`는 확률만 출력하며 별도 선별 컷오프를 선정하지 않았다.
 
+## 파일
+
+- `models/predict.py`: NN/LR/희소 후보의 실제 추론.
+- `models/*.npz`, `config.json`: 가중치·전처리 통계·확률 보정. pickle을 사용하지 않는다.
+- `models/candidate_structures.py`: 1차 신경망 구조.
+- `models/adaptive_structures.py`: 2차 수정 구조.
+- `models/baselines.py`: 비교한 LR/RF/HGB 정의.
+- `COMPARISON.md`, `comparison.json`, `comparison.ipynb`: 비교 조건·지표·저장된 출력.
+
+공개 파일은 비교 내용과 모델 실행 자료로 한정했다. 전체 학습 재현에는 별도 확보한 KNHANES 원자료와 원 연구의 역할 분할이 필요하다.
+노트북은 내장 집계값을 다시 표시하며 학습 재실행을 하지 않는다(`numpy pandas matplotlib ipykernel` 필요).
+현재 모델의 개별 소견 기준은 혈당≥100, 혈압≥130/85, TG≥150, HDL 남<40/여<50이다. 진단된 당뇨·고혈압 라벨이 아니다.

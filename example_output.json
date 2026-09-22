@@ -1,0 +1,48 @@
+{
+  "nn": {
+    "model": "nn",
+    "component_probabilities": {
+      "glucose": 0.09002194588538259,
+      "bp": 0.10496198630426079,
+      "tg": 0.22344823949970305,
+      "low_hdl": 0.1380002364749089
+    },
+    "any_abnormality_probability": 0.44039544463157654,
+    "expected_abnormality_count": 0.5564324081642553,
+    "missing_inputs": [],
+    "research_only": true,
+    "note": "Development sensitivity95 is not a guarantee or a diagnosis. living_alone means single-person household.",
+    "screen_positive_at_development_95_policy": true,
+    "cutoff": 0.10138056427240372
+  },
+  "lr": {
+    "model": "lr",
+    "component_probabilities": {
+      "glucose": 0.08522611443820925,
+      "bp": 0.10100681655854277,
+      "tg": 0.21223446067143512,
+      "low_hdl": 0.13012082605166594
+    },
+    "any_abnormality_probability": 0.43645828541611825,
+    "expected_abnormality_count": 0.5285882177198531,
+    "missing_inputs": [],
+    "research_only": true,
+    "note": "Development sensitivity95 is not a guarantee or a diagnosis. living_alone means single-person household.",
+    "screen_positive_at_development_95_policy": true,
+    "cutoff": 0.14988403383906268
+  },
+  "sparse": {
+    "model": "sparse",
+    "component_probabilities": {
+      "glucose": 0.07897603686433285,
+      "bp": 0.11636184563394636,
+      "tg": 0.242992298793979,
+      "low_hdl": 0.12610533030238003
+    },
+    "any_abnormality_probability": 0.4591120779514313,
+    "expected_abnormality_count": 0.5644355115946382,
+    "missing_inputs": [],
+    "research_only": true,
+    "note": "Experimental sparse candidate; probability comparison only. No screening cutoff selected."
+  }
+}

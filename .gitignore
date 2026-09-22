@@ -1,26 +1,4 @@
-# 대용량 데이터 및 압축 파일 제외 (GitHub 업로드 제한 방지)
-*.sas7bdat
-*.zip
-*.csv
-*.xlsx
-*.parquet
-
-# PDF 이용지침서 등 대용량 문서 제외
-*.pdf
-
-# 파이썬 및 주피터 노트북 임시 파일
 __pycache__/
-*.py[cod]
-.ipynb_checkpoints/
-.virtual_documents/
-
-# 가상환경
-venv/
+.pytest_cache/
 .venv/
-env/
-
-# OS / IDE 설정 파일
-.vscode/
-.idea/
-.DS_Store
-Thumbs.db
+.env
