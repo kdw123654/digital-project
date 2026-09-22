@@ -1,0 +1,39 @@
+{
+  "training_loop": "Extracted verbatim from completed aligned run, only base.numpy_predict renamed to the identical local helper",
+  "data_and_windows": "Exact equality against executed generator",
+  "model_checks": [
+    {
+      "family": "field",
+      "exported_builder_max_abs_error": 0.0
+    },
+    {
+      "family": "MLP",
+      "exported_builder_max_abs_error": 0.0
+    },
+    {
+      "family": "field_no_plasticity",
+      "exported_builder_max_abs_error": 0.0
+    },
+    {
+      "family": "field_no_quartic",
+      "exported_builder_max_abs_error": 0.0
+    },
+    {
+      "family": "GRU_attention",
+      "exported_builder_max_abs_error": 0.0
+    }
+  ],
+  "training_was_not_repeated_during_export": true,
+  "public_cli_evaluation_replay": {
+    "seed": 42,
+    "mode": "Reused completed training checkpoints; actual public CLI regenerated train-only normalization and held-out evaluation",
+    "max_abs_errors": {
+      "field": 0.0,
+      "MLP": 0.0,
+      "field_no_plasticity": 0.0,
+      "field_no_quartic": 0.0,
+      "GRU_attention": 0.0
+    },
+    "no_additional_training": true
+  }
+}

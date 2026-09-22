@@ -1,0 +1,7 @@
+{
+  "base_preprocessor.npz": "9097033d9fa434785fbf59c9d1f78da7bae957e13b7d7df90c6a90214d84403e",
+  "extra_preprocessor.npz": "cee6778133497dafcca752c76bc8e4abb02c1d96b9eae3d478fc5eda227103fa",
+  "manifest.json": "dd55a354ffda54135dd930103c6f89a6ec5c0daa62149867dc4f03cef2ffd102",
+  "verification.json": "8572a6f5ae65649d7989dbedb78c398eb5057c9f645138dffb53afe30432ef04",
+  "weights.npz": "41ccd239a4f76d3674cfe5dc15983e69f2ca1a747dc06420bf2432608102f738"
+}

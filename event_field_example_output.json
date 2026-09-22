@@ -1,0 +1,20 @@
+{
+  "model": "event_plastic_field",
+  "component_probabilities": {
+    "glucose": 0.14003977275046117,
+    "bp": 0.12729105423177425,
+    "tg": 0.27679847498408655,
+    "low_hdl": 0.13103307503388031
+  },
+  "any_abnormality_probability": 0.528360279574312,
+  "expected_abnormality_count": 0.6751623770002023,
+  "missing_inputs": [],
+  "research_only": true,
+  "note": "Single-fold research model. Development sensitivity95 is not a test guarantee or diagnosis. living_alone is single-person household.",
+  "screen_positive_at_development_95_policy": true,
+  "cutoff": 0.24589413606833121,
+  "source_fold": 1,
+  "source_seed": 42,
+  "single_shared_field": true,
+  "external_model_calls": 0
+}

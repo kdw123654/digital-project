@@ -1,0 +1,14 @@
+[
+  {
+    "view": "clean",
+    "n": 4068,
+    "CPU_original_vs_export_max": 0.0,
+    "CPU_vs_CUDA_max": 4.945042053061677e-07
+  },
+  {
+    "view": "missing20_0",
+    "n": 4068,
+    "CPU_original_vs_export_max": 0.0,
+    "CPU_vs_CUDA_max": 5.699791496005524e-07
+  }
+]

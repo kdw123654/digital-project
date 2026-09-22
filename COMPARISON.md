@@ -1,122 +1,103 @@
-# 모델 비교와 해석
+# 단일 Event-Plastic Field 셀의 비교 실험
 
-2021–2024년 4,068명: 2021년 1,039명, 2022년 1,013명, 2023년 1,010명, 2024년 1,006명. 원래 입력에는 자연 결측이 남아 있으므로 표의 `clean`은 완전 관측이나 정상인을 뜻하지 않는다.
+실행 완료: 2026-09-23. v17은 **복소장의 발화가 자체 연결을 갱신하고 다음 전파를 바꾸는 하나의 메커니즘**이다. 독립 Vortex·물리·Portia 예측을 결합하던 v15/v16과 구분한다. [셀의 수식과 구현](MECHANISM.md), [선행 개념](RELATED_WORK.md), [실행된 노트북](comparison.ipynb).
 
-## 과제와 입력
+## 실제 변경과 공통 출발 조건
 
-공복혈당 ≥100, 수축기혈압 ≥130 또는 이완기혈압 ≥85, 중성지방 ≥150, HDL 남 <40/여 <50의 네 소견을 동시에 예측한다. 단위는 혈압 mmHg, 검사값 mg/dL이다. 임상 진단과 구별한다. 기존 진단·약물 사용 배제, 12시간 이상 공복, target 검사와 설계변수 유효 등 기존 strict cohort를 유지했다.
+- 공유 상태 `(z, a, P)`에서 복소 전파·quartic 위상 흐름·발화/리셋·반대칭 결합 갱신이 연속해서 일어난다. 별도의 전문가 출력이나 gate가 없다.
+- 사후 PCA와 고정 선형 출력층을 제거했다. 학습 가능한 입력 투영, 단일 셀, 비선형 decoder를 함께 최적화한다. Field에는 원시 입력을 직접 읽는 비선형 MLP 우회 경로가 없다.
+- 모든 신경망은 같은 학습 자료에서 얻은 LR/Ridge 선형 경로로 초기화한다. 이 경로도 계속 학습된다. 건강·시계열 모두 초기 validation loss의 모델 간 최대 차이는 **0**이었다.
+- 건강 모델의 파라미터 수는 EPF 8,683, MLP 8,689. 시계열은 아래 표와 같다. 파라미터 수를 맞췄다고 연산량까지 같아지는 것은 아니다.
+- EPF는 매 입력마다 상태를 초기화하고 **동일 벡터를 받아 6회 내부 갱신**한다. 시계열에서 64개 관측을 순차 처리하는 streaming 셀이나 창 간 기억을 평가한 것이 아니다.
+- 발화 리셋을 문턱 크기만큼의 intensity 차감으로 바꾸고, 리셋 전 intensity를 decoder에 제공해 신호 소실을 줄였다. 작은 intensity의 surrogate gradient 폭증도 방지했다.
+- CUDA solve의 반복 동기화를 묶음 상태 검사로 바꿨다. 기존 갱신식과 forward·gradient 일치를 테스트했다. 초기 P=0인 구간은 공통 전파를 재사용한다.
 
-19개 비침습 입력을 학습 자료에서만 결측 대체·인코딩한다. 72개 기저에는 hinge와 성별×신체 계측 항이 포함되어 **LR_basis도 원래 입력에 대해서는 완전 선형 모델이 아니다.** 검사 수치·혈압·정답 소견은 입력에서 제외한다.
+## KNHANES 선별 결과
 
-출력은 4개 주변 확률이다. 16개 조합 확률은 이 확률의 곱으로 구성한 후 단일 온도로 보정한다. 합계 1의 유효한 분포지만 별도 16-class 분류기나 소견 간 상관을 직접 학습한 joint model은 아니다.
+2021년 1,039명, 2022년 1,013명, 2023년 1,010명, 2024년 1,006명, 총 4,068명. 네 개 연도를 모두 사용한 5개 PSU 외부 fold × 3 seed다. fit/validation/calibration/threshold/test를 PSU 단위로 분리한다. 같은 사람의 입력 변형은 같은 역할에 속한다. 전처리·누락/계측 오차 크기는 fit에서 정한다.
 
-## 구조와 학습법
+만 19–39세의 네 동시 이상 소견을 예측하는 **다중 라벨** 과제다. 비침습 입력 19개를 72개 기저로 변환한다. 종합 위험은 네 확률에서 독립 곱 joint를 만든 뒤 별도 자료의 temperature로 보정한다. 학습된 16-class 공동 분포가 아니다. 임계값은 별도 threshold 역할에서 종합 위험의 민감도 95%를 목표로 정하며 test 민감도 보장이 아니다.
 
-| 모델 | 유지한 계산 | 이번 개선 | 학습 방식 |
-|---|---|---|---|
-| Vortex_alternating | 복소 진폭·위상, Cayley unitary, GP, winding 진단 | 별도 smooth circulation/frustration proxy, 원래 기저+중복 제거된 파동 특징 | 매 라운드 수렴한 LR readout을 새로 적합한 뒤 wave encoder를 1 epoch 역전파; 최대 12라운드, 검증으로 선택. 고정 LR anchor 없음. round0 선택은 고정 초기 파동 상태임. |
-| Physical_regularized | FREE v0.1 quartic 매질, BAOAB, label 없는 국소 적응 | 구동32+감쇠32단계, rank6 추가 특징, 약한 방향 증폭 제한 | 매질은 label/역전파 없이 적응; readout은 weighted LR |
-| Portia_regularized | 32 sparse LIF 뉴런, E/I, STDP, 항상성 | 유한 pulse, label로 조절한 학습 신호, rank8 추가 특징·공통 스케일 | fit 행에서 국소 가소성 4회; readout weighted LR. 추론 시 label 미사용 |
-| LR_tuned | 같은72기저 | C=.01/.03/.1/1 검증 선택 | 소견별 weighted LR |
+| 모델 | 원래 입력 macro AP ↑ | 인공 20% 누락 macro Brier ↓ |
+|---|---:|---:|
+| EPF (single cell) | 0.361612 | 0.108461 |
+| MLP | 0.363338 | 0.108369 |
+| EPF without plasticity | 0.361705 | 0.108455 |
+| EPF without quartic | 0.363009 | 0.108385 |
+| LR | 0.364761 | 0.108419 |
 
-Vortex의 smooth proxy는 정수 winding의 미분이나 위상 불변량이 아니다. Portia는 설계 문서 기반 후보이며 실측 거미 커넥톰 복원이 아니다. 물리 시뮬레이션의 시간은 참가자의 건강 시계열이 아니다. `three` 모델에도 logistic readout·stacker가 있으므로 순수 신경망 대 모든 LR 계산의 비교라고 쓰지 않는다.
+누락 Brier는 3개 독립 누락 마스크와 3 seed 평균이다. `clean`에도 자연 결측은 남아 있다. EPF−MLP의 AP 차이는 −0.001725, 95% paired PSU 구간은 [−0.004886, +0.001019]였다. EPF의 선별 우월성은 확인되지 않았다. 범용 선별 기준 모델로 LR을 유지한다.
 
-## 동일 조건과 선택 절차
+기존에 반복 탐색한 자료이므로 새 독립 임상 검증으로 해석하지 않는다. 국민건강영양조사 4개년은 동일인을 4년 추적한 자료가 아니다. `living_alone`은 1인 가구 대리변수이며 실제 자취 여부를 직접 측정하지 않는다. 이번에는 별도의 자취 효과 연구를 추가하지 않았다.
 
-1. 기존 5개 outer PSU 분할을 고정했다. 모든 연도를 사용하고 각 참가자는 자신과 같은 PSU를 학습하지 않은 모델의 outer test에 한 번 포함된다. 별도의 outer-fit/validation/calibration 역할도 서로 PSU가 겹치지 않는다.
-2. v14에서 outer-fit 안에 PSU 3-fold를 만들어 기저 전처리·파동·물리·STDP·readout을 매번 새로 학습했다. 그 inner held-out 예측으로만 meta model을 적합한다. v15는 이 체크포인트와 같은 분할을 재사용하며 base model을 다시 튜닝하지 않았다.
-3. clean와 첫 번째 누락 view를 학습에 사용한다. 같은 사람을 두 명으로 세지 않는다. 검증은 clean AP 0.5 + 3개 누락 AP 평균 0.5다. 누락 요청률20%, age/sex 보존, 허리둘레/WHtR는 함께 누락한다.
-4. 각 expert set에 15개 meta 설정을 적합하고 fullfit/inner-bag 두 추론 경로를 검증에서 비교한다. 고정5개, 동적10개 설정이며 three/assisted/LR에 같은 후보 틀을 제공했다. 동적 후보군과 전체 선택 절차를 따로 보고한다.
-5. 선택을 고정한 뒤 원래 calibration 역할의 clean+누락으로 온도 하나를 적합한다. 그 후 outer test를 계산한다. AP는 소견별 조사 가중 AP의 단순 평균이다.
+## 입력과 학습 조건을 맞춘 합성 시계열
 
-**제한:** base hyperparameter와 meta 설정은 같은 개발 검증을 재사용했다. 완전히 중첩된 hyperparameter 탐색은 아니다. 모든 데이터는 과거 실험에서 이미 검토했으므로 개발 과정 전체가 탐색적이다. 모델별 계산량도 같지 않다. LR 한 개에는 전문가 간 불일치가 존재하지 않으므로 LR state 후보는 완전성만으로 구분된다.
+균등분포 입력 u, 길이 512의 학습 100개·검증 20개·시험 20개 독립 stream. 첫 64시점을 제외한다. 모든 모델은 같은 64개 이력을 받는다. 학습·검증·시험 생성 seed는 271828/314159/161804, 모델 seed는 42/43/44다. 시험은 선택 파일을 저장한 뒤 생성했다.
 
-## 최신 v15 결과 — 후보군 전체 공개
+다섯 출력 중 비교의 핵심은 `u[t-3]u[t-12] + u[t-1]u[t-32]`다. 나머지 네 지연 복원 출력은 공통 선형 초기화로 거의 해결되므로 장기 기억의 근거로 쓰지 않는다. **특정 다항식 합성 과제 1종**이며 일반 시계열 예측·의료 예후 성능으로 확장하지 않는다.
 
-| 모델 | 원래 입력 AP | 인공 누락 AP |
-|---|---|---|
-| three_static | 0.3707 | 0.3527 |
-| three_dynamic | 0.3709 | 0.3534 |
-| three_selected | 0.3697 | 0.3528 |
-| assisted_static | 0.3710 | 0.3517 |
-| assisted_dynamic | 0.3722 | 0.3526 |
-| assisted_selected | 0.3719 | 0.3533 |
-| LR_static | 0.3734 | 0.3524 |
-| LR_dynamic | 0.3728 | 0.3533 |
-| LR_selected | 0.3734 | 0.3530 |
+같은 AdamW, batch 1,024, MSE, 학습률 후보 0.001/0.003, weight decay 0.0001을 사용했다. 표준화는 학습 자료에만 fit한다. MLP와 GRU+attention에도 두 후보를 제공했다. 항 제거 대조군은 전체 EPF가 고른 학습률로 재학습한다. 이들은 항의 작동을 확인하는 제한된 ablation이며 독립적으로 최적 튜닝한 모델은 아니다.
 
-`static`과 `dynamic`은 각각 고정/조건부 후보군에서 validation으로 선택한 절차다. `selected`는 둘 중 validation이 선택한 절차이며, outer test에서 `dynamic`이 높다고 `selected`를 바꾸지 않는다. `assisted`에는 별도 LR 전문가가 포함된다.
+| 모델 | 파라미터 | 비선형 NMSE ↓ | 선택 trial 평균 학습 초 |
+|---|---:|---:|---:|
+| EPF (single cell) | 8,525 | 0.00009755 | 124.56 |
+| MLP | 8,520 | 0.00079754 | 11.31 |
+| EPF without plasticity | 8,525 | 0.00011064 | 85.80 |
+| EPF without quartic | 8,525 | 0.00010583 | 112.15 |
+| GRU + attention | 8,657 | 0.00037789 | 60.34 |
 
-세 모델 dynamic은 static 대비 +0.000256 / +0.000715였다. 그러나 전체 선택 절차 `three_selected`는 static보다 원래 입력 AP가 낮았다. 조건을 늘리면 항상 좋아진다는 가설은 지지되지 않는다.
+**EPF의 3-seed 평균 비선형 오차는 MLP 대비 87.77%, GRU+attention 대비 74.18% 낮았다.** 이것은 같은 입력·유사 파라미터·명시된 예산의 결과다. 학습 시간은 MLP보다 약 11배 길다. 시간 표는 선택된 trial의 학습·validation·진단을 포함한다. 전체 후보 비용은 `comparison.json`의 `cost.training_temporal`에 별도로 저장했다.
 
-## 고정 예측의 조건부 95% 차이 구간
+| 모델 | seed42 | seed43 | seed44 |
+|---|---:|---:|---:|
+| EPF (single cell) | 0.00010679 | 0.00009760 | 0.00008826 |
+| MLP | 0.00079105 | 0.00080244 | 0.00079913 |
+| EPF without plasticity | 0.00012629 | 0.00011822 | 0.00008740 |
+| EPF without quartic | 0.00009598 | 0.00011064 | 0.00011088 |
+| GRU + attention | 0.00024287 | 0.00049827 | 0.00039252 |
 
-| 비교 | 원래 입력 | 인공 누락 |
-|---|---|---|
-| three_dynamic − three_static | [-0.0025, +0.0030] | [-0.0028, +0.0038] |
-| three_dynamic − LR_selected | [-0.0065, +0.0012] | [-0.0037, +0.0041] |
-| three_dynamic − LR_v13 | [-0.0034, +0.0073] | [+0.0009, +0.0112] |
-| three_selected − three_static | [-0.0042, +0.0020] | [-0.0032, +0.0030] |
-| three_selected − LR_selected | [-0.0083, +0.0008] | [-0.0041, +0.0037] |
-| three_selected − LR_v13 | [-0.0047, +0.0064] | [-0.0004, +0.0104] |
-| assisted_selected − three_static | [-0.0018, +0.0045] | [-0.0027, +0.0035] |
-| assisted_selected − LR_selected | [-0.0062, +0.0019] | [-0.0033, +0.0036] |
-| assisted_selected − LR_v13 | [-0.0027, +0.0085] | [+0.0005, +0.0114] |
+학습은 최소 32, 최대 320 epoch, 절대 표준화 MSE 1e-5를 scheduler와 patience에 동일하게 사용했다. 의미 있는 개선이 24 epoch 없고 학습률을 2회 이상 낮췄을 때 정지한다. **GRU+attention seed44는 320 epoch 예산에 도달했고 best epoch는 319였다.** 모든 모델이 충분히 수렴했다는 비교는 아니다. 다른 모델의 plateau도 이 허용오차 기준의 정지이지 수학적 수렴 증명이 아니다.
 
-전체 표본설계 frame의 PSU를 200회 재표집한 paired bootstrap이다. 학습·선택 변동과 다중 비교 보정은 포함하지 않는다. `LR_v13`은 기본 튜닝 LR(0.3692/0.3471), `LR_selected`는 같은 메타 선택을 제공한 강한 대조군이다. 기본 LR만 이긴 점을 전체 LR 우월성으로 해석하지 않는다.
+## 단일 갱신식의 작동 항
 
-## fold별 최종 선택
+| 제거/비교 대조군 | 전체 EPF의 평균 상대 NMSE 감소 | 조건부 95% 구간 |
+|---|---:|---:|
+| MLP | 87.77% | 87.06–88.48% |
+| EPF without plasticity | 11.83% | 10.53–13.14% |
+| EPF without quartic | 7.82% | 5.55–9.96% |
+| GRU + attention | 74.18% | 73.15–75.15% |
 
-| fold | 후보 | 선택 | 설정 | 경로 |
-|---|---|---|---|---|
-| 1 | three_selected | context_stack | {"C": 0.01, "mode": "profile"} | inner_bag |
-| 1 | assisted_selected | context_stack | {"C": 0.01, "mode": "profile"} | inner_bag |
-| 1 | LR_selected | context_stack | {"C": 0.01, "mode": "profile"} | inner_bag |
-| 2 | three_selected | state_stack | {"C": 0.1, "shrink_people": 500} | fullfit |
-| 2 | assisted_selected | stack | {"C": 0.1} | fullfit |
-| 2 | LR_selected | context_stack | {"C": 0.1, "mode": "quality"} | fullfit |
-| 3 | three_selected | context_stack | {"C": 0.01, "mode": "quality"} | fullfit |
-| 3 | assisted_selected | context_stack | {"C": 0.01, "mode": "quality"} | inner_bag |
-| 3 | LR_selected | context_stack | {"C": 0.01, "mode": "quality"} | inner_bag |
-| 4 | three_selected | stack | {"C": 0.1} | fullfit |
-| 4 | assisted_selected | stack | {"C": 0.1} | fullfit |
-| 4 | LR_selected | stack | {"C": 0.1} | fullfit |
-| 5 | three_selected | context_mixture | {"regularization": 0.1, "mode": "quality"} | inner_bag |
-| 5 | assisted_selected | context_mixture | {"regularization": 0.1, "mode": "quality"} | inner_bag |
-| 5 | LR_selected | mean | {} | inner_bag |
+가소성 항 제거 대비 평균 11.83%, quartic 항 제거 대비 평균 7.82% 낮았다. 다만 각 제거 모델보다 나은 seed는 각각 2/3이다. seed44에서는 가소성 제거가, seed42에서는 quartic 제거가 더 좋았다. 발화 자체 제거는 이번 실행에 포함하지 않았다. 모든 항의 필수성이나 세 원리의 보편적 상승효과가 입증됐다고 해석하지 않는다.
 
-네 상태 결합은 fold2의 three에서만 선택됐다. 그 모델의 16개 소견×상태 셀은 각각 523–1,965명의 고유 참가자를 포함했고 모두 최소 양·음성 조건을 충족했다. 한 사람이 서로 다른 입력 view에서 다른 상태에 들어갈 수 있으므로 셀 인원 합은 전체 사람 수와 같지 않다. 이 인원은 학습 support이며 시험 성능이 아니다.
+구간은 20개 시험 stream 전체를 단위로 2,000번 paired bootstrap한 값이다. 3개 고정 학습 모델의 평균 손실에 대한 조건부 불확실성이며, 새로 학습할 때의 전체 불확실성은 포함하지 않는다. 건강 구간은 전체 조사 표본 틀에 따른 PSU 재표집이다.
 
-## 개선 이력
+## 추론 비용
 
-| 단계 | 모델 | 원래 입력 AP | 인공 누락 AP |
-|---|---|---|---|
-| v10 | Vortex_original_code | 0.3171 | 0.2994 |
-| v10 | FREE_v01_physical_readout | 0.3593 | 0.3359 |
-| v10 | Portia_STDP_proposal | 0.3487 | 0.3221 |
-| v12 | LR_tuned | 0.3663 | 0.3441 |
-| v12 | Vortex_improved | 0.3540 | 0.3329 |
-| v12 | Physical_improved | 0.3559 | 0.3336 |
-| v12 | Portia_improved | 0.3558 | 0.3315 |
-| v13 | LR_tuned | 0.3692 | 0.3471 |
-| v13 | Vortex_alternating | 0.3615 | 0.3418 |
-| v13 | Physical_regularized | 0.3663 | 0.3451 |
-| v13 | Portia_regularized | 0.3651 | 0.3432 |
+아래는 시계열 seed42 가중치(64개 입력)의 forward 비용이다. RTX 4060, PyTorch 2.8.0+cu126, CPU 1 thread. 이미 메모리에 있는 인코딩 입력에서 모델 forward만 측정했다. 전처리·장치 전송·확률 보정·JSON 직렬화는 제외한다. 8회 준비 실행 후 40회 반복, CUDA는 호출 전후 동기화했다. EPF의 CUDA 행은 `FastEventPlasticField` 실행 경로다.
 
-여러 요소를 함께 바꾼 단계별 결과다. 향상을 특정 물리·생물학적 메커니즘 하나의 인과 효과로 귀속하지 않는다. v14 고정 세 모델 결합은0.3707/0.3527, LR 메타 대조군은0.3707/0.3509였다. v15는 LR에도 평균/조건부 후보를 추가해 대조군을 강화했다.
+| 모델 | CPU 단건 중앙값 ms | CUDA 1,024건 묶음 중앙값 ms |
+|---|---:|---:|
+| EPF (single cell) | 1.5173 | 6.4403 |
+| MLP | 0.0206 | 0.2392 |
+| EPF without plasticity | 1.1468 | 4.7955 |
+| EPF without quartic | 1.5307 | 6.4525 |
+| GRU + attention | 0.8635 | 0.7142 |
 
-## 실제 실행 비용
+EPF의 낮은 합성 과제 오차와 더 큰 계산 비용을 함께 보고한다. 더 빠른 모델이라는 주장은 하지 않는다.
 
-| 체크포인트 | base 실행 수 | p50 ms | p95 ms |
-|---|---|---|---|
-| fold1 three_selected | 9 | 14.693 | 18.268 |
-| fold2 three_selected | 3 | 5.344 | 7.159 |
-| fold1 LR_selected | 3 | 1.382 | 2.053 |
+## 재현과 사용
 
-CPU 1스레드, 가상 단건 입력, 10회 워밍업 후100회 측정. 입력 검증·전처리·전문가 전체·결합·온도 보정·출력 dict를 포함하며 로딩/JSON 직렬화/HTTP는 제외한다. 체크포인트별 경로가 다르므로 하나의 범용 지연시간으로 해석하지 않는다. LR이 더 빠르다. 이전 버전의 전처리 제외 지연시간과 직접 비교하지 않는다.
+원자료에서 학습한 건강 모델 60개 × 13 입력 조건과 시계열 모델 15개를 다시 로드했다. 같은 CUDA 환경에서 저장 예측과 최대 오차 **0**이었다. 원본과 공개 CPU 모델의 차이도 0, CPU/CUDA 차이는 최대 5.70e-7이었다. 원본 단위 테스트는 124개, 공개 패키지 테스트는 11개 통과했다. 공개 CLI로 학습 완료 가중치를 재사용해 평가를 다시 실행한 결과도 원본과 일치했다.
 
-## 검증과 활용 결정
+```bash
+pip install -r requirements-structures.txt
+python -m models.predict_event_field --input example.json
+python experiment_temporal.py --seed 42
+python -m unittest test_models test_improved_models test_hybrid_models test_event_field -v
+```
 
-전체 로컬 테스트106개 통과. 최신 selected 세 종류×5fold의 모든 outer test/4view 재로딩 예측은 저장 OOF와 최대 절대차0이었다. 공개용 fold1/2 가중치도 전체4,068명×원래/누락 입력에서 원본과 최대차0이었다. batch 크기·행 순서를 바꾸는 경우 float32 파동 계산의 미세한 반올림 차이는 허용한다.
+`experiment_temporal.py`는 실제 완료한 합성 자료 생성·정규화·학습·선택·평가 루프를 독립 실행 파일로 옮긴 것이다. 이전 코드와 생성 입력, 창 구성, 동일 가중치의 예측 일치를 확인했다. 기본 출력은 `runs/event_field_temporal`이며 공개 원자료가 필요 없다. 공개용으로 옮긴 스크립트에서 전체 학습을 또 반복하지는 않았다. 실행 환경이 달라지면 수치가 달라질 수 있다.
 
-현재 정확도·속도·복잡성을 함께 보면 LR 대조군을 기본 선택으로 유지한다. 세 모델 결합은 추가 검증할 연구 후보다. 새로운 자료에서의 검증, 같은 계산량·용량 대조, 전체 재학습 ablation은 미완료다. 선행연구 원문과 주장 가능한 범위는 [RELATED_WORK.md](RELATED_WORK.md)에 있다.
+건강 가중치는 **fold1/seed42의 2,205명 fit 자료**로 학습한 하나의 모델이다. 표는 5개 fold 전체의 OOF 평균이며 공개한 단일 가중치의 성능표가 아니다. 전체 표본 재학습·임상 운영 모델이 아니다. 입력은 `example.json`을 따른다. API 키·외부 추론 호출이 없다.
+
+노트북은 내장 집계를 표·그림으로 재계산하는 실행된 결과 노트북이다. 원자료에서 건강 모델 전체를 재학습하는 노트북은 아니다. 원자료, 개인별 예측, 분할 인덱스, pickle/PT 연구 체크포인트는 공개하지 않는다.

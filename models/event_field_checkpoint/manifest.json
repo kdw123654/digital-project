@@ -1,0 +1,24 @@
+{
+  "version": "event_plastic_field_v17",
+  "constructor": {
+    "input_dim": 72,
+    "output_dim": 4,
+    "dimension": 16,
+    "steps": 6,
+    "plasticity": true,
+    "quartic": true,
+    "seed": 42,
+    "head_width": 64
+  },
+  "temperature": 1.075119007267492,
+  "cutoff": 0.24589413606833121,
+  "fold": 1,
+  "seed": 42,
+  "unique_fit_people": 2205,
+  "fit_views": 2,
+  "parameters": 8683,
+  "best_epoch": 16,
+  "linear_skip": "Train-only LR initialization shared with baselines, trainable thereafter. No separate expert calls.",
+  "not_full_cohort_refit": true,
+  "source": "health/fold1/seed42/field.pt"
+}
