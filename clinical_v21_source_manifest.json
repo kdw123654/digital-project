@@ -1,0 +1,33 @@
+{
+  "local_frozen_sha256": {
+    "analysis_sources_manifest": "fe463ac1c7317e20755403e40ab995947d15dcf1cf93a2573acf8fb46945f8dd",
+    "full_forward_sources_manifest": "8d0792ad1a5ffbcd58676951a432e6c112572f148a360fe10b3c2072f208a7fc",
+    "full_forward_verification": "c7168dac68a275a064a2967b77872be50f0b4941594e60e51ada062da74d1597",
+    "local_aggregate_report": "fb038030c6e60bf6a026480b75184b86f60970fb029b70686e183570680bfe3c",
+    "local_public_runtime": "44b37af840e9a2a4f6c718326d8a339742ed5c6b75ca8285c47cc19008113b56",
+    "presentation_sources_manifest": "fae49639e4acf8528e3834fcaffa51ce63261f6d0b38a945ad74d7762e8f7bf1",
+    "report_freeze": "f2de3ae843eef458dce85c9fa38ad88758c0cea3c1de7ba247146472d431d997",
+    "training_freeze": "442b8cb96622a382f624b6dc4e2aea5f09bacb18b890a5ec45bcf8e2579c9833",
+    "training_sources_manifest": "84466baf7d4d47d44497a9be73f4d25cf8879e7e42604fd38c35f2495b765495"
+  },
+  "public_code_sha256": {
+    "models/clinical_v21/__init__.py": "1097c031f65deee2c42f88a085f46ea093b725faf8b2f1cc3d7afe735a524bef",
+    "models/clinical_v21/event_field_v19.py": "ace51539e4a44d4b6e635398a16bcdb79a03aa7e4d293303c5eccde787a676d9",
+    "models/clinical_v21/event_field_v21.py": "08a3660812f4e5320c9e2e2859cfbf85d6a1fde8b9525910afe3ef36d1f187ac",
+    "models/clinical_v21/event_plastic_field.py": "fcac0173b48d241043b0d7fc3aa78184def1e469ca75b68ecc398850f5be3ad3",
+    "models/clinical_v21/predict.py": "df63c9b1ecdfddaefb6bccd7245e6d9da98e3410c7bcd7e528d02696378019ed",
+    "test_clinical_v21.py": "436d0c920c6e41d4627ae6712b7a4a3f7700ffc3865cca5b2eaabe59e9af981a"
+  },
+  "public_normalized_files_sha256": {
+    "CLINICAL_V21_PROTOCOL.md": "873751df00151c77a8cb5884ee68a076c19c1970d7e0c9f885d8a8e9400c735e",
+    "CLINICAL_V21_RESULTS.md": "3b9e2612b9e9def7de34aca853ca032c315c6503b0fc7865e0c47a03e979b993",
+    "README.md": "557390ee824eeb021d50f1233f1464e273961ef22243778a853030a664b925c4",
+    "clinical_v21_public_runtime.json": "b729eb7c7186dc96739d456649c88f958a68d92a506c2f5a2c203fbd5fb50399",
+    "clinical_v21_report.ipynb": "85442ae6025439b752d2813fdd159ee5f1bae1ccc505b50746293202f642215c",
+    "clinical_v21_report.json": "44c5581113614c945fc7b01c9d6170a24b7591a6ba5ad831dbe0ede1bb101a9f",
+    "clinical_v21_verification.json": "d4b3a35af1043ef41db9efc25ea1e827df168dc8e9f8a47479ecb53caed0897f",
+    "example_clinical_v21.json": "b5e9757f8a4cb9e996054cbf398afab18783bbcf477b9540f783dba0870627d4"
+  },
+  "scope": "Public aggregate, documentation, reproducible example and public code SHA-256 only; no private row artifacts",
+  "version": "clinical_v21_public_source_summary"
+}

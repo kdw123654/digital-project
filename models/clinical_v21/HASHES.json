@@ -1,0 +1,17 @@
+{
+  "LR_AP.npz": "1bbf87d1200299ce8e3ff4e5feffddd2118351a12ac0e0ab86cddc3480f2ff9b",
+  "LR_BCE.npz": "1bbf87d1200299ce8e3ff4e5feffddd2118351a12ac0e0ab86cddc3480f2ff9b",
+  "PUBLIC_EXPORT_SOURCES.json": "1a3b588377276d30c372e2f4efc245278623f937b812a26ef417614942a60d53",
+  "__init__.py": "1097c031f65deee2c42f88a085f46ea093b725faf8b2f1cc3d7afe735a524bef",
+  "base_preprocessor.npz": "9097033d9fa434785fbf59c9d1f78da7bae957e13b7d7df90c6a90214d84403e",
+  "enhanced_AP_EPF.npz": "bc6cc66d9f8b8a6a222bd2ec7636b4373fd4e7abd5850dd0bece885d0113548e",
+  "enhanced_AP_MLP.npz": "275ae4bcb416d46bfb58b1ac4edebe691efa5de38e9e943e9e7a9878a6f9d692",
+  "event_field_v19.py": "ace51539e4a44d4b6e635398a16bcdb79a03aa7e4d293303c5eccde787a676d9",
+  "event_field_v21.py": "08a3660812f4e5320c9e2e2859cfbf85d6a1fde8b9525910afe3ef36d1f187ac",
+  "event_plastic_field.py": "fcac0173b48d241043b0d7fc3aa78184def1e469ca75b68ecc398850f5be3ad3",
+  "extra_preprocessor.npz": "cee6778133497dafcca752c76bc8e4abb02c1d96b9eae3d478fc5eda227103fa",
+  "manifest.json": "781d4244d055776754e2bf7a905f11c511404a5c8d5c9bac9561117d44cd0f33",
+  "plain_AP_EPF.npz": "76aca03caec2a26cd9eb7a78d64a29606f05d0d7cd2333fbe661649e333e42d1",
+  "predict.py": "df63c9b1ecdfddaefb6bccd7245e6d9da98e3410c7bcd7e528d02696378019ed",
+  "verification.json": "c7ae7cdb6e64fc6fb06fd73b492c54aae33c15153be013d4c2eca9ec161784d3"
+}

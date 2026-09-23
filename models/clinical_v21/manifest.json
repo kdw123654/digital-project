@@ -1,0 +1,558 @@
+{
+  "full_forward_verification_sha256": "c7168dac68a275a064a2967b77872be50f0b4941594e60e51ada062da74d1597",
+  "full_study_evaluation_index_sha256": "1114ab9317d88cf740690f021436c0f806bbb1bb64ddcd43d213031f35642d43",
+  "full_study_training_digest": "bf13357a13c00658b442d734cd2ba55c707606e76c83a72c85ba6c639c4e7ead",
+  "models": {
+    "LR_AP": {
+      "architecture": null,
+      "calibration": {
+        "any_positive_n": 129,
+        "any_weighted_prevalence": 0.37891905578185825,
+        "calibration_effective_n": 294.99351201016043,
+        "calibration_n": 362,
+        "calibration_weighted_bce": 0.5416441336848716,
+        "component_coefficient_boundaries": {
+          "intercept_minus_twenty": [
+            false,
+            false,
+            false,
+            false
+          ],
+          "intercept_plus_twenty": [
+            false,
+            false,
+            false,
+            false
+          ],
+          "slope_twenty": [
+            false,
+            false,
+            false,
+            false
+          ],
+          "slope_zero": [
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        "component_coefficients": [
+          [
+            0.9328870533717072,
+            0.16799043507652442
+          ],
+          [
+            1.0408277019062044,
+            0.3276181290056478
+          ],
+          [
+            0.8494102216920265,
+            -0.1312568985242985
+          ],
+          [
+            0.901844417277569,
+            -0.3455882235957377
+          ]
+        ],
+        "component_positive_n": [
+          51,
+          36,
+          57,
+          50
+        ],
+        "component_weighted_prevalence": [
+          0.14862526273815282,
+          0.11268301833498603,
+          0.16839066975160022,
+          0.1348418923481984
+        ],
+        "gamma": -0.09928075184153262,
+        "gamma_endpoint": "none",
+        "independent_weighted_bce": 0.542863747745457,
+        "method": "v18_monotone_components_then_frechet_bounded_union_weighted_bce"
+      },
+      "checkpoint_policy": "AP",
+      "config_policy": "AP",
+      "dropout": 0.0,
+      "family": "LR",
+      "fold": 1,
+      "model_options": null,
+      "seed": null,
+      "selected_C": 0.1,
+      "selection_scope": "fit/clean validation only; no held-out test selection",
+      "source_checkpoint_sha256": "308b6bc08907546870be256c8f5f38d3ff62b17969890bed642343806853b16e",
+      "source_evaluation_done_sha256": "d1780c46765ae5f2c80a7b180d3eae9d16d13abd3a1eac152cdd2e01f886395f",
+      "stage": "linear_reference",
+      "state_file": "LR_AP.npz",
+      "stored_parameters": 292,
+      "thresholds": {
+        "adjusted_any": {
+          "0.9": 0.31106589364980947,
+          "0.95": 0.27815039777131517
+        },
+        "raw_any": {
+          "0.9": 0.3288369044769813,
+          "0.95": 0.2922341528936695
+        },
+        "raw_any_precal": {
+          "0.9": 0.3236283376122041,
+          "0.95": 0.26033107300180586
+        }
+      },
+      "validation_AP": 0.45036941618044435,
+      "validation_BCE": 0.30535503221734533
+    },
+    "LR_BCE": {
+      "architecture": null,
+      "calibration": {
+        "any_positive_n": 129,
+        "any_weighted_prevalence": 0.37891905578185825,
+        "calibration_effective_n": 294.99351201016043,
+        "calibration_n": 362,
+        "calibration_weighted_bce": 0.5416441336848716,
+        "component_coefficient_boundaries": {
+          "intercept_minus_twenty": [
+            false,
+            false,
+            false,
+            false
+          ],
+          "intercept_plus_twenty": [
+            false,
+            false,
+            false,
+            false
+          ],
+          "slope_twenty": [
+            false,
+            false,
+            false,
+            false
+          ],
+          "slope_zero": [
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        "component_coefficients": [
+          [
+            0.9328870533717072,
+            0.16799043507652442
+          ],
+          [
+            1.0408277019062044,
+            0.3276181290056478
+          ],
+          [
+            0.8494102216920265,
+            -0.1312568985242985
+          ],
+          [
+            0.901844417277569,
+            -0.3455882235957377
+          ]
+        ],
+        "component_positive_n": [
+          51,
+          36,
+          57,
+          50
+        ],
+        "component_weighted_prevalence": [
+          0.14862526273815282,
+          0.11268301833498603,
+          0.16839066975160022,
+          0.1348418923481984
+        ],
+        "gamma": -0.09928075184153262,
+        "gamma_endpoint": "none",
+        "independent_weighted_bce": 0.542863747745457,
+        "method": "v18_monotone_components_then_frechet_bounded_union_weighted_bce"
+      },
+      "checkpoint_policy": "BCE",
+      "config_policy": "BCE",
+      "dropout": 0.0,
+      "family": "LR",
+      "fold": 1,
+      "model_options": null,
+      "seed": null,
+      "selected_C": 0.1,
+      "selection_scope": "fit/clean validation only; no held-out test selection",
+      "source_checkpoint_sha256": "308b6bc08907546870be256c8f5f38d3ff62b17969890bed642343806853b16e",
+      "source_evaluation_done_sha256": "0ea4833288faf0c968f190faffa0636f77220c653baac2c5daadd646238757b9",
+      "stage": "linear_reference",
+      "state_file": "LR_BCE.npz",
+      "stored_parameters": 292,
+      "thresholds": {
+        "adjusted_any": {
+          "0.9": 0.31106589364980947,
+          "0.95": 0.27815039777131517
+        },
+        "raw_any": {
+          "0.9": 0.3288369044769813,
+          "0.95": 0.2922341528936695
+        },
+        "raw_any_precal": {
+          "0.9": 0.3236283376122041,
+          "0.95": 0.26033107300180586
+        }
+      },
+      "validation_AP": 0.45036941618044435,
+      "validation_BCE": 0.30535503221734533
+    },
+    "enhanced_AP_EPF": {
+      "architecture": {
+        "dimension": 12,
+        "head_width": 32,
+        "steps": 4
+      },
+      "calibration": {
+        "any_positive_n": 129,
+        "any_weighted_prevalence": 0.37891905578185825,
+        "calibration_effective_n": 294.99351201016043,
+        "calibration_n": 362,
+        "calibration_weighted_bce": 0.5444814121583164,
+        "component_coefficient_boundaries": {
+          "intercept_minus_twenty": [
+            false,
+            false,
+            false,
+            false
+          ],
+          "intercept_plus_twenty": [
+            false,
+            false,
+            false,
+            false
+          ],
+          "slope_twenty": [
+            false,
+            false,
+            false,
+            false
+          ],
+          "slope_zero": [
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        "component_coefficients": [
+          [
+            0.916685693019644,
+            0.17768992280559495
+          ],
+          [
+            0.997380672196125,
+            0.26678132283163575
+          ],
+          [
+            0.7839405053001184,
+            -0.15231456656567455
+          ],
+          [
+            0.8617803131000026,
+            -0.340241311444593
+          ]
+        ],
+        "component_positive_n": [
+          51,
+          36,
+          57,
+          50
+        ],
+        "component_weighted_prevalence": [
+          0.14862526273815282,
+          0.11268301833498603,
+          0.16839066975160022,
+          0.1348418923481984
+        ],
+        "gamma": -0.10195961370228175,
+        "gamma_endpoint": "none",
+        "independent_weighted_bce": 0.5458165821547476,
+        "method": "v18_monotone_components_then_frechet_bounded_union_weighted_bce"
+      },
+      "checkpoint_policy": "AP",
+      "config_policy": "AP",
+      "dropout": 0.1,
+      "family": "EPF",
+      "fold": 1,
+      "model_options": {
+        "event_mode": "hard",
+        "initialization": "linear_anchor",
+        "numeric_embedding": false,
+        "plastic_readout": "field",
+        "plasticity": true,
+        "quartic": true,
+        "residual_gate": "trainable",
+        "use_linear_skip": true
+      },
+      "seed": 42,
+      "selected_C": null,
+      "selection_scope": "fit/clean validation only; no held-out test selection",
+      "source_checkpoint_sha256": "5e4eed84ef1f368ad4f7c1399362e610955a138dc30cf689b0edde93cbc80fd9",
+      "source_evaluation_done_sha256": "ff69f482d7cc51a6943a3ac1068a7e450917c8f75fcf9a9b7cab599b60bbe867",
+      "stage": "enhanced",
+      "state_file": "enhanced_AP_EPF.npz",
+      "stored_parameters": 4719,
+      "thresholds": {
+        "adjusted_any": {
+          "0.9": 0.3168831222527497,
+          "0.95": 0.2690033160157105
+        },
+        "raw_any": {
+          "0.9": 0.3353564332741349,
+          "0.95": 0.2854355229682349
+        },
+        "raw_any_precal": {
+          "0.9": 0.30403247228857483,
+          "0.95": 0.2333163835688447
+        }
+      },
+      "validation_AP": 0.46173019587040304,
+      "validation_BCE": 0.3045720831312957
+    },
+    "enhanced_AP_MLP": {
+      "architecture": {
+        "head_width": 128,
+        "hidden_layers": 2
+      },
+      "calibration": {
+        "any_positive_n": 129,
+        "any_weighted_prevalence": 0.37891905578185825,
+        "calibration_effective_n": 294.99351201016043,
+        "calibration_n": 362,
+        "calibration_weighted_bce": 0.546323796215785,
+        "component_coefficient_boundaries": {
+          "intercept_minus_twenty": [
+            false,
+            false,
+            false,
+            false
+          ],
+          "intercept_plus_twenty": [
+            false,
+            false,
+            false,
+            false
+          ],
+          "slope_twenty": [
+            false,
+            false,
+            false,
+            false
+          ],
+          "slope_zero": [
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        "component_coefficients": [
+          [
+            0.8437561520282174,
+            0.03741992504854716
+          ],
+          [
+            1.0239970549822313,
+            0.3270982758795207
+          ],
+          [
+            0.7848403944933985,
+            -0.166026932210243
+          ],
+          [
+            0.8374540654106627,
+            -0.37924654888735126
+          ]
+        ],
+        "component_positive_n": [
+          51,
+          36,
+          57,
+          50
+        ],
+        "component_weighted_prevalence": [
+          0.14862526273815282,
+          0.11268301833498603,
+          0.16839066975160022,
+          0.1348418923481984
+        ],
+        "gamma": -0.10087286779726644,
+        "gamma_endpoint": "none",
+        "independent_weighted_bce": 0.5476327699329389,
+        "method": "v18_monotone_components_then_frechet_bounded_union_weighted_bce"
+      },
+      "checkpoint_policy": "AP",
+      "config_policy": "AP",
+      "dropout": 0.1,
+      "family": "MLP",
+      "fold": 1,
+      "model_options": {
+        "event_mode": "hard",
+        "initialization": "linear_anchor",
+        "numeric_embedding": false,
+        "plastic_readout": "none",
+        "plasticity": true,
+        "quartic": true,
+        "residual_gate": "trainable",
+        "use_linear_skip": true
+      },
+      "seed": 42,
+      "selected_C": null,
+      "selection_scope": "fit/clean validation only; no held-out test selection",
+      "source_checkpoint_sha256": "45e21826d9e988a9a2b69c77b72b10d949776c4dbb2bf068976b7146a63ebaee",
+      "source_evaluation_done_sha256": "bcd34cfb193198eeb41003806c11b0528a2e68b9ba1e1e7f327b2ff44d9cfac4",
+      "stage": "enhanced",
+      "state_file": "enhanced_AP_MLP.npz",
+      "stored_parameters": 27180,
+      "thresholds": {
+        "adjusted_any": {
+          "0.9": 0.3110014262998835,
+          "0.95": 0.26705666329828787
+        },
+        "raw_any": {
+          "0.9": 0.3294528610263228,
+          "0.95": 0.2840073015950302
+        },
+        "raw_any_precal": {
+          "0.9": 0.29489491753289265,
+          "0.95": 0.23609226457825305
+        }
+      },
+      "validation_AP": 0.46553159538157013,
+      "validation_BCE": 0.3040284249765694
+    },
+    "plain_AP_EPF": {
+      "architecture": {
+        "dimension": 12,
+        "head_width": 32,
+        "steps": 4
+      },
+      "calibration": {
+        "any_positive_n": 129,
+        "any_weighted_prevalence": 0.37891905578185825,
+        "calibration_effective_n": 294.99351201016043,
+        "calibration_n": 362,
+        "calibration_weighted_bce": 0.5450221358874526,
+        "component_coefficient_boundaries": {
+          "intercept_minus_twenty": [
+            false,
+            false,
+            false,
+            false
+          ],
+          "intercept_plus_twenty": [
+            false,
+            false,
+            false,
+            false
+          ],
+          "slope_twenty": [
+            false,
+            false,
+            false,
+            false
+          ],
+          "slope_zero": [
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        "component_coefficients": [
+          [
+            0.9074618302445032,
+            0.14559621913153248
+          ],
+          [
+            0.990864793586822,
+            0.23222015738693896
+          ],
+          [
+            0.7973332100093768,
+            -0.17632037492956998
+          ],
+          [
+            0.9027300071597846,
+            -0.3302320853639847
+          ]
+        ],
+        "component_positive_n": [
+          51,
+          36,
+          57,
+          50
+        ],
+        "component_weighted_prevalence": [
+          0.14862526273815282,
+          0.11268301833498603,
+          0.16839066975160022,
+          0.1348418923481984
+        ],
+        "gamma": -0.10593243497200872,
+        "gamma_endpoint": "none",
+        "independent_weighted_bce": 0.5464117676574692,
+        "method": "v18_monotone_components_then_frechet_bounded_union_weighted_bce"
+      },
+      "checkpoint_policy": "AP",
+      "config_policy": "AP",
+      "dropout": 0.1,
+      "family": "EPF",
+      "fold": 1,
+      "model_options": {
+        "event_mode": "hard",
+        "initialization": "linear_anchor",
+        "numeric_embedding": false,
+        "plastic_readout": "none",
+        "plasticity": true,
+        "quartic": true,
+        "residual_gate": "off",
+        "use_linear_skip": true
+      },
+      "seed": 42,
+      "selected_C": null,
+      "selection_scope": "fit/clean validation only; no held-out test selection",
+      "source_checkpoint_sha256": "42bc6de2d2a4fac1f2d5080959b7e3fd667c20293198a7263071b6afa733bccf",
+      "source_evaluation_done_sha256": "782adf9155b74b3ea1b49d0a765df58f99f29151550d3fe98d106b290c66b030",
+      "stage": "plain",
+      "state_file": "plain_AP_EPF.npz",
+      "stored_parameters": 4491,
+      "thresholds": {
+        "adjusted_any": {
+          "0.9": 0.3181445278079916,
+          "0.95": 0.2745915559275751
+        },
+        "raw_any": {
+          "0.9": 0.3374280168119421,
+          "0.95": 0.2929028828837041
+        },
+        "raw_any_precal": {
+          "0.9": 0.3168277803224377,
+          "0.95": 0.2431393986694719
+        }
+      },
+      "validation_AP": 0.46560648454126,
+      "validation_BCE": 0.3039494222516329
+    }
+  },
+  "not_full_cohort_refit": true,
+  "primary_comparison": "survey-weighted raw pre-calibration four-component macro AP",
+  "probability_stages": {
+    "adjusted_any": "bounded q_gamma calibrated union risk",
+    "calibrated_components": "four monotone component calibrators applied to logits",
+    "raw_any": "independent union of calibrated components, q0",
+    "raw_any_precal": "independent union of raw components",
+    "raw_components": "sigmoid(model logits)"
+  },
+  "scope": "prespecified fold1 seed42 research examples",
+  "source_sha256_manifest": "84466baf7d4d47d44497a9be73f4d25cf8879e7e42604fd38c35f2495b765495",
+  "thresholds": "clean threshold-role development 90/95 sensitivity cutoffs for three risk stages; not held-out guarantees",
+  "version": "clinical_condition_v21"
+}

@@ -1,0 +1,154 @@
+{
+  "checks": [
+    {
+      "device": "cpu",
+      "max_abs_difference": {
+        "adjusted_any": 1.0788613175050088e-07,
+        "calibrated_components": 2.2520576326012787e-07,
+        "raw_any": 1.1109520386964888e-07,
+        "raw_any_precal": 1.115175083388209e-07,
+        "raw_components": 2.7134679303486564e-07,
+        "raw_logits": 1.5497207641601562e-06
+      },
+      "max_cpu_cuda_difference": null,
+      "model_id": "enhanced_AP_EPF",
+      "views": 13
+    },
+    {
+      "device": "cuda",
+      "max_abs_difference": {
+        "adjusted_any": 0.0,
+        "calibrated_components": 0.0,
+        "raw_any": 0.0,
+        "raw_any_precal": 0.0,
+        "raw_components": 0.0,
+        "raw_logits": 0.0
+      },
+      "max_cpu_cuda_difference": {
+        "adjusted_any": 1.0788613175050088e-07,
+        "calibrated_components": 2.2520576326012787e-07,
+        "raw_any": 1.1109520386964888e-07,
+        "raw_any_precal": 1.115175083388209e-07,
+        "raw_components": 2.7134679303486564e-07,
+        "raw_logits": 1.5497207641601562e-06
+      },
+      "model_id": "enhanced_AP_EPF",
+      "views": 13
+    },
+    {
+      "device": "cpu",
+      "max_abs_difference": {
+        "adjusted_any": 8.600974465977629e-08,
+        "calibrated_components": 1.7870427726496274e-07,
+        "raw_any": 8.483961511096538e-08,
+        "raw_any_precal": 1.0182157506033462e-07,
+        "raw_components": 1.8983952670970083e-07,
+        "raw_logits": 9.5367431640625e-07
+      },
+      "max_cpu_cuda_difference": null,
+      "model_id": "enhanced_AP_MLP",
+      "views": 13
+    },
+    {
+      "device": "cuda",
+      "max_abs_difference": {
+        "adjusted_any": 0.0,
+        "calibrated_components": 0.0,
+        "raw_any": 0.0,
+        "raw_any_precal": 0.0,
+        "raw_components": 0.0,
+        "raw_logits": 0.0
+      },
+      "max_cpu_cuda_difference": {
+        "adjusted_any": 8.600974465977629e-08,
+        "calibrated_components": 1.7870427726496274e-07,
+        "raw_any": 8.483961511096538e-08,
+        "raw_any_precal": 1.0182157506033462e-07,
+        "raw_components": 1.8983952670970083e-07,
+        "raw_logits": 9.5367431640625e-07
+      },
+      "model_id": "enhanced_AP_MLP",
+      "views": 13
+    },
+    {
+      "device": "cpu",
+      "max_abs_difference": {
+        "adjusted_any": 1.5040145728839605e-07,
+        "calibrated_components": 3.7673294750462105e-07,
+        "raw_any": 1.5395363106573967e-07,
+        "raw_any_precal": 1.4824872152097157e-07,
+        "raw_components": 4.449485405677578e-07,
+        "raw_logits": 2.0265579223632812e-06
+      },
+      "max_cpu_cuda_difference": null,
+      "model_id": "plain_AP_EPF",
+      "views": 13
+    },
+    {
+      "device": "cuda",
+      "max_abs_difference": {
+        "adjusted_any": 0.0,
+        "calibrated_components": 0.0,
+        "raw_any": 0.0,
+        "raw_any_precal": 0.0,
+        "raw_components": 0.0,
+        "raw_logits": 0.0
+      },
+      "max_cpu_cuda_difference": {
+        "adjusted_any": 1.5040145728839605e-07,
+        "calibrated_components": 3.7673294750462105e-07,
+        "raw_any": 1.5395363106573967e-07,
+        "raw_any_precal": 1.4824872152097157e-07,
+        "raw_components": 4.449485405677578e-07,
+        "raw_logits": 2.0265579223632812e-06
+      },
+      "model_id": "plain_AP_EPF",
+      "views": 13
+    },
+    {
+      "device": "cpu",
+      "max_abs_difference": {
+        "adjusted_any": 0.0,
+        "calibrated_components": 0.0,
+        "raw_any": 0.0,
+        "raw_any_precal": 0.0,
+        "raw_components": 0.0,
+        "raw_logits": 0.0
+      },
+      "max_cpu_cuda_difference": null,
+      "model_id": "LR_AP",
+      "views": 13
+    },
+    {
+      "device": "cpu",
+      "max_abs_difference": {
+        "adjusted_any": 0.0,
+        "calibrated_components": 0.0,
+        "raw_any": 0.0,
+        "raw_any_precal": 0.0,
+        "raw_components": 0.0,
+        "raw_logits": 0.0
+      },
+      "max_cpu_cuda_difference": null,
+      "model_id": "LR_BCE",
+      "views": 13
+    }
+  ],
+  "devices": [
+    "cpu",
+    "cuda"
+  ],
+  "examples": 5,
+  "linear_execution": "NumPy CPU only; no LR CUDA parity or timing",
+  "maximum_allowed_abs_difference": {
+    "adjusted_any": 0.0001,
+    "calibrated_components": 0.0001,
+    "raw_any": 0.0001,
+    "raw_any_precal": 0.0001,
+    "raw_components": 0.0001,
+    "raw_logits": 0.001
+  },
+  "model_device_pairs": 8,
+  "view_replays": 104,
+  "views_per_example": 13
+}
