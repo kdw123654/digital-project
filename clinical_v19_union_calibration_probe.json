@@ -1,0 +1,429 @@
+{
+  "version": "clinical_v19_union_calibration_probe",
+  "status": "exploratory_posthoc_calibration_only",
+  "n": 4068,
+  "units": 35,
+  "folds": 5,
+  "neural_seeds": [
+    42,
+    43,
+    44
+  ],
+  "LR_seedless": true,
+  "variants": {
+    "q0": "Four frozen marginal calibrators followed by 1-product(1-p)",
+    "gamma": "Original frozen Fréchet-bounded one-parameter union adjustment",
+    "positive_logit": "New calibration-role sigmoid(a*logit(q0)+b), a>0, no union-bound projection"
+  },
+  "models": {
+    "EPF": {
+      "units": 15,
+      "seed_count": 3,
+      "variants": {
+        "q0": {
+          "ap": 0.6865783509706774,
+          "auc": 0.7840152532838293,
+          "brier": 0.1829757290858202,
+          "nll": 0.5466807832853431,
+          "observed_rate": 0.3799226528155136,
+          "predicted_mean": 0.4290340727672383,
+          "mean_risk_gap": 0.049111419951724765,
+          "screening": {
+            "0.9": {
+              "sensitivity": 0.8742096058852861,
+              "specificity": 0.4630653508946359,
+              "referral_rate": 0.6650730454134298
+            },
+            "0.95": {
+              "sensitivity": 0.9300440352987005,
+              "specificity": 0.3175501670657657,
+              "referral_rate": 0.7765164791182834
+            }
+          },
+          "frechet_violation": {
+            "fraction": 0.0,
+            "weighted_fraction": 0.0,
+            "mean_excess": 0.0,
+            "weighted_mean_excess": 0.0,
+            "max_excess": 0.0,
+            "below_lower_n_per_seed": [
+              0,
+              0,
+              0
+            ],
+            "above_upper_n_per_seed": [
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        "gamma": {
+          "ap": 0.6815705353097,
+          "auc": 0.7824490592806289,
+          "brier": 0.18097363783647072,
+          "nll": 0.5413419498134587,
+          "observed_rate": 0.3799226528155136,
+          "predicted_mean": 0.38769608940973677,
+          "mean_risk_gap": 0.007773436594223175,
+          "screening": {
+            "0.9": {
+              "sensitivity": 0.8738487066389148,
+              "specificity": 0.4665848456829575,
+              "referral_rate": 0.6627535726225773
+            },
+            "0.95": {
+              "sensitivity": 0.9299645224584228,
+              "specificity": 0.32075390516448693,
+              "referral_rate": 0.7744997049677435
+            }
+          },
+          "frechet_violation": {
+            "fraction": 0.0,
+            "weighted_fraction": 0.0,
+            "mean_excess": 0.0,
+            "weighted_mean_excess": 0.0,
+            "max_excess": 0.0,
+            "below_lower_n_per_seed": [
+              0,
+              0,
+              0
+            ],
+            "above_upper_n_per_seed": [
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        "positive_logit": {
+          "ap": 0.6789653960816207,
+          "auc": 0.7795739990024356,
+          "brier": 0.18222347963856178,
+          "nll": 0.5445466266789446,
+          "observed_rate": 0.3799226528155136,
+          "predicted_mean": 0.39342309180489493,
+          "mean_risk_gap": 0.013500438989381339,
+          "screening": {
+            "0.9": {
+              "sensitivity": 0.8742096058852861,
+              "specificity": 0.4630653508946359,
+              "referral_rate": 0.6650730454134298
+            },
+            "0.95": {
+              "sensitivity": 0.9300440352987005,
+              "specificity": 0.3175501670657657,
+              "referral_rate": 0.7765164791182834
+            }
+          },
+          "frechet_violation": {
+            "fraction": 0.14626352015732547,
+            "weighted_fraction": 0.13362742550653958,
+            "mean_excess": 0.0032350972440531723,
+            "weighted_mean_excess": 0.0029319450647766997,
+            "max_excess": 0.04748409106351539,
+            "below_lower_n_per_seed": [
+              0,
+              1,
+              0
+            ],
+            "above_upper_n_per_seed": [
+              611,
+              590,
+              583
+            ]
+          }
+        }
+      },
+      "pooled_fold_specific_rank_changes": [
+        {
+          "seed": 42,
+          "pooled_oof_ap_change_C_minus_A": -0.007673093350268112,
+          "pooled_oof_auc_change_C_minus_A": -0.004393406233855979
+        },
+        {
+          "seed": 43,
+          "pooled_oof_ap_change_C_minus_A": -0.006504421755103573,
+          "pooled_oof_auc_change_C_minus_A": -0.004679208991732464
+        },
+        {
+          "seed": 44,
+          "pooled_oof_ap_change_C_minus_A": -0.00866134956179887,
+          "pooled_oof_auc_change_C_minus_A": -0.004251147618592577
+        }
+      ],
+      "positive_logit_slope_range": [
+        0.6859062514412039,
+        0.9452660454475729
+      ]
+    },
+    "MLP": {
+      "units": 15,
+      "seed_count": 3,
+      "variants": {
+        "q0": {
+          "ap": 0.6937462715008499,
+          "auc": 0.7874267206897007,
+          "brier": 0.18067447591902408,
+          "nll": 0.5427892823486737,
+          "observed_rate": 0.3799226528155136,
+          "predicted_mean": 0.42673662276782864,
+          "mean_risk_gap": 0.04681396995231509,
+          "screening": {
+            "0.9": {
+              "sensitivity": 0.8723761377316501,
+              "specificity": 0.48258028840229117,
+              "referral_rate": 0.6522756986484298
+            },
+            "0.95": {
+              "sensitivity": 0.9280340262882616,
+              "specificity": 0.3244228695343132,
+              "referral_rate": 0.7714912240481692
+            }
+          },
+          "frechet_violation": {
+            "fraction": 0.0,
+            "weighted_fraction": 0.0,
+            "mean_excess": 0.0,
+            "weighted_mean_excess": 0.0,
+            "max_excess": 0.0,
+            "below_lower_n_per_seed": [
+              0,
+              0,
+              0
+            ],
+            "above_upper_n_per_seed": [
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        "gamma": {
+          "ap": 0.6879083295701891,
+          "auc": 0.7853504148739288,
+          "brier": 0.17934115167717546,
+          "nll": 0.5381906948595803,
+          "observed_rate": 0.3799226528155136,
+          "predicted_mean": 0.3888802313495394,
+          "mean_risk_gap": 0.008957578534025864,
+          "screening": {
+            "0.9": {
+              "sensitivity": 0.8710596009535657,
+              "specificity": 0.48614434952672675,
+              "referral_rate": 0.6495655229359274
+            },
+            "0.95": {
+              "sensitivity": 0.9271580592047982,
+              "specificity": 0.3303813478461591,
+              "referral_rate": 0.7674637068851751
+            }
+          },
+          "frechet_violation": {
+            "fraction": 0.0,
+            "weighted_fraction": 0.0,
+            "mean_excess": 0.0,
+            "weighted_mean_excess": 0.0,
+            "max_excess": 0.0,
+            "below_lower_n_per_seed": [
+              0,
+              0,
+              0
+            ],
+            "above_upper_n_per_seed": [
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        "positive_logit": {
+          "ap": 0.6873390353907541,
+          "auc": 0.7831875873072417,
+          "brier": 0.18017713534073762,
+          "nll": 0.5411890704007005,
+          "observed_rate": 0.3799226528155136,
+          "predicted_mean": 0.39332704459973494,
+          "mean_risk_gap": 0.01340439178422137,
+          "screening": {
+            "0.9": {
+              "sensitivity": 0.8723761377316501,
+              "specificity": 0.48258028840229117,
+              "referral_rate": 0.6522756986484298
+            },
+            "0.95": {
+              "sensitivity": 0.9280340262882616,
+              "specificity": 0.3244228695343132,
+              "referral_rate": 0.7714912240481692
+            }
+          },
+          "frechet_violation": {
+            "fraction": 0.09759095378564404,
+            "weighted_fraction": 0.09077127766040101,
+            "mean_excess": 0.0014311152621004856,
+            "weighted_mean_excess": 0.001307126835894153,
+            "max_excess": 0.0324094180871857,
+            "below_lower_n_per_seed": [
+              0,
+              0,
+              0
+            ],
+            "above_upper_n_per_seed": [
+              519,
+              353,
+              319
+            ]
+          }
+        }
+      },
+      "pooled_fold_specific_rank_changes": [
+        {
+          "seed": 42,
+          "pooled_oof_ap_change_C_minus_A": -0.005724915985648726,
+          "pooled_oof_auc_change_C_minus_A": -0.004540407432794491
+        },
+        {
+          "seed": 43,
+          "pooled_oof_ap_change_C_minus_A": -0.007257418949229821,
+          "pooled_oof_auc_change_C_minus_A": -0.0037679018608671733
+        },
+        {
+          "seed": 44,
+          "pooled_oof_ap_change_C_minus_A": -0.006239373395408476,
+          "pooled_oof_auc_change_C_minus_A": -0.004409090853715103
+        }
+      ],
+      "positive_logit_slope_range": [
+        0.7404811860372176,
+        1.040682096804482
+      ]
+    },
+    "LR": {
+      "units": 5,
+      "seed_count": 1,
+      "variants": {
+        "q0": {
+          "ap": 0.6925896385625241,
+          "auc": 0.7865076618418176,
+          "brier": 0.18184118663302165,
+          "nll": 0.5475321558955464,
+          "observed_rate": 0.3799226528155136,
+          "predicted_mean": 0.43309305680321314,
+          "mean_risk_gap": 0.053170403987699566,
+          "screening": {
+            "0.9": {
+              "sensitivity": 0.8729831863326176,
+              "specificity": 0.4758205921549858,
+              "referral_rate": 0.6566978646800994
+            },
+            "0.95": {
+              "sensitivity": 0.9320896069149701,
+              "specificity": 0.3220760101960044,
+              "referral_rate": 0.7744872653112893
+            }
+          },
+          "frechet_violation": {
+            "fraction": 0.0,
+            "weighted_fraction": 0.0,
+            "mean_excess": 0.0,
+            "weighted_mean_excess": 0.0,
+            "max_excess": 0.0,
+            "below_lower_n_per_seed": [
+              0
+            ],
+            "above_upper_n_per_seed": [
+              0
+            ]
+          }
+        },
+        "gamma": {
+          "ap": 0.6891318297710951,
+          "auc": 0.784627991204984,
+          "brier": 0.18046015586982384,
+          "nll": 0.5412117310195865,
+          "observed_rate": 0.3799226528155136,
+          "predicted_mean": 0.3918000571609335,
+          "mean_risk_gap": 0.01187740434541995,
+          "screening": {
+            "0.9": {
+              "sensitivity": 0.8731677638598242,
+              "specificity": 0.4735419432756378,
+              "referral_rate": 0.6581809284161567
+            },
+            "0.95": {
+              "sensitivity": 0.929642540998602,
+              "specificity": 0.32666397982493556,
+              "referral_rate": 0.7707126735002575
+            }
+          },
+          "frechet_violation": {
+            "fraction": 0.0,
+            "weighted_fraction": 0.0,
+            "mean_excess": 0.0,
+            "weighted_mean_excess": 0.0,
+            "max_excess": 0.0,
+            "below_lower_n_per_seed": [
+              0
+            ],
+            "above_upper_n_per_seed": [
+              0
+            ]
+          }
+        },
+        "positive_logit": {
+          "ap": 0.6864052070774288,
+          "auc": 0.7803748676332689,
+          "brier": 0.18185922849994274,
+          "nll": 0.5462433016512307,
+          "observed_rate": 0.3799226528155136,
+          "predicted_mean": 0.39449092291992593,
+          "mean_risk_gap": 0.014568270104412362,
+          "screening": {
+            "0.9": {
+              "sensitivity": 0.8729831863326176,
+              "specificity": 0.4758205921549858,
+              "referral_rate": 0.6566978646800994
+            },
+            "0.95": {
+              "sensitivity": 0.9320896069149701,
+              "specificity": 0.3220760101960044,
+              "referral_rate": 0.7744872653112893
+            }
+          },
+          "frechet_violation": {
+            "fraction": 0.05555555555555555,
+            "weighted_fraction": 0.050508242038639156,
+            "mean_excess": 0.0010321626637828892,
+            "weighted_mean_excess": 0.0009177519010949188,
+            "max_excess": 0.03604877824701316,
+            "below_lower_n_per_seed": [
+              4
+            ],
+            "above_upper_n_per_seed": [
+              222
+            ]
+          }
+        }
+      },
+      "pooled_fold_specific_rank_changes": [
+        {
+          "seed": null,
+          "pooled_oof_ap_change_C_minus_A": -0.0061844314850952875,
+          "pooled_oof_auc_change_C_minus_A": -0.006132794208548731
+        }
+      ],
+      "positive_logit_slope_range": [
+        0.7224453605422794,
+        1.1503678123925154
+      ]
+    }
+  },
+  "interpretation": {
+    "rank": "Positive slope preserves within-fold ranking absent numerical ties; pooled OOF ranking/AP/AUC can change when the five calibrators differ",
+    "coherence": "Positive-logit risk is not constrained to lie between max(component p) and min(sum(component p),1); measured violations are reported without clipping",
+    "selection": "No base retraining, neural candidate search, hyperparameter search, model promotion, bootstrap CI, or external validation",
+    "scope": "One clean test view on the same previously explored KNHANES 2021-2024 cohort; calibration-only post-hoc comparison"
+  },
+  "probe_source_manifest_sha256": "3b6bd09490f295a3756eb9604d11455879309b4024410e35194f7464576afe92",
+  "privacy": "Only clean-view aggregate metrics and model counts; no patient risks or role indices"
+}

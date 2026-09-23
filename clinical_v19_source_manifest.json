@@ -1,0 +1,45 @@
+{
+  "version": "clinical_v19_public_source_manifest",
+  "training_manifest_sha256": "aefe984d61ebdae15a150849f81197323a132ce774955887922d8647e4702e65",
+  "analysis_manifest_sha256": "72e88bf5576bdbea6f1df0e7857bed94c48c2f027dc5fa0c1311d595918f11b9",
+  "training_code_sha256": {
+    "metabolic/run_clinical_v19.py": "20022657ae970f716937b9b24aa90497e616ef2d26fb2d1c12352fa83023904e",
+    "metabolic/clinical_v19_data.py": "3c41a170b68c5a9e967fc3ef2a5cdff4dd2199744de55eb00133839a48c4f61b",
+    "metabolic/event_field_v19.py": "ace51539e4a44d4b6e635398a16bcdb79a03aa7e4d293303c5eccde787a676d9",
+    "metabolic/event_plastic_field.py": "1b438f9bf934ae82041187db22de10de12911e1db7fa1f05d9c54aa345528c3a",
+    "metabolic/clinical_v19_calibration.py": "735193350bca8b43dbcfed6083bb3a43e47b73ef4864b0d92dd7459d1f17a8a0",
+    "metabolic/clinical_multitask.py": "299dccfcb6e7c4c1d2c053298b3d06bd60478e5bf7601d66cbf1ac30af412589",
+    "metabolic/data.py": "be69e4cc340f827ba42b379aab7643427bd0c1264007edb8adaf430680a7263a",
+    "metabolic/expanded.py": "8b0598dbbbdb66b86cdeefbb6753110b4153f12e6f49300fa1c88f577e22010c",
+    "metabolic/refined.py": "ca3efec87c342fca70603556abc2414929a0a1f8bf0259f9d77701fbf002f9be",
+    "metabolic/run_mechanism_study.py": "7aabd906abc68e4dcf8f279b25e7f31a7a7b509ab7dca411369639ca636f07c1",
+    "metabolic/adaptive_candidates.py": "e01ab2c5148f4203efc2f743230cf58262db162a2ab3c4ed807230cd6b1af199",
+    "metabolic/screening.py": "b2101793e6b0c8b98b95596ff02df00e90313aed05aa1df55335ac7d49ce219e",
+    "metabolic/train.py": "8c10995927aab95177e2e246a64a6ea6ea001414d347549b094a5efd8e091dd2",
+    "metabolic/comparison.py": "9770546ed5eb6c8d2d225f4c771a42c4bb55f35c6d3f25121c7fd8acaba237a0"
+  },
+  "analysis_code_sha256": {
+    "metabolic/analyze_clinical_v19.py": "0800304511a7bc1e1b59550f7981c6eb24d28bdf702d39ca18f5de40fc5da27a",
+    "metabolic/analyze_clinical_multitask.py": "22ab7ddfde3471c3ada407231372868cfe50845ff516a9a45d8200727fe000c5",
+    "metabolic/analyze_mechanism_study.py": "3978ec6b105d11d52d708f9ea78b71ccb7194dc551be5fbd254218349e1bde0c"
+  },
+  "public_package_hashes_sha256": "10d459bb66bd725e471210a2c32dfdfbbe21083aa260e96e4d550b3b51e63727",
+  "public_package_file_sha256": {
+    "models/clinical_v19_checkpoints/EPF_basic_clean_native.npz": "768826d73f0bd60c204d9c4077dde8c53a8007a1fbf1c0844ca3a93468b202ec",
+    "models/clinical_v19_checkpoints/EPF_field_only_basic_clean_native.npz": "c500765f993cc653ea0fc475b05eae0322113e3effc168022c7b721854ed9ef6",
+    "models/clinical_v19_checkpoints/EPF_joint.npz": "f439714e6d39dc8ed7d60656e6a2e40941d28a3bb90e2d46dc99fede6310d1e8",
+    "models/clinical_v19_checkpoints/EPF_regression.npz": "1f247c351b4f52fa4e887e4ad147e6d5479cffebb6662eb61ea4e3b409269447",
+    "models/clinical_v19_checkpoints/LR_basic_clean.npz": "d5f96b0f114896d2fc85116ecd3b457950b3cc629ac65ab19d7543ced14bc372",
+    "models/clinical_v19_checkpoints/LR_engineered_clean.npz": "1bbf87d1200299ce8e3ff4e5feffddd2118351a12ac0e0ab86cddc3480f2ff9b",
+    "models/clinical_v19_checkpoints/MLP_basic_clean_native.npz": "ae64e349fc1e19b1db023bc9625d8f66ec1fdea27b6c6ab0e7ecbe810e89237d",
+    "models/clinical_v19_checkpoints/base_preprocessor.npz": "d5ecb7fd79e5a8761f89e087e1734032b2b133c23014a2cf51b4b49cb07ffe54",
+    "models/clinical_v19_checkpoints/extra_preprocessor.npz": "8c0b079e862de1f48f3966de140ff5f882b79b9a3bc11815b03a3b9ddde4e840",
+    "models/clinical_v19_checkpoints/manifest.json": "778d1c57a4ab3c96649396fe268c25eb0f63f8d7c69cc4628a2fb7a87f4d2fce",
+    "models/clinical_v19_checkpoints/target_transform.npz": "0002946eb5723f468e751c0f048e86205f914ad150c59844013b38110393e041",
+    "models/clinical_v19_checkpoints/verification.json": "01889140e712bfc83f4ecdd37eb98ce4498c47013814a0db24ca790af17d57ea",
+    "models/event_field_v19.py": "ace51539e4a44d4b6e635398a16bcdb79a03aa7e4d293303c5eccde787a676d9",
+    "models/predict_clinical_v19.py": "f5079909c8aad3cb3c36b952dec4793806d0208fc3ada1cb72a9bdfe31e06a19",
+    "test_clinical_v19.py": "04779353e38be717ff23f5b68b0d2a9c4a516af77bba8ac4b6a695cbe296b044"
+  },
+  "data_provenance": "KNHANES 2021-2024 inputs and prior role archives were hash-checked locally; private file names and source paths are omitted from this public manifest"
+}

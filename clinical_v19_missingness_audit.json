@@ -1,0 +1,88 @@
+{
+  "version": "clinical_v19_missingness_audit",
+  "n": 4068,
+  "frozen_report_sha256": "b820e2c09b3d481a5b2a95a95bf646ce054d410ae4076dc414f190b0769684e9",
+  "legacy_view_generator_sha256": "7aabd906abc68e4dcf8f279b25e7f31a7a7b509ab7dca411369639ca636f07c1",
+  "corrected_view_generator_sha256": "85ccea1b29486e64f247a1e10c7392794036ec929a2bf579a2700d81686849a8",
+  "stochastic_views": {
+    "missing20_0": {
+      "nominal_group_probability": 0.2,
+      "legacy_waist_theoretical_probability": 0.3599999999999999,
+      "corrected_waist_theoretical_probability": 0.2,
+      "legacy_waist_draw_fraction": 0.3581612586037365,
+      "corrected_waist_draw_fraction": 0.19321533923303835,
+      "legacy_newly_missing_fraction_initial_observed": 0.35914786967418544,
+      "corrected_newly_missing_fraction_initial_observed": 0.19473684210526315,
+      "nonwaist_draws_identical": true
+    },
+    "missing20_1": {
+      "nominal_group_probability": 0.2,
+      "legacy_waist_theoretical_probability": 0.3599999999999999,
+      "corrected_waist_theoretical_probability": 0.2,
+      "legacy_waist_draw_fraction": 0.3466076696165192,
+      "corrected_waist_draw_fraction": 0.19665683382497542,
+      "legacy_newly_missing_fraction_initial_observed": 0.34786967418546366,
+      "corrected_newly_missing_fraction_initial_observed": 0.19699248120300752,
+      "nonwaist_draws_identical": true
+    },
+    "missing20_2": {
+      "nominal_group_probability": 0.2,
+      "legacy_waist_theoretical_probability": 0.3599999999999999,
+      "corrected_waist_theoretical_probability": 0.2,
+      "legacy_waist_draw_fraction": 0.3608652900688299,
+      "corrected_waist_draw_fraction": 0.20329400196656833,
+      "legacy_newly_missing_fraction_initial_observed": 0.3609022556390977,
+      "corrected_newly_missing_fraction_initial_observed": 0.20300751879699247,
+      "nonwaist_draws_identical": true
+    },
+    "missing10": {
+      "nominal_group_probability": 0.1,
+      "legacy_waist_theoretical_probability": 0.18999999999999995,
+      "corrected_waist_theoretical_probability": 0.1,
+      "legacy_waist_draw_fraction": 0.18977384464110128,
+      "corrected_waist_draw_fraction": 0.102015732546706,
+      "legacy_newly_missing_fraction_initial_observed": 0.18947368421052632,
+      "corrected_newly_missing_fraction_initial_observed": 0.10200501253132832,
+      "nonwaist_draws_identical": true
+    },
+    "missing30": {
+      "nominal_group_probability": 0.3,
+      "legacy_waist_theoretical_probability": 0.51,
+      "corrected_waist_theoretical_probability": 0.3,
+      "legacy_waist_draw_fraction": 0.5049164208456244,
+      "corrected_waist_draw_fraction": 0.2947394296951819,
+      "legacy_newly_missing_fraction_initial_observed": 0.5040100250626567,
+      "corrected_newly_missing_fraction_initial_observed": 0.2942355889724311,
+      "nonwaist_draws_identical": true
+    },
+    "missing40": {
+      "nominal_group_probability": 0.4,
+      "legacy_waist_theoretical_probability": 0.64,
+      "corrected_waist_theoretical_probability": 0.4,
+      "legacy_waist_draw_fraction": 0.6364306784660767,
+      "corrected_waist_draw_fraction": 0.3928220255653884,
+      "legacy_newly_missing_fraction_initial_observed": 0.6370927318295739,
+      "corrected_newly_missing_fraction_initial_observed": 0.3919799498746867,
+      "nonwaist_draws_identical": true
+    }
+  },
+  "BMI_noise25": {
+    "meaning": "Gaussian sigma = 25% of clean fit-role BMI SD; all observed BMI rows targeted",
+    "not_a_fraction_of_people_selected": true,
+    "feature_units": "kg/m^2",
+    "fit_role_sd_original_units": 4.286845446021203,
+    "specified_noise_sigma_original_units": 1.0717113615053007,
+    "originally_observed_n": 4055,
+    "finite_value_changed_n": 4055,
+    "finite_value_changed_fraction": 1.0
+  },
+  "findings": {
+    "confirmed_v19_waist_mask_bug": "WC and WHtR used two independent Bernoulli(p) draws combined by OR; group probability was 1-(1-p)^2, not p",
+    "corrected_v20_mask": "One WC draw is shared with derived WHtR; all nonwaist draws and legacy clean/block/noise numerical values remain unchanged",
+    "BMI_noise25_interpretation": "Gaussian sigma 0.25 x clean fit-role BMI SD applied to every observed BMI; 25 does not mean 25 percent of people",
+    "missingness_provenance": "Natural missing and artificial MCAR are both NaN before encoding; no provenance flag separates them",
+    "observation_vs_hypothesis": "Mask probability and encoding alias are verified code/data facts. Any MNAR or spurious-signal explanation for test metrics remains a hypothesis, not a demonstrated cause.",
+    "retraining_boundary": "Corrected stress on clean-trained checkpoints needs new evaluation only; paired20-trained v19 checkpoints saw legacy waist masking and require new fit, calibration, thresholds and test predictions before attributing a corrected-training effect."
+  },
+  "privacy": "Aggregate mask fractions and code hashes only; no raw rows or predictions"
+}

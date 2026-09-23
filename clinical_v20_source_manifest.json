@@ -1,0 +1,36 @@
+{
+  "version": "clinical_v20_public_source_manifest",
+  "training_manifest_sha256": "347bae4676eec3169a9361eb1ad5132cf1db3e22fb9107f0d7017a54d1fe34e8",
+  "analysis_manifest_sha256": "f9eda8246df4930752d47c999a98683d2656d6dc05a384223a83e6efddbdd2fa",
+  "parent_v19_training_manifest_sha256": "aefe984d61ebdae15a150849f81197323a132ce774955887922d8647e4702e65",
+  "training_code_sha256": {
+    "metabolic/run_clinical_v19.py": "20022657ae970f716937b9b24aa90497e616ef2d26fb2d1c12352fa83023904e",
+    "metabolic/clinical_v19_data.py": "3c41a170b68c5a9e967fc3ef2a5cdff4dd2199744de55eb00133839a48c4f61b",
+    "metabolic/event_field_v19.py": "ace51539e4a44d4b6e635398a16bcdb79a03aa7e4d293303c5eccde787a676d9",
+    "metabolic/event_plastic_field.py": "1b438f9bf934ae82041187db22de10de12911e1db7fa1f05d9c54aa345528c3a",
+    "metabolic/clinical_v19_calibration.py": "735193350bca8b43dbcfed6083bb3a43e47b73ef4864b0d92dd7459d1f17a8a0",
+    "metabolic/clinical_multitask.py": "299dccfcb6e7c4c1d2c053298b3d06bd60478e5bf7601d66cbf1ac30af412589",
+    "metabolic/data.py": "be69e4cc340f827ba42b379aab7643427bd0c1264007edb8adaf430680a7263a",
+    "metabolic/expanded.py": "8b0598dbbbdb66b86cdeefbb6753110b4153f12e6f49300fa1c88f577e22010c",
+    "metabolic/refined.py": "ca3efec87c342fca70603556abc2414929a0a1f8bf0259f9d77701fbf002f9be",
+    "metabolic/run_mechanism_study.py": "7aabd906abc68e4dcf8f279b25e7f31a7a7b509ab7dca411369639ca636f07c1",
+    "metabolic/adaptive_candidates.py": "e01ab2c5148f4203efc2f743230cf58262db162a2ab3c4ed807230cd6b1af199",
+    "metabolic/screening.py": "b2101793e6b0c8b98b95596ff02df00e90313aed05aa1df55335ac7d49ce219e",
+    "metabolic/train.py": "8c10995927aab95177e2e246a64a6ea6ea001414d347549b094a5efd8e091dd2",
+    "metabolic/comparison.py": "9770546ed5eb6c8d2d225f4c771a42c4bb55f35c6d3f25121c7fd8acaba237a0",
+    "metabolic/run_clinical_v20.py": "a5c97edbba38e0bd542b72da04520f4377e5984547baade19597e4838779e608",
+    "metabolic/clinical_v20_data.py": "c04e572ca5e437b5e730ae5aadd52ea1f0ff56998a4a2a3176a118b5bc4185d1",
+    "metabolic/clinical_v20_missingness.py": "85ccea1b29486e64f247a1e10c7392794036ec929a2bf579a2700d81686849a8"
+  },
+  "analysis_code_sha256": {
+    "metabolic/analyze_clinical_v20.py": "a655ec3f3e6c6a6e9320c48069705b836921417da8ec74dcb4b8411e004c49c8",
+    "metabolic/analyze_clinical_v19.py": "0800304511a7bc1e1b59550f7981c6eb24d28bdf702d39ca18f5de40fc5da27a",
+    "metabolic/analyze_clinical_multitask.py": "22ab7ddfde3471c3ada407231372868cfe50845ff516a9a45d8200727fe000c5",
+    "metabolic/analyze_mechanism_study.py": "3978ec6b105d11d52d708f9ea78b71ccb7194dc551be5fbd254218349e1bde0c",
+    "metabolic/clinical_v19_calibration.py": "735193350bca8b43dbcfed6083bb3a43e47b73ef4864b0d92dd7459d1f17a8a0",
+    "metabolic/screening.py": "b2101793e6b0c8b98b95596ff02df00e90313aed05aa1df55335ac7d49ce219e",
+    "scripts/report_clinical_v20.py": "96908fd895d8f544bbec62afef55c3481d562e658dbcc435be8b1c36ca12a112"
+  },
+  "public_corrected_mask_module_sha256": "85ccea1b29486e64f247a1e10c7392794036ec929a2bf579a2700d81686849a8",
+  "source_boundary": "The frozen v20 manifest also binds 210 reused v19 source units and private cohort files; their names and hashes are omitted from this public summary"
+}

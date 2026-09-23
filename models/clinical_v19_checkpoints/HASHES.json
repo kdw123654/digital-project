@@ -1,0 +1,17 @@
+{
+  "models/clinical_v19_checkpoints/EPF_basic_clean_native.npz": "768826d73f0bd60c204d9c4077dde8c53a8007a1fbf1c0844ca3a93468b202ec",
+  "models/clinical_v19_checkpoints/EPF_field_only_basic_clean_native.npz": "c500765f993cc653ea0fc475b05eae0322113e3effc168022c7b721854ed9ef6",
+  "models/clinical_v19_checkpoints/EPF_joint.npz": "f439714e6d39dc8ed7d60656e6a2e40941d28a3bb90e2d46dc99fede6310d1e8",
+  "models/clinical_v19_checkpoints/EPF_regression.npz": "1f247c351b4f52fa4e887e4ad147e6d5479cffebb6662eb61ea4e3b409269447",
+  "models/clinical_v19_checkpoints/LR_basic_clean.npz": "d5f96b0f114896d2fc85116ecd3b457950b3cc629ac65ab19d7543ced14bc372",
+  "models/clinical_v19_checkpoints/LR_engineered_clean.npz": "1bbf87d1200299ce8e3ff4e5feffddd2118351a12ac0e0ab86cddc3480f2ff9b",
+  "models/clinical_v19_checkpoints/MLP_basic_clean_native.npz": "ae64e349fc1e19b1db023bc9625d8f66ec1fdea27b6c6ab0e7ecbe810e89237d",
+  "models/clinical_v19_checkpoints/base_preprocessor.npz": "d5ecb7fd79e5a8761f89e087e1734032b2b133c23014a2cf51b4b49cb07ffe54",
+  "models/clinical_v19_checkpoints/extra_preprocessor.npz": "8c0b079e862de1f48f3966de140ff5f882b79b9a3bc11815b03a3b9ddde4e840",
+  "models/clinical_v19_checkpoints/manifest.json": "778d1c57a4ab3c96649396fe268c25eb0f63f8d7c69cc4628a2fb7a87f4d2fce",
+  "models/clinical_v19_checkpoints/target_transform.npz": "0002946eb5723f468e751c0f048e86205f914ad150c59844013b38110393e041",
+  "models/clinical_v19_checkpoints/verification.json": "01889140e712bfc83f4ecdd37eb98ce4498c47013814a0db24ca790af17d57ea",
+  "models/event_field_v19.py": "ace51539e4a44d4b6e635398a16bcdb79a03aa7e4d293303c5eccde787a676d9",
+  "models/predict_clinical_v19.py": "f5079909c8aad3cb3c36b952dec4793806d0208fc3ada1cb72a9bdfe31e06a19",
+  "test_clinical_v19.py": "04779353e38be717ff23f5b68b0d2a9c4a516af77bba8ac4b6a695cbe296b044"
+}

@@ -1,0 +1,712 @@
+{
+  "version": "clinical_factorial_v19",
+  "fold": 1,
+  "seed": 42,
+  "scope": "KNHANES 2021-24 age19-39 non-invasive research screening",
+  "not_full_cohort_refit": true,
+  "source_sha256_manifest": "aefe984d61ebdae15a150849f81197323a132ce774955887922d8647e4702e65",
+  "public_base_sha256": "fcac0173b48d241043b0d7fc3aa78184def1e469ca75b68ecc398850f5be3ad3",
+  "target_columns_are_outputs_only": [
+    "HE_glu",
+    "HE_sbp",
+    "HE_dbp",
+    "HE_TG",
+    "HE_HDL_st2"
+  ],
+  "raw_input_count": 19,
+  "basic_encoded_dim": 56,
+  "engineered_encoded_dim": 72,
+  "models": {
+    "EPF_basic_clean_native": {
+      "family": "EPF",
+      "mode": "classification",
+      "basis": "basic",
+      "input_dim": 56,
+      "output_dim": 4,
+      "initialization": "native",
+      "seed": 42,
+      "architecture": {
+        "dimension": 24,
+        "steps": 6,
+        "head_width": 96
+      },
+      "dropout": 0.1,
+      "use_linear_skip": true,
+      "parameters": 16267,
+      "state_file": "EPF_basic_clean_native.npz",
+      "calibration": {
+        "component_coefficients": [
+          [
+            0.872021597549308,
+            0.04904438749041894
+          ],
+          [
+            0.9100676624925321,
+            0.058981950602421604
+          ],
+          [
+            0.7368791516930701,
+            -0.29066476721271123
+          ],
+          [
+            1.1344102403568908,
+            0.06749053555553473
+          ]
+        ],
+        "component_coefficient_boundaries": {
+          "slope_zero": [
+            false,
+            false,
+            false,
+            false
+          ],
+          "slope_twenty": [
+            false,
+            false,
+            false,
+            false
+          ],
+          "intercept_minus_twenty": [
+            false,
+            false,
+            false,
+            false
+          ],
+          "intercept_plus_twenty": [
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        "gamma": -0.12095490750114865,
+        "gamma_endpoint": "none",
+        "calibration_weighted_bce": 0.5418696250641704,
+        "independent_weighted_bce": 0.5440941607841293,
+        "calibration_n": 362,
+        "calibration_effective_n": 294.99351201016043,
+        "component_positive_n": [
+          51,
+          36,
+          57,
+          50
+        ],
+        "component_weighted_prevalence": [
+          0.14862526273815282,
+          0.11268301833498603,
+          0.16839066975160022,
+          0.1348418923481984
+        ],
+        "any_positive_n": 129,
+        "any_weighted_prevalence": 0.37891905578185825,
+        "method": "v18_monotone_components_then_frechet_bounded_union_weighted_bce"
+      },
+      "thresholds": {
+        "raw_any": {
+          "0.9": 0.2941117779411513,
+          "0.95": 0.25150848930427305
+        },
+        "adjusted_any": {
+          "0.9": 0.2745761280949956,
+          "0.95": 0.23365959442319242
+        }
+      },
+      "calibration_n": 362,
+      "threshold_n": 338,
+      "unique_fit_people": 2205,
+      "source_unit": "fold1/seed42/conditions/basic_clean_native/EPF/classification",
+      "selection": "prespecified fold1 seed42 example; no held-out test winner selection"
+    },
+    "EPF_field_only_basic_clean_native": {
+      "family": "EPF_field_only",
+      "mode": "classification",
+      "basis": "basic",
+      "input_dim": 56,
+      "output_dim": 4,
+      "initialization": "native",
+      "seed": 42,
+      "architecture": {
+        "dimension": 12,
+        "steps": 4,
+        "head_width": 32
+      },
+      "dropout": 0.1,
+      "use_linear_skip": false,
+      "parameters": 3815,
+      "state_file": "EPF_field_only_basic_clean_native.npz",
+      "calibration": {
+        "component_coefficients": [
+          [
+            0.7587557217328957,
+            -0.1159580211265296
+          ],
+          [
+            0.8752279833846948,
+            0.05388271605088065
+          ],
+          [
+            0.7975878755401892,
+            -0.18346809210570592
+          ],
+          [
+            0.9779983076098759,
+            -0.07911176048876514
+          ]
+        ],
+        "component_coefficient_boundaries": {
+          "slope_zero": [
+            false,
+            false,
+            false,
+            false
+          ],
+          "slope_twenty": [
+            false,
+            false,
+            false,
+            false
+          ],
+          "intercept_minus_twenty": [
+            false,
+            false,
+            false,
+            false
+          ],
+          "intercept_plus_twenty": [
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        "gamma": -0.13886783264013208,
+        "gamma_endpoint": "none",
+        "calibration_weighted_bce": 0.552010519642119,
+        "independent_weighted_bce": 0.5548747806091499,
+        "calibration_n": 362,
+        "calibration_effective_n": 294.99351201016043,
+        "component_positive_n": [
+          51,
+          36,
+          57,
+          50
+        ],
+        "component_weighted_prevalence": [
+          0.14862526273815282,
+          0.11268301833498603,
+          0.16839066975160022,
+          0.1348418923481984
+        ],
+        "any_positive_n": 129,
+        "any_weighted_prevalence": 0.37891905578185825,
+        "method": "v18_monotone_components_then_frechet_bounded_union_weighted_bce"
+      },
+      "thresholds": {
+        "raw_any": {
+          "0.9": 0.2845916954004812,
+          "0.95": 0.2660868335835629
+        },
+        "adjusted_any": {
+          "0.9": 0.263539508453269,
+          "0.95": 0.24296842601747604
+        }
+      },
+      "calibration_n": 362,
+      "threshold_n": 338,
+      "unique_fit_people": 2205,
+      "source_unit": "fold1/seed42/conditions/basic_clean_native/EPF_field_only/classification",
+      "selection": "prespecified fold1 seed42 example; no held-out test winner selection"
+    },
+    "MLP_basic_clean_native": {
+      "family": "MLP",
+      "mode": "classification",
+      "basis": "basic",
+      "input_dim": 56,
+      "output_dim": 4,
+      "initialization": "native",
+      "seed": 42,
+      "architecture": {
+        "head_width": 64,
+        "hidden_layers": 1
+      },
+      "dropout": 0.1,
+      "use_linear_skip": true,
+      "parameters": 4264,
+      "state_file": "MLP_basic_clean_native.npz",
+      "calibration": {
+        "component_coefficients": [
+          [
+            0.9869780542210557,
+            0.19287662279891113
+          ],
+          [
+            1.0273832551686615,
+            0.2567562172986704
+          ],
+          [
+            0.825670424965658,
+            -0.24517647849228286
+          ],
+          [
+            1.0230068235195449,
+            -0.17522714336867828
+          ]
+        ],
+        "component_coefficient_boundaries": {
+          "slope_zero": [
+            false,
+            false,
+            false,
+            false
+          ],
+          "slope_twenty": [
+            false,
+            false,
+            false,
+            false
+          ],
+          "intercept_minus_twenty": [
+            false,
+            false,
+            false,
+            false
+          ],
+          "intercept_plus_twenty": [
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        "gamma": -0.08732503401746429,
+        "gamma_endpoint": "none",
+        "calibration_weighted_bce": 0.5399337239692626,
+        "independent_weighted_bce": 0.541056521232626,
+        "calibration_n": 362,
+        "calibration_effective_n": 294.99351201016043,
+        "component_positive_n": [
+          51,
+          36,
+          57,
+          50
+        ],
+        "component_weighted_prevalence": [
+          0.14862526273815282,
+          0.11268301833498603,
+          0.16839066975160022,
+          0.1348418923481984
+        ],
+        "any_positive_n": 129,
+        "any_weighted_prevalence": 0.37891905578185825,
+        "method": "v18_monotone_components_then_frechet_bounded_union_weighted_bce"
+      },
+      "thresholds": {
+        "raw_any": {
+          "0.9": 0.29632029840402047,
+          "0.95": 0.23321414774679886
+        },
+        "adjusted_any": {
+          "0.9": 0.2810152376503714,
+          "0.95": 0.21987946208351467
+        }
+      },
+      "calibration_n": 362,
+      "threshold_n": 338,
+      "unique_fit_people": 2205,
+      "source_unit": "fold1/seed42/conditions/basic_clean_native/MLP/classification",
+      "selection": "prespecified fold1 seed42 example; no held-out test winner selection"
+    },
+    "LR_basic_clean": {
+      "family": "LR",
+      "mode": "classification",
+      "basis": "basic",
+      "input_dim": 56,
+      "output_dim": 4,
+      "initialization": "linear_fit",
+      "seed": null,
+      "architecture": null,
+      "dropout": 0.0,
+      "use_linear_skip": false,
+      "parameters": 228,
+      "state_file": "LR_basic_clean.npz",
+      "calibration": {
+        "component_coefficients": [
+          [
+            0.9560902182233784,
+            0.19829706616899367
+          ],
+          [
+            1.0497924970842487,
+            0.33683433996006445
+          ],
+          [
+            0.8105448842205417,
+            -0.2245007960662925
+          ],
+          [
+            0.9253600970611898,
+            -0.3208665551037133
+          ]
+        ],
+        "component_coefficient_boundaries": {
+          "slope_zero": [
+            false,
+            false,
+            false,
+            false
+          ],
+          "slope_twenty": [
+            false,
+            false,
+            false,
+            false
+          ],
+          "intercept_minus_twenty": [
+            false,
+            false,
+            false,
+            false
+          ],
+          "intercept_plus_twenty": [
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        "gamma": -0.07851119859315113,
+        "gamma_endpoint": "none",
+        "calibration_weighted_bce": 0.5399603488827531,
+        "independent_weighted_bce": 0.5406574553103425,
+        "calibration_n": 362,
+        "calibration_effective_n": 294.99351201016043,
+        "component_positive_n": [
+          51,
+          36,
+          57,
+          50
+        ],
+        "component_weighted_prevalence": [
+          0.14862526273815282,
+          0.11268301833498603,
+          0.16839066975160022,
+          0.1348418923481984
+        ],
+        "any_positive_n": 129,
+        "any_weighted_prevalence": 0.37891905578185825,
+        "method": "v18_monotone_components_then_frechet_bounded_union_weighted_bce"
+      },
+      "thresholds": {
+        "raw_any": {
+          "0.9": 0.34034302746890516,
+          "0.95": 0.2831554156560186
+        },
+        "adjusted_any": {
+          "0.9": 0.3250841041440163,
+          "0.95": 0.2728754791508173
+        }
+      },
+      "calibration_n": 362,
+      "threshold_n": 338,
+      "unique_fit_people": 2205,
+      "source_unit": "fold1/baselines/basic_clean/LR",
+      "selection": "prespecified fold1 seed42 example; no held-out test winner selection"
+    },
+    "LR_engineered_clean": {
+      "family": "LR",
+      "mode": "classification",
+      "basis": "engineered",
+      "input_dim": 72,
+      "output_dim": 4,
+      "initialization": "linear_fit",
+      "seed": null,
+      "architecture": null,
+      "dropout": 0.0,
+      "use_linear_skip": false,
+      "parameters": 292,
+      "state_file": "LR_engineered_clean.npz",
+      "calibration": {
+        "component_coefficients": [
+          [
+            0.9328870533717072,
+            0.16799043507652442
+          ],
+          [
+            1.0408277019062044,
+            0.3276181290056478
+          ],
+          [
+            0.8494102216920265,
+            -0.1312568985242985
+          ],
+          [
+            0.901844417277569,
+            -0.3455882235957377
+          ]
+        ],
+        "component_coefficient_boundaries": {
+          "slope_zero": [
+            false,
+            false,
+            false,
+            false
+          ],
+          "slope_twenty": [
+            false,
+            false,
+            false,
+            false
+          ],
+          "intercept_minus_twenty": [
+            false,
+            false,
+            false,
+            false
+          ],
+          "intercept_plus_twenty": [
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        "gamma": -0.09928075184153262,
+        "gamma_endpoint": "none",
+        "calibration_weighted_bce": 0.5416441336848716,
+        "independent_weighted_bce": 0.542863747745457,
+        "calibration_n": 362,
+        "calibration_effective_n": 294.99351201016043,
+        "component_positive_n": [
+          51,
+          36,
+          57,
+          50
+        ],
+        "component_weighted_prevalence": [
+          0.14862526273815282,
+          0.11268301833498603,
+          0.16839066975160022,
+          0.1348418923481984
+        ],
+        "any_positive_n": 129,
+        "any_weighted_prevalence": 0.37891905578185825,
+        "method": "v18_monotone_components_then_frechet_bounded_union_weighted_bce"
+      },
+      "thresholds": {
+        "raw_any": {
+          "0.9": 0.3288369044769813,
+          "0.95": 0.2922341528936695
+        },
+        "adjusted_any": {
+          "0.9": 0.31106589364980947,
+          "0.95": 0.27815039777131517
+        }
+      },
+      "calibration_n": 362,
+      "threshold_n": 338,
+      "unique_fit_people": 2205,
+      "source_unit": "fold1/baselines/engineered_clean/LR",
+      "selection": "prespecified fold1 seed42 example; no held-out test winner selection"
+    },
+    "EPF_regression": {
+      "family": "EPF",
+      "mode": "regression",
+      "basis": "basic",
+      "input_dim": 56,
+      "output_dim": 5,
+      "initialization": "native",
+      "seed": 42,
+      "architecture": {
+        "dimension": 24,
+        "steps": 6,
+        "head_width": 96
+      },
+      "dropout": 0.1,
+      "use_linear_skip": true,
+      "parameters": 16421,
+      "state_file": "EPF_regression.npz",
+      "calibration": {
+        "component_coefficients": [
+          [
+            1.8070581048651182,
+            -0.6705367688484667
+          ],
+          [
+            1.5505838123294449,
+            -0.05864681875574495
+          ],
+          [
+            1.6939246497386518,
+            -0.2431386164967444
+          ],
+          [
+            1.7094381851354143,
+            -0.4724205162636151
+          ]
+        ],
+        "component_coefficient_boundaries": {
+          "slope_zero": [
+            false,
+            false,
+            false,
+            false
+          ],
+          "slope_twenty": [
+            false,
+            false,
+            false,
+            false
+          ],
+          "intercept_minus_twenty": [
+            false,
+            false,
+            false,
+            false
+          ],
+          "intercept_plus_twenty": [
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        "gamma": -0.17834516342538279,
+        "gamma_endpoint": "none",
+        "calibration_weighted_bce": 0.5571776791955818,
+        "independent_weighted_bce": 0.5607699714917951,
+        "calibration_n": 362,
+        "calibration_effective_n": 294.99351201016043,
+        "component_positive_n": [
+          51,
+          36,
+          57,
+          50
+        ],
+        "component_weighted_prevalence": [
+          0.14862526273815282,
+          0.11268301833498603,
+          0.16839066975160022,
+          0.1348418923481984
+        ],
+        "any_positive_n": 129,
+        "any_weighted_prevalence": 0.37891905578185825,
+        "method": "v18_monotone_components_then_frechet_bounded_union_weighted_bce"
+      },
+      "thresholds": {
+        "raw_any": {
+          "0.9": 0.3639717426423452,
+          "0.95": 0.30861188722071714
+        },
+        "adjusted_any": {
+          "0.9": 0.3243708815925121,
+          "0.95": 0.27616411641973465
+        }
+      },
+      "calibration_n": 362,
+      "threshold_n": 338,
+      "unique_fit_people": 2205,
+      "source_unit": "fold1/seed42/extensions/EPF/regression",
+      "selection": "prespecified fold1 seed42 example; no held-out test winner selection"
+    },
+    "EPF_joint": {
+      "family": "EPF",
+      "mode": "joint",
+      "basis": "basic",
+      "input_dim": 56,
+      "output_dim": 9,
+      "initialization": "native",
+      "seed": 42,
+      "architecture": {
+        "dimension": 24,
+        "steps": 6,
+        "head_width": 96
+      },
+      "dropout": 0.1,
+      "use_linear_skip": true,
+      "parameters": 17037,
+      "state_file": "EPF_joint.npz",
+      "calibration": {
+        "component_coefficients": [
+          [
+            0.8565320714579562,
+            0.06733305419356471
+          ],
+          [
+            0.7382964215434593,
+            -0.32485065357351156
+          ],
+          [
+            0.7418009122446229,
+            -0.2714170230858596
+          ],
+          [
+            1.0227010424368859,
+            -0.11936808414116126
+          ]
+        ],
+        "component_coefficient_boundaries": {
+          "slope_zero": [
+            false,
+            false,
+            false,
+            false
+          ],
+          "slope_twenty": [
+            false,
+            false,
+            false,
+            false
+          ],
+          "intercept_minus_twenty": [
+            false,
+            false,
+            false,
+            false
+          ],
+          "intercept_plus_twenty": [
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        "gamma": -0.1389015710616538,
+        "gamma_endpoint": "none",
+        "calibration_weighted_bce": 0.5610035841370149,
+        "independent_weighted_bce": 0.56376356073914,
+        "calibration_n": 362,
+        "calibration_effective_n": 294.99351201016043,
+        "component_positive_n": [
+          51,
+          36,
+          57,
+          50
+        ],
+        "component_weighted_prevalence": [
+          0.14862526273815282,
+          0.11268301833498603,
+          0.16839066975160022,
+          0.1348418923481984
+        ],
+        "any_positive_n": 129,
+        "any_weighted_prevalence": 0.37891905578185825,
+        "method": "v18_monotone_components_then_frechet_bounded_union_weighted_bce"
+      },
+      "thresholds": {
+        "raw_any": {
+          "0.9": 0.3215058903154744,
+          "0.95": 0.25228764522508307
+        },
+        "adjusted_any": {
+          "0.9": 0.29611047976048527,
+          "0.95": 0.2307904292736791
+        }
+      },
+      "calibration_n": 362,
+      "threshold_n": 338,
+      "unique_fit_people": 2205,
+      "source_unit": "fold1/seed42/extensions/EPF/joint",
+      "selection": "prespecified fold1 seed42 example; no held-out test winner selection"
+    }
+  }
+}

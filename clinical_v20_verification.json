@@ -1,0 +1,53 @@
+{
+  "version": "clinical_v20_public_verification_summary",
+  "lineage": {
+    "counts": {
+      "reused_clean_neural": 195,
+      "reused_clean_linear": 15,
+      "retrained_paired_neural": 120,
+      "refit_paired_LR": 10
+    },
+    "evaluated_units": 340,
+    "source_manifest_sha256": "347bae4676eec3169a9361eb1ad5132cf1db3e22fb9107f0d7017a54d1fe34e8",
+    "level": "artifact/input/lineage and v19 clean reproduction; full model-forward replay separate"
+  },
+  "full_forward": {
+    "status": "passed",
+    "scope": "full source-origin model-forward/calibration/threshold/13-view replay",
+    "total_units": 340,
+    "views_per_unit": 13,
+    "total_views": 4420,
+    "max_absolute_error": {
+      "components": 0.0,
+      "raw_any": 0.0,
+      "adjusted_any": 0.0,
+      "continuous": 0.0,
+      "calibration_coefficients": 0.0,
+      "calibration_gamma": 0.0,
+      "threshold": 0.0
+    },
+    "tolerances": {
+      "probability": 1e-06,
+      "measurement": 0.001,
+      "calibration": 1e-06,
+      "threshold": 1e-06
+    },
+    "source_manifest_sha256": "347bae4676eec3169a9361eb1ad5132cf1db3e22fb9107f0d7017a54d1fe34e8"
+  },
+  "analysis": {
+    "models": 26,
+    "prespecified_contrasts": 44,
+    "paired_PSU_replicates": 2000,
+    "clean_reused_exact_units": 210,
+    "new_fit_units": 130
+  },
+  "public_examples": {
+    "count": 7,
+    "lineage": "Prespecified fold1 clean examples unchanged from v19 (neural seed42; LR seedless); no v20 checkpoint promotion"
+  },
+  "tests": {
+    "local_pytest_passed": 203,
+    "public_unittest_passed_before_v20_report_copy": 21
+  },
+  "privacy": "Aggregate counts and maxima only; no private rows, predictions, role indices or absolute paths"
+}

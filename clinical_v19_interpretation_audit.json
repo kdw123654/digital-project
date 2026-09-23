@@ -1,0 +1,567 @@
+{
+  "version": "clinical_v19_interpretation_audit",
+  "n": 4068,
+  "source_manifest_sha256": "aefe984d61ebdae15a150849f81197323a132ce774955887922d8647e4702e65",
+  "frozen_report_sha256": "b820e2c09b3d481a5b2a95a95bf646ce054d410ae4076dc414f190b0769684e9",
+  "rank_calibration": {
+    "model_count": 26,
+    "model_view_comparisons": 338,
+    "clean_exceptions": {
+      "ap_increased": [],
+      "ap_unchanged": [],
+      "auc_increased": [],
+      "auc_unchanged": []
+    },
+    "all_view_exceptions": {
+      "ap_increased": [],
+      "ap_unchanged": [],
+      "auc_increased": [
+        {
+          "model": "MLP_joint",
+          "view": "body_missing",
+          "delta": 0.00010296086070349375
+        }
+      ],
+      "auc_unchanged": []
+    },
+    "seed_view_direction_counts": {
+      "ap_decreased": 1007,
+      "ap_increased": 7,
+      "ap_unchanged": 0,
+      "auc_decreased": 1009,
+      "auc_increased": 5,
+      "auc_unchanged": 0
+    },
+    "seed_view_count_note": "Seedless LR scores are repeated three times for pairing; seed-view counts are not independent experiment counts.",
+    "clean_models": [
+      {
+        "model": "EPF@basic_clean_native",
+        "raw_AP": 0.6865783509706774,
+        "adjusted_AP": 0.6815705353097,
+        "AP_change": -0.0050078156609774105,
+        "raw_AUC": 0.7840152532838293,
+        "adjusted_AUC": 0.7824490592806289,
+        "AUC_change": -0.0015661940032003496
+      },
+      {
+        "model": "MLP@basic_clean_native",
+        "raw_AP": 0.6937462715008499,
+        "adjusted_AP": 0.6879083295701891,
+        "AP_change": -0.005837941930660784,
+        "raw_AUC": 0.7874267206897007,
+        "adjusted_AUC": 0.7853504148739288,
+        "AUC_change": -0.002076305815771895
+      },
+      {
+        "model": "EPF@basic_clean_linear_anchor",
+        "raw_AP": 0.6949938121909233,
+        "adjusted_AP": 0.6908405364358282,
+        "AP_change": -0.004153275755095054,
+        "raw_AUC": 0.7878308045856043,
+        "adjusted_AUC": 0.7861422384234875,
+        "AUC_change": -0.001688566162116767
+      },
+      {
+        "model": "MLP@basic_clean_linear_anchor",
+        "raw_AP": 0.6922017339806019,
+        "adjusted_AP": 0.6878604188886008,
+        "AP_change": -0.004341315092001086,
+        "raw_AUC": 0.7874013196368986,
+        "adjusted_AUC": 0.785465556153436,
+        "AUC_change": -0.0019357634834625825
+      },
+      {
+        "model": "EPF@basic_paired20_native",
+        "raw_AP": 0.6852014954073367,
+        "adjusted_AP": 0.6790469755559215,
+        "AP_change": -0.00615451985141513,
+        "raw_AUC": 0.78218784716057,
+        "adjusted_AUC": 0.7800343535688429,
+        "AUC_change": -0.002153493591727118
+      },
+      {
+        "model": "MLP@basic_paired20_native",
+        "raw_AP": 0.6933225408222311,
+        "adjusted_AP": 0.6869827763092117,
+        "AP_change": -0.00633976451301943,
+        "raw_AUC": 0.7859852129484457,
+        "adjusted_AUC": 0.7836121217009184,
+        "AUC_change": -0.0023730912475272703
+      },
+      {
+        "model": "EPF@basic_paired20_linear_anchor",
+        "raw_AP": 0.6887048094363276,
+        "adjusted_AP": 0.6850240309141872,
+        "AP_change": -0.0036807785221404377,
+        "raw_AUC": 0.7825656833516986,
+        "adjusted_AUC": 0.7809607559834468,
+        "AUC_change": -0.0016049273682517962
+      },
+      {
+        "model": "MLP@basic_paired20_linear_anchor",
+        "raw_AP": 0.6877428435762423,
+        "adjusted_AP": 0.6830183486134999,
+        "AP_change": -0.004724494962742409,
+        "raw_AUC": 0.7822167200087043,
+        "adjusted_AUC": 0.7803436461249137,
+        "AUC_change": -0.0018730738837906546
+      },
+      {
+        "model": "EPF@engineered_clean_native",
+        "raw_AP": 0.6945689542804715,
+        "adjusted_AP": 0.6891141501177828,
+        "AP_change": -0.005454804162688731,
+        "raw_AUC": 0.786087645898819,
+        "adjusted_AUC": 0.7844384866604033,
+        "AUC_change": -0.0016491592384156872
+      },
+      {
+        "model": "MLP@engineered_clean_native",
+        "raw_AP": 0.6937650433361605,
+        "adjusted_AP": 0.6876432014838593,
+        "AP_change": -0.006121841852301246,
+        "raw_AUC": 0.7880021971183808,
+        "adjusted_AUC": 0.7856896866580946,
+        "AUC_change": -0.0023125104602862434
+      },
+      {
+        "model": "EPF@engineered_clean_linear_anchor",
+        "raw_AP": 0.6981874880058289,
+        "adjusted_AP": 0.6932331534194572,
+        "AP_change": -0.004954334586371623,
+        "raw_AUC": 0.7918602059903339,
+        "adjusted_AUC": 0.7903847840915228,
+        "AUC_change": -0.0014754218988111134
+      },
+      {
+        "model": "MLP@engineered_clean_linear_anchor",
+        "raw_AP": 0.6958883706769518,
+        "adjusted_AP": 0.6912979129187177,
+        "AP_change": -0.004590457758234079,
+        "raw_AUC": 0.7909590776433161,
+        "adjusted_AUC": 0.7893773862205125,
+        "AUC_change": -0.0015816914228036216
+      },
+      {
+        "model": "EPF@engineered_paired20_native",
+        "raw_AP": 0.6920806835382217,
+        "adjusted_AP": 0.6879642361475419,
+        "AP_change": -0.004116447390679845,
+        "raw_AUC": 0.7852531762001164,
+        "adjusted_AUC": 0.7838762273640268,
+        "AUC_change": -0.00137694883608952
+      },
+      {
+        "model": "MLP@engineered_paired20_native",
+        "raw_AP": 0.6944985442387724,
+        "adjusted_AP": 0.6880389668583451,
+        "AP_change": -0.00645957738042735,
+        "raw_AUC": 0.786190383846802,
+        "adjusted_AUC": 0.7838769853290186,
+        "AUC_change": -0.0023133985177833383
+      },
+      {
+        "model": "EPF@engineered_paired20_linear_anchor",
+        "raw_AP": 0.6941146256439324,
+        "adjusted_AP": 0.6890678464742545,
+        "AP_change": -0.005046779169677995,
+        "raw_AUC": 0.7868273875040641,
+        "adjusted_AUC": 0.7854641351449594,
+        "AUC_change": -0.0013632523591047274
+      },
+      {
+        "model": "MLP@engineered_paired20_linear_anchor",
+        "raw_AP": 0.6923706646107798,
+        "adjusted_AP": 0.6879983389573164,
+        "AP_change": -0.004372325653463349,
+        "raw_AUC": 0.7858542160109501,
+        "adjusted_AUC": 0.7843323064215321,
+        "AUC_change": -0.0015219095894180024
+      },
+      {
+        "model": "EPF_field_only@basic_clean_native",
+        "raw_AP": 0.687376668688895,
+        "adjusted_AP": 0.6821185962771567,
+        "AP_change": -0.005258072411738368,
+        "raw_AUC": 0.7838339588648046,
+        "adjusted_AUC": 0.7820558937940539,
+        "AUC_change": -0.001778065070750623
+      },
+      {
+        "model": "LR@basic_clean",
+        "raw_AP": 0.6925896385625241,
+        "adjusted_AP": 0.6891318297710951,
+        "AP_change": -0.0034578087914289846,
+        "raw_AUC": 0.7865076618418176,
+        "adjusted_AUC": 0.7846279912049839,
+        "AUC_change": -0.0018796706368336968
+      },
+      {
+        "model": "LR@basic_paired20",
+        "raw_AP": 0.6874795160335697,
+        "adjusted_AP": 0.6836857234016116,
+        "AP_change": -0.003793792631958115,
+        "raw_AUC": 0.7807556095053935,
+        "adjusted_AUC": 0.7788184110994418,
+        "AUC_change": -0.0019371984059516345
+      },
+      {
+        "model": "LR@engineered_clean",
+        "raw_AP": 0.6956521199494491,
+        "adjusted_AP": 0.6913023491717656,
+        "AP_change": -0.004349770777683504,
+        "raw_AUC": 0.7911079314215663,
+        "adjusted_AUC": 0.7896323003357479,
+        "AUC_change": -0.0014756310858183852
+      },
+      {
+        "model": "LR@engineered_paired20",
+        "raw_AP": 0.691686182067182,
+        "adjusted_AP": 0.6875324524006429,
+        "AP_change": -0.004153729666539152,
+        "raw_AUC": 0.7855752254478855,
+        "adjusted_AUC": 0.7840169236507567,
+        "AUC_change": -0.0015583017971287916
+      },
+      {
+        "model": "EPF_regression",
+        "raw_AP": 0.6871548645898472,
+        "adjusted_AP": 0.6806734302379125,
+        "AP_change": -0.006481434351934712,
+        "raw_AUC": 0.7812192079772368,
+        "adjusted_AUC": 0.7768420644933446,
+        "AUC_change": -0.004377143483892176
+      },
+      {
+        "model": "EPF_joint",
+        "raw_AP": 0.6862938227633721,
+        "adjusted_AP": 0.6799538870747556,
+        "AP_change": -0.006339935688616571,
+        "raw_AUC": 0.7815429990643454,
+        "adjusted_AUC": 0.7792413419971224,
+        "AUC_change": -0.002301657067223073
+      },
+      {
+        "model": "MLP_regression",
+        "raw_AP": 0.694625916823901,
+        "adjusted_AP": 0.6879547336800765,
+        "AP_change": -0.006671183143824422,
+        "raw_AUC": 0.7857422093163757,
+        "adjusted_AUC": 0.7825614625199666,
+        "AUC_change": -0.0031807467964091174
+      },
+      {
+        "model": "MLP_joint",
+        "raw_AP": 0.6951321720485618,
+        "adjusted_AP": 0.6894180979401957,
+        "AP_change": -0.005714074108366107,
+        "raw_AUC": 0.78715930860829,
+        "adjusted_AUC": 0.7851991279832774,
+        "AUC_change": -0.0019601806250125753
+      },
+      {
+        "model": "Ridge@basic_clean",
+        "raw_AP": 0.68888681320611,
+        "adjusted_AP": 0.6829681571862473,
+        "AP_change": -0.005918656019862745,
+        "raw_AUC": 0.7861903516273167,
+        "adjusted_AUC": 0.7822276127322594,
+        "AUC_change": -0.003962738895057272
+      }
+    ]
+  },
+  "seed_variation": {
+    "models": {
+      "EPF@basic_clean_native": {
+        "seeds": [
+          42,
+          43,
+          44
+        ],
+        "macro_ap": [
+          0.3469819906263063,
+          0.35035614652960606,
+          0.3432429996191393
+        ],
+        "mean": 0.34686037892501725,
+        "sample_sd": 0.003558132487259091,
+        "min": 0.3432429996191393,
+        "max": 0.35035614652960606,
+        "range": 0.007113146910466772,
+        "seedless_repeated_for_pairing": false
+      },
+      "MLP@basic_clean_native": {
+        "seeds": [
+          42,
+          43,
+          44
+        ],
+        "macro_ap": [
+          0.35599763805803564,
+          0.3405393288257921,
+          0.35201449342493235
+        ],
+        "mean": 0.34951715343625334,
+        "sample_sd": 0.008026042695139868,
+        "min": 0.3405393288257921,
+        "max": 0.35599763805803564,
+        "range": 0.015458309232243561,
+        "seedless_repeated_for_pairing": false
+      },
+      "LR@basic_clean": {
+        "seeds": [
+          42,
+          43,
+          44
+        ],
+        "macro_ap": [
+          0.3572703075596715,
+          0.3572703075596715,
+          0.3572703075596715
+        ],
+        "mean": 0.3572703075596715,
+        "sample_sd": 0.0,
+        "min": 0.3572703075596715,
+        "max": 0.3572703075596715,
+        "range": 0.0,
+        "seedless_repeated_for_pairing": true
+      },
+      "EPF@engineered_clean_linear_anchor": {
+        "seeds": [
+          42,
+          43,
+          44
+        ],
+        "macro_ap": [
+          0.36446711443796037,
+          0.3590564859706022,
+          0.36172814700491723
+        ],
+        "mean": 0.36175058247115993,
+        "sample_sd": 0.002705384005193316,
+        "min": 0.3590564859706022,
+        "max": 0.36446711443796037,
+        "range": 0.005410628467358181,
+        "seedless_repeated_for_pairing": false
+      },
+      "LR@engineered_clean": {
+        "seeds": [
+          42,
+          43,
+          44
+        ],
+        "macro_ap": [
+          0.3594734720559497,
+          0.3594734720559497,
+          0.3594734720559497
+        ],
+        "mean": 0.35947347205594965,
+        "sample_sd": 6.798699777552591e-17,
+        "min": 0.3594734720559497,
+        "max": 0.3594734720559497,
+        "range": 0.0,
+        "seedless_repeated_for_pairing": true
+      }
+    },
+    "paired_differences": {
+      "primary_EPF_minus_MLP": {
+        "models": [
+          "EPF@basic_clean_native",
+          "MLP@basic_clean_native"
+        ],
+        "seeds": [
+          42,
+          43,
+          44
+        ],
+        "paired_macro_ap_difference": [
+          -0.009015647431729334,
+          0.009816817703813985,
+          -0.008771493805793062
+        ],
+        "mean": -0.0026567745112361374,
+        "sample_sd": 0.01080313749837443,
+        "positive_seeds": 1,
+        "negative_seeds": 2,
+        "zero_seeds": 0
+      },
+      "primary_EPF_minus_LR": {
+        "models": [
+          "EPF@basic_clean_native",
+          "LR@basic_clean"
+        ],
+        "seeds": [
+          42,
+          43,
+          44
+        ],
+        "paired_macro_ap_difference": [
+          -0.010288316933365182,
+          -0.006914161030065424,
+          -0.014027307940532197
+        ],
+        "mean": -0.010409928634654267,
+        "sample_sd": 0.003558132487259091,
+        "positive_seeds": 0,
+        "negative_seeds": 3,
+        "zero_seeds": 0
+      },
+      "posthoc_engineered_anchor_EPF_minus_matched_LR": {
+        "models": [
+          "EPF@engineered_clean_linear_anchor",
+          "LR@engineered_clean"
+        ],
+        "seeds": [
+          42,
+          43,
+          44
+        ],
+        "paired_macro_ap_difference": [
+          0.004993642382010666,
+          -0.0004169860853475149,
+          0.0022546749489675277
+        ],
+        "mean": 0.002277110415210226,
+        "sample_sd": 0.002705384005193316,
+        "positive_seeds": 2,
+        "negative_seeds": 1,
+        "zero_seeds": 0
+      }
+    },
+    "interpretation": "Three seed scores are repeated fits on the same five test folds, not independent cohort replicates or a retraining CI. LR has no random seed; its OOF score is repeated solely for pairing."
+  },
+  "multiplicity": {
+    "prespecified_contrasts": 44,
+    "metrics_per_contrast": 7,
+    "unadjusted_intervals": 308,
+    "posthoc_matched_comparison_extra_metrics": 5,
+    "interpretation": "Intervals are descriptive and not family-wise error controlled; inspecting many conditions and metrics after prior v16/v18 exploration limits confirmatory claims."
+  },
+  "absolute_gap_bootstrap": {
+    "frozen_contrast_count": 44,
+    "frozen_absolute_gap_ci_excludes_zero_count": 0,
+    "all_frozen_absolute_gap_contrasts_reproduced": true,
+    "selected_distributions": {
+      "primary_EPF_vs_LR": {
+        "absolute_gap_improvement": {
+          "estimate": 0.004103967751196816,
+          "ci95": [
+            -0.0046013347852431425,
+            0.0061279090304181445
+          ],
+          "sample_skewness": -1.6265408250139617,
+          "kde_peaks_scott_5pct_prominence": [
+            {
+              "location": -0.003835969539518779,
+              "relative_height": 0.1061661356217368
+            },
+            {
+              "location": 0.004026980406298223,
+              "relative_height": 1.0
+            }
+          ]
+        },
+        "signed_gap_difference_first_minus_second": {
+          "estimate": -0.004103967751196816,
+          "ci95": [
+            -0.006241406959037174,
+            -0.0018317789103653869
+          ]
+        },
+        "adjusted_any_brier_improvement_frozen_report": {
+          "estimate": -0.0005134819666469115,
+          "ci95": [
+            -0.0024164279139827667,
+            0.0013749358222277016
+          ]
+        }
+      },
+      "primary_EPF_vs_MLP": {
+        "absolute_gap_improvement": {
+          "estimate": 0.0011841419398027101,
+          "ci95": [
+            -0.0019607301500175647,
+            0.0031076496609184693
+          ],
+          "sample_skewness": -0.2624946398893113,
+          "kde_peaks_scott_5pct_prominence": [
+            {
+              "location": 0.0008728507056747605,
+              "relative_height": 1.0
+            }
+          ]
+        },
+        "signed_gap_difference_first_minus_second": {
+          "estimate": -0.0011841419398027101,
+          "ci95": [
+            -0.0032890610648531825,
+            0.0008706467731810536
+          ]
+        },
+        "adjusted_any_brier_improvement_frozen_report": {
+          "estimate": -0.00163248615929526,
+          "ci95": [
+            -0.003190086330374267,
+            1.5788261331079652e-05
+          ]
+        }
+      },
+      "primary_EPF_vs_field_only": {
+        "absolute_gap_improvement": {
+          "estimate": -0.000490373149915348,
+          "ci95": [
+            -0.0013861396344755615,
+            0.001437709025976871
+          ],
+          "sample_skewness": 0.3577114473240996,
+          "kde_peaks_scott_5pct_prominence": [
+            {
+              "location": -0.00027992234113883587,
+              "relative_height": 1.0
+            }
+          ]
+        },
+        "signed_gap_difference_first_minus_second": {
+          "estimate": 0.000490373149915348,
+          "ci95": [
+            -0.0005252122614804206,
+            0.0014517302257053613
+          ]
+        },
+        "adjusted_any_brier_improvement_frozen_report": {
+          "estimate": -5.672565913600325e-05,
+          "ci95": [
+            -0.0008180848399298126,
+            0.0007231040614889643
+          ]
+        }
+      },
+      "posthoc_engineered_anchor_EPF_vs_matched_LR": {
+        "absolute_gap_improvement": {
+          "estimate": 0.0002948361793253893,
+          "ci95": [
+            -0.00042390823818113434,
+            0.0007579494389522752
+          ],
+          "sample_skewness": -0.351373843714146,
+          "kde_peaks_scott_5pct_prominence": [
+            {
+              "location": 0.0002438476731116253,
+              "relative_height": 1.0
+            }
+          ]
+        },
+        "signed_gap_difference_first_minus_second": {
+          "estimate": -0.0002948361793253893,
+          "ci95": [
+            -0.0007631695974143509,
+            0.0002052108291408538
+          ]
+        }
+      }
+    },
+    "interpretation": "Absolute value has a kink at signed gap zero. Percentile PSU intervals are descriptive and may be skewed when replicate gaps cross zero; multimodality is neither mathematically necessary nor established merely by the kink. KDE peak counts are bandwidth-sensitive diagnostics, not a formal modality test.",
+    "alternatives": "Report signed calibration-in-the-large gap with its direction, and Brier score as a proper probability score; retain the frozen absolute-gap point estimates rather than replacing them post hoc."
+  },
+  "privacy": "Aggregate model/view/seed metrics only; no person-level predictions or role indices"
+}

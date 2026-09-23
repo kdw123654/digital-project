@@ -1,0 +1,92 @@
+{
+  "scope": "Read-only original KNHANES 2021-24 labels, survey role and threshold audit; aggregate only",
+  "n": 4068,
+  "survey_weight": {
+    "same_archived_values": true,
+    "equal_duration_pooled_factor": 0.25,
+    "global_rescaling_changes_weighted_prevalence": false,
+    "interpretation": "Each of four equally long survey years can receive wt_itvex/4; the common factor cancels in weighted prevalence and sensitivity. Year shares still follow each year's eligible weighted mass."
+  },
+  "roles": {
+    "within_fold_row_overlap_total": 0,
+    "within_fold_psu_overlap_total": 0,
+    "test_person_coverage_once": true,
+    "cross_fold_role_reuse_pair_counts": {
+      "calibration_versus_threshold_across_different_folds": 426,
+      "calibration_versus_test_across_different_folds": 1594,
+      "threshold_versus_test_across_different_folds": 1666
+    },
+    "unique_calibration_people_across_folds": 1367,
+    "unique_threshold_people_across_folds": 1390,
+    "interpretation": "Roles are disjoint inside each fold; the same cohort is intentionally reused across different folds and three seeds. Reused rows do not increase independent participant n."
+  },
+  "threshold": {
+    "selection_rule": "highest unique risk with threshold-role weighted positive sensitivity >= target",
+    "decision_inequality": "risk >= cutoff",
+    "out_of_sample_guarantee": false,
+    "recomputed_units": 10,
+    "stored_cuts_match": true,
+    "clean_test_sensitivity": {
+      "raw_any": {
+        "0.9": {
+          "model_count": 26,
+          "met_or_exceeded_n": 0,
+          "below_target_n": 26,
+          "minimum_test_sensitivity": 0.8637343448600024,
+          "maximum_test_sensitivity": 0.8883187771685497
+        },
+        "0.95": {
+          "model_count": 26,
+          "met_or_exceeded_n": 0,
+          "below_target_n": 26,
+          "minimum_test_sensitivity": 0.9211777168209521,
+          "maximum_test_sensitivity": 0.9360789189392272
+        }
+      },
+      "adjusted_any": {
+        "0.9": {
+          "model_count": 26,
+          "met_or_exceeded_n": 0,
+          "below_target_n": 26,
+          "minimum_test_sensitivity": 0.8621520671255106,
+          "maximum_test_sensitivity": 0.8857027265293979
+        },
+        "0.95": {
+          "model_count": 26,
+          "met_or_exceeded_n": 0,
+          "below_target_n": 26,
+          "minimum_test_sensitivity": 0.9181830532479451,
+          "maximum_test_sensitivity": 0.9357876740155322
+        }
+      }
+    }
+  },
+  "bp": {
+    "test_actual_BP_weighted_prevalence": 0.10103151922765924,
+    "test_pre_component_calibration_mean": 0.10374503511245993,
+    "test_post_component_calibration_mean": 0.11983315919882342,
+    "calibration_role_pre_component_calibration_fold_seed_mean": 0.10385418797006021,
+    "calibration_role_post_component_calibration_fold_seed_mean": 0.11976390997677933,
+    "interpretation": "Pre/post is a descriptive recalculation using frozen models. Calibration fits each fold's separate calibration role; test prevalence differs, so a calibration-role mean need not equal OOF test prevalence."
+  },
+  "reported_bp": {
+    "model_count": 26,
+    "test_BP_predicted_mean_min_across_26_models": 0.11968886808665796,
+    "test_BP_predicted_mean_max_across_26_models": 0.1220047517722833,
+    "models_with_test_BP_predicted_mean_above_observed_n": 26
+  },
+  "minimum_107_clarification": {
+    "fold5_calibration_any_positive_n": 107,
+    "fold5_threshold_any_positive_n": 115,
+    "minimum_calibration_any_positive_n_across_folds": 107,
+    "minimum_threshold_any_positive_n_across_folds": 113,
+    "meaning": "The cited minimum 107 is a calibration-role count, not the threshold-role positive count."
+  },
+  "limits": [
+    "This audit does not change any frozen model or split.",
+    "Cross-fold and cross-seed reuse means role counts are not independent additions to cohort n.",
+    "Weighted empirical threshold-role sensitivity has no automatic out-of-sample 90/95% guarantee.",
+    "Fixed test scores cannot by themselves identify a causal mechanism for calibration transport differences."
+  ],
+  "privacy": "Aggregate survey-role and threshold checks only; no participant rows or split indices"
+}

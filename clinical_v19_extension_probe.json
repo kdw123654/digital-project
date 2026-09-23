@@ -1,0 +1,278 @@
+{
+  "version": "clinical_v19_extension_comparison_probe",
+  "status": "exploratory_posthoc_not_prespecified_primary",
+  "n": 4068,
+  "test_rows_unique": 4068,
+  "comparison_table": [
+    {
+      "contrast": "MLP_regression_minus_MLP_classification",
+      "first_model": "MLP_regression",
+      "second_model": "MLP@basic_clean_native",
+      "metrics": {
+        "component_macro_ap_difference": {
+          "estimate": 0.012887136015806933,
+          "ci95": [
+            0.00374356809723666,
+            0.02140924269034029
+          ],
+          "valid_replicates": 2000
+        },
+        "component_brier_improvement": {
+          "estimate": 0.00040763662290105307,
+          "ci95": [
+            -0.00034247620794993183,
+            0.0011859361685287212
+          ],
+          "valid_replicates": 2000
+        },
+        "adjusted_any_ap_difference": {
+          "estimate": 4.6404109887432377e-05,
+          "ci95": [
+            -0.00853104457870561,
+            0.008778259646612037
+          ],
+          "valid_replicates": 2000
+        },
+        "adjusted_any_brier_improvement": {
+          "estimate": -0.0024730522770602115,
+          "ci95": [
+            -0.004437559719628093,
+            -0.0004666422207179704
+          ],
+          "valid_replicates": 2000
+        }
+      }
+    },
+    {
+      "contrast": "EPF_regression_minus_EPF_classification",
+      "first_model": "EPF_regression",
+      "second_model": "EPF@basic_clean_native",
+      "metrics": {
+        "component_macro_ap_difference": {
+          "estimate": 0.005470183181590482,
+          "ci95": [
+            -0.00263595758146251,
+            0.014904278496841629
+          ],
+          "valid_replicates": 2000
+        },
+        "component_brier_improvement": {
+          "estimate": -0.0002586557859079325,
+          "ci95": [
+            -0.0009733079304676234,
+            0.00046923471412310956
+          ],
+          "valid_replicates": 2000
+        },
+        "adjusted_any_ap_difference": {
+          "estimate": -0.0008971050717876405,
+          "ci95": [
+            -0.009502460895555866,
+            0.007988033297153458
+          ],
+          "valid_replicates": 2000
+        },
+        "adjusted_any_brier_improvement": {
+          "estimate": -0.0035299860397471072,
+          "ci95": [
+            -0.005768964542547091,
+            -0.0013535737225741594
+          ],
+          "valid_replicates": 2000
+        }
+      }
+    },
+    {
+      "contrast": "MLP_regression_minus_Ridge",
+      "first_model": "MLP_regression",
+      "second_model": "Ridge@basic_clean",
+      "metrics": {
+        "component_macro_ap_difference": {
+          "estimate": 0.004018234047070912,
+          "ci95": [
+            -0.004749870849690721,
+            0.011856243135365032
+          ],
+          "valid_replicates": 2000
+        },
+        "component_brier_improvement": {
+          "estimate": 0.0006872750213751389,
+          "ci95": [
+            0.00010231543218834905,
+            0.0012439896764840188
+          ],
+          "valid_replicates": 2000
+        },
+        "adjusted_any_ap_difference": {
+          "estimate": 0.0049865764938290535,
+          "ci95": [
+            -0.0019299745955804384,
+            0.011809383785331508
+          ],
+          "valid_replicates": 2000
+        },
+        "adjusted_any_brier_improvement": {
+          "estimate": 0.0020505114635445687,
+          "ci95": [
+            0.0008467174656110035,
+            0.003268109471220706
+          ],
+          "valid_replicates": 2000
+        },
+        "macro_NMSE_improvement": {
+          "estimate": 0.0018594135970079195,
+          "ci95": [
+            -0.002352259509670939,
+            0.005762959706871681
+          ],
+          "valid_replicates": 2000
+        }
+      }
+    },
+    {
+      "contrast": "EPF_regression_minus_Ridge",
+      "first_model": "EPF_regression",
+      "second_model": "Ridge@basic_clean",
+      "metrics": {
+        "component_macro_ap_difference": {
+          "estimate": -0.00605549329838162,
+          "ci95": [
+            -0.01615885626862809,
+            0.003981023994452518
+          ],
+          "valid_replicates": 2000
+        },
+        "component_brier_improvement": {
+          "estimate": -0.0004915974274247031,
+          "ci95": [
+            -0.0012595480802723336,
+            0.00022216154159893073
+          ],
+          "valid_replicates": 2000
+        },
+        "adjusted_any_ap_difference": {
+          "estimate": -0.002294726948335102,
+          "ci95": [
+            -0.01355903941553042,
+            0.00845450370412637
+          ],
+          "valid_replicates": 2000
+        },
+        "adjusted_any_brier_improvement": {
+          "estimate": -0.000638908458437587,
+          "ci95": [
+            -0.002128407672279606,
+            0.0008737512662097697
+          ],
+          "valid_replicates": 2000
+        },
+        "macro_NMSE_improvement": {
+          "estimate": -0.010533609870818564,
+          "ci95": [
+            -0.016441499432529927,
+            -0.00549695819090689
+          ],
+          "valid_replicates": 2000
+        }
+      }
+    },
+    {
+      "contrast": "MLP_regression_minus_LR",
+      "first_model": "MLP_regression",
+      "second_model": "LR@basic_clean",
+      "metrics": {
+        "component_macro_ap_difference": {
+          "estimate": 0.005133981892388895,
+          "ci95": [
+            -0.005811204073928695,
+            0.014931510272346411
+          ],
+          "valid_replicates": 2000
+        },
+        "component_brier_improvement": {
+          "estimate": 0.0007247671934902944,
+          "ci95": [
+            -0.0002351571637962041,
+            0.0016553208000932016
+          ],
+          "valid_replicates": 2000
+        },
+        "adjusted_any_ap_difference": {
+          "estimate": -0.0011770960910186812,
+          "ci95": [
+            -0.00940805773998303,
+            0.0075056116107487325
+          ],
+          "valid_replicates": 2000
+        },
+        "adjusted_any_brier_improvement": {
+          "estimate": -0.001354048084411863,
+          "ci95": [
+            -0.0031173098742684714,
+            0.0005209959285928654
+          ],
+          "valid_replicates": 2000
+        }
+      }
+    },
+    {
+      "contrast": "EPF_regression_minus_LR",
+      "first_model": "EPF_regression",
+      "second_model": "LR@basic_clean",
+      "metrics": {
+        "component_macro_ap_difference": {
+          "estimate": -0.0049397454530636375,
+          "ci95": [
+            -0.015869998904821044,
+            0.005287676106452768
+          ],
+          "valid_replicates": 2000
+        },
+        "component_brier_improvement": {
+          "estimate": -0.0004541052553095476,
+          "ci95": [
+            -0.0014493287236355477,
+            0.0005490374354427644
+          ],
+          "valid_replicates": 2000
+        },
+        "adjusted_any_ap_difference": {
+          "estimate": -0.008458399533182837,
+          "ci95": [
+            -0.01943006870902995,
+            0.002142442744560751
+          ],
+          "valid_replicates": 2000
+        },
+        "adjusted_any_brier_improvement": {
+          "estimate": -0.004043468006394019,
+          "ci95": [
+            -0.006202028470843264,
+            -0.0019034800002637566
+          ],
+          "valid_replicates": 2000
+        }
+      }
+    }
+  ],
+  "uncertainty": {
+    "replicates": 2000,
+    "rng_seed": 202609238,
+    "survey": {
+      "full_frame_psus": 768,
+      "domain_psus": 699,
+      "strata": 108,
+      "singleton_strata": 0,
+      "method": "n_h-1 draws with replacement; multiplicity*n_h/(n_h-1); full survey PSUs; no FPC"
+    },
+    "scope": "Paired full-frame PSU bootstrap of fixed clean OOF predictions, conditional on fitted models",
+    "limits": "Six post-hoc contrasts and 26 displayed intervals have no multiplicity adjustment, full retraining uncertainty, or independent cohort"
+  },
+  "design_limits": "All models use basic clean inputs and the original five PSU test folds. Regression-only NN uses five continuous targets with a 5-output head; classification NN and LR use four binary targets with 4-output heads. The selected NN backbone/config is reused, but the task labels and output structure change, so these contrasts do not identify a pure objective effect. Ridge alpha and LR C were each selected separately on clean validation.",
+  "validation": {
+    "frozen_report_point_max_abs_error": 3.3306690738754696e-16,
+    "source_manifest_sha256": "116eef71232537cdb143a5b9134ca1eba209d28da68e90c56bef09c6e9f9bddc",
+    "frozen_report_sha256": "b820e2c09b3d481a5b2a95a95bf646ce054d410ae4076dc414f190b0769684e9"
+  },
+  "privacy": "Six aggregate fixed-OOF contrasts only; no participant predictions or role indices"
+}

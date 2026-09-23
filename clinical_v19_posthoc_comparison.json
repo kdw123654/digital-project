@@ -1,0 +1,73 @@
+{
+  "version": "clinical_v19_posthoc_matched_comparison",
+  "status": "exploratory_posthoc_not_prespecified_primary",
+  "n": 4068,
+  "models": {
+    "EPF": "EPF@engineered_clean_linear_anchor",
+    "LR": "LR@engineered_clean"
+  },
+  "comparison": "EPF minus LR; engineered inputs and clean fit in both; EPF linear_anchor versus independently validation-selected LR C",
+  "view": "clean held-out OOF from the original five PSU test folds",
+  "seed_handling": "Mean of three EPF seed metrics; seedless LR repeated only to align paired comparisons, not an LR ensemble",
+  "metrics": {
+    "component_macro_ap_difference": {
+      "estimate": 0.0022771104152102817,
+      "ci95": [
+        -0.0015962288441405514,
+        0.0057394135232340365
+      ],
+      "valid_replicates": 2000
+    },
+    "component_brier_improvement": {
+      "estimate": 0.0004027436648046667,
+      "ci95": [
+        9.927877026001259e-05,
+        0.0007317850950831924
+      ],
+      "valid_replicates": 2000
+    },
+    "adjusted_any_ap_difference": {
+      "estimate": 0.0019308042476917642,
+      "ci95": [
+        -0.002142428828983409,
+        0.00604324925499226
+      ],
+      "valid_replicates": 2000
+    },
+    "adjusted_any_brier_improvement": {
+      "estimate": 0.0004878737860282145,
+      "ci95": [
+        4.060455849101557e-05,
+        0.0009450909810563762
+      ],
+      "valid_replicates": 2000
+    },
+    "matched95_specificity_difference": {
+      "estimate": 0.0026768285025410843,
+      "ci95": [
+        -0.020689395966718014,
+        0.026716469813146116
+      ],
+      "valid_replicates": 2000
+    }
+  },
+  "uncertainty": {
+    "replicates": 2000,
+    "rng_seed": 202609237,
+    "survey": {
+      "full_frame_psus": 768,
+      "domain_psus": 699,
+      "strata": 108,
+      "singleton_strata": 0,
+      "method": "n_h-1 draws with replacement; multiplicity*n_h/(n_h-1); full survey PSUs; no FPC"
+    },
+    "scope": "Paired full-frame PSU bootstrap of fixed OOF predictions; conditional on fitted models",
+    "limitations": "Post-hoc comparison after inspecting held-out condition results; no multiplicity correction, full retraining uncertainty, or independent cohort. Do not promote this condition as a test-selected winner."
+  },
+  "provenance": {
+    "training_sources_sha256": "aefe984d61ebdae15a150849f81197323a132ce774955887922d8647e4702e65",
+    "analysis_sources_sha256": "72e88bf5576bdbea6f1df0e7857bed94c48c2f027dc5fa0c1311d595918f11b9",
+    "reproduction_script_sha256": "b8caa8ae4bc23f04b3a99a7ed1a72623df1a8a50091d22f808c02e4eacb4df91"
+  },
+  "privacy": "Only aggregate statistics; no participant rows, predictions, role indices, or absolute source paths"
+}

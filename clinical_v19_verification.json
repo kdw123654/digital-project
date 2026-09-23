@@ -1,0 +1,65 @@
+{
+  "version": "clinical_v19_public_verification_summary",
+  "study": {
+    "status": "passed",
+    "units": {
+      "neural": 315,
+      "linear": 25
+    },
+    "views": {
+      "neural": 4095,
+      "linear": 325
+    },
+    "total_views": 4420,
+    "max_absolute_error": {
+      "components": 0.0,
+      "raw_any": 0.0,
+      "adjusted_any": 0.0,
+      "continuous": 0.0,
+      "calibration_coefficients": 0.0,
+      "calibration_gamma": 0.0,
+      "threshold": 0.0
+    },
+    "tolerances": {
+      "probability": 1e-06,
+      "measurement": 0.001,
+      "calibration": 1e-06,
+      "threshold": 1e-06
+    },
+    "scope": "checkpoint and frozen linear-coefficient reproduction only",
+    "source_manifest_sha256": "aefe984d61ebdae15a150849f81197323a132ce774955887922d8647e4702e65"
+  },
+  "portable_examples": {
+    "models": 7,
+    "cpu_cuda_pairs": 14,
+    "test_views_per_pair": 13,
+    "max_absolute_error": {
+      "components": 7.013199532779346e-07,
+      "raw_any": 6.419107020372294e-07,
+      "adjusted_any": 6.00712813936255e-07,
+      "continuous": 0.00017464255961385788
+    },
+    "package_hashes_checked": 15,
+    "selection": "Prespecified fold1 examples (neural seed42; LR seedless), not full-cohort refits or test-selected winners"
+  },
+  "tests": {
+    "local_pytest_passed": 173,
+    "public_unittest_passed": 18
+  },
+  "execution": {
+    "tuning": {
+      "status": "tune_only",
+      "max_concurrent_workers": 2,
+      "shared_device_timing_limit": "Shared-device fit_seconds are not fair per-model speed comparisons"
+    },
+    "evaluation": {
+      "status": "run_after_parent_tuning_review",
+      "expected_units": 340,
+      "max_concurrent_workers": 2,
+      "all_five_folds_started": true,
+      "no_intermediate_test_analysis": true,
+      "shared_device_timing_limit": "Shared-device fit_seconds are not fair per-model speed comparisons"
+    }
+  },
+  "privacy": "Only aggregate counts and error maxima; no person-level records or absolute paths"
+}

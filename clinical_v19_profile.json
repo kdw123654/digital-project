@@ -1,0 +1,525 @@
+{
+  "version": "clinical_v19_inference_profile",
+  "scope": "Five prespecified fold1 examples (neural seed42; LR seedless)",
+  "source_sha256_manifest": "aefe984d61ebdae15a150849f81197323a132ce774955887922d8647e4702e65",
+  "preconditions": "All 340 units complete, frozen source unchanged, portable 13-view CPU/CUDA parity and hashes verified; no concurrent training",
+  "stimuli": "Public synthetic raw19 rows; encoded before forward timing; no private participant rows",
+  "warmup_calls": 8,
+  "timed_calls": 40,
+  "cuda_timing": "Synchronize immediately before and after each timed call",
+  "cpu_cuda_comparison": "Separate device strata; no combined speed ranking",
+  "hardware": {
+    "python": "3.13.1",
+    "platform": "Windows-11-10.0.22631-SP0",
+    "cpu": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
+    "logical_cpu_count": 12,
+    "cpu_threads_used": 1,
+    "torch": "2.8.0+cu126",
+    "numpy": "2.2.6",
+    "scipy": "1.15.2",
+    "cuda_runtime": "12.6",
+    "cuda_device": "NVIDIA GeForce RTX 4060"
+  },
+  "inference": [
+    {
+      "model": "EPF_basic_clean_native",
+      "family": "EPF",
+      "device": "cpu",
+      "operation": "forward_encoded_only",
+      "batch_size": 1,
+      "input_dtype": "float32",
+      "weight_dtype": "float32",
+      "output_dtype": "float32",
+      "parameters": 16267,
+      "serialized_weights_bytes": 65839,
+      "timing": {
+        "n": 40,
+        "min_ms": 1.1077,
+        "median_ms": 1.12155,
+        "mean_ms": 1.1338225,
+        "p90_ms": 1.17505,
+        "max_ms": 1.2604
+      }
+    },
+    {
+      "model": "EPF_basic_clean_native",
+      "family": "EPF",
+      "device": "cpu",
+      "operation": "forward_encoded_only",
+      "batch_size": 1024,
+      "input_dtype": "float32",
+      "weight_dtype": "float32",
+      "output_dtype": "float32",
+      "parameters": 16267,
+      "serialized_weights_bytes": 65839,
+      "timing": {
+        "n": 40,
+        "min_ms": 41.4556,
+        "median_ms": 42.227199999999996,
+        "mean_ms": 42.3242925,
+        "p90_ms": 43.03865,
+        "max_ms": 43.6763
+      }
+    },
+    {
+      "model": "EPF_basic_clean_native",
+      "family": "EPF",
+      "device": "cpu",
+      "operation": "predict_raw19_dict",
+      "batch_size": 1,
+      "input_dtype": "raw19 float64 with missing",
+      "weight_dtype": "float32",
+      "output_dtype": "JSON-compatible dict",
+      "parameters": 16267,
+      "serialized_weights_bytes": 65839,
+      "timing": {
+        "n": 40,
+        "min_ms": 1.6281,
+        "median_ms": 1.6535,
+        "mean_ms": 1.6665125000000003,
+        "p90_ms": 1.70234,
+        "max_ms": 1.8149
+      }
+    },
+    {
+      "model": "EPF_basic_clean_native",
+      "family": "EPF",
+      "device": "cuda",
+      "operation": "forward_encoded_only",
+      "batch_size": 1,
+      "input_dtype": "float32",
+      "weight_dtype": "float32",
+      "output_dtype": "float32",
+      "parameters": 16267,
+      "serialized_weights_bytes": 65839,
+      "timing": {
+        "n": 40,
+        "min_ms": 4.3786,
+        "median_ms": 4.6614,
+        "mean_ms": 4.683294999999999,
+        "p90_ms": 4.861140000000001,
+        "max_ms": 5.1269
+      }
+    },
+    {
+      "model": "EPF_basic_clean_native",
+      "family": "EPF",
+      "device": "cuda",
+      "operation": "forward_encoded_only",
+      "batch_size": 1024,
+      "input_dtype": "float32",
+      "weight_dtype": "float32",
+      "output_dtype": "float32",
+      "parameters": 16267,
+      "serialized_weights_bytes": 65839,
+      "timing": {
+        "n": 40,
+        "min_ms": 4.6038,
+        "median_ms": 4.9467,
+        "mean_ms": 5.5472325,
+        "p90_ms": 6.803060000000004,
+        "max_ms": 11.7374
+      }
+    },
+    {
+      "model": "EPF_basic_clean_native",
+      "family": "EPF",
+      "device": "cuda",
+      "operation": "predict_raw19_dict",
+      "batch_size": 1,
+      "input_dtype": "raw19 float64 with missing",
+      "weight_dtype": "float32",
+      "output_dtype": "JSON-compatible dict",
+      "parameters": 16267,
+      "serialized_weights_bytes": 65839,
+      "timing": {
+        "n": 40,
+        "min_ms": 4.9797,
+        "median_ms": 5.291650000000001,
+        "mean_ms": 5.3163725,
+        "p90_ms": 5.57412,
+        "max_ms": 5.6856
+      }
+    },
+    {
+      "model": "EPF_field_only_basic_clean_native",
+      "family": "EPF_field_only",
+      "device": "cpu",
+      "operation": "forward_encoded_only",
+      "batch_size": 1,
+      "input_dtype": "float32",
+      "weight_dtype": "float32",
+      "output_dtype": "float32",
+      "parameters": 3815,
+      "serialized_weights_bytes": 19036,
+      "timing": {
+        "n": 40,
+        "min_ms": 0.7176,
+        "median_ms": 0.72635,
+        "mean_ms": 0.7918475,
+        "p90_ms": 0.8538400000000002,
+        "max_ms": 2.4361
+      }
+    },
+    {
+      "model": "EPF_field_only_basic_clean_native",
+      "family": "EPF_field_only",
+      "device": "cpu",
+      "operation": "forward_encoded_only",
+      "batch_size": 1024,
+      "input_dtype": "float32",
+      "weight_dtype": "float32",
+      "output_dtype": "float32",
+      "parameters": 3815,
+      "serialized_weights_bytes": 19036,
+      "timing": {
+        "n": 40,
+        "min_ms": 7.7201,
+        "median_ms": 7.89925,
+        "mean_ms": 7.9682225,
+        "p90_ms": 8.20755,
+        "max_ms": 8.7469
+      }
+    },
+    {
+      "model": "EPF_field_only_basic_clean_native",
+      "family": "EPF_field_only",
+      "device": "cpu",
+      "operation": "predict_raw19_dict",
+      "batch_size": 1,
+      "input_dtype": "raw19 float64 with missing",
+      "weight_dtype": "float32",
+      "output_dtype": "JSON-compatible dict",
+      "parameters": 3815,
+      "serialized_weights_bytes": 19036,
+      "timing": {
+        "n": 40,
+        "min_ms": 1.2328,
+        "median_ms": 1.2478500000000001,
+        "mean_ms": 1.25998,
+        "p90_ms": 1.31614,
+        "max_ms": 1.3334
+      }
+    },
+    {
+      "model": "EPF_field_only_basic_clean_native",
+      "family": "EPF_field_only",
+      "device": "cuda",
+      "operation": "forward_encoded_only",
+      "batch_size": 1,
+      "input_dtype": "float32",
+      "weight_dtype": "float32",
+      "output_dtype": "float32",
+      "parameters": 3815,
+      "serialized_weights_bytes": 19036,
+      "timing": {
+        "n": 40,
+        "min_ms": 3.0361,
+        "median_ms": 3.2262,
+        "mean_ms": 3.4914424999999993,
+        "p90_ms": 3.57087,
+        "max_ms": 8.4266
+      }
+    },
+    {
+      "model": "EPF_field_only_basic_clean_native",
+      "family": "EPF_field_only",
+      "device": "cuda",
+      "operation": "forward_encoded_only",
+      "batch_size": 1024,
+      "input_dtype": "float32",
+      "weight_dtype": "float32",
+      "output_dtype": "float32",
+      "parameters": 3815,
+      "serialized_weights_bytes": 19036,
+      "timing": {
+        "n": 40,
+        "min_ms": 3.023,
+        "median_ms": 3.1689,
+        "mean_ms": 3.20902,
+        "p90_ms": 3.36186,
+        "max_ms": 3.5093
+      }
+    },
+    {
+      "model": "EPF_field_only_basic_clean_native",
+      "family": "EPF_field_only",
+      "device": "cuda",
+      "operation": "predict_raw19_dict",
+      "batch_size": 1,
+      "input_dtype": "raw19 float64 with missing",
+      "weight_dtype": "float32",
+      "output_dtype": "JSON-compatible dict",
+      "parameters": 3815,
+      "serialized_weights_bytes": 19036,
+      "timing": {
+        "n": 40,
+        "min_ms": 3.5374,
+        "median_ms": 3.79445,
+        "mean_ms": 3.8014275,
+        "p90_ms": 3.96158,
+        "max_ms": 4.1638
+      }
+    },
+    {
+      "model": "MLP_basic_clean_native",
+      "family": "MLP",
+      "device": "cpu",
+      "operation": "forward_encoded_only",
+      "batch_size": 1,
+      "input_dtype": "float32",
+      "weight_dtype": "float32",
+      "output_dtype": "float32",
+      "parameters": 4264,
+      "serialized_weights_bytes": 17715,
+      "timing": {
+        "n": 40,
+        "min_ms": 0.0312,
+        "median_ms": 0.0322,
+        "mean_ms": 0.0342275,
+        "p90_ms": 0.041510000000000005,
+        "max_ms": 0.0586
+      }
+    },
+    {
+      "model": "MLP_basic_clean_native",
+      "family": "MLP",
+      "device": "cpu",
+      "operation": "forward_encoded_only",
+      "batch_size": 1024,
+      "input_dtype": "float32",
+      "weight_dtype": "float32",
+      "output_dtype": "float32",
+      "parameters": 4264,
+      "serialized_weights_bytes": 17715,
+      "timing": {
+        "n": 40,
+        "min_ms": 0.7248,
+        "median_ms": 0.7325999999999999,
+        "mean_ms": 0.73713,
+        "p90_ms": 0.7511300000000001,
+        "max_ms": 0.7962
+      }
+    },
+    {
+      "model": "MLP_basic_clean_native",
+      "family": "MLP",
+      "device": "cpu",
+      "operation": "predict_raw19_dict",
+      "batch_size": 1,
+      "input_dtype": "raw19 float64 with missing",
+      "weight_dtype": "float32",
+      "output_dtype": "JSON-compatible dict",
+      "parameters": 4264,
+      "serialized_weights_bytes": 17715,
+      "timing": {
+        "n": 40,
+        "min_ms": 0.49,
+        "median_ms": 0.50515,
+        "mean_ms": 0.508195,
+        "p90_ms": 0.5246999999999999,
+        "max_ms": 0.5714
+      }
+    },
+    {
+      "model": "MLP_basic_clean_native",
+      "family": "MLP",
+      "device": "cuda",
+      "operation": "forward_encoded_only",
+      "batch_size": 1,
+      "input_dtype": "float32",
+      "weight_dtype": "float32",
+      "output_dtype": "float32",
+      "parameters": 4264,
+      "serialized_weights_bytes": 17715,
+      "timing": {
+        "n": 40,
+        "min_ms": 0.1362,
+        "median_ms": 0.14465,
+        "mean_ms": 0.1507,
+        "p90_ms": 0.1684,
+        "max_ms": 0.2808
+      }
+    },
+    {
+      "model": "MLP_basic_clean_native",
+      "family": "MLP",
+      "device": "cuda",
+      "operation": "forward_encoded_only",
+      "batch_size": 1024,
+      "input_dtype": "float32",
+      "weight_dtype": "float32",
+      "output_dtype": "float32",
+      "parameters": 4264,
+      "serialized_weights_bytes": 17715,
+      "timing": {
+        "n": 40,
+        "min_ms": 0.1521,
+        "median_ms": 0.15525,
+        "mean_ms": 0.16499999999999998,
+        "p90_ms": 0.16805,
+        "max_ms": 0.3995
+      }
+    },
+    {
+      "model": "MLP_basic_clean_native",
+      "family": "MLP",
+      "device": "cuda",
+      "operation": "predict_raw19_dict",
+      "batch_size": 1,
+      "input_dtype": "raw19 float64 with missing",
+      "weight_dtype": "float32",
+      "output_dtype": "JSON-compatible dict",
+      "parameters": 4264,
+      "serialized_weights_bytes": 17715,
+      "timing": {
+        "n": 40,
+        "min_ms": 0.6759,
+        "median_ms": 0.6876,
+        "mean_ms": 0.7120625,
+        "p90_ms": 0.8098299999999999,
+        "max_ms": 0.9018
+      }
+    },
+    {
+      "model": "LR_basic_clean",
+      "family": "LR",
+      "device": "cpu",
+      "operation": "forward_encoded_only",
+      "batch_size": 1,
+      "input_dtype": "float32",
+      "weight_dtype": "float64",
+      "output_dtype": "float64",
+      "parameters": 228,
+      "serialized_weights_bytes": 1987,
+      "timing": {
+        "n": 40,
+        "min_ms": 0.0019,
+        "median_ms": 0.002,
+        "mean_ms": 0.0020174999999999998,
+        "p90_ms": 0.0021,
+        "max_ms": 0.0023
+      }
+    },
+    {
+      "model": "LR_basic_clean",
+      "family": "LR",
+      "device": "cpu",
+      "operation": "forward_encoded_only",
+      "batch_size": 1024,
+      "input_dtype": "float32",
+      "weight_dtype": "float64",
+      "output_dtype": "float64",
+      "parameters": 228,
+      "serialized_weights_bytes": 1987,
+      "timing": {
+        "n": 40,
+        "min_ms": 0.2162,
+        "median_ms": 0.2267,
+        "mean_ms": 0.23325,
+        "p90_ms": 0.25493000000000005,
+        "max_ms": 0.291
+      }
+    },
+    {
+      "model": "LR_basic_clean",
+      "family": "LR",
+      "device": "cpu",
+      "operation": "predict_raw19_dict",
+      "batch_size": 1,
+      "input_dtype": "raw19 float64 with missing",
+      "weight_dtype": "float64",
+      "output_dtype": "JSON-compatible dict",
+      "parameters": 228,
+      "serialized_weights_bytes": 1987,
+      "timing": {
+        "n": 40,
+        "min_ms": 0.3963,
+        "median_ms": 0.40715,
+        "mean_ms": 0.43133750000000004,
+        "p90_ms": 0.4901400000000001,
+        "max_ms": 0.775
+      }
+    },
+    {
+      "model": "LR_engineered_clean",
+      "family": "LR",
+      "device": "cpu",
+      "operation": "forward_encoded_only",
+      "batch_size": 1,
+      "input_dtype": "float32",
+      "weight_dtype": "float64",
+      "output_dtype": "float64",
+      "parameters": 292,
+      "serialized_weights_bytes": 2468,
+      "timing": {
+        "n": 40,
+        "min_ms": 0.0019,
+        "median_ms": 0.002,
+        "mean_ms": 0.0019975,
+        "p90_ms": 0.00201,
+        "max_ms": 0.0023
+      }
+    },
+    {
+      "model": "LR_engineered_clean",
+      "family": "LR",
+      "device": "cpu",
+      "operation": "forward_encoded_only",
+      "batch_size": 1024,
+      "input_dtype": "float32",
+      "weight_dtype": "float64",
+      "output_dtype": "float64",
+      "parameters": 292,
+      "serialized_weights_bytes": 2468,
+      "timing": {
+        "n": 40,
+        "min_ms": 0.0479,
+        "median_ms": 0.048549999999999996,
+        "mean_ms": 0.04944249999999999,
+        "p90_ms": 0.04952,
+        "max_ms": 0.0664
+      }
+    },
+    {
+      "model": "LR_engineered_clean",
+      "family": "LR",
+      "device": "cpu",
+      "operation": "predict_raw19_dict",
+      "batch_size": 1,
+      "input_dtype": "raw19 float64 with missing",
+      "weight_dtype": "float64",
+      "output_dtype": "JSON-compatible dict",
+      "parameters": 292,
+      "serialized_weights_bytes": 2468,
+      "timing": {
+        "n": 40,
+        "min_ms": 0.3863,
+        "median_ms": 0.39075,
+        "mean_ms": 0.40383250000000004,
+        "p90_ms": 0.4356900000000001,
+        "max_ms": 0.5223
+      }
+    }
+  ],
+  "training_search_cost": {
+    "interpretation": "Summed per-trial fit compute under at most two shared GPU workers; not elapsed wall time or inference speed",
+    "families": {
+      "EPF": {
+        "trials": 40,
+        "sum_trial_fit_seconds": 568.6623964999976,
+        "median_trial_fit_seconds": 14.38084415000003
+      },
+      "EPF_field_only": {
+        "trials": 40,
+        "sum_trial_fit_seconds": 572.551683799999,
+        "median_trial_fit_seconds": 13.501228500000025
+      },
+      "MLP": {
+        "trials": 40,
+        "sum_trial_fit_seconds": 43.958121199998004,
+        "median_trial_fit_seconds": 1.0330863499998486
+      }
+    }
+  }
+}

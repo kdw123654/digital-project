@@ -1,0 +1,373 @@
+{
+  "scope": "Frozen basic_clean_native four-label classification only; no model retraining or selection",
+  "n": 4068,
+  "families": {
+    "EPF": {
+      "seedless": false,
+      "seed_mean_raw_sigmoid": {
+        "macro_ap": 0.34728645603643765,
+        "macro_brier": 0.1074878234304452,
+        "macro_nll": 0.3518421093433921
+      },
+      "seed_mean_post_saved": {
+        "macro_ap": 0.34686037892501725,
+        "macro_brier": 0.1076048905424133,
+        "macro_nll": 0.3522625411144706
+      },
+      "seed_mean_per_label": {
+        "high_glucose": {
+          "raw_sigmoid": {
+            "ap": 0.3554324025535385,
+            "auc": 0.7894091842501395,
+            "brier": 0.09719993672461007,
+            "nll": 0.32203194458263007,
+            "observed_rate": 0.12882212778159,
+            "predicted_mean": 0.13353688755273682,
+            "mean_risk_gap": 0.004714759771146826
+          },
+          "post_saved": {
+            "ap": 0.34786553930112335,
+            "auc": 0.7815997482253646,
+            "brier": 0.097709998305774,
+            "nll": 0.3245709603876275,
+            "observed_rate": 0.12882212778159,
+            "predicted_mean": 0.12794949490615742,
+            "mean_risk_gap": -0.0008726328754325626
+          }
+        },
+        "high_blood_pressure": {
+          "raw_sigmoid": {
+            "ap": 0.24902089208134218,
+            "auc": 0.7407392069899701,
+            "brier": 0.08443871646098909,
+            "nll": 0.29585365477736714,
+            "observed_rate": 0.10103151922765924,
+            "predicted_mean": 0.10374503599743334,
+            "mean_risk_gap": 0.0027135167697740956
+          },
+          "post_saved": {
+            "ap": 0.25221262103238384,
+            "auc": 0.7417241097869077,
+            "brier": 0.08465873095310657,
+            "nll": 0.29508334021645904,
+            "observed_rate": 0.10103151922765924,
+            "predicted_mean": 0.11983315919882342,
+            "mean_risk_gap": 0.018801639971164175
+          }
+        },
+        "high_triglyceride": {
+          "raw_sigmoid": {
+            "ap": 0.42869047635379004,
+            "auc": 0.7923969513332492,
+            "brier": 0.12654322418472821,
+            "nll": 0.39703508471464205,
+            "observed_rate": 0.18656404964936124,
+            "predicted_mean": 0.18153539135570065,
+            "mean_risk_gap": -0.005028658293660587
+          },
+          "post_saved": {
+            "ap": 0.4272181747536883,
+            "auc": 0.7947239570398433,
+            "brier": 0.12621616380908537,
+            "nll": 0.39564735206788354,
+            "observed_rate": 0.18656404964936124,
+            "predicted_mean": 0.18633203475696428,
+            "mean_risk_gap": -0.0002320148923969645
+          }
+        },
+        "low_hdl": {
+          "raw_sigmoid": {
+            "ap": 0.3560020531570796,
+            "auc": 0.7475386667241392,
+            "brier": 0.12176941635145344,
+            "nll": 0.39244775329892945,
+            "observed_rate": 0.1638444509303705,
+            "predicted_mean": 0.1625962179039884,
+            "mean_risk_gap": -0.0012482330263820784
+          },
+          "post_saved": {
+            "ap": 0.36014518061287343,
+            "auc": 0.7428267751748351,
+            "brier": 0.12183466910168726,
+            "nll": 0.39374851178591214,
+            "observed_rate": 0.1638444509303705,
+            "predicted_mean": 0.16754702176655187,
+            "mean_risk_gap": 0.0037025708361813348
+          }
+        }
+      },
+      "maximum_post_saved_vs_v19_report_metric_difference": 0.0
+    },
+    "MLP": {
+      "seedless": false,
+      "seed_mean_raw_sigmoid": {
+        "macro_ap": 0.35077065280029834,
+        "macro_brier": 0.10688331529010507,
+        "macro_nll": 0.34907976267270185
+      },
+      "seed_mean_post_saved": {
+        "macro_ap": 0.34951715343625334,
+        "macro_brier": 0.10709231050242246,
+        "macro_nll": 0.3502604633496489
+      },
+      "seed_mean_per_label": {
+        "high_glucose": {
+          "raw_sigmoid": {
+            "ap": 0.3532851106605562,
+            "auc": 0.793880682575136,
+            "brier": 0.0966753569336969,
+            "nll": 0.31978529373788195,
+            "observed_rate": 0.12882212778159,
+            "predicted_mean": 0.13336469151482225,
+            "mean_risk_gap": 0.004542563733232252
+          },
+          "post_saved": {
+            "ap": 0.3450128061057134,
+            "auc": 0.7860842076844698,
+            "brier": 0.09722375624153339,
+            "nll": 0.3228600701593736,
+            "observed_rate": 0.12882212778159,
+            "predicted_mean": 0.12925148314810966,
+            "mean_risk_gap": 0.00042935536651965883
+          }
+        },
+        "high_blood_pressure": {
+          "raw_sigmoid": {
+            "ap": 0.24555445963321446,
+            "auc": 0.7489535310487835,
+            "brier": 0.08405429862788565,
+            "nll": 0.29181875498036264,
+            "observed_rate": 0.10103151922765924,
+            "predicted_mean": 0.10465398436422768,
+            "mean_risk_gap": 0.0036224651365684563
+          },
+          "post_saved": {
+            "ap": 0.25043502316674965,
+            "auc": 0.7507546741887725,
+            "brier": 0.0846479430490616,
+            "nll": 0.29300314249510984,
+            "observed_rate": 0.10103151922765924,
+            "predicted_mean": 0.11996455702411117,
+            "mean_risk_gap": 0.018933037796451932
+          }
+        },
+        "high_triglyceride": {
+          "raw_sigmoid": {
+            "ap": 0.4399686788750672,
+            "auc": 0.7955874827108905,
+            "brier": 0.12588696004744945,
+            "nll": 0.3948647257328603,
+            "observed_rate": 0.18656404964936124,
+            "predicted_mean": 0.1847701653880652,
+            "mean_risk_gap": -0.0017938842612960453
+          },
+          "post_saved": {
+            "ap": 0.43687753989630623,
+            "auc": 0.7987148028006911,
+            "brier": 0.12529384932069826,
+            "nll": 0.39322533623154426,
+            "observed_rate": 0.18656404964936124,
+            "predicted_mean": 0.18705283027991407,
+            "mean_risk_gap": 0.0004887806305528449
+          }
+        },
+        "low_hdl": {
+          "raw_sigmoid": {
+            "ap": 0.36427436203235547,
+            "auc": 0.7528323774105078,
+            "brier": 0.12091664555138824,
+            "nll": 0.38985027623970253,
+            "observed_rate": 0.1638444509303705,
+            "predicted_mean": 0.16568925505964813,
+            "mean_risk_gap": 0.0018448041292776218
+          },
+          "post_saved": {
+            "ap": 0.36574324457624413,
+            "auc": 0.7459866714960158,
+            "brier": 0.12120369339839658,
+            "nll": 0.3919533045125679,
+            "observed_rate": 0.1638444509303705,
+            "predicted_mean": 0.16653142612247648,
+            "mean_risk_gap": 0.002686975192105969
+          }
+        }
+      },
+      "maximum_post_saved_vs_v19_report_metric_difference": 0.0
+    },
+    "LR": {
+      "seedless": true,
+      "seed_mean_raw_sigmoid": {
+        "macro_ap": 0.36439074646293734,
+        "macro_brier": 0.10657335335592971,
+        "macro_nll": 0.348413802876209
+      },
+      "seed_mean_post_saved": {
+        "macro_ap": 0.3572703075596715,
+        "macro_brier": 0.10740944107301169,
+        "macro_nll": 0.3506643224933043
+      },
+      "seed_mean_per_label": {
+        "high_glucose": {
+          "raw_sigmoid": {
+            "ap": 0.37991745556828294,
+            "auc": 0.7975718276073365,
+            "brier": 0.0954392853546858,
+            "nll": 0.31703443838466283,
+            "observed_rate": 0.12882212778159,
+            "predicted_mean": 0.13083267767423598,
+            "mean_risk_gap": 0.0020105498926459853
+          },
+          "post_saved": {
+            "ap": 0.3621850963927361,
+            "auc": 0.7914667555000928,
+            "brier": 0.0967478892483496,
+            "nll": 0.32086725440523495,
+            "observed_rate": 0.12882212778159,
+            "predicted_mean": 0.1292193393061238,
+            "mean_risk_gap": 0.0003972115245338137
+          }
+        },
+        "high_blood_pressure": {
+          "raw_sigmoid": {
+            "ap": 0.2762204158158846,
+            "auc": 0.7574777796766919,
+            "brier": 0.08234133342698857,
+            "nll": 0.2868191162899868,
+            "observed_rate": 0.10103151922765924,
+            "predicted_mean": 0.10028887841864118,
+            "mean_risk_gap": -0.0007426408090180636
+          },
+          "post_saved": {
+            "ap": 0.26694069699106626,
+            "auc": 0.7588374423171828,
+            "brier": 0.08388300851593876,
+            "nll": 0.28993351422956926,
+            "observed_rate": 0.10103151922765924,
+            "predicted_mean": 0.12069912356431191,
+            "mean_risk_gap": 0.01966760433665267
+          }
+        },
+        "high_triglyceride": {
+          "raw_sigmoid": {
+            "ap": 0.4322468167012311,
+            "auc": 0.7921664169745737,
+            "brier": 0.12730599358681224,
+            "nll": 0.40013820889136026,
+            "observed_rate": 0.18656404964936124,
+            "predicted_mean": 0.1853458237507241,
+            "mean_risk_gap": -0.0012182258986371541
+          },
+          "post_saved": {
+            "ap": 0.42850304996129246,
+            "auc": 0.7950496637989511,
+            "brier": 0.12750657909955093,
+            "nll": 0.39982715598509083,
+            "observed_rate": 0.18656404964936124,
+            "predicted_mean": 0.18742571708555955,
+            "mean_risk_gap": 0.0008616674361983101
+          }
+        },
+        "low_hdl": {
+          "raw_sigmoid": {
+            "ap": 0.3691782977663508,
+            "auc": 0.7606235976883793,
+            "brier": 0.12120680105523221,
+            "nll": 0.3896634479388261,
+            "observed_rate": 0.1638444509303705,
+            "predicted_mean": 0.164194847918397,
+            "mean_risk_gap": 0.00035039698802649677
+          },
+          "post_saved": {
+            "ap": 0.3714523868935911,
+            "auc": 0.7533442055802629,
+            "brier": 0.12150028742820745,
+            "nll": 0.3920293653533223,
+            "observed_rate": 0.1638444509303705,
+            "predicted_mean": 0.16743648474431683,
+            "mean_risk_gap": 0.0035920338139463215
+          }
+        }
+      },
+      "maximum_post_saved_vs_v19_report_metric_difference": 5.551115123125783e-17
+    }
+  },
+  "rank_preservation_summary": {
+    "fold_label_checks": 140,
+    "zero_slope_n": 0,
+    "new_tie_rows_n": 0,
+    "max_abs_within_fold_AP_change_cpu": 0.0,
+    "max_abs_within_fold_AUC_change_cpu": 0.0,
+    "pooled_OOF_AP_can_change_across_fold_specific_calibrators": true
+  },
+  "cpu_reproduction": {
+    "device": "cpu",
+    "torch_threads": 1,
+    "max_abs_component_probability_error_vs_saved": 7.771764759523236e-07,
+    "required_tolerance": 1e-06,
+    "backend_precision_caveat": "Frozen post values came from the training host; CPU reconstruction may differ at floating-point resolution."
+  },
+  "comparisons": {
+    "EPF_minus_LR": {
+      "macro_ap": {
+        "raw_sigmoid_difference": -0.01710429042649969,
+        "post_saved_difference": -0.01040992863465423,
+        "calibration_stage_change_in_difference": 0.00669436179184546
+      },
+      "macro_brier": {
+        "raw_sigmoid_difference": 0.0009144700745154916,
+        "post_saved_difference": 0.00019544946940161512,
+        "calibration_stage_change_in_difference": -0.0007190206051138764
+      },
+      "macro_nll": {
+        "raw_sigmoid_difference": 0.0034283064671831176,
+        "post_saved_difference": 0.0015982186211662697,
+        "calibration_stage_change_in_difference": -0.001830087846016848
+      }
+    },
+    "MLP_minus_LR": {
+      "macro_ap": {
+        "raw_sigmoid_difference": -0.013620093662638999,
+        "post_saved_difference": -0.007753154123418149,
+        "calibration_stage_change_in_difference": 0.00586693953922085
+      },
+      "macro_brier": {
+        "raw_sigmoid_difference": 0.00030996193417535955,
+        "post_saved_difference": -0.00031713057058922745,
+        "calibration_stage_change_in_difference": -0.000627092504764587
+      },
+      "macro_nll": {
+        "raw_sigmoid_difference": 0.0006659597964928654,
+        "post_saved_difference": -0.0004038591436554273,
+        "calibration_stage_change_in_difference": -0.0010698189401482927
+      }
+    },
+    "EPF_minus_MLP": {
+      "macro_ap": {
+        "raw_sigmoid_difference": -0.003484196763860692,
+        "post_saved_difference": -0.002656774511236082,
+        "calibration_stage_change_in_difference": 0.00082742225262461
+      },
+      "macro_brier": {
+        "raw_sigmoid_difference": 0.000604508140340132,
+        "post_saved_difference": 0.0005125800399908426,
+        "calibration_stage_change_in_difference": -9.192810034928944e-05
+      },
+      "macro_nll": {
+        "raw_sigmoid_difference": 0.002762346670690252,
+        "post_saved_difference": 0.002002077764821697,
+        "calibration_stage_change_in_difference": -0.0007602689058685552
+      }
+    }
+  },
+  "interpretation": [
+    "Each positive-slope fold-specific monotone calibrator preserves within-fold order unless numerical saturation adds ties.",
+    "Pooled OOF AP may change because folds use different fitted slopes/intercepts; Brier/NLL also respond to probability calibration.",
+    "Pre/post differences are descriptive on reused KNHANES folds and do not establish independent model superiority or clinical validity."
+  ],
+  "source_sha256": {
+    "script": "4ca4c91d67ae2c282aa55b1ed3cb0226591416dad89c5b3202d06a04605358f4",
+    "frozen_manifest": "aefe984d61ebdae15a150849f81197323a132ce774955887922d8647e4702e65",
+    "v19_report": "b820e2c09b3d481a5b2a95a95bf646ce054d410ae4076dc414f190b0769684e9"
+  },
+  "privacy": "Aggregate first-stage calibration metrics only; no person-level rows or scores"
+}

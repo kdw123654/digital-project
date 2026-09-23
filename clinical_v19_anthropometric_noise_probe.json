@@ -1,0 +1,888 @@
+{
+  "version": "anthropometric_noise_probe_v1",
+  "scope": "Same 4068 KNHANES 2021-24 people; primary basic_clean_native EPF, MLP and basic_clean LR only",
+  "plan_sha256": "8afdd715a096c3dccc7fc69ba6105441865e4e0c8d18b3059ed15888d741b605",
+  "sources_sha256": "d6215f21525218dff9608834db13f36b9b4631c501bf36eb0bd134b41bef24dd",
+  "device": "cpu",
+  "threads": 1,
+  "unperturbed_identity": {
+    "observed_BMI_n": 4055,
+    "observed_WHtR_n": 3985,
+    "BMI_reconstruction_max_abs": 0.0,
+    "WHtR_reconstruction_max_abs": 0.0
+  },
+  "severe_weight25_seed202609239": {
+    "BMI_absolute_delta_kg_m2": {
+      "n": 4055,
+      "mean": 4.684205699293972,
+      "sd": 3.8723749128339833,
+      "median": 3.868234452713942,
+      "p05": 0.40131597962122856,
+      "p95": 11.886417450268958,
+      "min": 0.0014975019074832119,
+      "max": 38.68431057543207
+    },
+    "BMI_absolute_relative_percent": {
+      "n": 4055,
+      "mean": 19.863824230161033,
+      "sd": 15.679446710624465,
+      "median": 16.802063277317462,
+      "p05": 1.750244659424071,
+      "p95": 48.1188392278887,
+      "min": 0.00625614886925893,
+      "max": 134.7202520403402
+    },
+    "BMI_formula_max_abs_residual": 0.0,
+    "WHtR_formula_max_abs_residual": 0.0
+  },
+  "performance": {
+    "EPF": {
+      "clean": {
+        "macro_ap": 0.34686036961612277,
+        "raw_any": {
+          "ap": 0.6865783509706774,
+          "brier": 0.18297572851443958,
+          "mean_risk_gap": 0.04911141469842497,
+          "screening": {
+            "0.9": {
+              "sensitivity": 0.8742096058852861,
+              "referral_rate": 0.6650730454134298
+            },
+            "0.95": {
+              "sensitivity": 0.9300440352987005,
+              "referral_rate": 0.7765164791182834
+            }
+          }
+        },
+        "adjusted_any": {
+          "ap": 0.6815705353097,
+          "brier": 0.1809736377869637,
+          "mean_risk_gap": 0.007773432074941078,
+          "screening": {
+            "0.9": {
+              "sensitivity": 0.8738487066389148,
+              "referral_rate": 0.6627535726225773
+            },
+            "0.95": {
+              "sensitivity": 0.9299645224584228,
+              "referral_rate": 0.7744997049677435
+            }
+          }
+        }
+      },
+      "stress": {
+        "weight_relative_CV10": {
+          "macro_ap": 0.3450053493264579,
+          "raw_any": {
+            "ap": 0.6843815060043401,
+            "brier": 0.18343798445417714,
+            "mean_risk_gap": 0.04956259969634445,
+            "screening": {
+              "0.9": {
+                "sensitivity": 0.8725673657422874,
+                "referral_rate": 0.663687619645123
+              },
+              "0.95": {
+                "sensitivity": 0.9318518944877455,
+                "referral_rate": 0.7784127356257766
+              }
+            },
+            "delta_ap_vs_clean": -0.002196844966337319,
+            "delta_brier_vs_clean": 0.0004622559397375603,
+            "delta_mean_risk_gap_vs_clean": 0.00045118499791948347
+          },
+          "adjusted_any": {
+            "ap": 0.6795260922520968,
+            "brier": 0.1813985014625179,
+            "mean_risk_gap": 0.008218409018796292,
+            "screening": {
+              "0.9": {
+                "sensitivity": 0.8722819102866388,
+                "referral_rate": 0.6618263625577949
+              },
+              "0.95": {
+                "sensitivity": 0.9313123833107806,
+                "referral_rate": 0.7765644113806763
+              }
+            },
+            "delta_ap_vs_clean": -0.002044443057603207,
+            "delta_brier_vs_clean": 0.00042486367555419347,
+            "delta_mean_risk_gap_vs_clean": 0.0004449769438552142
+          },
+          "delta_macro_ap_vs_clean": -0.0018550202896648882
+        },
+        "weight_relative_CV25": {
+          "macro_ap": 0.3348496372079994,
+          "raw_any": {
+            "ap": 0.6734948648343053,
+            "brier": 0.18649086080950156,
+            "mean_risk_gap": 0.05196041059009963,
+            "screening": {
+              "0.9": {
+                "sensitivity": 0.8735269989796287,
+                "referral_rate": 0.6668742302979767
+              },
+              "0.95": {
+                "sensitivity": 0.9290935375405529,
+                "referral_rate": 0.7789049948964163
+              }
+            },
+            "delta_ap_vs_clean": -0.013083486136372113,
+            "delta_brier_vs_clean": 0.003515132295061979,
+            "delta_mean_risk_gap_vs_clean": 0.0028489958916746577
+          },
+          "adjusted_any": {
+            "ap": 0.6692214797731902,
+            "brier": 0.18406246118622938,
+            "mean_risk_gap": 0.010675226458762503,
+            "screening": {
+              "0.9": {
+                "sensitivity": 0.8730431193794645,
+                "referral_rate": 0.6654660875415055
+              },
+              "0.95": {
+                "sensitivity": 0.9286691821333964,
+                "referral_rate": 0.7772830488150712
+              }
+            },
+            "delta_ap_vs_clean": -0.012349055536509779,
+            "delta_brier_vs_clean": 0.0030888233992656666,
+            "delta_mean_risk_gap_vs_clean": 0.0029017943838214252
+          },
+          "delta_macro_ap_vs_clean": -0.012010732408123392
+        },
+        "height_relative_CV1": {
+          "macro_ap": 0.34710953856976423,
+          "raw_any": {
+            "ap": 0.6870183640594527,
+            "brier": 0.18299204526615684,
+            "mean_risk_gap": 0.04911032205941934,
+            "screening": {
+              "0.9": {
+                "sensitivity": 0.8723293043815432,
+                "referral_rate": 0.6632868100817148
+              },
+              "0.95": {
+                "sensitivity": 0.9304513542104372,
+                "referral_rate": 0.7767562825295431
+              }
+            },
+            "delta_ap_vs_clean": 0.0004400130887752818,
+            "delta_brier_vs_clean": 1.6316751717260214e-05,
+            "delta_mean_risk_gap_vs_clean": -1.0926390056273383e-06
+          },
+          "adjusted_any": {
+            "ap": 0.6821664092479732,
+            "brier": 0.18098123060798954,
+            "mean_risk_gap": 0.007766798646517014,
+            "screening": {
+              "0.9": {
+                "sensitivity": 0.8716232029893702,
+                "referral_rate": 0.6617691050547098
+              },
+              "0.95": {
+                "sensitivity": 0.9309377778509069,
+                "referral_rate": 0.7754233860727067
+              }
+            },
+            "delta_ap_vs_clean": 0.0005958739382732059,
+            "delta_brier_vs_clean": 7.592821025831364e-06,
+            "delta_mean_risk_gap_vs_clean": -6.633428424064267e-06
+          },
+          "delta_macro_ap_vs_clean": 0.0002491689536414654
+        },
+        "height_relative_CV3": {
+          "macro_ap": 0.346227871387482,
+          "raw_any": {
+            "ap": 0.6854197597373978,
+            "brier": 0.18385700710152408,
+            "mean_risk_gap": 0.04972788408297377,
+            "screening": {
+              "0.9": {
+                "sensitivity": 0.8734556925509346,
+                "referral_rate": 0.6650237463156038
+              },
+              "0.95": {
+                "sensitivity": 0.9299684649100316,
+                "referral_rate": 0.7764806925444323
+              }
+            },
+            "delta_ap_vs_clean": -0.00115859123327966,
+            "delta_brier_vs_clean": 0.0008812785870845052,
+            "delta_mean_risk_gap_vs_clean": 0.000616469384548797
+          },
+          "adjusted_any": {
+            "ap": 0.6808214356750679,
+            "brier": 0.1816923104641174,
+            "mean_risk_gap": 0.008350713258814098,
+            "screening": {
+              "0.9": {
+                "sensitivity": 0.8724356145551635,
+                "referral_rate": 0.6627165983949534
+              },
+              "0.95": {
+                "sensitivity": 0.9297499369375976,
+                "referral_rate": 0.7748916184635156
+              }
+            },
+            "delta_ap_vs_clean": -0.0007490996346320999,
+            "delta_brier_vs_clean": 0.0007186726771536978,
+            "delta_mean_risk_gap_vs_clean": 0.0005772811838730199
+          },
+          "delta_macro_ap_vs_clean": -0.0006324982286407543
+        },
+        "joint_weightCV10_heightCV1": {
+          "macro_ap": 0.3452272003232347,
+          "raw_any": {
+            "ap": 0.6846773365361548,
+            "brier": 0.18349576204396406,
+            "mean_risk_gap": 0.049569563136460104,
+            "screening": {
+              "0.9": {
+                "sensitivity": 0.8728433355469104,
+                "referral_rate": 0.6633269481440739
+              },
+              "0.95": {
+                "sensitivity": 0.9310283572046048,
+                "referral_rate": 0.7781923050448434
+              }
+            },
+            "delta_ap_vs_clean": -0.0019010144345226188,
+            "delta_brier_vs_clean": 0.0005200335295244829,
+            "delta_mean_risk_gap_vs_clean": 0.00045814843803513444
+          },
+          "adjusted_any": {
+            "ap": 0.6799654840854731,
+            "brier": 0.1814387881313547,
+            "mean_risk_gap": 0.008226873978316236,
+            "screening": {
+              "0.9": {
+                "sensitivity": 0.8724791760490627,
+                "referral_rate": 0.6614474204763641
+              },
+              "0.95": {
+                "sensitivity": 0.931249023898943,
+                "referral_rate": 0.7767947155730626
+              }
+            },
+            "delta_ap_vs_clean": -0.0016050512242269388,
+            "delta_brier_vs_clean": 0.00046515034439098546,
+            "delta_mean_risk_gap_vs_clean": 0.00045344190337515827
+          },
+          "delta_macro_ap_vs_clean": -0.0016331692928880925
+        },
+        "joint_weightCV25_heightCV3": {
+          "macro_ap": 0.33295320084231556,
+          "raw_any": {
+            "ap": 0.6706181779290614,
+            "brier": 0.18756259204084866,
+            "mean_risk_gap": 0.05248547516468858,
+            "screening": {
+              "0.9": {
+                "sensitivity": 0.8730517934465569,
+                "referral_rate": 0.6672951746462829
+              },
+              "0.95": {
+                "sensitivity": 0.9288888307464676,
+                "referral_rate": 0.7793665627055588
+              }
+            },
+            "delta_ap_vs_clean": -0.01596017304161601,
+            "delta_brier_vs_clean": 0.00458686352640908,
+            "delta_mean_risk_gap_vs_clean": 0.0033740604662636092
+          },
+          "adjusted_any": {
+            "ap": 0.6665051327055566,
+            "brier": 0.1849644939977529,
+            "mean_risk_gap": 0.011209135108527897,
+            "screening": {
+              "0.9": {
+                "sensitivity": 0.87154058876182,
+                "referral_rate": 0.6643197802030397
+              },
+              "0.95": {
+                "sensitivity": 0.9281336034739461,
+                "referral_rate": 0.7777998302783954
+              }
+            },
+            "delta_ap_vs_clean": -0.015065402604143463,
+            "delta_brier_vs_clean": 0.003990856210789179,
+            "delta_mean_risk_gap_vs_clean": 0.003435703033586819
+          },
+          "delta_macro_ap_vs_clean": -0.01390716877380721
+        }
+      },
+      "clean_cpu_vs_saved_cuda_max_abs": {
+        "components": 7.771764759523236e-07,
+        "raw_any": 6.222101160968663e-07,
+        "adjusted_any": 5.678779317896954e-07
+      }
+    },
+    "MLP": {
+      "clean": {
+        "macro_ap": 0.34951715343625334,
+        "raw_any": {
+          "ap": 0.6937462715008499,
+          "brier": 0.18067447545805695,
+          "mean_risk_gap": 0.046813967160525195,
+          "screening": {
+            "0.9": {
+              "sensitivity": 0.8723761377316501,
+              "referral_rate": 0.6522756986484298
+            },
+            "0.95": {
+              "sensitivity": 0.9280340262882616,
+              "referral_rate": 0.7714912240481692
+            }
+          }
+        },
+        "adjusted_any": {
+          "ap": 0.6879083295701891,
+          "brier": 0.17934115139313056,
+          "mean_risk_gap": 0.008957576055464156,
+          "screening": {
+            "0.9": {
+              "sensitivity": 0.8710596009535657,
+              "referral_rate": 0.6495655229359274
+            },
+            "0.95": {
+              "sensitivity": 0.9271580592047982,
+              "referral_rate": 0.7674637068851751
+            }
+          }
+        }
+      },
+      "stress": {
+        "weight_relative_CV10": {
+          "macro_ap": 0.3489151979849079,
+          "raw_any": {
+            "ap": 0.6927474665806839,
+            "brier": 0.1813253174030957,
+            "mean_risk_gap": 0.048264899163369894,
+            "screening": {
+              "0.9": {
+                "sensitivity": 0.8712276480010783,
+                "referral_rate": 0.6520551798544779
+              },
+              "0.95": {
+                "sensitivity": 0.9302543617957508,
+                "referral_rate": 0.774388852029176
+              }
+            },
+            "delta_ap_vs_clean": -0.0009988049201660187,
+            "delta_brier_vs_clean": 0.0006508419450387548,
+            "delta_mean_risk_gap_vs_clean": 0.0014509320028446987
+          },
+          "adjusted_any": {
+            "ap": 0.6870414527120396,
+            "brier": 0.1798285787409253,
+            "mean_risk_gap": 0.01027543615569174,
+            "screening": {
+              "0.9": {
+                "sensitivity": 0.8708216527104278,
+                "referral_rate": 0.6507633730683525
+              },
+              "0.95": {
+                "sensitivity": 0.929289897827154,
+                "referral_rate": 0.7707684753751045
+              }
+            },
+            "delta_ap_vs_clean": -0.0008668768581494568,
+            "delta_brier_vs_clean": 0.00048742734779474994,
+            "delta_mean_risk_gap_vs_clean": 0.0013178601002275837
+          },
+          "delta_macro_ap_vs_clean": -0.0006019554513454484
+        },
+        "weight_relative_CV25": {
+          "macro_ap": 0.34082415143560996,
+          "raw_any": {
+            "ap": 0.6823264394316578,
+            "brier": 0.18564564078611936,
+            "mean_risk_gap": 0.054098843381392016,
+            "screening": {
+              "0.9": {
+                "sensitivity": 0.8720317120371761,
+                "referral_rate": 0.6598777922351524
+              },
+              "0.95": {
+                "sensitivity": 0.9300190626268373,
+                "referral_rate": 0.7804125939705586
+              }
+            },
+            "delta_ap_vs_clean": -0.01141983206919206,
+            "delta_brier_vs_clean": 0.00497116532806241,
+            "delta_mean_risk_gap_vs_clean": 0.0072848762208668205
+          },
+          "adjusted_any": {
+            "ap": 0.6769542104920203,
+            "brier": 0.1833306989934088,
+            "mean_risk_gap": 0.01561267318578629,
+            "screening": {
+              "0.9": {
+                "sensitivity": 0.8719232483278001,
+                "referral_rate": 0.6585379111641458
+              },
+              "0.95": {
+                "sensitivity": 0.9290733405228091,
+                "referral_rate": 0.7775616044582682
+              }
+            },
+            "delta_ap_vs_clean": -0.01095411907816879,
+            "delta_brier_vs_clean": 0.003989547600278254,
+            "delta_mean_risk_gap_vs_clean": 0.006655097130322134
+          },
+          "delta_macro_ap_vs_clean": -0.00869300200064338
+        },
+        "height_relative_CV1": {
+          "macro_ap": 0.3495398759384699,
+          "raw_any": {
+            "ap": 0.6938268417478001,
+            "brier": 0.18071195970657605,
+            "mean_risk_gap": 0.04691378201559953,
+            "screening": {
+              "0.9": {
+                "sensitivity": 0.8712403764028284,
+                "referral_rate": 0.6515751215878823
+              },
+              "0.95": {
+                "sensitivity": 0.92840915356814,
+                "referral_rate": 0.7708569041091407
+              }
+            },
+            "delta_ap_vs_clean": 8.057024695018455e-05,
+            "delta_brier_vs_clean": 3.7484248519098484e-05,
+            "delta_mean_risk_gap_vs_clean": 9.981485507433441e-05
+          },
+          "adjusted_any": {
+            "ap": 0.6882353237836382,
+            "brier": 0.17935833428734688,
+            "mean_risk_gap": 0.00905216333275952,
+            "screening": {
+              "0.9": {
+                "sensitivity": 0.870913473986787,
+                "referral_rate": 0.6495800624898739
+              },
+              "0.95": {
+                "sensitivity": 0.92863983310274,
+                "referral_rate": 0.7665732459521603
+              }
+            },
+            "delta_ap_vs_clean": 0.0003269942134490611,
+            "delta_brier_vs_clean": 1.718289421631658e-05,
+            "delta_mean_risk_gap_vs_clean": 9.45872772953639e-05
+          },
+          "delta_macro_ap_vs_clean": 2.272250221657668e-05
+        },
+        "height_relative_CV3": {
+          "macro_ap": 0.34782515898989463,
+          "raw_any": {
+            "ap": 0.6920991885527383,
+            "brier": 0.1816820278153758,
+            "mean_risk_gap": 0.0482718933868866,
+            "screening": {
+              "0.9": {
+                "sensitivity": 0.8713533833129518,
+                "referral_rate": 0.6540607920358524
+              },
+              "0.95": {
+                "sensitivity": 0.9292069298264352,
+                "referral_rate": 0.7706983956159962
+              }
+            },
+            "delta_ap_vs_clean": -0.0016470829481115556,
+            "delta_brier_vs_clean": 0.001007552357318836,
+            "delta_mean_risk_gap_vs_clean": 0.001457926226361407
+          },
+          "adjusted_any": {
+            "ap": 0.6866192936080037,
+            "brier": 0.1801263771139877,
+            "mean_risk_gap": 0.010331221958886756,
+            "screening": {
+              "0.9": {
+                "sensitivity": 0.8698627444111257,
+                "referral_rate": 0.652242416445585
+              },
+              "0.95": {
+                "sensitivity": 0.9280816091008679,
+                "referral_rate": 0.7668982765843247
+              }
+            },
+            "delta_ap_vs_clean": -0.0012890359621854364,
+            "delta_brier_vs_clean": 0.0007852257208571523,
+            "delta_mean_risk_gap_vs_clean": 0.0013736459034226003
+          },
+          "delta_macro_ap_vs_clean": -0.0016919944463587022
+        },
+        "joint_weightCV10_heightCV1": {
+          "macro_ap": 0.34885026653914625,
+          "raw_any": {
+            "ap": 0.6928458684196275,
+            "brier": 0.18137554483041227,
+            "mean_risk_gap": 0.04835944805043913,
+            "screening": {
+              "0.9": {
+                "sensitivity": 0.8720212678372847,
+                "referral_rate": 0.6521968943711749
+              },
+              "0.95": {
+                "sensitivity": 0.9294963436867408,
+                "referral_rate": 0.7739095015216336
+              }
+            },
+            "delta_ap_vs_clean": -0.0009004030812224117,
+            "delta_brier_vs_clean": 0.0007010693723553119,
+            "delta_mean_risk_gap_vs_clean": 0.001545480889913936
+          },
+          "adjusted_any": {
+            "ap": 0.6872833400678641,
+            "brier": 0.17985791244394245,
+            "mean_risk_gap": 0.010364150526635196,
+            "screening": {
+              "0.9": {
+                "sensitivity": 0.8720519941052159,
+                "referral_rate": 0.6503626928275793
+              },
+              "0.95": {
+                "sensitivity": 0.9292555302733775,
+                "referral_rate": 0.7708040149496026
+              }
+            },
+            "delta_ap_vs_clean": -0.0006249895023250351,
+            "delta_brier_vs_clean": 0.000516761050811887,
+            "delta_mean_risk_gap_vs_clean": 0.0014065744711710404
+          },
+          "delta_macro_ap_vs_clean": -0.0006668868971070885
+        },
+        "joint_weightCV25_heightCV3": {
+          "macro_ap": 0.33857883182849857,
+          "raw_any": {
+            "ap": 0.6803047412877832,
+            "brier": 0.18658192024560916,
+            "mean_risk_gap": 0.055323582350401364,
+            "screening": {
+              "0.9": {
+                "sensitivity": 0.870350328784015,
+                "referral_rate": 0.6621225994563078
+              },
+              "0.95": {
+                "sensitivity": 0.9292516218868894,
+                "referral_rate": 0.7810171211247939
+              }
+            },
+            "delta_ap_vs_clean": -0.01344153021306671,
+            "delta_brier_vs_clean": 0.005907444787552202,
+            "delta_mean_risk_gap_vs_clean": 0.008509615189876168
+          },
+          "adjusted_any": {
+            "ap": 0.6751509581583989,
+            "brier": 0.18406744634547118,
+            "mean_risk_gap": 0.016778778456895946,
+            "screening": {
+              "0.9": {
+                "sensitivity": 0.8704914388227956,
+                "referral_rate": 0.6610810124604158
+              },
+              "0.95": {
+                "sensitivity": 0.9278937748990419,
+                "referral_rate": 0.7770368735720312
+              }
+            },
+            "delta_ap_vs_clean": -0.01275737141179023,
+            "delta_brier_vs_clean": 0.004726294952340615,
+            "delta_mean_risk_gap_vs_clean": 0.00782120240143179
+          },
+          "delta_macro_ap_vs_clean": -0.010938321607754764
+        }
+      },
+      "clean_cpu_vs_saved_cuda_max_abs": {
+        "components": 1.5018835131108688e-07,
+        "raw_any": 1.3631842477046519e-07,
+        "adjusted_any": 1.1967996760287036e-07
+      }
+    },
+    "LR": {
+      "clean": {
+        "macro_ap": 0.3572703075596715,
+        "raw_any": {
+          "ap": 0.6925896385625241,
+          "brier": 0.18184118663302165,
+          "mean_risk_gap": 0.053170403987699566,
+          "screening": {
+            "0.9": {
+              "sensitivity": 0.8729831863326176,
+              "referral_rate": 0.6566978646800994
+            },
+            "0.95": {
+              "sensitivity": 0.9320896069149701,
+              "referral_rate": 0.7744872653112893
+            }
+          }
+        },
+        "adjusted_any": {
+          "ap": 0.6891318297710951,
+          "brier": 0.18046015586982384,
+          "mean_risk_gap": 0.01187740434541995,
+          "screening": {
+            "0.9": {
+              "sensitivity": 0.8731677638598242,
+              "referral_rate": 0.6581809284161567
+            },
+            "0.95": {
+              "sensitivity": 0.929642540998602,
+              "referral_rate": 0.7707126735002575
+            }
+          }
+        }
+      },
+      "stress": {
+        "weight_relative_CV10": {
+          "macro_ap": 0.3547056209320035,
+          "raw_any": {
+            "ap": 0.6915630947940224,
+            "brier": 0.18215851150083828,
+            "mean_risk_gap": 0.054000860131384186,
+            "screening": {
+              "0.9": {
+                "sensitivity": 0.8757081989310117,
+                "referral_rate": 0.660383545180432
+              },
+              "0.95": {
+                "sensitivity": 0.9323860005492067,
+                "referral_rate": 0.7758913460672304
+              }
+            },
+            "delta_ap_vs_clean": -0.001026543768501642,
+            "delta_brier_vs_clean": 0.00031732486781663183,
+            "delta_mean_risk_gap_vs_clean": 0.00083045614368462
+          },
+          "adjusted_any": {
+            "ap": 0.687321405347415,
+            "brier": 0.18075199779617654,
+            "mean_risk_gap": 0.012894926154006317,
+            "screening": {
+              "0.9": {
+                "sensitivity": 0.8742701475110267,
+                "referral_rate": 0.6611714548772497
+              },
+              "0.95": {
+                "sensitivity": 0.930812702271656,
+                "referral_rate": 0.773108051665068
+              }
+            },
+            "delta_ap_vs_clean": -0.0018104244236800682,
+            "delta_brier_vs_clean": 0.0002918419263527039,
+            "delta_mean_risk_gap_vs_clean": 0.0010175218085863667
+          },
+          "delta_macro_ap_vs_clean": -0.0025646866276680114
+        },
+        "weight_relative_CV25": {
+          "macro_ap": 0.34561237893244856,
+          "raw_any": {
+            "ap": 0.6879051941515034,
+            "brier": 0.1835494600253629,
+            "mean_risk_gap": 0.058251146579740155,
+            "screening": {
+              "0.9": {
+                "sensitivity": 0.8776542146553897,
+                "referral_rate": 0.6665272412256348
+              },
+              "0.95": {
+                "sensitivity": 0.9339999019695712,
+                "referral_rate": 0.7793459244283154
+              }
+            },
+            "delta_ap_vs_clean": -0.004684444411020672,
+            "delta_brier_vs_clean": 0.001708273392341253,
+            "delta_mean_risk_gap_vs_clean": 0.005080742592040589
+          },
+          "adjusted_any": {
+            "ap": 0.6829333031704609,
+            "brier": 0.18176325888017675,
+            "mean_risk_gap": 0.018054943206492684,
+            "screening": {
+              "0.9": {
+                "sensitivity": 0.8761014554848807,
+                "referral_rate": 0.6675307889688372
+              },
+              "0.95": {
+                "sensitivity": 0.9320027639234164,
+                "referral_rate": 0.7763456697625305
+              }
+            },
+            "delta_ap_vs_clean": -0.0061985266006342465,
+            "delta_brier_vs_clean": 0.0013031030103529129,
+            "delta_mean_risk_gap_vs_clean": 0.006177538861072734
+          },
+          "delta_macro_ap_vs_clean": -0.011657928627222924
+        },
+        "height_relative_CV1": {
+          "macro_ap": 0.3571789399530599,
+          "raw_any": {
+            "ap": 0.6928463032406968,
+            "brier": 0.18183707738346708,
+            "mean_risk_gap": 0.05321004006423189,
+            "screening": {
+              "0.9": {
+                "sensitivity": 0.8732800034391053,
+                "referral_rate": 0.659204861178189
+              },
+              "0.95": {
+                "sensitivity": 0.9308002969127337,
+                "referral_rate": 0.7747994436437741
+              }
+            },
+            "delta_ap_vs_clean": 0.00025666467817275773,
+            "delta_brier_vs_clean": -4.109249554573591e-06,
+            "delta_mean_risk_gap_vs_clean": 3.963607653232476e-05
+          },
+          "adjusted_any": {
+            "ap": 0.6894714427911994,
+            "brier": 0.18043859266923154,
+            "mean_risk_gap": 0.01191480808227017,
+            "screening": {
+              "0.9": {
+                "sensitivity": 0.8727319437492257,
+                "referral_rate": 0.6602107670849392
+              },
+              "0.95": {
+                "sensitivity": 0.9276818616081295,
+                "referral_rate": 0.7707195435582483
+              }
+            },
+            "delta_ap_vs_clean": 0.0003396130201043235,
+            "delta_brier_vs_clean": -2.1563200592294995e-05,
+            "delta_mean_risk_gap_vs_clean": 3.740373685021982e-05
+          },
+          "delta_macro_ap_vs_clean": -9.136760661160315e-05
+        },
+        "height_relative_CV3": {
+          "macro_ap": 0.3560382435590044,
+          "raw_any": {
+            "ap": 0.6923486502805334,
+            "brier": 0.18215303724441526,
+            "mean_risk_gap": 0.053784196942787375,
+            "screening": {
+              "0.9": {
+                "sensitivity": 0.8737733036015704,
+                "referral_rate": 0.6622429511616834
+              },
+              "0.95": {
+                "sensitivity": 0.9313351931094992,
+                "referral_rate": 0.7758923307883373
+              }
+            },
+            "delta_ap_vs_clean": -0.0002409882819907061,
+            "delta_brier_vs_clean": 0.0003118506113936048,
+            "delta_mean_risk_gap_vs_clean": 0.0006137929550878093
+          },
+          "adjusted_any": {
+            "ap": 0.6892246000564279,
+            "brier": 0.18063964501936192,
+            "mean_risk_gap": 0.012479067892444832,
+            "screening": {
+              "0.9": {
+                "sensitivity": 0.8735022269522785,
+                "referral_rate": 0.662313220877115
+              },
+              "0.95": {
+                "sensitivity": 0.9276495353075164,
+                "referral_rate": 0.7730609667796076
+              }
+            },
+            "delta_ap_vs_clean": 9.277028533283271e-05,
+            "delta_brier_vs_clean": 0.00017948914953808126,
+            "delta_mean_risk_gap_vs_clean": 0.0006016635470248808
+          },
+          "delta_macro_ap_vs_clean": -0.0012320640006671102
+        },
+        "joint_weightCV10_heightCV1": {
+          "macro_ap": 0.35467874226654555,
+          "raw_any": {
+            "ap": 0.6917855864828892,
+            "brier": 0.18215562704908494,
+            "mean_risk_gap": 0.054036980154897475,
+            "screening": {
+              "0.9": {
+                "sensitivity": 0.8759073334036765,
+                "referral_rate": 0.6618210685743098
+              },
+              "0.95": {
+                "sensitivity": 0.9327097887404742,
+                "referral_rate": 0.7769406823945807
+              }
+            },
+            "delta_ap_vs_clean": -0.0008040520796348538,
+            "delta_brier_vs_clean": 0.0003144404160632941,
+            "delta_mean_risk_gap_vs_clean": 0.0008665761671979091
+          },
+          "adjusted_any": {
+            "ap": 0.687721884377161,
+            "brier": 0.18073649627315705,
+            "mean_risk_gap": 0.01293685582435237,
+            "screening": {
+              "0.9": {
+                "sensitivity": 0.8746826900938047,
+                "referral_rate": 0.6619068111545093
+              },
+              "0.95": {
+                "sensitivity": 0.9303995394127416,
+                "referral_rate": 0.7733752858887849
+              }
+            },
+            "delta_ap_vs_clean": -0.001409945393934131,
+            "delta_brier_vs_clean": 0.00027634040333321397,
+            "delta_mean_risk_gap_vs_clean": 0.0010594514789324192
+          },
+          "delta_macro_ap_vs_clean": -0.0025915652931259303
+        },
+        "joint_weightCV25_heightCV3": {
+          "macro_ap": 0.34435033051942954,
+          "raw_any": {
+            "ap": 0.6870942539879955,
+            "brier": 0.18388962161427927,
+            "mean_risk_gap": 0.05883658602973835,
+            "screening": {
+              "0.9": {
+                "sensitivity": 0.876681003035555,
+                "referral_rate": 0.6673553038135408
+              },
+              "0.95": {
+                "sensitivity": 0.933113177236435,
+                "referral_rate": 0.7770846944112035
+              }
+            },
+            "delta_ap_vs_clean": -0.005495384574528583,
+            "delta_brier_vs_clean": 0.0020484349812576186,
+            "delta_mean_risk_gap_vs_clean": 0.005666182042038781
+          },
+          "adjusted_any": {
+            "ap": 0.6824421236795063,
+            "brier": 0.18200702771626961,
+            "mean_risk_gap": 0.01866473342063237,
+            "screening": {
+              "0.9": {
+                "sensitivity": 0.8766300527517391,
+                "referral_rate": 0.6685645013972352
+              },
+              "0.95": {
+                "sensitivity": 0.9312302403166396,
+                "referral_rate": 0.7763788286235916
+              }
+            },
+            "delta_ap_vs_clean": -0.00668970609158881,
+            "delta_brier_vs_clean": 0.0015468718464457798,
+            "delta_mean_risk_gap_vs_clean": 0.006787329075212418
+          },
+          "delta_macro_ap_vs_clean": -0.012919977040241948
+        }
+      },
+      "clean_cpu_vs_saved_cuda_max_abs": {
+        "components": 0.0,
+        "raw_any": 0.0,
+        "adjusted_any": 0.0
+      }
+    }
+  },
+  "interpretation": "Fixed synthetic relative measurement-CV stress on all prespecified clean models; no refit or test-selected winner, no claim of realistic measurement-error prevalence",
+  "privacy": "Aggregate synthetic stress summaries only; no participant rows or risks"
+}
