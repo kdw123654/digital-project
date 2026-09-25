@@ -1,0 +1,19 @@
+{
+  "LR_BCE.npz": "8cffa8487de7849a5eb327f168a76cbc250d45bafd03d9743334c01a9cc473a0",
+  "PUBLIC_EXPORT_SOURCES.json": "6d4c2420d974e2a71e7a622cfc1c7f43cec038e636e8b05887bfafd3e55e3c15",
+  "__init__.py": "901585b32db5b1bc4b4f18365fa60ba4fd71e6e52a50051d1277d5b9783d9e00",
+  "binary4_BCE_EPF.npz": "b3563468bee5671d9e727bc12349e55af00690d778121283e7ea86e08794b654",
+  "binary4_BCE_MLP.npz": "86b49979bfda21641efd2cfb09449cb65195f118feb3b2f912e404cc4110441e",
+  "event_field_v19.py": "ace51539e4a44d4b6e635398a16bcdb79a03aa7e4d293303c5eccde787a676d9",
+  "event_field_v21.py": "08a3660812f4e5320c9e2e2859cfbf85d6a1fde8b9525910afe3ef36d1f187ac",
+  "event_field_v22.py": "fd0f0968fdfeaf2d9755806591a907f09f8b754b924eef2174eebe8c664fc4c6",
+  "event_plastic_field.py": "1b438f9bf934ae82041187db22de10de12911e1db7fa1f05d9c54aa345528c3a",
+  "full10_BCE_EPF.npz": "af3a6f736961e370dd3c4d7895972727fd7022958e924f461c8d2e70ed0c0ffd",
+  "full10_BCE_MLP.npz": "d87dc4429714a8fba2b8b25868b1bf18c9006aee035ee32015d1ad26fb5040aa",
+  "manifest.json": "7d795b80b394b5c163573d20e2acfa1c444281877cb8e205317704fead9376bc",
+  "predict.py": "df2c5ce808def8f7f7a7b4f622ac2e964f9de15d575214d96b782368a19487bd",
+  "preprocessor.npz": "c73c9fb2414e3fe4cd311eea562910e0647c3fc5efd83f5ac96ba4315da88c65",
+  "state16_BCE_EPF.npz": "0310821940e0b66bcdd3d323dd595e135752026aa3c800f290cacaf5bdef3fd2",
+  "state16_BCE_MLP.npz": "82de3e403454243719db0b12ff495c39a28cf637a4bb8881eb217f163bcfa3d1",
+  "verification.json": "4ad2c38f99d2fa970c5e1c88a8dabeac5ee9ac92cefc65c3139f9b3f64b52603"
+}

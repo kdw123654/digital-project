@@ -1,0 +1,590 @@
+{
+  "baseline_numerical_final_audit_sha256": "e06bc377354ba7b7beda008b9d5c896475829c7dc721985a101024843530e5af",
+  "encoded_dim": 114,
+  "evaluation_index_sha256": "bdd7c3fe7ec8572bc82a98eb4e729ba48238d1892e28483830c16cb24cf9a51a",
+  "evaluation_plan_sha256": "62bea7ff9757673efee6554e52a68c3ad65324ca7d618487aee965977b9e5a09",
+  "full_forward_verification_sha256": "738e7efcddeeb053c23747c035acde0bdb57b4ba8e702742fc44d9f66a256b5d",
+  "models": {
+    "LR_BCE": {
+      "arm": "full",
+      "calibration": {
+        "component": {
+          "component_coefficients": [
+            [
+              0.8181962388056601,
+              -0.0356384784832464
+            ],
+            [
+              0.9095748122604709,
+              0.05663433654942503
+            ],
+            [
+              0.8460145156827399,
+              -0.12751031622866155
+            ],
+            [
+              0.8464700896487216,
+              -0.43457085996789474
+            ]
+          ],
+          "gamma": -0.1142551890278872,
+          "method": "v18_monotone_components_then_frechet_bounded_union_weighted_bce"
+        }
+      },
+      "config": null,
+      "family": "LR",
+      "fold": 1,
+      "mode": "binary4",
+      "panel": "expanded",
+      "policy": "BCE",
+      "seed": null,
+      "selection_scope": "clean fit/validation only; fixed public examples",
+      "source_checkpoint_sha256": "f5157e306549cb3e183f57bdbf8558147399a6dfdc8e1b899ebeb13e3bb30106",
+      "source_evaluation_done_sha256": "71112847b4d8763444d3175f2303ab589c4faefef33c4301d26e27dd76e53e69",
+      "state_file": "LR_BCE.npz",
+      "stored_parameters": 460,
+      "thresholds": {
+        "adjusted_any": {
+          "0.9": 0.32386272599907895,
+          "0.95": 0.29295312955100594
+        },
+        "raw_any": {
+          "0.9": 0.3431634611780521,
+          "0.95": 0.3127176812111221
+        },
+        "raw_any_precal": {
+          "0.9": 0.3149541403947566,
+          "0.95": 0.281404858379903
+        }
+      }
+    },
+    "binary4_BCE_EPF": {
+      "arm": "full",
+      "calibration": {
+        "component": {
+          "component_coefficients": [
+            [
+              0.8172363756614454,
+              -0.037562759742090265
+            ],
+            [
+              0.9102854313884169,
+              0.05829663505343347
+            ],
+            [
+              0.84587390612692,
+              -0.1281161419896291
+            ],
+            [
+              0.846724596528943,
+              -0.4337460323301397
+            ]
+          ],
+          "gamma": -0.11419378538692493,
+          "method": "v18_monotone_components_then_frechet_bounded_union_weighted_bce"
+        }
+      },
+      "config": {
+        "architecture": {
+          "dimension": 12,
+          "head_width": 32,
+          "steps": 4
+        },
+        "arm": "full",
+        "batch_size": 256,
+        "dropout": 0.1,
+        "family": "EPF",
+        "field_weight_decay": {
+          "source": "artifacts/clinical_condition_v21/fold1/selection/FROZEN_SELECTION.json",
+          "source_sha256": "330edf924d2b9458572b1b30a7508e7db7c5cb732be9755ec474549c552719d1",
+          "v21_trial_id": 9,
+          "value": 0.0001
+        },
+        "fold": 1,
+        "id": 0,
+        "linear_lr_ratio": 0.0,
+        "lr": 0.0003,
+        "mode": "binary4",
+        "panel": "expanded",
+        "plastic_readout": "field",
+        "residual_gate_init": 0.1,
+        "residual_shrink": 0.0
+      },
+      "family": "EPF",
+      "fold": 1,
+      "mode": "binary4",
+      "panel": "expanded",
+      "policy": "BCE",
+      "seed": 42,
+      "selection_scope": "clean fit/validation only; fixed public examples",
+      "source_checkpoint_sha256": "5a5d2aeea81018a6d44c2e0897d3308ae705e31e48a8d1d0a274cd777d46a8f9",
+      "source_evaluation_done_sha256": "3c8a6578fcecd482f2faba13388e77840e0eb5ce55e154170c433f7d802e4871",
+      "state_file": "binary4_BCE_EPF.npz",
+      "stored_parameters": 5895,
+      "thresholds": {
+        "adjusted_any": {
+          "0.9": 0.3239958477444509,
+          "0.95": 0.29291660957514326
+        },
+        "raw_any": {
+          "0.9": 0.343286044235088,
+          "0.95": 0.31267069435135053
+        },
+        "raw_any_precal": {
+          "0.9": 0.3150700240296448,
+          "0.95": 0.2814361918033329
+        }
+      }
+    },
+    "binary4_BCE_MLP": {
+      "arm": "full",
+      "calibration": {
+        "component": {
+          "component_coefficients": [
+            [
+              0.7719786427912065,
+              -0.10460090490621075
+            ],
+            [
+              0.9209839940736878,
+              0.09061016810773406
+            ],
+            [
+              0.7973422315147571,
+              -0.20489375708938837
+            ],
+            [
+              0.789042990411338,
+              -0.47085952490374905
+            ]
+          ],
+          "gamma": -0.11988275662827667,
+          "method": "v18_monotone_components_then_frechet_bounded_union_weighted_bce"
+        }
+      },
+      "config": {
+        "architecture": {
+          "head_width": 64,
+          "hidden_layers": 1
+        },
+        "arm": "full",
+        "batch_size": 512,
+        "dropout": 0.1,
+        "family": "MLP",
+        "field_weight_decay": {
+          "source": "artifacts/clinical_condition_v21/fold1/selection/FROZEN_SELECTION.json",
+          "source_sha256": "330edf924d2b9458572b1b30a7508e7db7c5cb732be9755ec474549c552719d1",
+          "v21_trial_id": 22,
+          "value": 0.001
+        },
+        "fold": 1,
+        "id": 3,
+        "linear_lr_ratio": 0.1,
+        "lr": 0.002,
+        "mode": "binary4",
+        "panel": "expanded",
+        "plastic_readout": "none",
+        "residual_gate_init": 0.1,
+        "residual_shrink": 0.0
+      },
+      "family": "MLP",
+      "fold": 1,
+      "mode": "binary4",
+      "panel": "expanded",
+      "policy": "BCE",
+      "seed": 42,
+      "selection_scope": "clean fit/validation only; fixed public examples",
+      "source_checkpoint_sha256": "d879cc5f18fc97bd584fdcacc18041e102d14c9dbe9a24d7a06e8caa08dc8f79",
+      "source_evaluation_done_sha256": "91f286feafdeaaf123b495dc7c0b1798717d1e3b674dc7b530735422f92315bc",
+      "state_file": "binary4_BCE_MLP.npz",
+      "stored_parameters": 8212,
+      "thresholds": {
+        "adjusted_any": {
+          "0.9": 0.3330867950867712,
+          "0.95": 0.2792495878863063
+        },
+        "raw_any": {
+          "0.9": 0.35308647971075646,
+          "0.95": 0.29777099263884416
+        },
+        "raw_any_precal": {
+          "0.9": 0.31057682632260086,
+          "0.95": 0.23562056852767424
+        }
+      }
+    },
+    "full10_BCE_EPF": {
+      "arm": "full",
+      "calibration": {
+        "component": {
+          "component_coefficients": [
+            [
+              0.8107905894656351,
+              -0.037281509378464
+            ],
+            [
+              0.8862059006928895,
+              0.01954261261710276
+            ],
+            [
+              0.7545129551715626,
+              -0.22029017117686392
+            ],
+            [
+              0.8496742258765334,
+              -0.3886640056070723
+            ]
+          ],
+          "gamma": -0.11336274657734968,
+          "method": "v18_monotone_components_then_frechet_bounded_union_weighted_bce"
+        },
+        "direct_union": {
+          "bias": 0.186274194177895,
+          "method": "bounded_positive_slope_union_logit_v22",
+          "slope": 1.0102524928680874
+        }
+      },
+      "config": {
+        "architecture": {
+          "dimension": 24,
+          "head_width": 96,
+          "steps": 6
+        },
+        "arm": "full",
+        "batch_size": 256,
+        "dropout": 0.1,
+        "family": "EPF",
+        "field_weight_decay": {
+          "source": "artifacts/clinical_condition_v21/fold1/selection/FROZEN_SELECTION.json",
+          "source_sha256": "330edf924d2b9458572b1b30a7508e7db7c5cb732be9755ec474549c552719d1",
+          "v21_trial_id": 9,
+          "value": 0.0001
+        },
+        "fold": 1,
+        "id": 5,
+        "linear_lr_ratio": 0.1,
+        "lr": 0.0003,
+        "mode": "full10",
+        "panel": "expanded",
+        "plastic_readout": "field",
+        "residual_gate_init": 0.1,
+        "residual_shrink": 0.0
+      },
+      "family": "EPF",
+      "fold": 1,
+      "mode": "full10",
+      "panel": "expanded",
+      "policy": "BCE",
+      "seed": 42,
+      "selection_scope": "clean fit/validation only; fixed public examples",
+      "source_checkpoint_sha256": "feaacab37bde557db692e8553e0390b05e18e8845d0021b643bbfb2235af03b9",
+      "source_evaluation_done_sha256": "2f040046e5b952fa26e039c67ec158be3dfa1245dc5c641fbcfb544a361ef190",
+      "state_file": "full10_BCE_EPF.npz",
+      "stored_parameters": 21141,
+      "target_transform": {
+        "mean": [
+          91.8749105851001,
+          112.18505468253895,
+          70.76608266954925,
+          4.557203348296678,
+          57.250652777182005
+        ],
+        "scale": [
+          13.146436733674243,
+          11.71765128563442,
+          8.806193090348518,
+          0.5191127012901655,
+          14.423126896563117
+        ]
+      },
+      "thresholds": {
+        "adjusted_any": {
+          "0.9": 0.3387607301560378,
+          "0.95": 0.284034554816451
+        },
+        "direct_any_calibrated": {
+          "0.9": 0.3148419275353003,
+          "0.95": 0.2460437273922043
+        },
+        "direct_any_raw": {
+          "0.9": 0.27806675565259,
+          "0.95": 0.21537175325288604
+        },
+        "raw_any": {
+          "0.9": 0.35900248734900914,
+          "0.95": 0.3035412629595788
+        },
+        "raw_any_precal": {
+          "0.9": 0.30372534065786405,
+          "0.95": 0.24587427363269734
+        }
+      }
+    },
+    "full10_BCE_MLP": {
+      "arm": "full",
+      "calibration": {
+        "component": {
+          "component_coefficients": [
+            [
+              0.7566544009457655,
+              -0.12697818083494652
+            ],
+            [
+              0.9144440884583827,
+              0.08688672288597701
+            ],
+            [
+              0.8080464869135692,
+              -0.18498875371730025
+            ],
+            [
+              0.7961153313776966,
+              -0.4703369688335023
+            ]
+          ],
+          "gamma": -0.11904970377515087,
+          "method": "v18_monotone_components_then_frechet_bounded_union_weighted_bce"
+        },
+        "direct_union": {
+          "bias": 0.1223240225321025,
+          "method": "bounded_positive_slope_union_logit_v22",
+          "slope": 0.9737803016627689
+        }
+      },
+      "config": {
+        "architecture": {
+          "head_width": 64,
+          "hidden_layers": 1
+        },
+        "arm": "full",
+        "batch_size": 512,
+        "dropout": 0.1,
+        "family": "MLP",
+        "field_weight_decay": {
+          "source": "artifacts/clinical_condition_v21/fold1/selection/FROZEN_SELECTION.json",
+          "source_sha256": "330edf924d2b9458572b1b30a7508e7db7c5cb732be9755ec474549c552719d1",
+          "v21_trial_id": 22,
+          "value": 0.001
+        },
+        "fold": 1,
+        "id": 3,
+        "linear_lr_ratio": 0.1,
+        "lr": 0.002,
+        "mode": "full10",
+        "panel": "expanded",
+        "plastic_readout": "none",
+        "residual_gate_init": 0.1,
+        "residual_shrink": 0.0
+      },
+      "family": "MLP",
+      "fold": 1,
+      "mode": "full10",
+      "panel": "expanded",
+      "policy": "BCE",
+      "seed": 42,
+      "selection_scope": "clean fit/validation only; fixed public examples",
+      "source_checkpoint_sha256": "7432884635457d8c2dfca16a6923d24922443418981f13e08bad0759bde65005",
+      "source_evaluation_done_sha256": "fadd80d608346f08fa65b27ade55fa7d7847cb10f4d801f17b945e35cb52e6db",
+      "state_file": "full10_BCE_MLP.npz",
+      "stored_parameters": 9298,
+      "target_transform": {
+        "mean": [
+          91.8749105851001,
+          112.18505468253895,
+          70.76608266954925,
+          4.557203348296678,
+          57.250652777182005
+        ],
+        "scale": [
+          13.146436733674243,
+          11.71765128563442,
+          8.806193090348518,
+          0.5191127012901655,
+          14.423126896563117
+        ]
+      },
+      "thresholds": {
+        "adjusted_any": {
+          "0.9": 0.32569635980140393,
+          "0.95": 0.27859033510325104
+        },
+        "direct_any_calibrated": {
+          "0.9": 0.31009948579203234,
+          "0.95": 0.21648062310728275
+        },
+        "direct_any_raw": {
+          "0.9": 0.2795281880505797,
+          "0.95": 0.19053358692161054
+        },
+        "raw_any": {
+          "0.9": 0.34580239293827897,
+          "0.95": 0.2980562203224952
+        },
+        "raw_any_precal": {
+          "0.9": 0.3048501323795372,
+          "0.95": 0.2364433483965138
+        }
+      }
+    },
+    "state16_BCE_EPF": {
+      "arm": "full",
+      "calibration": {
+        "joint_temperature": {
+          "method": "one_positive_joint_temperature_v22",
+          "temperature": 1.1653403257432395
+        }
+      },
+      "config": {
+        "architecture": {
+          "dimension": 24,
+          "head_width": 96,
+          "steps": 6
+        },
+        "arm": "full",
+        "batch_size": 256,
+        "dropout": 0.1,
+        "family": "EPF",
+        "field_weight_decay": {
+          "source": "artifacts/clinical_condition_v21/fold1/selection/FROZEN_SELECTION.json",
+          "source_sha256": "330edf924d2b9458572b1b30a7508e7db7c5cb732be9755ec474549c552719d1",
+          "v21_trial_id": 9,
+          "value": 0.0001
+        },
+        "fold": 1,
+        "id": 7,
+        "linear_lr_ratio": 0.1,
+        "lr": 0.001,
+        "mode": "state16",
+        "panel": "expanded",
+        "plastic_readout": "field",
+        "residual_gate_init": 0.1,
+        "residual_shrink": 0.0
+      },
+      "family": "EPF",
+      "fold": 1,
+      "mode": "state16",
+      "panel": "expanded",
+      "policy": "BCE",
+      "seed": 42,
+      "selection_scope": "clean fit/validation only; fixed public examples",
+      "source_checkpoint_sha256": "9ebdb7a8e4ab3d1ee8e197bcb7a80474f1884a8fe021b2e8f94fc4309d10efaa",
+      "source_evaluation_done_sha256": "2f509118cd94cd397a1155075c88e5435a68789e8af04bc5bb7980e9b436a5d5",
+      "state_file": "state16_BCE_EPF.npz",
+      "stored_parameters": 21039,
+      "thresholds": {
+        "direct_any_calibrated": {
+          "0.9": 0.35208224817643297,
+          "0.95": 0.29827170936753433
+        },
+        "direct_any_raw": {
+          "0.9": 0.2642303878681094,
+          "0.95": 0.21881074570329917
+        }
+      }
+    },
+    "state16_BCE_MLP": {
+      "arm": "full",
+      "calibration": {
+        "joint_temperature": {
+          "method": "one_positive_joint_temperature_v22",
+          "temperature": 1.1284186956886908
+        }
+      },
+      "config": {
+        "architecture": {
+          "head_width": 128,
+          "hidden_layers": 2
+        },
+        "arm": "full",
+        "batch_size": 512,
+        "dropout": 0.1,
+        "family": "MLP",
+        "field_weight_decay": {
+          "source": "artifacts/clinical_condition_v21/fold1/selection/FROZEN_SELECTION.json",
+          "source_sha256": "330edf924d2b9458572b1b30a7508e7db7c5cb732be9755ec474549c552719d1",
+          "v21_trial_id": 22,
+          "value": 0.001
+        },
+        "fold": 1,
+        "id": 5,
+        "linear_lr_ratio": 0.1,
+        "lr": 0.0005,
+        "mode": "state16",
+        "panel": "expanded",
+        "plastic_readout": "none",
+        "residual_gate_init": 0.1,
+        "residual_shrink": 0.0
+      },
+      "family": "MLP",
+      "fold": 1,
+      "mode": "state16",
+      "panel": "expanded",
+      "policy": "BCE",
+      "seed": 42,
+      "selection_scope": "clean fit/validation only; fixed public examples",
+      "source_checkpoint_sha256": "8cd6a5b575e21a40fc4ac2812aafc1491da0a92532ca7b6b8bb110d6d85d43e0",
+      "source_evaluation_done_sha256": "8beef64bd821adbc1263adbb66c1e15633d953fcd1eb2eb5b4273d0ca2b95f39",
+      "state_file": "state16_BCE_MLP.npz",
+      "stored_parameters": 34284,
+      "thresholds": {
+        "direct_any_calibrated": {
+          "0.9": 0.34810576999339715,
+          "0.95": 0.30631091998177173
+        },
+        "direct_any_raw": {
+          "0.9": 0.280513913792916,
+          "0.95": 0.24737927426070272
+        }
+      }
+    }
+  },
+  "not_full_cohort_refit": true,
+  "parent_export_review_sha256": "37bd752ee2d11ec95a2c3bd301a97a4575ab7c2a27104ed9116fcb618aa56b89",
+  "primary_metric": "survey-weighted raw pre-calibration four-component macro AP",
+  "privacy": "numeric model weights, fit-only numeric statistics, aggregate calibration and thresholds only",
+  "raw38_feature_names": [
+    "age",
+    "HE_BMI",
+    "HE_wc",
+    "WHtR",
+    "sex",
+    "incm",
+    "edu",
+    "sm_presnt",
+    "dr_month",
+    "pa_aerobic",
+    "sedentary_hours",
+    "walking_days",
+    "stress_level",
+    "employed",
+    "alcohol_frequency",
+    "alcohol_amount",
+    "strength_days",
+    "family_history",
+    "living_alone",
+    "sleep_weekday_hours",
+    "sleep_weekend_hours",
+    "vigorous_work_met_min_week",
+    "moderate_work_met_min_week",
+    "transport_met_min_week",
+    "vigorous_leisure_met_min_week",
+    "moderate_leisure_met_min_week",
+    "cigarettes_day",
+    "alcohol_10plus_glasses_tail",
+    "family_HP_father",
+    "family_HP_mother",
+    "family_HP_sibling",
+    "family_HL_father",
+    "family_HL_mother",
+    "family_HL_sibling",
+    "family_DM_father",
+    "family_DM_mother",
+    "family_DM_sibling",
+    "pregnancy_history"
+  ],
+  "scope": "seven prespecified fold1/seed42 full-expanded BCE research examples",
+  "source_manifest_sha256": "1569df4775fd001275ed661f85217cded2910a979cbe848226bcccf0618b7fcd",
+  "training_digest": "76916b8e5dd9fe6eb0e7968fcad6992d69bfb987f77e196d9c1af8772b24954b",
+  "verification_sha256": "fe47a38b99f56bfadc9466f7501a0a324022a84ba2fd33089bcd4e98d3087bce",
+  "version": "clinical_followup_v22_public/1"
+}

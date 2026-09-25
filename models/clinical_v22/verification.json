@@ -1,0 +1,110 @@
+{
+  "baseline_numerical_final_audit_sha256": "e06bc377354ba7b7beda008b9d5c896475829c7dc721985a101024843530e5af",
+  "evaluation_index_sha256": "bdd7c3fe7ec8572bc82a98eb4e729ba48238d1892e28483830c16cb24cf9a51a",
+  "evaluation_plan_sha256": "62bea7ff9757673efee6554e52a68c3ad65324ca7d618487aee965977b9e5a09",
+  "models": {
+    "LR_BCE": {
+      "max_abs_difference": {
+        "adjusted_any": 3.3306690738754696e-16,
+        "calibrated_components": 2.220446049250313e-16,
+        "raw_any": 2.7755575615628914e-16,
+        "raw_any_precal": 2.220446049250313e-16,
+        "raw_components": 1.1102230246251565e-16,
+        "raw_scores": 0.0
+      },
+      "private_prediction_sha256": "7f7962e6ad151f4149d076b1d1fba36d3616bc84918fbeeaa25cee6e3e1629de",
+      "views": 13
+    },
+    "binary4_BCE_EPF": {
+      "max_abs_difference": {
+        "adjusted_any": 1.6348279369138297e-08,
+        "calibrated_components": 2.2530018239930172e-08,
+        "raw_any": 1.615043404568084e-08,
+        "raw_any_precal": 1.6513945877427716e-08,
+        "raw_components": 2.4229556055965773e-08,
+        "raw_scores": 4.76837158203125e-07
+      },
+      "private_prediction_sha256": "b3d2f0a4e073fc741e73a200105dca66ba99ee9be47b0c4a58da7142ee340521",
+      "views": 13
+    },
+    "binary4_BCE_MLP": {
+      "max_abs_difference": {
+        "adjusted_any": 3.3306690738754696e-16,
+        "calibrated_components": 1.1102230246251565e-16,
+        "raw_any": 2.220446049250313e-16,
+        "raw_any_precal": 2.220446049250313e-16,
+        "raw_components": 2.220446049250313e-16,
+        "raw_scores": 0.0
+      },
+      "private_prediction_sha256": "966298ca069d4bd57cb3da54ea1b31ecd37ab076d0088884031ea44d8cf631c3",
+      "views": 13
+    },
+    "full10_BCE_EPF": {
+      "max_abs_difference": {
+        "adjusted_any": 2.220446049250313e-16,
+        "calibrated_components": 1.1102230246251565e-16,
+        "continuous_original": 0.0,
+        "continuous_z": 0.0,
+        "direct_any_calibrated": 2.220446049250313e-16,
+        "direct_any_raw": 2.220446049250313e-16,
+        "direct_union_logit": 0.0,
+        "raw_any": 2.220446049250313e-16,
+        "raw_any_precal": 2.220446049250313e-16,
+        "raw_components": 2.220446049250313e-16,
+        "raw_scores": 0.0
+      },
+      "private_prediction_sha256": "8e0559b60df444178c1c30edbc7e9080d9f538640df3743d730175c62fd5684a",
+      "views": 13
+    },
+    "full10_BCE_MLP": {
+      "max_abs_difference": {
+        "adjusted_any": 3.3306690738754696e-16,
+        "calibrated_components": 2.220446049250313e-16,
+        "continuous_original": 0.0,
+        "continuous_z": 0.0,
+        "direct_any_calibrated": 2.220446049250313e-16,
+        "direct_any_raw": 2.220446049250313e-16,
+        "direct_union_logit": 0.0,
+        "raw_any": 2.220446049250313e-16,
+        "raw_any_precal": 2.220446049250313e-16,
+        "raw_components": 2.220446049250313e-16,
+        "raw_scores": 0.0
+      },
+      "private_prediction_sha256": "c59f5d0d8bece5cc69b285a9a2dec40779405d3116b17ef9e799188b43ce2b46",
+      "views": 13
+    },
+    "state16_BCE_EPF": {
+      "max_abs_difference": {
+        "calibrated_components": 0.0,
+        "calibrated_state_probabilities": 0.0,
+        "direct_any_calibrated": 0.0,
+        "direct_any_raw": 0.0,
+        "raw_components": 0.0,
+        "raw_scores": 0.0,
+        "raw_state_probabilities": 0.0,
+        "state_logits": 0.0
+      },
+      "private_prediction_sha256": "bf5e069c6dbf2629c495e21dd3f13583715086e463d3360be48dea02b3ac9493",
+      "views": 13
+    },
+    "state16_BCE_MLP": {
+      "max_abs_difference": {
+        "calibrated_components": 0.0,
+        "calibrated_state_probabilities": 0.0,
+        "direct_any_calibrated": 0.0,
+        "direct_any_raw": 0.0,
+        "raw_components": 0.0,
+        "raw_scores": 0.0,
+        "raw_state_probabilities": 0.0,
+        "state_logits": 0.0
+      },
+      "private_prediction_sha256": "9febbac7ff5c6497a462a43868c2d5edf5861108bc2ede1abcc6975922ca3e78",
+      "views": 13
+    }
+  },
+  "parent_export_review_sha256": "37bd752ee2d11ec95a2c3bd301a97a4575ab7c2a27104ed9116fcb618aa56b89",
+  "person_level_values_exported": false,
+  "source_manifest_sha256": "1569df4775fd001275ed661f85217cded2910a979cbe848226bcccf0618b7fcd",
+  "status": "passed",
+  "training_digest": "76916b8e5dd9fe6eb0e7968fcad6992d69bfb987f77e196d9c1af8772b24954b"
+}

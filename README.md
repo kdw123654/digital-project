@@ -1,41 +1,64 @@
-# KNHANES 2021–2024 비침습 대사이상 선별 연구
+# KNHANES 2021–2024 비침습 대사이상 선별 연구: v22
 
-v21은 만 19–39세 4,068명의 원시 비침습 입력 19개를 동일한 fit 전용 engineered 72열로 변환해 네 소견을 평가했다. 같은 5개 PSU 외부 fold와 fit/validation/calibration/threshold/test 역할을 유지했고, 신경망은 seed 42/43/44의 독립 모델이다(LR은 seed 없음). EPF는 하나의 `(z,a,P)` 상태에 gate와 최종 P 읽기 4개를 더해 검사했다. 이미 v16–v20에서 살핀 코호트의 후속 탐색이며 진단 도구가 아니다.
+v22는 만 19–39세 4,068명의 현재 네 소견(혈당·혈압·중성지방·HDL)을 비침습 정보로 선별하는 **탐색 연구**다. 원시 입력은 허용된 38개 변수이며, 공개 예제는 이를 fit에서 고정한 전처리로 114열에 인코딩한다. PSU가 겹치지 않는 5개 fold에서 fit·validation·calibration·threshold·test 역할을 분리했다. 장래 발병 예측이나 임상 진단 성능을 입증한 연구는 아니다.
 
-## 선택 정책과 시험 결과
+## 같은 대상에서의 주요 결과
 
-아래는 **validation에서** AP 또는 BCE 기준으로 설정·checkpoint를 선택한 뒤, clean **test에서** 측정한 보정 전 조사 가중 4소견 macro AP다. 신경망의 AP/BCE checkpoint는 각 후보의 동일 BCE 학습 궤적에서 고른다. LR_AP/LR_BCE는 동일 12-C grid에서 validation 정책별 C를 선택한다.
+아래 수치는 **동일한 전체 대상 4,068명**, 조사 가중치 `wt_itvex`의 고정 OOF clean test에서 측정한 **보정 전 네 소견 macro AP**다. `BCE`는 validation에서 설정과 checkpoint를 고른 정책이다. 값이 높을수록 이 지표에서의 순위 성능이 높지만, 행 사이의 작은 차이를 확정적 우위로 해석하지 않는다.
 
-| 계열 | AP 선택 정책 | BCE 선택 정책 |
-|---|---:|---:|
-| enhanced EPF | 0.362684 | 0.366256 |
-| enhanced MLP | 0.357676 | 0.367310 |
-| LR | 0.361252 | 0.368316 |
+| 계열 | 원시 19개: base19 | 확장 38개: expanded | expanded − base19 |
+|---|---:|---:|---:|
+| EPF | 0.366582 | 0.365067 | −0.001515 |
+| MLP | 0.367236 | 0.364540 | −0.002696 |
+| LR | 0.368316 | 0.363757 | −0.004559 |
 
-사전 주대조 `EPF_AP−MLP_AP`는 +0.005008, paired PSU 95% 구간 [0.000559, 0.009631]이었다. `EPF_AP−LR_BCE`는 −0.005631 [−0.010765, −0.001013]이다. AP 정책에서의 EPF−MLP 결과를 모든 MLP 조건에 대한 우위로 확대하지 않는다. P 읽기·가소성·사차항 제거의 사전 대조 구간은 모두 0을 포함했다. 현재 성능과 크기를 함께 보면 **기본 연구 기준은 LR_BCE**다. 구간은 고정 OOF 예측 조건의 근사치이며 재학습·선택 불확실성, 다중비교 보정, 독립 외부 검증을 포함하지 않는다.
+영양 참여자 **3,784명**은 `wt_tot`를 쓰는 **별도 도메인**이다. 아래 값은 이 대상 안에서만 비교한다. 전체 대상 표와 표본·가중치가 달라 숫자를 직접 빼지 않는다.
 
-## 공개 예제와 실행
+| 계열 | base19 | expanded | expanded + nutrition |
+|---|---:|---:|---:|
+| EPF | 0.371775 | 0.373809 | 0.376799 |
+| MLP | 0.373100 | 0.373877 | 0.375469 |
+| LR | 0.373975 | 0.371814 | 0.374385 |
 
-공개 package는 사전 지정한 fold1의 5개 예제 상태만 담으며 전체 코호트 재적합 모델이 아니다. 아래 입력은 합성값이다.
+사전 지정한 **16개 같은 대상 내 대조**를 전체 조사 틀 PSU 재표집 2,000회로 평가했다. 16개 동시 95% 근사구간은 모두 0을 포함해 이 조건에서 확실한 우위를 보이지 않았다. 확장 입력이나 40세 이상 source 사전학습의 개선 근거도 확인되지 않았다. 전이−matched scratch의 macro AP 차이는 EPF −0.000923, MLP −0.000004였다. 이 구간은 **고정된 OOF 예측에 조건부**이며 재학습·선택·반복 연구의 변동을 포함하지 않는다.
+
+LR은 네 소견에 독립 선형 출력을 적합하고, MLP는 공유 비선형 표현을 학습한다. EPF는 `(z,a,P)`의 반복 상태와 가소성·상호작용을 사용하지만, 입력은 한 시점의 설문·계측값이며 **실제 종단 시계열이 아니다**. `binary4`는 네 이진 소견, `full10`은 네 이진 소견·다섯 연속 수치·직접 종합위험, `state16`은 네 소견의 `2⁴=16`개 조합을 모델링한다. 현재 성능과 공개 예제 계산비용을 함께 볼 때 **LR을 기본 비교 기준**으로 유지한다. EPF의 다중 출력은 연구 후보이며 확실한 우위는 확인되지 않았다.
+
+미국 NHANES 2021–2023의 **공통 5입력·유효 302명** 분석은 별도 외부 연구다. 대상 자격·측정·가중치가 한국 본 연구와 같지 않아 위 두 표와 합치거나 직접 성능 차이로 해석하지 않는다. 외부 집계와 한계는 [v22 보고서](v22/REPORT.md)에 분리해 두었다.
+
+## 공개 예제 실행
+
+공개 패키지에는 사전에 고정한 **fold 1 예제 7개**만 있다. 신경망 6개는 seed 42, LR 1개는 seed가 없다. 전체 4,068명을 다시 학습한 운영 모델이 아니다. 예제 ID는 `binary4_BCE_EPF`, `binary4_BCE_MLP`, `full10_BCE_EPF`, `full10_BCE_MLP`, `state16_BCE_EPF`, `state16_BCE_MLP`, `LR_BCE`다.
+
+다음 내용을 `synthetic_raw38.json`으로 저장한다. 한 사람의 **합성** 예이며, 나머지 허용 입력을 생략하면 결측으로 처리한다.
+
+```json
+{"age": 29, "HE_BMI": 23.0, "HE_wc": 80.0, "WHtR": 0.47, "sex": 1, "pregnancy_history": 8}
+```
+
+패키지 루트에서 실행한다.
 
 ```bash
 pip install -r requirements-structures.txt
-python -m models.clinical_v21.predict --model LR_BCE --input example_clinical_v21.json --device cpu
-python -m unittest discover -p "test*.py" -q
+python -m models.clinical_v22.predict --model LR_BCE --input synthetic_raw38.json --device cpu
 ```
 
-fold1 합성 입력 한 명, CPU 1 thread 중앙 추론 시간은 예열 10회 뒤 50회 측정값이다. 전처리·보정·cutoff 적용을 포함하고 모델 로딩은 제외했다. 배치와 GPU 결과 및 측정 조건은 [전체 runtime JSON](clinical_v21_public_runtime.json)에 있다.
+입력은 [공개 예측 코드의 `RAW38_NAMES`](models/clinical_v22/predict.py)에 있는 **38개 이름만** 허용하는 JSON 객체다(기존 19개·추가 수치 9개·가족력/임신력 범주 10개). 위 예처럼 일부 키를 생략하거나 `null`로 결측을 표시할 수 있다. `age`는 19–39, `sex`는 1 또는 2여야 하며 BMI·허리둘레·허리/키 비율 중 적어도 하나는 양수로 제공해야 한다. 남성의 `pregnancy_history` 구조 코드는 8이다. 범주값은 코드의 허용값을 따르고, 검사 결과·정답 변수와 알 수 없는 추가 키, NaN/Infinity는 거부된다. 출력의 90%·95% 선별 cutoff는 threshold 역할에서 정한 **목표**로, test 민감도 달성이나 진단을 보증하지 않는다.
 
-| 공개 예제 | 저장 매개변수 | CPU 1인 중앙값 |
+## 실행 검증과 속도
+
+전체 연구에서 1,618개 학습 궤적을 동결했고, 고유 평가 1,000단위 × 13개 뷰를 원 checkpoint와 기준선에서 독립 CPU 재생했다. 점수·확률·연속값·임계값·요약의 최대 절대오차는 0, 보정값은 2.22×10⁻¹⁶이었다. 이는 구현과 산출물의 재현 검증이며 임상적 타당성 검증은 아니다.
+
+다음은 공개 fold 1 예제의 **합성 raw38 한 명, CPU 1스레드** 추론 중앙값이다. 예열 10회 뒤 50회 측정했으며 raw38 검사·114열 전처리·forward·보정·cutoff 결정을 포함한다. 모델 로딩, CLI 시작, JSON 파일 읽기와 출력 기록은 제외했다. 다른 장치·배치 크기의 **전체 26조건**은 [벤치마크 JSON](v22/benchmark_public_v22.json)에 있다.
+
+| 공개 예제 | 저장 매개변수 | CPU batch 1 중앙값 |
 |---|---:|---:|
-| enhanced_AP_EPF | 4,719 | 1.274 ms |
-| enhanced_AP_MLP | 27,180 | 0.366 ms |
-| LR_BCE | 292 | 0.248 ms |
+| binary4_BCE_EPF | 5,895 | 1.49540 ms |
+| binary4_BCE_MLP | 8,212 | 0.57885 ms |
+| LR_BCE | 460 | 0.43630 ms |
 
-훈련 궤적 963개와 정확한 checkpoint 재사용 21건을 동결했다. 독립 원본 재생은 고유 평가 730단위 × 13보기 = 9,490보기에서 최대 절대오차 0이었고, 공개 테스트 26개가 통과했다. 실행 검증은 임상적 타당성의 증명이 아니다.
+[v22 실행 노트북](v22/REPORT.ipynb) · [82모델 공개 집계 JSON](v22/PUBLIC_REPORT.json) · [v22 결과·한계](v22/REPORT.md) · [실측 벤치마크](v22/benchmark_public_v22.json) · [공개 모델 예제](models/clinical_v22/)
 
-[v21 결과·한계](CLINICAL_V21_RESULTS.md) · [사전 프로토콜](CLINICAL_V21_PROTOCOL.md) · [실행 노트북](clinical_v21_report.ipynb) · [54모델 전체 집계 JSON](clinical_v21_report.json) · [전체 재생 검증](clinical_v21_verification.json) · [runtime 상세](clinical_v21_public_runtime.json) · [소스 요약](clinical_v21_source_manifest.json)
+[공개 복사본 계보](v22/PUBLICATION_MANIFEST.json)는 원본 해시, 공개본의 줄바꿈 정리, 노트북 실행 출력 추가를 구분해 기록한다.
 
-이전 연구: [v20 결과와 한계](CLINICAL_V20_RESULTS.md) · [v20 노트북](clinical_v20_report.ipynb) · [v20 집계](clinical_v20_report.json) · [v20 검증](clinical_v20_verification.json) · [v20 소스 요약](clinical_v20_source_manifest.json) · [v20 마스크 코드](models/clinical_v20_missingness.py).
-
-[v19 원결과·프로파일](CLINICAL_V19_RESULTS.md) · [v19 감사 노트북](clinical_v19_report.ipynb) · [v19 설계](CLINICAL_V19_DESIGN.md) · [v18 공동 학습](CLINICAL_MULTITASK.md) · [v17 단일 셀 수식](MECHANISM.md). 원자료·개인별 예측·역할 인덱스는 공개하지 않는다.
+이전 연구: [v21 결과·한계](CLINICAL_V21_RESULTS.md) · [v21 프로토콜](CLINICAL_V21_PROTOCOL.md) · [v21 실행 노트북](clinical_v21_report.ipynb) · [v21 집계](clinical_v21_report.json) · [v20 결과](CLINICAL_V20_RESULTS.md) · [v19 결과](CLINICAL_V19_RESULTS.md). v21은 원시 19개 입력과 72열 인코딩을 사용한 선행 연구다. 원자료·개인별 예측·역할 인덱스는 공개하지 않는다.

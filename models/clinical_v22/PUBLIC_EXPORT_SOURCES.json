@@ -1,0 +1,18 @@
+{
+  "baseline_numerical_final_audit_sha256": "e06bc377354ba7b7beda008b9d5c896475829c7dc721985a101024843530e5af",
+  "copied_core_sha256": {
+    "event_field_v19.py": "ace51539e4a44d4b6e635398a16bcdb79a03aa7e4d293303c5eccde787a676d9",
+    "event_field_v21.py": "08a3660812f4e5320c9e2e2859cfbf85d6a1fde8b9525910afe3ef36d1f187ac",
+    "event_field_v22.py": "fd0f0968fdfeaf2d9755806591a907f09f8b754b924eef2174eebe8c664fc4c6",
+    "event_plastic_field.py": "1b438f9bf934ae82041187db22de10de12911e1db7fa1f05d9c54aa345528c3a"
+  },
+  "evaluation_index_sha256": "bdd7c3fe7ec8572bc82a98eb4e729ba48238d1892e28483830c16cb24cf9a51a",
+  "evaluation_plan_sha256": "62bea7ff9757673efee6554e52a68c3ad65324ca7d618487aee965977b9e5a09",
+  "export_script_sha256": "cda097df4d93ef2431c3b4c879eaf4d7f4afe4d3407fb1c16c609a03a8ea904b",
+  "parent_export_review_sha256": "37bd752ee2d11ec95a2c3bd301a97a4575ab7c2a27104ed9116fcb618aa56b89",
+  "template_source_sha256": {
+    "__init__.py": "901585b32db5b1bc4b4f18365fa60ba4fd71e6e52a50051d1277d5b9783d9e00",
+    "predict.py": "df2c5ce808def8f7f7a7b4f622ac2e964f9de15d575214d96b782368a19487bd"
+  },
+  "training_source_manifest_sha256": "1569df4775fd001275ed661f85217cded2910a979cbe848226bcccf0618b7fcd"
+}

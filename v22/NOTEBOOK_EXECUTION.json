@@ -1,0 +1,16 @@
+{
+  "cell_sources_unchanged": true,
+  "code_cells": 12,
+  "embedded_png_outputs": 2,
+  "error_outputs": 0,
+  "executed_notebook_sha256": "e0ddd78b04bd92022ea3f18c23091855acaaa071eca350f21278270e2afd963d",
+  "ipykernel_version": "7.3.0",
+  "kernel": "clinical-v22-venv",
+  "kernel_python": "workspace .venv/Scripts/python.exe",
+  "nbclient_version": "0.11.0",
+  "nonempty_output_cells": 12,
+  "public_report_sha256": "b3128be565c59f028c9cc4a23de944c30de5cbb982d0487eee1765f2177770d6",
+  "python_version": "3.13.1",
+  "status": "passed",
+  "template_sha256": "fe7525a7cbcab398aa9769c06713b4aa3e87a3b487f51c6309623b8a02d530bf"
+}

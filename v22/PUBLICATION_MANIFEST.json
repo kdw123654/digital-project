@@ -1,0 +1,23 @@
+{
+  "benchmark": {
+    "change": "CRLF to LF only; JSON content unchanged",
+    "frozen_sha256": "4a2c2d110db42dc32e34846c76b6f64219d850ce6800f6f8e69647f307e1d1ed",
+    "public_sha256": "78e70d658a93d3166ff52b23544fe672590bc23a7d499f7af1d2800184b56037"
+  },
+  "notebook": {
+    "change": "execute unchanged cells and save outputs",
+    "frozen_template_sha256": "fe7525a7cbcab398aa9769c06713b4aa3e87a3b487f51c6309623b8a02d530bf",
+    "public_executed_sha256": "e0ddd78b04bd92022ea3f18c23091855acaaa071eca350f21278270e2afd963d"
+  },
+  "public_report": {
+    "change": "byte-exact copy",
+    "frozen_sha256": "b3128be565c59f028c9cc4a23de944c30de5cbb982d0487eee1765f2177770d6",
+    "public_sha256": "b3128be565c59f028c9cc4a23de944c30de5cbb982d0487eee1765f2177770d6"
+  },
+  "report_md": {
+    "change": "remove one trailing space on line 123",
+    "frozen_sha256": "a4b54587ffd13bc958f72c955f4459c17fa7e92faa402c4f387b3af3248b03fb",
+    "public_sha256": "b76f8fa204e86fd9577ac771bf424711c4d8b4ee355da88062d8d80cb053f898"
+  },
+  "version": "clinical_v22_publication_manifest/1"
+}
