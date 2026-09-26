@@ -1,0 +1,81 @@
+{
+  "scope": "Aggregate verification summary; source artifacts retained locally, no participant data exported",
+  "study_sha256": "84b0cfad565bc6c66eac35c7fed3a6169698d9efa318d380964cd6c05f3dddcc",
+  "selection": {
+    "status": "pass",
+    "verified_units": 1000,
+    "candidate_count": 200,
+    "choice_count": 50
+  },
+  "evaluation": {
+    "status": "pass",
+    "array_count": 20,
+    "cell_count": 10,
+    "contrast_count": 9,
+    "psu_intervals_independently_recomputed": false,
+    "interval_scope": "Stored frozen REPORT CI endpoints only; endpoint ordering and H1/H2 decision consistency checked. PSU bootstrap not rerun.",
+    "checkpoint_replay": {
+      "absolute_tolerance": 1e-05,
+      "fold": 1,
+      "max_errors": {
+        "binary_EPF": {
+          "p16": 0.0,
+          "p4": 0.0
+        },
+        "binary_EPF_noP": {
+          "p16": 0.0,
+          "p4": 0.0
+        },
+        "binary_EPF_step1": {
+          "p16": 0.0,
+          "p4": 0.0
+        },
+        "binary_Linear": {
+          "p16": 0.0,
+          "p4": 0.0
+        },
+        "binary_MLP": {
+          "p16": 0.0,
+          "p4": 0.0
+        },
+        "joint_EPF": {
+          "p16": 0.0,
+          "p4": 0.0
+        },
+        "joint_EPF_noP": {
+          "p16": 0.0,
+          "p4": 0.0
+        },
+        "joint_EPF_step1": {
+          "p16": 0.0,
+          "p4": 0.0
+        },
+        "joint_Linear": {
+          "p16": 0.0,
+          "p4": 0.0
+        },
+        "joint_MLP": {
+          "p16": 0.0,
+          "p4": 0.0
+        }
+      },
+      "models": 50,
+      "rows": 836,
+      "same_rows_for_all_cells": true,
+      "scope": "Original inference reused to replay saved checkpoints; no new fitting, selection, or CI computation."
+    }
+  },
+  "notebook": {
+    "status": "pass",
+    "cells": 17,
+    "executed_code_cells": 8,
+    "errors": 0,
+    "inline_png_outputs": 3,
+    "cell_sources_and_ids_unchanged": true
+  },
+  "source_audits": {
+    "SELECTION_AUDIT.json": "85dc85f2eb48ad0aa7987c140d893188860f4cb1982020ef04a463d634235a5a",
+    "EVALUATION_REPLAY_AUDIT.json": "adb62c83f390495aaa032d5fe76333d15aaa57024f7338b2aa94004cbbbfac24",
+    "NOTEBOOK_EXECUTION_AUDIT.json": "f28297af2a434bf7e91afd9c584977e6704171d9b592747b0bfa8f880b66e087"
+  }
+}

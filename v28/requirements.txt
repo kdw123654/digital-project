@@ -1,0 +1,11 @@
+# v28 model APIs and aggregate report notebook; no legacy baseline dependencies.
+numpy==2.2.6
+scipy>=1.15,<2
+torch==2.8.0
+scikit-learn==1.7.1
+pandas>=2.2,<3
+matplotlib>=3.9,<4
+nbformat>=5.10,<6
+nbclient>=0.10,<1
+ipykernel>=6,<8
+pytest>=8,<9

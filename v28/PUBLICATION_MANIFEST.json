@@ -1,0 +1,41 @@
+{
+  "scope": "v28 aggregate results only; no participant rows or checkpoints",
+  "files": {
+    "PUBLIC_REPORT.json": {
+      "source": "artifacts/clinical_factorial_v28/publication/PUBLIC_REPORT.json",
+      "source_sha256": "d9f002961a12e16c1ced71f82940be3a051c66ac295237e44de36c43de0bce36",
+      "public_sha256": "d9f002961a12e16c1ced71f82940be3a051c66ac295237e44de36c43de0bce36",
+      "change": "none"
+    },
+    "REPORT.md": {
+      "source": "artifacts/clinical_factorial_v28/publication/REPORT.md",
+      "source_sha256": "db1cf877459d2117401fc046981f82d6a69c5c125f101282ea3c8e35543d07e4",
+      "public_sha256": "db1cf877459d2117401fc046981f82d6a69c5c125f101282ea3c8e35543d07e4",
+      "change": "none"
+    },
+    "REPORT.ipynb": {
+      "source": "artifacts/clinical_factorial_v28/publication/REPORT.executed.ipynb",
+      "source_sha256": "225aabf85604c7416d28fe652c9ee4fd8706c1947dab6fb20bb614f8fa004a01",
+      "public_sha256": "b16f3ade8f9e4bc02e5fe11af5ffe28665bb229d0989b707b5e2f1acf0883f36",
+      "change": "CRLF to LF only"
+    },
+    "figures/ap_heatmap.png": {
+      "source": "artifacts/clinical_factorial_v28/publication/figures/ap_heatmap.png",
+      "source_sha256": "e1bca2ed347e3a20a59060b382ad1ee351d24ae4d5b526c8b0d3f3215bd39568",
+      "public_sha256": "e1bca2ed347e3a20a59060b382ad1ee351d24ae4d5b526c8b0d3f3215bd39568",
+      "change": "none"
+    },
+    "figures/h1_ci95.png": {
+      "source": "artifacts/clinical_factorial_v28/publication/figures/h1_ci95.png",
+      "source_sha256": "c5a4a65ccb790f9f55eb6a3ae4ba178c619b3575d5c90d28cca37c1c36c9a1eb",
+      "public_sha256": "c5a4a65ccb790f9f55eb6a3ae4ba178c619b3575d5c90d28cca37c1c36c9a1eb",
+      "change": "none"
+    },
+    "figures/h2_ci90.png": {
+      "source": "artifacts/clinical_factorial_v28/publication/figures/h2_ci90.png",
+      "source_sha256": "ce2edf677232e536f919929955e1376d0624aac6cd43eea5eeedb08c008e7b3e",
+      "public_sha256": "ce2edf677232e536f919929955e1376d0624aac6cd43eea5eeedb08c008e7b3e",
+      "change": "none"
+    }
+  }
+}

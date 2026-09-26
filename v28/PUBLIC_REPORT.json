@@ -1,0 +1,1337 @@
+{
+  "cells": {
+    "binary_EPF": {
+      "chosen": [
+        {
+          "config": 0,
+          "fold": 1,
+          "lr": 0.0003,
+          "selected_mean_best_epoch": 5.6,
+          "selected_parameters": [
+            5895
+          ],
+          "selected_seed_count": 5,
+          "selection_score_kind": "BCE",
+          "weight_decay": 0.0
+        },
+        {
+          "config": 2,
+          "fold": 2,
+          "lr": 0.001,
+          "selected_mean_best_epoch": 6.8,
+          "selected_parameters": [
+            5895
+          ],
+          "selected_seed_count": 5,
+          "selection_score_kind": "BCE",
+          "weight_decay": 0.0
+        },
+        {
+          "config": 2,
+          "fold": 3,
+          "lr": 0.001,
+          "selected_mean_best_epoch": 1,
+          "selected_parameters": [
+            5895
+          ],
+          "selected_seed_count": 5,
+          "selection_score_kind": "BCE",
+          "weight_decay": 0.0
+        },
+        {
+          "config": 2,
+          "fold": 4,
+          "lr": 0.001,
+          "selected_mean_best_epoch": 1.6,
+          "selected_parameters": [
+            5895
+          ],
+          "selected_seed_count": 5,
+          "selection_score_kind": "BCE",
+          "weight_decay": 0.0
+        },
+        {
+          "config": 1,
+          "fold": 5,
+          "lr": 0.0003,
+          "selected_mean_best_epoch": 1,
+          "selected_parameters": [
+            5895
+          ],
+          "selected_seed_count": 5,
+          "selection_score_kind": "BCE",
+          "weight_decay": 0.001
+        }
+      ],
+      "chosen_config_by_fold": [
+        0,
+        2,
+        2,
+        2,
+        1
+      ],
+      "fold_macro_ap": [
+        0.38790369072062625,
+        0.37010253733023,
+        0.34738748264864916,
+        0.3693927210110468,
+        0.41258164269657527
+      ],
+      "joint16_nll": 1.3890191341681364,
+      "macro_ap": 0.36378738810020333,
+      "mean_best_epoch_all_units": 3.75,
+      "parameters": [
+        5895
+      ],
+      "per_flag_ap": [
+        0.3682300270719895,
+        0.27452198009306145,
+        0.43769770566894,
+        0.37469983956682246
+      ],
+      "selected_best_epoch_one_count": 17,
+      "selected_mean_best_epoch": 3.2,
+      "selected_median_best_epoch": 1,
+      "selected_parameters": [
+        5895
+      ],
+      "selected_units": 25,
+      "training_units": 100
+    },
+    "binary_EPF_noP": {
+      "chosen": [
+        {
+          "config": 0,
+          "fold": 1,
+          "lr": 0.0003,
+          "selected_mean_best_epoch": 5.4,
+          "selected_parameters": [
+            5893
+          ],
+          "selected_seed_count": 5,
+          "selection_score_kind": "BCE",
+          "weight_decay": 0.0
+        },
+        {
+          "config": 2,
+          "fold": 2,
+          "lr": 0.001,
+          "selected_mean_best_epoch": 6.8,
+          "selected_parameters": [
+            5893
+          ],
+          "selected_seed_count": 5,
+          "selection_score_kind": "BCE",
+          "weight_decay": 0.0
+        },
+        {
+          "config": 2,
+          "fold": 3,
+          "lr": 0.001,
+          "selected_mean_best_epoch": 1,
+          "selected_parameters": [
+            5893
+          ],
+          "selected_seed_count": 5,
+          "selection_score_kind": "BCE",
+          "weight_decay": 0.0
+        },
+        {
+          "config": 3,
+          "fold": 4,
+          "lr": 0.001,
+          "selected_mean_best_epoch": 1.6,
+          "selected_parameters": [
+            5893
+          ],
+          "selected_seed_count": 5,
+          "selection_score_kind": "BCE",
+          "weight_decay": 0.001
+        },
+        {
+          "config": 0,
+          "fold": 5,
+          "lr": 0.0003,
+          "selected_mean_best_epoch": 1,
+          "selected_parameters": [
+            5893
+          ],
+          "selected_seed_count": 5,
+          "selection_score_kind": "BCE",
+          "weight_decay": 0.0
+        }
+      ],
+      "chosen_config_by_fold": [
+        0,
+        2,
+        2,
+        3,
+        0
+      ],
+      "fold_macro_ap": [
+        0.3882371069747334,
+        0.3700413638853318,
+        0.3473922689351408,
+        0.3694347898455186,
+        0.4125807030234508
+      ],
+      "joint16_nll": 1.3890308827369608,
+      "macro_ap": 0.3637771144215165,
+      "mean_best_epoch_all_units": 3.9,
+      "parameters": [
+        5893
+      ],
+      "per_flag_ap": [
+        0.36829462420281733,
+        0.2744249270715407,
+        0.4376593841009011,
+        0.37472952231080686
+      ],
+      "selected_best_epoch_one_count": 17,
+      "selected_mean_best_epoch": 3.16,
+      "selected_median_best_epoch": 1,
+      "selected_parameters": [
+        5893
+      ],
+      "selected_units": 25,
+      "training_units": 100
+    },
+    "binary_EPF_step1": {
+      "chosen": [
+        {
+          "config": 3,
+          "fold": 1,
+          "lr": 0.001,
+          "selected_mean_best_epoch": 11.4,
+          "selected_parameters": [
+            5895
+          ],
+          "selected_seed_count": 5,
+          "selection_score_kind": "BCE",
+          "weight_decay": 0.001
+        },
+        {
+          "config": 2,
+          "fold": 2,
+          "lr": 0.001,
+          "selected_mean_best_epoch": 10.4,
+          "selected_parameters": [
+            5895
+          ],
+          "selected_seed_count": 5,
+          "selection_score_kind": "BCE",
+          "weight_decay": 0.0
+        },
+        {
+          "config": 2,
+          "fold": 3,
+          "lr": 0.001,
+          "selected_mean_best_epoch": 1.6,
+          "selected_parameters": [
+            5895
+          ],
+          "selected_seed_count": 5,
+          "selection_score_kind": "BCE",
+          "weight_decay": 0.0
+        },
+        {
+          "config": 3,
+          "fold": 4,
+          "lr": 0.001,
+          "selected_mean_best_epoch": 2.8,
+          "selected_parameters": [
+            5895
+          ],
+          "selected_seed_count": 5,
+          "selection_score_kind": "BCE",
+          "weight_decay": 0.001
+        },
+        {
+          "config": 2,
+          "fold": 5,
+          "lr": 0.001,
+          "selected_mean_best_epoch": 9.6,
+          "selected_parameters": [
+            5895
+          ],
+          "selected_seed_count": 5,
+          "selection_score_kind": "BCE",
+          "weight_decay": 0.0
+        }
+      ],
+      "chosen_config_by_fold": [
+        3,
+        2,
+        2,
+        3,
+        2
+      ],
+      "fold_macro_ap": [
+        0.3870868140830184,
+        0.37094065810575627,
+        0.3472891513881904,
+        0.3696444203063344,
+        0.41360611498609356
+      ],
+      "joint16_nll": 1.388051016930904,
+      "macro_ap": 0.3642115443698021,
+      "mean_best_epoch_all_units": 11.98,
+      "parameters": [
+        5895
+      ],
+      "per_flag_ap": [
+        0.3680230334322771,
+        0.2752324626986279,
+        0.4376668569098506,
+        0.3759238244384529
+      ],
+      "selected_best_epoch_one_count": 9,
+      "selected_mean_best_epoch": 7.16,
+      "selected_median_best_epoch": 8,
+      "selected_parameters": [
+        5895
+      ],
+      "selected_units": 25,
+      "training_units": 100
+    },
+    "binary_Linear": {
+      "chosen": [
+        {
+          "config": 0,
+          "fold": 1,
+          "lr": 0.0003,
+          "selected_mean_best_epoch": 1,
+          "selected_parameters": [
+            460
+          ],
+          "selected_seed_count": 5,
+          "selection_score_kind": "BCE",
+          "weight_decay": 0.0
+        },
+        {
+          "config": 3,
+          "fold": 2,
+          "lr": 0.001,
+          "selected_mean_best_epoch": 2.2,
+          "selected_parameters": [
+            460
+          ],
+          "selected_seed_count": 5,
+          "selection_score_kind": "BCE",
+          "weight_decay": 0.001
+        },
+        {
+          "config": 2,
+          "fold": 3,
+          "lr": 0.001,
+          "selected_mean_best_epoch": 1.2,
+          "selected_parameters": [
+            460
+          ],
+          "selected_seed_count": 5,
+          "selection_score_kind": "BCE",
+          "weight_decay": 0.0
+        },
+        {
+          "config": 2,
+          "fold": 4,
+          "lr": 0.001,
+          "selected_mean_best_epoch": 2.4,
+          "selected_parameters": [
+            460
+          ],
+          "selected_seed_count": 5,
+          "selection_score_kind": "BCE",
+          "weight_decay": 0.0
+        },
+        {
+          "config": 2,
+          "fold": 5,
+          "lr": 0.001,
+          "selected_mean_best_epoch": 2.4,
+          "selected_parameters": [
+            460
+          ],
+          "selected_seed_count": 5,
+          "selection_score_kind": "BCE",
+          "weight_decay": 0.0
+        }
+      ],
+      "chosen_config_by_fold": [
+        0,
+        3,
+        2,
+        2,
+        2
+      ],
+      "fold_macro_ap": [
+        0.3870807088341196,
+        0.37494463107489373,
+        0.34721788864874326,
+        0.37014379304115075,
+        0.41205901332636263
+      ],
+      "joint16_nll": 1.3885540528984561,
+      "macro_ap": 0.36490442253772587,
+      "mean_best_epoch_all_units": 1.84,
+      "parameters": [
+        460
+      ],
+      "per_flag_ap": [
+        0.3692911856360294,
+        0.27477832420577936,
+        0.44065940770692813,
+        0.3748887726021665
+      ],
+      "selected_best_epoch_one_count": 15,
+      "selected_mean_best_epoch": 1.84,
+      "selected_median_best_epoch": 1,
+      "selected_parameters": [
+        460
+      ],
+      "selected_units": 25,
+      "training_units": 100
+    },
+    "binary_MLP": {
+      "chosen": [
+        {
+          "config": 3,
+          "fold": 1,
+          "lr": 0.001,
+          "selected_mean_best_epoch": 8,
+          "selected_parameters": [
+            8212
+          ],
+          "selected_seed_count": 5,
+          "selection_score_kind": "BCE",
+          "weight_decay": 0.001
+        },
+        {
+          "config": 3,
+          "fold": 2,
+          "lr": 0.001,
+          "selected_mean_best_epoch": 1,
+          "selected_parameters": [
+            8212
+          ],
+          "selected_seed_count": 5,
+          "selection_score_kind": "BCE",
+          "weight_decay": 0.001
+        },
+        {
+          "config": 1,
+          "fold": 3,
+          "lr": 0.0003,
+          "selected_mean_best_epoch": 13.8,
+          "selected_parameters": [
+            8212
+          ],
+          "selected_seed_count": 5,
+          "selection_score_kind": "BCE",
+          "weight_decay": 0.001
+        },
+        {
+          "config": 2,
+          "fold": 4,
+          "lr": 0.001,
+          "selected_mean_best_epoch": 4.2,
+          "selected_parameters": [
+            8212
+          ],
+          "selected_seed_count": 5,
+          "selection_score_kind": "BCE",
+          "weight_decay": 0.0
+        },
+        {
+          "config": 3,
+          "fold": 5,
+          "lr": 0.001,
+          "selected_mean_best_epoch": 11.4,
+          "selected_parameters": [
+            8212
+          ],
+          "selected_seed_count": 5,
+          "selection_score_kind": "BCE",
+          "weight_decay": 0.001
+        }
+      ],
+      "chosen_config_by_fold": [
+        3,
+        3,
+        1,
+        2,
+        3
+      ],
+      "fold_macro_ap": [
+        0.3877234811455369,
+        0.37559747627724016,
+        0.3471409115109638,
+        0.3698160512994616,
+        0.4109346110766017
+      ],
+      "joint16_nll": 1.3869307960063924,
+      "macro_ap": 0.3650994890614158,
+      "mean_best_epoch_all_units": 11.18,
+      "parameters": [
+        8212
+      ],
+      "per_flag_ap": [
+        0.3685679947225684,
+        0.27394873827841104,
+        0.44148389684751815,
+        0.3763973263971656
+      ],
+      "selected_best_epoch_one_count": 5,
+      "selected_mean_best_epoch": 7.68,
+      "selected_median_best_epoch": 7,
+      "selected_parameters": [
+        8212
+      ],
+      "selected_units": 25,
+      "training_units": 100
+    },
+    "joint_EPF": {
+      "chosen": [
+        {
+          "config": 2,
+          "fold": 1,
+          "lr": 0.001,
+          "selected_mean_best_epoch": 11.2,
+          "selected_parameters": [
+            5971
+          ],
+          "selected_seed_count": 5,
+          "selection_score_kind": "Gaussian NLL",
+          "weight_decay": 0.0
+        },
+        {
+          "config": 3,
+          "fold": 2,
+          "lr": 0.001,
+          "selected_mean_best_epoch": 7.8,
+          "selected_parameters": [
+            5971
+          ],
+          "selected_seed_count": 5,
+          "selection_score_kind": "Gaussian NLL",
+          "weight_decay": 0.001
+        },
+        {
+          "config": 3,
+          "fold": 3,
+          "lr": 0.001,
+          "selected_mean_best_epoch": 7.6,
+          "selected_parameters": [
+            5971
+          ],
+          "selected_seed_count": 5,
+          "selection_score_kind": "Gaussian NLL",
+          "weight_decay": 0.001
+        },
+        {
+          "config": 2,
+          "fold": 4,
+          "lr": 0.001,
+          "selected_mean_best_epoch": 10.2,
+          "selected_parameters": [
+            5971
+          ],
+          "selected_seed_count": 5,
+          "selection_score_kind": "Gaussian NLL",
+          "weight_decay": 0.0
+        },
+        {
+          "config": 2,
+          "fold": 5,
+          "lr": 0.001,
+          "selected_mean_best_epoch": 6.2,
+          "selected_parameters": [
+            5971
+          ],
+          "selected_seed_count": 5,
+          "selection_score_kind": "Gaussian NLL",
+          "weight_decay": 0.0
+        }
+      ],
+      "chosen_config_by_fold": [
+        2,
+        3,
+        3,
+        2,
+        2
+      ],
+      "fold_macro_ap": [
+        0.410150337865857,
+        0.39285989816567624,
+        0.36626838746051765,
+        0.38794144381935153,
+        0.4171799266853292
+      ],
+      "joint16_nll": 1.3648342918307708,
+      "macro_ap": 0.3813966575289658,
+      "mean_best_epoch_all_units": 16,
+      "parameters": [
+        5971
+      ],
+      "per_flag_ap": [
+        0.38522227530040754,
+        0.2880018878539545,
+        0.4633638202177637,
+        0.3889986467437373
+      ],
+      "selected_best_epoch_one_count": 0,
+      "selected_mean_best_epoch": 8.6,
+      "selected_median_best_epoch": 9,
+      "selected_parameters": [
+        5971
+      ],
+      "selected_units": 25,
+      "training_units": 100
+    },
+    "joint_EPF_noP": {
+      "chosen": [
+        {
+          "config": 3,
+          "fold": 1,
+          "lr": 0.001,
+          "selected_mean_best_epoch": 12,
+          "selected_parameters": [
+            5969
+          ],
+          "selected_seed_count": 5,
+          "selection_score_kind": "Gaussian NLL",
+          "weight_decay": 0.001
+        },
+        {
+          "config": 3,
+          "fold": 2,
+          "lr": 0.001,
+          "selected_mean_best_epoch": 8,
+          "selected_parameters": [
+            5969
+          ],
+          "selected_seed_count": 5,
+          "selection_score_kind": "Gaussian NLL",
+          "weight_decay": 0.001
+        },
+        {
+          "config": 3,
+          "fold": 3,
+          "lr": 0.001,
+          "selected_mean_best_epoch": 7.6,
+          "selected_parameters": [
+            5969
+          ],
+          "selected_seed_count": 5,
+          "selection_score_kind": "Gaussian NLL",
+          "weight_decay": 0.001
+        },
+        {
+          "config": 3,
+          "fold": 4,
+          "lr": 0.001,
+          "selected_mean_best_epoch": 10.2,
+          "selected_parameters": [
+            5969
+          ],
+          "selected_seed_count": 5,
+          "selection_score_kind": "Gaussian NLL",
+          "weight_decay": 0.001
+        },
+        {
+          "config": 3,
+          "fold": 5,
+          "lr": 0.001,
+          "selected_mean_best_epoch": 3.6,
+          "selected_parameters": [
+            5969
+          ],
+          "selected_seed_count": 5,
+          "selection_score_kind": "Gaussian NLL",
+          "weight_decay": 0.001
+        }
+      ],
+      "chosen_config_by_fold": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "fold_macro_ap": [
+        0.4084231581785759,
+        0.3964054750029665,
+        0.3604579284184203,
+        0.3856945399456264,
+        0.416827667247901
+      ],
+      "joint16_nll": 1.365113021021043,
+      "macro_ap": 0.38067140307672176,
+      "mean_best_epoch_all_units": 14.32,
+      "parameters": [
+        5969
+      ],
+      "per_flag_ap": [
+        0.38094724209470354,
+        0.28688995389685323,
+        0.4647689317693461,
+        0.3900794845459844
+      ],
+      "selected_best_epoch_one_count": 0,
+      "selected_mean_best_epoch": 8.28,
+      "selected_median_best_epoch": 9,
+      "selected_parameters": [
+        5969
+      ],
+      "selected_units": 25,
+      "training_units": 100
+    },
+    "joint_EPF_step1": {
+      "chosen": [
+        {
+          "config": 3,
+          "fold": 1,
+          "lr": 0.001,
+          "selected_mean_best_epoch": 22,
+          "selected_parameters": [
+            5971
+          ],
+          "selected_seed_count": 5,
+          "selection_score_kind": "Gaussian NLL",
+          "weight_decay": 0.001
+        },
+        {
+          "config": 2,
+          "fold": 2,
+          "lr": 0.001,
+          "selected_mean_best_epoch": 11.2,
+          "selected_parameters": [
+            5971
+          ],
+          "selected_seed_count": 5,
+          "selection_score_kind": "Gaussian NLL",
+          "weight_decay": 0.0
+        },
+        {
+          "config": 2,
+          "fold": 3,
+          "lr": 0.001,
+          "selected_mean_best_epoch": 14,
+          "selected_parameters": [
+            5971
+          ],
+          "selected_seed_count": 5,
+          "selection_score_kind": "Gaussian NLL",
+          "weight_decay": 0.0
+        },
+        {
+          "config": 2,
+          "fold": 4,
+          "lr": 0.001,
+          "selected_mean_best_epoch": 18.6,
+          "selected_parameters": [
+            5971
+          ],
+          "selected_seed_count": 5,
+          "selection_score_kind": "Gaussian NLL",
+          "weight_decay": 0.0
+        },
+        {
+          "config": 2,
+          "fold": 5,
+          "lr": 0.001,
+          "selected_mean_best_epoch": 12.6,
+          "selected_parameters": [
+            5971
+          ],
+          "selected_seed_count": 5,
+          "selection_score_kind": "Gaussian NLL",
+          "weight_decay": 0.0
+        }
+      ],
+      "chosen_config_by_fold": [
+        3,
+        2,
+        2,
+        2,
+        2
+      ],
+      "fold_macro_ap": [
+        0.4082411891007381,
+        0.39853434745277333,
+        0.3635552594761836,
+        0.381480249817006,
+        0.4174237361046713
+      ],
+      "joint16_nll": 1.3642069841725697,
+      "macro_ap": 0.38060793774501334,
+      "mean_best_epoch_all_units": 33.22,
+      "parameters": [
+        5971
+      ],
+      "per_flag_ap": [
+        0.38092852716766595,
+        0.28439400980778307,
+        0.4674852690520432,
+        0.3896239449525611
+      ],
+      "selected_best_epoch_one_count": 0,
+      "selected_mean_best_epoch": 15.68,
+      "selected_median_best_epoch": 14,
+      "selected_parameters": [
+        5971
+      ],
+      "selected_units": 25,
+      "training_units": 100
+    },
+    "joint_Linear": {
+      "chosen": [
+        {
+          "config": 3,
+          "fold": 1,
+          "lr": 0.001,
+          "selected_mean_best_epoch": 50.6,
+          "selected_parameters": [
+            654
+          ],
+          "selected_seed_count": 5,
+          "selection_score_kind": "Gaussian NLL",
+          "weight_decay": 0.001
+        },
+        {
+          "config": 3,
+          "fold": 2,
+          "lr": 0.001,
+          "selected_mean_best_epoch": 21.6,
+          "selected_parameters": [
+            654
+          ],
+          "selected_seed_count": 5,
+          "selection_score_kind": "Gaussian NLL",
+          "weight_decay": 0.001
+        },
+        {
+          "config": 3,
+          "fold": 3,
+          "lr": 0.001,
+          "selected_mean_best_epoch": 71.6,
+          "selected_parameters": [
+            654
+          ],
+          "selected_seed_count": 5,
+          "selection_score_kind": "Gaussian NLL",
+          "weight_decay": 0.001
+        },
+        {
+          "config": 3,
+          "fold": 4,
+          "lr": 0.001,
+          "selected_mean_best_epoch": 68.6,
+          "selected_parameters": [
+            654
+          ],
+          "selected_seed_count": 5,
+          "selection_score_kind": "Gaussian NLL",
+          "weight_decay": 0.001
+        },
+        {
+          "config": 3,
+          "fold": 5,
+          "lr": 0.001,
+          "selected_mean_best_epoch": 55.2,
+          "selected_parameters": [
+            654
+          ],
+          "selected_seed_count": 5,
+          "selection_score_kind": "Gaussian NLL",
+          "weight_decay": 0.001
+        }
+      ],
+      "chosen_config_by_fold": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "fold_macro_ap": [
+        0.40711085778221584,
+        0.399494217176751,
+        0.3477922423643036,
+        0.37468601929938317,
+        0.4130754723378706
+      ],
+      "joint16_nll": 1.3594741171535287,
+      "macro_ap": 0.3753764205867663,
+      "mean_best_epoch_all_units": 99.46,
+      "parameters": [
+        654
+      ],
+      "per_flag_ap": [
+        0.37845507874372064,
+        0.28374409959434205,
+        0.45660402606908507,
+        0.38270247793991735
+      ],
+      "selected_best_epoch_one_count": 0,
+      "selected_mean_best_epoch": 53.52,
+      "selected_median_best_epoch": 59,
+      "selected_parameters": [
+        654
+      ],
+      "selected_units": 25,
+      "training_units": 100
+    },
+    "joint_MLP": {
+      "chosen": [
+        {
+          "config": 3,
+          "fold": 1,
+          "lr": 0.001,
+          "selected_mean_best_epoch": 19.6,
+          "selected_parameters": [
+            8708
+          ],
+          "selected_seed_count": 5,
+          "selection_score_kind": "Gaussian NLL",
+          "weight_decay": 0.001
+        },
+        {
+          "config": 3,
+          "fold": 2,
+          "lr": 0.001,
+          "selected_mean_best_epoch": 13.8,
+          "selected_parameters": [
+            8708
+          ],
+          "selected_seed_count": 5,
+          "selection_score_kind": "Gaussian NLL",
+          "weight_decay": 0.001
+        },
+        {
+          "config": 3,
+          "fold": 3,
+          "lr": 0.001,
+          "selected_mean_best_epoch": 10.6,
+          "selected_parameters": [
+            8708
+          ],
+          "selected_seed_count": 5,
+          "selection_score_kind": "Gaussian NLL",
+          "weight_decay": 0.001
+        },
+        {
+          "config": 2,
+          "fold": 4,
+          "lr": 0.001,
+          "selected_mean_best_epoch": 17.6,
+          "selected_parameters": [
+            8708
+          ],
+          "selected_seed_count": 5,
+          "selection_score_kind": "Gaussian NLL",
+          "weight_decay": 0.0
+        },
+        {
+          "config": 2,
+          "fold": 5,
+          "lr": 0.001,
+          "selected_mean_best_epoch": 12.8,
+          "selected_parameters": [
+            8708
+          ],
+          "selected_seed_count": 5,
+          "selection_score_kind": "Gaussian NLL",
+          "weight_decay": 0.0
+        }
+      ],
+      "chosen_config_by_fold": [
+        3,
+        3,
+        3,
+        2,
+        2
+      ],
+      "fold_macro_ap": [
+        0.41157297151317473,
+        0.39660814124334715,
+        0.35659195767924506,
+        0.3732726251430784,
+        0.4169099179491956
+      ],
+      "joint16_nll": 1.3651518409171004,
+      "macro_ap": 0.3781140980392181,
+      "mean_best_epoch_all_units": 29.34,
+      "parameters": [
+        8708
+      ],
+      "per_flag_ap": [
+        0.3818695049129683,
+        0.28428128545288595,
+        0.45872239159291067,
+        0.38758321019810743
+      ],
+      "selected_best_epoch_one_count": 0,
+      "selected_mean_best_epoch": 14.88,
+      "selected_median_best_epoch": 15,
+      "selected_parameters": [
+        8708
+      ],
+      "selected_units": 25,
+      "training_units": 100
+    }
+  },
+  "contrasts": {
+    "joint_EPF-binary_EPF": {
+      "estimate": 0.017609269428762453,
+      "fold_diff": [
+        0.022246647145230725,
+        0.022757360835446216,
+        0.018880904811868493,
+        0.01854872280830472,
+        0.004598283988753948
+      ],
+      "hypothesis": "H1 design effect > 0",
+      "psu_ci90": [
+        0.009744967782399819,
+        0.02533249031696402
+      ],
+      "psu_ci95": [
+        0.008461944517990466,
+        0.02664737078484489
+      ],
+      "supported": true
+    },
+    "joint_EPF-joint_EPF_noP": {
+      "estimate": 0.0007252544522440285,
+      "fold_diff": [
+        0.0017271796872810885,
+        -0.0035455768372902874,
+        0.005810459042097371,
+        0.0022469038737251146,
+        0.0003522594374282262
+      ],
+      "hypothesis": "H2 equivalence within +-0.005",
+      "psu_ci90": [
+        -0.0010950765437099414,
+        0.0027140932081971074
+      ],
+      "psu_ci95": [
+        -0.0015035936555867365,
+        0.0030014144644208824
+      ],
+      "supported": true
+    },
+    "joint_EPF-joint_EPF_step1": {
+      "estimate": 0.0007887197839524518,
+      "fold_diff": [
+        0.0019091487651188843,
+        -0.005674449287097094,
+        0.0027131279843340406,
+        0.006461194002345516,
+        -0.00024380941934210032
+      ],
+      "hypothesis": "H2 equivalence within +-0.005",
+      "psu_ci90": [
+        -0.001726071366420312,
+        0.003580351695951011
+      ],
+      "psu_ci95": [
+        -0.002221597989433344,
+        0.0039950898992465985
+      ],
+      "supported": true
+    },
+    "joint_EPF-joint_Linear": {
+      "estimate": 0.006020236942199497,
+      "fold_diff": [
+        0.003039480083641133,
+        -0.006634319011074752,
+        0.018476145096214036,
+        0.013255424519968362,
+        0.004104454347458597
+      ],
+      "hypothesis": "H2 equivalence within +-0.005",
+      "psu_ci90": [
+        0.001539743128218779,
+        0.0114438632797887
+      ],
+      "psu_ci95": [
+        0.0006614724859546437,
+        0.012290706639368222
+      ],
+      "supported": false
+    },
+    "joint_EPF-joint_MLP": {
+      "estimate": 0.003282559489747705,
+      "fold_diff": [
+        -0.0014226336473177614,
+        -0.0037482430776709097,
+        0.009676429781272589,
+        0.014668818676273121,
+        0.0002700087361336423
+      ],
+      "hypothesis": "H2 equivalence within +-0.005",
+      "psu_ci90": [
+        -0.00024411399559990104,
+        0.007565678641852536
+      ],
+      "psu_ci95": [
+        -0.0010405094974967873,
+        0.008325337367909462
+      ],
+      "supported": false
+    },
+    "joint_EPF_noP-binary_EPF_noP": {
+      "estimate": 0.01689428865520526,
+      "fold_diff": [
+        0.02018605120384248,
+        0.026364111117634703,
+        0.01306565948327948,
+        0.016259750100107828,
+        0.0042469642244502
+      ],
+      "hypothesis": "H1 design effect > 0",
+      "psu_ci90": [
+        0.009390612749210204,
+        0.024311361377253426
+      ],
+      "psu_ci95": [
+        0.00759350195012679,
+        0.025582951219863863
+      ],
+      "supported": true
+    },
+    "joint_EPF_step1-binary_EPF_step1": {
+      "estimate": 0.01639639337521126,
+      "fold_diff": [
+        0.021154375017719662,
+        0.02759368934701706,
+        0.016266108087993225,
+        0.011835829510671636,
+        0.003817621118577752
+      ],
+      "hypothesis": "H1 design effect > 0",
+      "psu_ci90": [
+        0.008582109969303076,
+        0.02395609489629537
+      ],
+      "psu_ci95": [
+        0.007244071949223706,
+        0.025481105098598834
+      ],
+      "supported": true
+    },
+    "joint_Linear-binary_Linear": {
+      "estimate": 0.01047199804904042,
+      "fold_diff": [
+        0.020030148948096238,
+        0.024549586101857257,
+        0.0005743537155603606,
+        0.004542226258232418,
+        0.0010164590115079863
+      ],
+      "hypothesis": "H1 design effect > 0",
+      "psu_ci90": [
+        0.0016499799581181308,
+        0.018478436501002345
+      ],
+      "psu_ci95": [
+        -0.00013625977893164936,
+        0.019695479897497342
+      ],
+      "supported": false
+    },
+    "joint_MLP-binary_MLP": {
+      "estimate": 0.013014608977802267,
+      "fold_diff": [
+        0.023849490367637838,
+        0.021010664966106984,
+        0.00945104616828124,
+        0.003456573843616806,
+        0.0059753068725939
+      ],
+      "hypothesis": "H1 design effect > 0",
+      "psu_ci90": [
+        0.0048775608034834165,
+        0.020267509164934767
+      ],
+      "psu_ci95": [
+        0.0030107378197199454,
+        0.02129534318338953
+      ],
+      "supported": true
+    }
+  },
+  "execution": {
+    "automatic_retries": 0,
+    "completed_training_queue_elapsed_seconds_sum": 1335.3970921999999,
+    "completed_units": 1000,
+    "completed_units_at_recovery": [
+      683
+    ],
+    "evaluation_attempts": 1,
+    "evaluation_completed_at": "2026-09-26T07:54:22.428857+00:00",
+    "evaluation_seconds": 231.52172419999988,
+    "evaluation_started_at": "2026-09-26T07:50:30.907146+00:00",
+    "failed_evaluation_attempts": 0,
+    "failed_fold_invocations": 0,
+    "failed_training_attempts": 0,
+    "failed_unit_records": 0,
+    "failure_count_note": "단위·fold·실행기 실패 수는 서로 중복될 수 있어 합산하지 않는다. 프로세스 부재로 확인한 외부 중단은 interrupted 건수로 별도 표시한다.",
+    "failure_records_note": "원본 실패·중단 로그와 복구 증거는 비공개 실행 기록에 보존하며 공개 보고서는 집계와 상대 경로 해시만 싣는다.",
+    "incomplete_units_at_recovery": [
+      2
+    ],
+    "interrupted_fold_invocations": 2,
+    "interrupted_training_attempts": 1,
+    "interrupted_training_elapsed_seconds_sum": null,
+    "interruption_elapsed_upper_bounds_seconds": [
+      4544.586213
+    ],
+    "interruption_exact_end_time_unknown": true,
+    "interruption_observed_at": [
+      "2026-09-26T07:21:05.677919+00:00"
+    ],
+    "interruption_timing_note": "중단 실행의 정확한 종료시각과 소요시간은 알 수 없다. interruption_observed_at은 프로세스 부재 관측시각이며 elapsed 상한은 시작부터 관측까지다. 중단이 있으면 전체 queue elapsed 합은 null이고 완료된 재개 실행의 elapsed 합을 별도 표시한다. wall span에는 중단 후 대기시간이 포함된다.",
+    "manual_unit_restarts": 2,
+    "missing_units_at_recovery": [
+      315
+    ],
+    "repeated_fold_invocations": 4,
+    "retry_note": "자동 재시도는 실행기 기록이다. repeated_fold_invocations는 완료 단위 건너뛰기도 포함한 수동 fold 재호출 횟수다. manual_unit_restarts는 복구 기록으로 결속된 미완료 단위 재시작 수다.",
+    "status": "completed",
+    "training_attempts": 2,
+    "training_completed_at": "2026-09-26T07:44:26.802692+00:00",
+    "training_fold_invocations": 9,
+    "training_queue_elapsed_seconds_sum": null,
+    "training_seconds_sum": 5759.446937799994,
+    "training_started_at": "2026-09-26T06:05:21.091706+00:00",
+    "training_unit_seconds_median": 5.448695199993381,
+    "training_wall_span_seconds": 5945.710986
+  },
+  "flags": [
+    "elevated_glucose",
+    "elevated_bp",
+    "elevated_tg",
+    "low_hdl"
+  ],
+  "interpretation_limits": [
+    "재사용한 2021–2024 코호트의 탐색적 비교다. 독립 확인 실험·임상 선별 성능 검증·생물학적 기전 입증이 아니다.",
+    "PSU 구간은 고정된 OOF 예측에 조건부인 pointwise percentile 구간이다. H1은 95%, H2는 90%이며 다중비교 보정·동시구간이 아니다. 재학습·설정 선택·코호트 재사용의 불확실성은 포함하지 않는다.",
+    "joint 대 binary는 연속값 감독 신호, 손실(NLL/BCE), 앵커(Ridge/logistic), 출력 헤드 구조를 함께 바꾼 설계 묶음의 비교다. 출력 표현 하나만의 분리된 인과 효과로 해석하지 않는다.",
+    "H2 충족은 이번 주지표 macro AP·사전 한계 ±0.005·대상 코호트와 학습 예산에 한정된다. 16상태 NLL·보정·계산시간 등 모든 성능의 동등성이나 일반적인 구조 무관성을 뜻하지 않는다. 효과가 정확히 0이라는 증거도 아니며, 미충족도 곧바로 차이가 존재한다는 검정 결과는 아니다.",
+    "EPF_noP는 P 업데이트를 끄고 z/trace 기반 capacity-control 읽기로 대체한다. EPF_step1은 반복을 한 단계로 줄이며 초기 trace가 0이어서 최종 P도 0이다. 따라서 각각 순수한 P 제거 효과·반복 횟수만의 효과로 단정하지 않는다.",
+    "joint_Linear의 Linear는 평균 경로를 가리킨다. 입력 의존 공분산 경로와 flag 확률 변환은 비선형이므로 모델 전체가 선형인 비교가 아니다.",
+    "각 칸의 p4와 p16은 선택된 seed 42–46의 혼합이다. binary p16은 각 seed 안에서 네 Bernoulli의 독립곱을 만든 뒤 평균한다. 평균 주변확률의 독립곱과 일반적으로 다르며 seed 혼합은 의존성을 만들 수 있다.",
+    "16상태 categorical NLL은 각 칸이 만든 seed 혼합 공동예측 전체의 proper score다. 주변확률의 정확도와 보정도 영향을 주므로 NLL 차이를 의존성 모델링만의 효과로 분리해 해석하지 않는다. binary BCE와 joint 연속 Gaussian NLL은 서로 다른 학습·선택 점수이므로 수치 크기를 직접 비교하지 않는다.",
+    "fold와 seed는 독립 사람이나 독립 확인 실험의 수가 아니다. 구조 간 AP 범위는 관측한 다섯 joint 칸의 최대–최소이며 동등성 구간이나 인과 효과 범위가 아니다.",
+    "파라미터 수는 DONE 메타데이터의 requires_grad 파라미터 수다. 비영 gradient, 실제 업데이트, 유효 용량의 동등성을 검증한 수가 아니다."
+  ],
+  "joint_structure_range": {
+    "descriptive_only": true,
+    "interval": null,
+    "maximum_architectures": [
+      "EPF"
+    ],
+    "maximum_macro_ap": 0.3813966575289658,
+    "minimum_architectures": [
+      "Linear"
+    ],
+    "minimum_macro_ap": 0.3753764205867663,
+    "range": 0.006020236942199497
+  },
+  "mean_design_effect": {
+    "estimate": 0.014877311697204331,
+    "fold_diff": [
+      0.021493342536505387,
+      0.024455082473612444,
+      0.01164761445339656,
+      0.010928620504186682,
+      0.003930927043176757
+    ],
+    "psu_ci90": [
+      0.007091178273206394,
+      0.022196977081932086
+    ],
+    "psu_ci95": [
+      0.005533888387078335,
+      0.023614833683019185
+    ]
+  },
+  "prespecified_rules": {
+    "equivalence_margin": 0.005,
+    "h1_all_five_supported": false,
+    "h1_rule": "All five pointwise PSU 95% lower bounds strictly > 0",
+    "h2_all_four_supported": false,
+    "h2_noP_and_step1_supported": true,
+    "h2_rule": "Pointwise PSU 90% interval strictly inside (-0.005,+0.005)",
+    "runbook_architecture_extension_pattern_met": false,
+    "runbook_claim_pattern_met": false
+  },
+  "provenance": {
+    "evaluation_done_sha256": "6722d4f13580a60660feff397b2c1dd7490f361d8ce293066330e302207c7447",
+    "harness_log_manifest": {
+      "EVALUATION_STARTED.json": "3130729a1c4a69ae05901665c25d45e518af8370e9fbfc24e645932c9c6096c7",
+      "TEST_STARTED.json": "1580d3081a1effa1917053d863837eb4d6350a9d3635cbeff33cc644226ed99b",
+      "logs/evaluate-20260926T075030906842Z-a779a20a/STATUS.json": "b90ab29e7acf7b91a76374a723647064995bd4230562ae9997c56b167d5f3529",
+      "logs/evaluate-20260926T075030906842Z-a779a20a/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "logs/evaluate-20260926T075030906842Z-a779a20a/stdout.log": "2361e4944acc5748255ec024027ba2c47426f1555856e7020a7d328076d917fc",
+      "logs/train-20260926T060521091377Z-30b7b297/ATTEMPT.json": "dd889850012121b63455c2606dc3bd6c697de3c8de40f0ad530540bf72d84a3a",
+      "logs/train-20260926T060521091377Z-30b7b297/fold1.STATUS.json": "2cf5f1f6672e17ef35fbc8a63fe8001b07d95b06d5f14639f113154855365fcb",
+      "logs/train-20260926T060521091377Z-30b7b297/fold1.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "logs/train-20260926T060521091377Z-30b7b297/fold1.stdout.log": "7df8c3cc53c014dc025628668a0847cf2c3603184a93d9e2d9e5c7bbcb5cc6d1",
+      "logs/train-20260926T060521091377Z-30b7b297/fold2.STATUS.json": "33d8776ca2074da6df358fa00d53bb7ab69341ca195d038272b7fb9eb60cf52b",
+      "logs/train-20260926T060521091377Z-30b7b297/fold2.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "logs/train-20260926T060521091377Z-30b7b297/fold2.stdout.log": "3eea57579bf39b4699862215e8b831a39fd41f95a50f54c2b5f0ced1246438d2",
+      "logs/train-20260926T060521091377Z-30b7b297/fold3.STATUS.json": "88d152838359630af40fc7d9f8c717ebe6fa1c21a5d3e883732e23baca162cda",
+      "logs/train-20260926T060521091377Z-30b7b297/fold3.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "logs/train-20260926T060521091377Z-30b7b297/fold3.stdout.log": "8a4bdce93efbe87227a0b91809f92f480b1edcd65437859619dad187af33fca8",
+      "logs/train-20260926T060521091377Z-30b7b297/fold4.STATUS.json": "561056d18069618d174019dbc23cd0f1eb31783c60fdb247a24452509bcee0fb",
+      "logs/train-20260926T060521091377Z-30b7b297/fold4.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "logs/train-20260926T060521091377Z-30b7b297/fold4.stdout.log": "ce48f288de628dd94d0a9e663ed57c277ce8524c554f7901cbec6b05f3091c84",
+      "logs/train-20260926T072211405339Z-81fcf360/ATTEMPT.json": "d7b295bcf7916eed3bf20f509c60e2bbccd0e4f88da0a6e210e4f804d74d870b",
+      "logs/train-20260926T072211405339Z-81fcf360/fold1.STATUS.json": "603c3b84c288b23181aaf0477ee27b1b86d059f4b5ce4354fb5e0b1227f04e98",
+      "logs/train-20260926T072211405339Z-81fcf360/fold1.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "logs/train-20260926T072211405339Z-81fcf360/fold1.stdout.log": "73127ce4c0ada71d2f664b4979f8fdfb0cc018b8116092df183c7a7d722e07c4",
+      "logs/train-20260926T072211405339Z-81fcf360/fold2.STATUS.json": "b5b7bc7ed1e649e948972670d008c06bdae55bc49defe4cfae8e5983bcaf3e39",
+      "logs/train-20260926T072211405339Z-81fcf360/fold2.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "logs/train-20260926T072211405339Z-81fcf360/fold2.stdout.log": "a5d63b8d71194c7514c7a71e7cb1f47dbdf335383584eb997af983e9b322302d",
+      "logs/train-20260926T072211405339Z-81fcf360/fold3.STATUS.json": "44f981b7e2061f146ba4834150a0da17d988e7a35ac3b0960ecce21d11f6e423",
+      "logs/train-20260926T072211405339Z-81fcf360/fold3.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "logs/train-20260926T072211405339Z-81fcf360/fold3.stdout.log": "35861c25ad6464586c05b21cde8e9573a427aef3ac2ee205c86fac5512d585b1",
+      "logs/train-20260926T072211405339Z-81fcf360/fold4.STATUS.json": "97096b0f522f315501ed6e5252c0d8dffc38872dc9999b2f3d2a52ca766fa022",
+      "logs/train-20260926T072211405339Z-81fcf360/fold4.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "logs/train-20260926T072211405339Z-81fcf360/fold4.stdout.log": "4b7373941f02ef280601c12dc26cae57aca7de9be500b8c74394c01e52791bbc",
+      "logs/train-20260926T072211405339Z-81fcf360/fold5.STATUS.json": "dcdfb23c4df4e65194f86b0e88e6728a140627312b25bf1916b7cfacf5f44124",
+      "logs/train-20260926T072211405339Z-81fcf360/fold5.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "logs/train-20260926T072211405339Z-81fcf360/fold5.stdout.log": "bc61461a2c99f1da2c5b09617fce82bf3f5db67e4bc20a2e31c09ed63cf64e90",
+      "recovery/20260926T072106759654Z-10254442/COMPLETED_FILES.json": "408d8293dea95c570f38ba9cbb04ca2c46a8e1087b6ac23cc865b521f20e066a",
+      "recovery/20260926T072106759654Z-10254442/RECOVERY.json": "125b17707b49b79c94320f6d73e3d80bb336390755143623bf54d6494e559282",
+      "recovery/20260926T072106759654Z-10254442/preserved/.fold3.lock": "00e616adf0772489b8527a504f19c64e1c37a83c3f814f1cad758789e33034f5",
+      "recovery/20260926T072106759654Z-10254442/preserved/.fold4.lock": "5b20b4e14f32c2ae093c5dca26e3ea4fcd23a417d8339866a1dc2eb3cfac95e0",
+      "recovery/20260926T072106759654Z-10254442/preserved/fold3/joint_EPF/cfg3/seed44/STARTED.json.55b3258fd59047289e888f8ca9c5cf3a.tmp": "c7d7333bea17e50b67c442ffdb26fa19b9bb9667bcd17f2a7d8d192bc5004fee",
+      "recovery/20260926T072106759654Z-10254442/preserved/fold4/joint_MLP/cfg1/seed43/STARTED.json": "1574fcc24bdb347af7d4059e84cfa9650109affa7df708e1a856f678ac84c743",
+      "recovery/20260926T072106759654Z-10254442/preserved/logs/.train_runner.lock": "8a13ed4a831829820e896c08d9fe00e6b23daa139081f7ee2ff3c4bdfc0a91ad"
+    },
+    "harness_log_manifest_sha256": "b441479697c1000c8f47e8c1c5b9ff8689a555973c9d0a7d63b0b7aa5fa0ebfb",
+    "renderer_outside_training_sources": true,
+    "report_sha256": "c04afe08c4c8a15c6a1cc5d4ca692d60fc222b0d36f28e941fac17d4eb97ef95",
+    "selection_freeze_sha256": "b07201f2c6b01ee47e143c31d65a1a41af6fa11ecf55b63a4d649197ca8b77cd",
+    "selection_sha256": "fa9a6b3a5a26d555a5c2576d8492507cb4f179ec054855c161f469c03dbac2f0",
+    "study_sha256": "84b0cfad565bc6c66eac35c7fed3a6169698d9efa318d380964cd6c05f3dddcc",
+    "training_freeze_sha256": "e1e79fd86705900191493834a944d0ba03de8c589ed14b66a26a6d17361ea59a",
+    "unit_metadata_count": 1000
+  },
+  "psu_requested_draws": 2000,
+  "psu_valid_draws": 2000,
+  "schema": "clinical-factorial-v28-public/1",
+  "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "version": "clinical_factorial_v28"
+}

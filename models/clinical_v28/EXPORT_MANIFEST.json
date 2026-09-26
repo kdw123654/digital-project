@@ -1,0 +1,519 @@
+{
+  "schema": "clinical-v28-portable-export/1",
+  "scope": "Original model definitions and training core for prepared 114-column arrays; no trained checkpoint or cohort reproduction package.",
+  "source_files": {
+    "metabolic/event_plastic_field.py": {
+      "sha256": "1b438f9bf934ae82041187db22de10de12911e1db7fa1f05d9c54aa345528c3a",
+      "bytes": 9467,
+      "crlf_count": 0
+    },
+    "metabolic/event_field_v19.py": {
+      "sha256": "ace51539e4a44d4b6e635398a16bcdb79a03aa7e4d293303c5eccde787a676d9",
+      "bytes": 19325,
+      "crlf_count": 0
+    },
+    "metabolic/event_field_v21.py": {
+      "sha256": "08a3660812f4e5320c9e2e2859cfbf85d6a1fde8b9525910afe3ef36d1f187ac",
+      "bytes": 35494,
+      "crlf_count": 0
+    },
+    "metabolic/event_field_v23.py": {
+      "sha256": "31a4aabbe42cb30fa95156b86f8bc70918dea26f8b845b33349e31d75739a593",
+      "bytes": 20322,
+      "crlf_count": 0
+    },
+    "metabolic/clinical_v23_distribution.py": {
+      "sha256": "5202e1e1e65cf61645d82a59346802c034ce526f24d41aae1d9b238ca5fc3c8a",
+      "bytes": 25501,
+      "crlf_count": 0
+    },
+    "metabolic/clinical_v24_distribution.py": {
+      "sha256": "516ee259bfa9e5a4c11771ff20813a53f292a1051e17c59b5b366622bec9abac",
+      "bytes": 12443,
+      "crlf_count": 0
+    },
+    "metabolic/design_factorial_v28.py": {
+      "sha256": "f864a32bd0b67633f7b45d6d240c3b17cdd74412c68befd3cf8abca9375b0af3",
+      "bytes": 20796,
+      "crlf_count": 0
+    },
+    "metabolic/extrude_updown_v26.py": {
+      "sha256": "58db3049a57a5be9f3a2ee2cbd67ba732b6e2e12d959c9c10e70314fe908ed7b",
+      "bytes": 48786,
+      "crlf_count": 0
+    }
+  },
+  "exported_files": {
+    "models/clinical_v28/__init__.py": {
+      "sha256": "518c1f1d6b2290fc793fc806f215122a161305a2312552672f719a80431ee4ce",
+      "bytes": 414
+    },
+    "models/clinical_v28/_training.py": {
+      "sha256": "255fb6a560ce18e152bf6178cd195ae101aa3ddcce25f14934b78c986d752992",
+      "bytes": 1341
+    },
+    "models/clinical_v28/clinical_v23_distribution.py": {
+      "sha256": "5202e1e1e65cf61645d82a59346802c034ce526f24d41aae1d9b238ca5fc3c8a",
+      "bytes": 25501
+    },
+    "models/clinical_v28/clinical_v24_distribution.py": {
+      "sha256": "19c163fcb6a663796fdf0a8a66d8bf603d6f6d1768b778fa6f1529c601f9de20",
+      "bytes": 12434
+    },
+    "models/clinical_v28/event_field_v19.py": {
+      "sha256": "ace51539e4a44d4b6e635398a16bcdb79a03aa7e4d293303c5eccde787a676d9",
+      "bytes": 19325
+    },
+    "models/clinical_v28/event_field_v21.py": {
+      "sha256": "08a3660812f4e5320c9e2e2859cfbf85d6a1fde8b9525910afe3ef36d1f187ac",
+      "bytes": 35494
+    },
+    "models/clinical_v28/event_field_v23.py": {
+      "sha256": "31a4aabbe42cb30fa95156b86f8bc70918dea26f8b845b33349e31d75739a593",
+      "bytes": 20322
+    },
+    "models/clinical_v28/event_plastic_field.py": {
+      "sha256": "1b438f9bf934ae82041187db22de10de12911e1db7fa1f05d9c54aa345528c3a",
+      "bytes": 9467
+    },
+    "models/clinical_v28/experiment.py": {
+      "sha256": "3e38c1a4516e0a659e75093d05f56086a7972f4e19185dc08c44089f323854bd",
+      "bytes": 10126
+    },
+    "models/clinical_v28/README.md": {
+      "sha256": "639d3d3b69ddcef4364c5f5f16386a1b219e20088283c96f09150ddc2aa71f30",
+      "bytes": 4409
+    },
+    "models/clinical_v28/synthetic_demo.py": {
+      "sha256": "068e3bc02d1377bf5d8f7c81f39d9bada502bd60c21d82575d99642b8fadab01",
+      "bytes": 3498
+    },
+    "test_clinical_v28.py": {
+      "sha256": "aa295f4e170e5dad178c957aa0adc34a6e853c0f219fc71602a890c5e4af03fb",
+      "bytes": 4288
+    }
+  },
+  "transformations": [
+    {
+      "kind": "line_endings",
+      "description": "All public text is UTF-8 with LF. Source SHA256 values refer to original bytes; exported SHA256 values refer to public LF bytes."
+    },
+    {
+      "kind": "import_relocation",
+      "file": "models/clinical_v28/clinical_v24_distribution.py",
+      "source_line": 17,
+      "from": "from metabolic.clinical_v23_distribution import JointTargetTransform",
+      "to": "from .clinical_v23_distribution import JointTargetTransform"
+    },
+    {
+      "kind": "extraction",
+      "description": "Selected module-level constants, class and function source spans copied, including decorators. All selected ASTs and bodies match the original."
+    },
+    {
+      "kind": "module_wiring",
+      "file": "models/clinical_v28/experiment.py",
+      "description": "ud aliases the exported _training module; imports no cohort loaders or original training harness."
+    },
+    {
+      "kind": "support_files",
+      "files": [
+        "models/clinical_v28/__init__.py",
+        "models/clinical_v28/synthetic_demo.py",
+        "models/clinical_v28/README.md",
+        "test_clinical_v28.py"
+      ],
+      "description": "New portable package interface, synthetic-only example, documentation and tests; not original scientific model definitions."
+    }
+  ],
+  "extracted_nodes": [
+    {
+      "source": "metabolic/design_factorial_v28.py",
+      "source_start_line": 45,
+      "source_end_line": 45,
+      "export": "models/clinical_v28/experiment.py",
+      "symbol": "SEEDS",
+      "ast_sha256": "615550d4cabde8d879fd038595444fda9dcf1f59549e9cdf5d49d8e918850101",
+      "body_ast_sha256": "615550d4cabde8d879fd038595444fda9dcf1f59549e9cdf5d49d8e918850101",
+      "normalized_source_text_sha256": "1a29a9191e0b8673a872c9a842bf74b1fab26c54099fb5f6268bdb23a0f2c0d7",
+      "decorators_preserved": true,
+      "ast_equal": true
+    },
+    {
+      "source": "metabolic/design_factorial_v28.py",
+      "source_start_line": 46,
+      "source_end_line": 46,
+      "export": "models/clinical_v28/experiment.py",
+      "symbol": "(LR_GRID, WD_GRID)",
+      "ast_sha256": "3c457157ba4c2043c3d61417bbe745ef73931418306c23c687858f2ceca207e6",
+      "body_ast_sha256": "3c457157ba4c2043c3d61417bbe745ef73931418306c23c687858f2ceca207e6",
+      "normalized_source_text_sha256": "0af2bcb54fb529975df1ae426131050b7c85dcc5b5e6c556233c2b0441d6fcc5",
+      "decorators_preserved": true,
+      "ast_equal": true
+    },
+    {
+      "source": "metabolic/design_factorial_v28.py",
+      "source_start_line": 47,
+      "source_end_line": 47,
+      "export": "models/clinical_v28/experiment.py",
+      "symbol": "(MAX_EPOCHS, PATIENCE, BATCH, CLIP_NORM, LINEAR_LR_RATIO)",
+      "ast_sha256": "b29834d5dd2e5451ae6649dfe8a9a9f5ea5387bd12e646c39aadd97e395f163c",
+      "body_ast_sha256": "b29834d5dd2e5451ae6649dfe8a9a9f5ea5387bd12e646c39aadd97e395f163c",
+      "normalized_source_text_sha256": "91d198d2c63e166d50479f56848153380862dad3d4f3cca198ce7e238c1e443a",
+      "decorators_preserved": true,
+      "ast_equal": true
+    },
+    {
+      "source": "metabolic/design_factorial_v28.py",
+      "source_start_line": 48,
+      "source_end_line": 48,
+      "export": "models/clinical_v28/experiment.py",
+      "symbol": "DESIGNS",
+      "ast_sha256": "295fecb538e29be0937b306c615e9e6c327929d2db108055bc4e213f5d3d686d",
+      "body_ast_sha256": "295fecb538e29be0937b306c615e9e6c327929d2db108055bc4e213f5d3d686d",
+      "normalized_source_text_sha256": "5fd7b185bc1af481f162cbef46304d2f113d512d44eac96648b4827020124070",
+      "decorators_preserved": true,
+      "ast_equal": true
+    },
+    {
+      "source": "metabolic/design_factorial_v28.py",
+      "source_start_line": 49,
+      "source_end_line": 53,
+      "export": "models/clinical_v28/experiment.py",
+      "symbol": "ARCHS",
+      "ast_sha256": "e53f2a148a9a34e6ef67e96b542b965cdfbed9a493fb9c4aba69f4998816aa51",
+      "body_ast_sha256": "e53f2a148a9a34e6ef67e96b542b965cdfbed9a493fb9c4aba69f4998816aa51",
+      "normalized_source_text_sha256": "606677471a5466e5853547b834b9fa749a5a1a17ad092349af8438cc72bde0be",
+      "decorators_preserved": true,
+      "ast_equal": true
+    },
+    {
+      "source": "metabolic/design_factorial_v28.py",
+      "source_start_line": 54,
+      "source_end_line": 54,
+      "export": "models/clinical_v28/experiment.py",
+      "symbol": "CELLS",
+      "ast_sha256": "d8b77fe2540af7adf4c48fdf679eaecae14e2c5ceec199c9842f63c0e43212ee",
+      "body_ast_sha256": "d8b77fe2540af7adf4c48fdf679eaecae14e2c5ceec199c9842f63c0e43212ee",
+      "normalized_source_text_sha256": "43d62335980d0b16b9bd60cb427718ac308ec51f3e87af437fef4361da8cc026",
+      "decorators_preserved": true,
+      "ast_equal": true
+    },
+    {
+      "source": "metabolic/design_factorial_v28.py",
+      "source_start_line": 55,
+      "source_end_line": 55,
+      "export": "models/clinical_v28/experiment.py",
+      "symbol": "LOGIT_C_GRID",
+      "ast_sha256": "bb6eec79344433d50811f3a3feb40da0cff9998446744efa85a4e73ea41cd8b7",
+      "body_ast_sha256": "bb6eec79344433d50811f3a3feb40da0cff9998446744efa85a4e73ea41cd8b7",
+      "normalized_source_text_sha256": "ef24b0e8495f09840953ee07df9455bd7f5720d1fa91aded789a366127c172da",
+      "decorators_preserved": true,
+      "ast_equal": true
+    },
+    {
+      "source": "metabolic/design_factorial_v28.py",
+      "source_start_line": 56,
+      "source_end_line": 56,
+      "export": "models/clinical_v28/experiment.py",
+      "symbol": "EQUIVALENCE_MARGIN",
+      "ast_sha256": "01e2b8fb99276d056089e68f3606cd886c076cbea7394aa416b5b87c705b3abe",
+      "body_ast_sha256": "01e2b8fb99276d056089e68f3606cd886c076cbea7394aa416b5b87c705b3abe",
+      "normalized_source_text_sha256": "2f249a2312405a89749b152ef88375434e182304bf6e0b0c4816e6043a6e372b",
+      "decorators_preserved": true,
+      "ast_equal": true
+    },
+    {
+      "source": "metabolic/design_factorial_v28.py",
+      "source_start_line": 57,
+      "source_end_line": 57,
+      "export": "models/clinical_v28/experiment.py",
+      "symbol": "H1",
+      "ast_sha256": "cdc11e76475c80386914a9d4c0dcbfdf6f24a55fb10ee5c70ea0d02ceda3c38d",
+      "body_ast_sha256": "cdc11e76475c80386914a9d4c0dcbfdf6f24a55fb10ee5c70ea0d02ceda3c38d",
+      "normalized_source_text_sha256": "a4d62d8a11885d209fabe613667e3d96813ccc525f0da9c686699eb1b7867143",
+      "decorators_preserved": true,
+      "ast_equal": true
+    },
+    {
+      "source": "metabolic/design_factorial_v28.py",
+      "source_start_line": 58,
+      "source_end_line": 58,
+      "export": "models/clinical_v28/experiment.py",
+      "symbol": "H2",
+      "ast_sha256": "0e79f67b2d8109366546b88d3a9dcc8cb5c28f30f94579be2035d5960bc0fa5a",
+      "body_ast_sha256": "0e79f67b2d8109366546b88d3a9dcc8cb5c28f30f94579be2035d5960bc0fa5a",
+      "normalized_source_text_sha256": "773131c4a658c4fc1f3067ee7f43524c2a0985e6ca56776dc744285e31d6ffcf",
+      "decorators_preserved": true,
+      "ast_equal": true
+    },
+    {
+      "source": "metabolic/design_factorial_v28.py",
+      "source_start_line": 61,
+      "source_end_line": 102,
+      "export": "models/clinical_v28/experiment.py",
+      "symbol": "BinaryModel",
+      "ast_sha256": "386e4655e62a48789712294e824a22adb5fa53618a3571268a1a8761310103fb",
+      "body_ast_sha256": "b52f8db9aec12881b3a8ad56d387e28d481835ddd03b07812352b92e5ca7c990",
+      "normalized_source_text_sha256": "cd3fbeb5348e73aa2d509940685da5d8711016523cd53cf1fe1dc36d6e1d0f80",
+      "decorators_preserved": true,
+      "ast_equal": true
+    },
+    {
+      "source": "metabolic/design_factorial_v28.py",
+      "source_start_line": 105,
+      "source_end_line": 121,
+      "export": "models/clinical_v28/experiment.py",
+      "symbol": "logistic_anchor",
+      "ast_sha256": "9a6972167ccc2a62dad2153c11934c1595907c675f24a6a46cc51fc1d2b4feb1",
+      "body_ast_sha256": "3e0f285d0c5ae56e21ebb1726bdc6174323b7ae736de7308c34ae51b03b7a68c",
+      "normalized_source_text_sha256": "95c32e5857d33bb7373545045b46479526f3d7363d919822574c984645ebb0fa",
+      "decorators_preserved": true,
+      "ast_equal": true
+    },
+    {
+      "source": "metabolic/design_factorial_v28.py",
+      "source_start_line": 124,
+      "source_end_line": 139,
+      "export": "models/clinical_v28/experiment.py",
+      "symbol": "build",
+      "ast_sha256": "da31eb23ac2693fa1953f2815a4a393ad64ddaad6799d1d8daff2e8e2c0b5e68",
+      "body_ast_sha256": "d7f3e6dfc55106c8bc4708048702af5963dbb01aeb1fc11dbc4a596e0345b313",
+      "normalized_source_text_sha256": "34da1d08495dad1d39b25b588f4a0f0958418702d97d55cc4cec927a65f40996",
+      "decorators_preserved": true,
+      "ast_equal": true
+    },
+    {
+      "source": "metabolic/design_factorial_v28.py",
+      "source_start_line": 142,
+      "source_end_line": 144,
+      "export": "models/clinical_v28/experiment.py",
+      "symbol": "_bce",
+      "ast_sha256": "a65ff67bb865859e2713955f8a6dd0cd3af9a58ca1efa31a0a8d26c7c60e8ae2",
+      "body_ast_sha256": "aa4fe2f33f188ce3773a8917d727ba95c4574a2bdce5646f53898345090cd195",
+      "normalized_source_text_sha256": "028940324da3690be5cbef9a0438d1c6fce1582eca99a1a7d2f7e7dd2d683808",
+      "decorators_preserved": true,
+      "ast_equal": true
+    },
+    {
+      "source": "metabolic/design_factorial_v28.py",
+      "source_start_line": 147,
+      "source_end_line": 150,
+      "export": "models/clinical_v28/experiment.py",
+      "symbol": "_objective",
+      "ast_sha256": "901ec9c253984d2ea967c82e81265d3edadef275aa6684bbc3f3027d7f909271",
+      "body_ast_sha256": "094f9cc5364e872df86d19db445596de3d95bd6ed5a519b10ec29a3389ef7d7c",
+      "normalized_source_text_sha256": "a61eb7d460ba16bbec989c0a97345097f2348041291e6bcfada3dc035bd5b85b",
+      "decorators_preserved": true,
+      "ast_equal": true
+    },
+    {
+      "source": "metabolic/design_factorial_v28.py",
+      "source_start_line": 153,
+      "source_end_line": 170,
+      "export": "models/clinical_v28/experiment.py",
+      "symbol": "predict",
+      "ast_sha256": "0421ac50d7b6de99433060deba3e0e7222c808eaf750a22dedf1a150c9f1a648",
+      "body_ast_sha256": "ee5875476809cc90d7d66226affee89d04fb470327a503e81c55469c45cc955c",
+      "normalized_source_text_sha256": "0ac7da6de1500057b6df3f04038fedb53f9af659a69acd553f89461270e3c60e",
+      "decorators_preserved": true,
+      "ast_equal": true
+    },
+    {
+      "source": "metabolic/design_factorial_v28.py",
+      "source_start_line": 185,
+      "source_end_line": 240,
+      "export": "models/clinical_v28/experiment.py",
+      "symbol": "train_unit",
+      "ast_sha256": "8755a4e705438d997b824786eeffe6cf74902c7846cf8f79d46cfb9bfea36c2b",
+      "body_ast_sha256": "b45bc7e9422fbaba2716d4b0bda2a0c83dcfa1754453a034bf682c4304b769fc",
+      "normalized_source_text_sha256": "726925aa45b5ded742470ee696a94fb693084b565e225f754f2c455910cf49db",
+      "decorators_preserved": true,
+      "ast_equal": true
+    },
+    {
+      "source": "metabolic/design_factorial_v28.py",
+      "source_start_line": 243,
+      "source_end_line": 244,
+      "export": "models/clinical_v28/experiment.py",
+      "symbol": "configs",
+      "ast_sha256": "b9815999740f42b9e8843d157f989acde7a2814a1ade10ee169082ce31012191",
+      "body_ast_sha256": "729553d83be236408cc9e5816344485b66c78a350690a426d9cec2f449776711",
+      "normalized_source_text_sha256": "1797c80ca5e5ca0e88c6f9e6448dfe93e3afc487040d1474b4211fb65006e1ad",
+      "decorators_preserved": true,
+      "ast_equal": true
+    },
+    {
+      "source": "metabolic/extrude_updown_v26.py",
+      "source_start_line": 63,
+      "source_end_line": 63,
+      "export": "models/clinical_v28/_training.py",
+      "symbol": "(COV_PENALTY, CLIP_NORM, LINEAR_LR_RATIO)",
+      "ast_sha256": "40520dcb5884eb3943a4e0a4d0d63462540837c1846076cbb061b77e32fc9b62",
+      "body_ast_sha256": "40520dcb5884eb3943a4e0a4d0d63462540837c1846076cbb061b77e32fc9b62",
+      "normalized_source_text_sha256": "3c2472bbfe8e9e45d50c8dcd177e5018b4144b04c84ce179beb4a00d585ccbf8",
+      "decorators_preserved": true,
+      "ast_equal": true
+    },
+    {
+      "source": "metabolic/extrude_updown_v26.py",
+      "source_start_line": 221,
+      "source_end_line": 232,
+      "export": "models/clinical_v28/_training.py",
+      "symbol": "_optimizer",
+      "ast_sha256": "74e94da4a2b0a6ce1534f87a06c0277ac16496769249dac9c888b56262ea94bc",
+      "body_ast_sha256": "f6ed2a098f4302d15ca89d0690c01bce624edfe02a616db3158cdc4e36448540",
+      "normalized_source_text_sha256": "740c11279e591b4372d1f757e05d958ae4ecdb757a4fddcc37cf584e914c1cd0",
+      "decorators_preserved": true,
+      "ast_equal": true
+    },
+    {
+      "source": "metabolic/extrude_updown_v26.py",
+      "source_start_line": 235,
+      "source_end_line": 241,
+      "export": "models/clinical_v28/_training.py",
+      "symbol": "_loss",
+      "ast_sha256": "d4ccd09f650e13e6378d870623b2c1a70d163f2b4a73ff2c57446199df31e917",
+      "body_ast_sha256": "2798350bb5e0eb5c08b97c570a3bab59c413f2bd72a5b2dae4a57f362f9b5d4e",
+      "normalized_source_text_sha256": "0597a1c3c93a2c01ef6cbb617ba49525dd0f142e05d1c6346cfcb64dce3363b8",
+      "decorators_preserved": true,
+      "ast_equal": true
+    }
+  ],
+  "verification": {
+    "status": "passed",
+    "device": "cpu",
+    "torch_threads": 1,
+    "python_version": "3.13.1",
+    "runtime": {
+      "numpy": "2.2.6",
+      "scipy": "1.15.2",
+      "torch": "2.8.0+cu126",
+      "scikit-learn": "1.7.1"
+    },
+    "portable_subprocess": {
+      "working_directory": "repository root",
+      "PYTHONPATH": "unset",
+      "demo": "passed, 10 cells",
+      "tests": "5 passed",
+      "training_limit": "2 synthetic epochs per design"
+    },
+    "source_model_comparison": {
+      "inputs": "synthetic_demo.synthetic_inputs(seed=2801)",
+      "model_seed": 42,
+      "cells": {
+        "binary_Linear": {
+          "trainable_parameters": 460,
+          "initial_state_exact": true,
+          "forward_exact": true,
+          "proper_probabilities_exact": true,
+          "training_objective_exact": true,
+          "optimizer_groups_exact": true,
+          "maximum_absolute_error": 0.0
+        },
+        "binary_MLP": {
+          "trainable_parameters": 8212,
+          "initial_state_exact": true,
+          "forward_exact": true,
+          "proper_probabilities_exact": true,
+          "training_objective_exact": true,
+          "optimizer_groups_exact": true,
+          "maximum_absolute_error": 0.0
+        },
+        "binary_EPF": {
+          "trainable_parameters": 5895,
+          "initial_state_exact": true,
+          "forward_exact": true,
+          "proper_probabilities_exact": true,
+          "training_objective_exact": true,
+          "optimizer_groups_exact": true,
+          "maximum_absolute_error": 0.0
+        },
+        "binary_EPF_noP": {
+          "trainable_parameters": 5893,
+          "initial_state_exact": true,
+          "forward_exact": true,
+          "proper_probabilities_exact": true,
+          "training_objective_exact": true,
+          "optimizer_groups_exact": true,
+          "maximum_absolute_error": 0.0
+        },
+        "binary_EPF_step1": {
+          "trainable_parameters": 5895,
+          "initial_state_exact": true,
+          "forward_exact": true,
+          "proper_probabilities_exact": true,
+          "training_objective_exact": true,
+          "optimizer_groups_exact": true,
+          "maximum_absolute_error": 0.0
+        },
+        "joint_Linear": {
+          "trainable_parameters": 654,
+          "initial_state_exact": true,
+          "forward_exact": true,
+          "proper_probabilities_exact": true,
+          "training_objective_exact": true,
+          "optimizer_groups_exact": true,
+          "maximum_absolute_error": 0.0
+        },
+        "joint_MLP": {
+          "trainable_parameters": 8708,
+          "initial_state_exact": true,
+          "forward_exact": true,
+          "proper_probabilities_exact": true,
+          "training_objective_exact": true,
+          "optimizer_groups_exact": true,
+          "maximum_absolute_error": 0.0
+        },
+        "joint_EPF": {
+          "trainable_parameters": 5971,
+          "initial_state_exact": true,
+          "forward_exact": true,
+          "proper_probabilities_exact": true,
+          "training_objective_exact": true,
+          "optimizer_groups_exact": true,
+          "maximum_absolute_error": 0.0
+        },
+        "joint_EPF_noP": {
+          "trainable_parameters": 5969,
+          "initial_state_exact": true,
+          "forward_exact": true,
+          "proper_probabilities_exact": true,
+          "training_objective_exact": true,
+          "optimizer_groups_exact": true,
+          "maximum_absolute_error": 0.0
+        },
+        "joint_EPF_step1": {
+          "trainable_parameters": 5971,
+          "initial_state_exact": true,
+          "forward_exact": true,
+          "proper_probabilities_exact": true,
+          "training_objective_exact": true,
+          "optimizer_groups_exact": true,
+          "maximum_absolute_error": 0.0
+        }
+      },
+      "logistic_anchor_exact": true
+    },
+    "short_training_comparison": {
+      "binary_EPF": {
+        "epochs": 2,
+        "metadata_exact": true,
+        "state_dict_exact": true,
+        "predictions_exact": true,
+        "maximum_absolute_error": 0.0
+      },
+      "joint_EPF": {
+        "epochs": 2,
+        "metadata_exact": true,
+        "state_dict_exact": true,
+        "predictions_exact": true,
+        "maximum_absolute_error": 0.0
+      }
+    },
+    "limits": [
+      "No original participant rows, checkpoints or study artifacts were modified.",
+      "No full 1000-unit study or PSU resampling was rerun.",
+      "Synthetic equivalence and portable tests do not establish clinical validity."
+    ]
+  }
+}
