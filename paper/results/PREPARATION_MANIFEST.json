@@ -13,15 +13,15 @@
   ],
   "sha256": {
     ".gitignore": "3dfe0f8cfc7f85e49f4387e3ed4149aa04deceddbabfc64f1e1d8682781acab2",
-    "README.md": "1c413bb07bfbfb95b10f93ce00499e09f40377450846c374085d553c59f5eb91",
+    "README.md": "35383888374233e78134a3f7c236d7939df208e77885921fae2d21c104456145",
     "RESEARCH_REPORT.md": "89c02defc1ba6932b754d3ba9cb4e73bf474a61261c4a206f444d31f58076486",
     "my_model.ipynb": "90b55517ea542609608f94cbad80e65699c230c0b81a164eaae30dca7b895235",
     "paper/01_study_definition.md": "5465d195ec2a2f08eeb15cee2b515767c0cf0e32e47bceed0cc1003ed521e597",
     "paper/02_model_comparison.md": "6ffad8174066b8193b427be04797c79007d49420b3a88b96be7fd56844a040fa",
     "paper/03_writing_plan.md": "016107dec1f6fdea5ea14eafbe562de4d4986e05dab7ee588d0439fdca37364c",
     "paper/figures.R": "acfa78d7155365f347f9420c5659b140da3bf2e4d68bec3cd0144da892e243f7",
-    "paper/manuscript.md": "a545e61810c41680fd1699be7a270c2c86a1f7e7acff8c6b643558fa7c443660",
-    "paper/manuscript_review.docx": "efade92cf39a227c623394807a663a9d4c80ac1281c90f2f4042fd89a981b1b0",
+    "paper/manuscript.md": "0c82826c2a90516faf13ee508518bfdf8d254658ae418aaa470e5abc496c4ff9",
+    "paper/manuscript_review.docx": "ffeca16230e5deb5cc2db3c5051b96e94ab26a7348f3e990b61a44279d2d1644",
     "paper/model_comparison.ipynb": "e68b477787649617df30d6b7fa804244cd5f266aa0f1bf7ed719dadc6adf2aea",
     "paper/render_results.py": "4ac4c6c1cbcf19aba4650cbd337bf3cadb0f3f2a4a4c6c1a6eceacb584ffbc1e",
     "paper/requirements-results.txt": "ef0f05e50cd94c8064557ba75335ada462304f4e35de2c8ce60b3875af2e2d09",
@@ -48,7 +48,9 @@
     "figures": 3,
     "figure_generator": "R 4.6.1",
     "unverified_factor_claims_included": false,
-    "figure_placement": "All three figures and captions after references on a separate final page; former positions contain parenthesized figure numbers only"
+    "figure_placement": "All three figures and captions after references on a separate final page; former positions contain parenthesized figure numbers only",
+    "table_placement": "Both tables and captions after references beside the final-page figures; former positions contain (표1) and (표2) only",
+    "tables": 2
   },
   "hash_basis": "Git blob bytes with repository newline normalization; manifest excludes itself and unchanged prior presentation files"
 }
