@@ -2,7 +2,7 @@
   "schema": "paper-preparation/1",
   "base_main_commit": "56728e7d27e76cc901bdc17f41d2fefd4a0b3ebd",
   "analysis_source_sha256": "74200bd55fdffcce4264046eaa28cb02fad7292e6df750a6a3c2a1a5ea08fa6d",
-  "scope": "Main my_model.ipynb plus executed aggregate model comparison and three-page first manuscript draft; EPF is one comparator",
+  "scope": "Main my_model.ipynb plus executed aggregate model comparison and four-page first manuscript draft; EPF is one comparator",
   "numerical_results_unchanged": true,
   "new_training_performed": false,
   "public_notebook_executed_code_cells": 6,
@@ -13,15 +13,15 @@
   ],
   "sha256": {
     ".gitignore": "3dfe0f8cfc7f85e49f4387e3ed4149aa04deceddbabfc64f1e1d8682781acab2",
-    "README.md": "4626b0eb6c9377d7e2d850e5e97a6765f89e1f795a2a4a2fc0a0198e2051a0da",
-    "RESEARCH_REPORT.md": "bf179deae1483e4bee98b65a9fc8609c1dd21dd21a9f0fdcb2cc0b3196a40e06",
+    "README.md": "1c413bb07bfbfb95b10f93ce00499e09f40377450846c374085d553c59f5eb91",
+    "RESEARCH_REPORT.md": "89c02defc1ba6932b754d3ba9cb4e73bf474a61261c4a206f444d31f58076486",
     "my_model.ipynb": "90b55517ea542609608f94cbad80e65699c230c0b81a164eaae30dca7b895235",
     "paper/01_study_definition.md": "5465d195ec2a2f08eeb15cee2b515767c0cf0e32e47bceed0cc1003ed521e597",
     "paper/02_model_comparison.md": "6ffad8174066b8193b427be04797c79007d49420b3a88b96be7fd56844a040fa",
-    "paper/03_writing_plan.md": "d86331a949349e4d5345f5e69632117ca1a464781a4124eec4ca74dd6cb3a6ad",
+    "paper/03_writing_plan.md": "016107dec1f6fdea5ea14eafbe562de4d4986e05dab7ee588d0439fdca37364c",
     "paper/figures.R": "acfa78d7155365f347f9420c5659b140da3bf2e4d68bec3cd0144da892e243f7",
-    "paper/manuscript.md": "5256e34011c60279d5a3f1bf784a49680ef7c853a415287fd10fa62b5c62c775",
-    "paper/manuscript_review.docx": "25677021c8965d7c879ad92e3722d767899d8a718c2f6446a6ef1c4487f333d0",
+    "paper/manuscript.md": "a545e61810c41680fd1699be7a270c2c86a1f7e7acff8c6b643558fa7c443660",
+    "paper/manuscript_review.docx": "efade92cf39a227c623394807a663a9d4c80ac1281c90f2f4042fd89a981b1b0",
     "paper/model_comparison.ipynb": "e68b477787649617df30d6b7fa804244cd5f266aa0f1bf7ed719dadc6adf2aea",
     "paper/render_results.py": "4ac4c6c1cbcf19aba4650cbd337bf3cadb0f3f2a4a4c6c1a6eceacb584ffbc1e",
     "paper/requirements-results.txt": "ef0f05e50cd94c8064557ba75335ada462304f4e35de2c8ce60b3875af2e2d09",
@@ -43,11 +43,12 @@
   },
   "manuscript_status": {
     "kind": "first draft",
-    "pages": 3,
+    "pages": 4,
     "authors": "unconfirmed; anonymous review copy only",
     "figures": 3,
     "figure_generator": "R 4.6.1",
-    "unverified_factor_claims_included": false
+    "unverified_factor_claims_included": false,
+    "figure_placement": "All three figures and captions after references on a separate final page; former positions contain parenthesized figure numbers only"
   },
   "hash_basis": "Git blob bytes with repository newline normalization; manifest excludes itself and unchanged prior presentation files"
 }
