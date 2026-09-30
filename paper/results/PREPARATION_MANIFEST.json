@@ -12,28 +12,27 @@
     "Decide public retraining-code scope; current public package regenerates aggregate tables/figures only"
   ],
   "sha256": {
-    ".gitignore": "80d76816846f433613e0631504810303f408880cf056e2060d994d12c9ae625b",
-    "my_model.ipynb": "6b882e8c0145d37646bbb2c006d6376d4b6182815a294a446a8155da9f3477bc",
-    "paper/01_study_definition.md": "339486bc2f24ec93f045e022e569bebef2f3fec6187cd93ff92986e9d430c3f1",
-    "paper/02_model_comparison.md": "7625408e54091e5ca78ee00c2c987895252a28e2c54ba8dda3134825ccb858fe",
-    "paper/03_writing_plan.md": "6b9053936d7aae2b91027f50bb631e96933d1ed164f98cd6ddcfde3c1d6a3f3c",
-    "paper/__pycache__/render_results.cpython-313.pyc": "f19b39d0c184fffefb5f60d750b09b644fcf77c035512a08c9e4c0e8a132ca77",
+    ".gitignore": "3dfe0f8cfc7f85e49f4387e3ed4149aa04deceddbabfc64f1e1d8682781acab2",
+    "README.md": "4626b0eb6c9377d7e2d850e5e97a6765f89e1f795a2a4a2fc0a0198e2051a0da",
+    "RESEARCH_REPORT.md": "bf179deae1483e4bee98b65a9fc8609c1dd21dd21a9f0fdcb2cc0b3196a40e06",
+    "my_model.ipynb": "90b55517ea542609608f94cbad80e65699c230c0b81a164eaae30dca7b895235",
+    "paper/01_study_definition.md": "5465d195ec2a2f08eeb15cee2b515767c0cf0e32e47bceed0cc1003ed521e597",
+    "paper/02_model_comparison.md": "6ffad8174066b8193b427be04797c79007d49420b3a88b96be7fd56844a040fa",
+    "paper/03_writing_plan.md": "d86331a949349e4d5345f5e69632117ca1a464781a4124eec4ca74dd6cb3a6ad",
     "paper/figures.R": "acfa78d7155365f347f9420c5659b140da3bf2e4d68bec3cd0144da892e243f7",
-    "paper/manuscript.md": "e4d8e3cf9fd99256c974e3ac277b2496d3e29608d474cefbc1a98c38f14ed43c",
+    "paper/manuscript.md": "5256e34011c60279d5a3f1bf784a49680ef7c853a415287fd10fa62b5c62c775",
     "paper/manuscript_review.docx": "25677021c8965d7c879ad92e3722d767899d8a718c2f6446a6ef1c4487f333d0",
-    "paper/model_comparison.ipynb": "52a245d1ed4b69965009009629bb410af9a1572b6bfe18fc4f07c5c9a6a4ef39",
+    "paper/model_comparison.ipynb": "e68b477787649617df30d6b7fa804244cd5f266aa0f1bf7ed719dadc6adf2aea",
     "paper/render_results.py": "4ac4c6c1cbcf19aba4650cbd337bf3cadb0f3f2a4a4c6c1a6eceacb584ffbc1e",
     "paper/requirements-results.txt": "ef0f05e50cd94c8064557ba75335ada462304f4e35de2c8ce60b3875af2e2d09",
-    "paper/results/class_ap.csv": "14d8f62f9ed8aea5ed021077ae0142d6de96c11c7852f56d79a90dada74d13d0",
-    "paper/results/comparison_summary.json": "d389d2aedf94b6125073ca9b834625dd947061d24b9245b61ff453f827230444",
+    "paper/results/class_ap.csv": "bcac3dedcace388bbde9f693f713e2177e6baf983a1699f5f9d5afe50d3795ed",
+    "paper/results/comparison_summary.json": "36dd3894a07f04e41a4343b23956daae5d4237b0a32b837bcfe85eb914b37968",
     "paper/results/figures/fig1_pipeline.png": "f13b529aba1b27b337224faceb7191bc8b60e6f21a86edf62aa44297b25066a6",
     "paper/results/figures/fig2_macro_ap.png": "39996349b9858099901be2628ff42b0081cc4880eb2d60b17f2ef1a398103e28",
     "paper/results/figures/fig3_class_ap.png": "10bb9a6be81c0b17277d95b947ecd7617e4736ab3f6f01237b4274254e281fc0",
-    "paper/results/metrics.csv": "e89dc511360930dd8886217fc43e67b649a753a87f293b685417cb343933c0d3",
+    "paper/results/metrics.csv": "6aa75f0b4581130dd7f38bdbe858aac7bc423e9ee709d59c72a91770e7acf6b0",
     "paper/results/model_comparison.png": "16288732c24c045b1a2dbdcb9cc6cbe2c807c3ed731c0f631ed8f4acc1c00e5d",
-    "paper/results/model_table.md": "24f0dd2e193f9c22990554b164b3528d6309b8fd01aa3d7067e097f366bd29a5",
-    "README.md": "e435198abee62d896c09386313e50731995ef84b92045bec65391027c6e0c7bc",
-    "RESEARCH_REPORT.md": "8f8134e404e81f4bf00b27cd01e794c667a9978aead60ffe5f147966cc1b9269"
+    "paper/results/model_table.md": "4cbc1b083f75811272d162aac30b3ae6a710783e542005dd9781376d3a977743"
   },
   "main_notebook": "my_model.ipynb",
   "main_notebook_status": {
@@ -49,5 +48,6 @@
     "figures": 3,
     "figure_generator": "R 4.6.1",
     "unverified_factor_claims_included": false
-  }
+  },
+  "hash_basis": "Git blob bytes with repository newline normalization; manifest excludes itself and unchanged prior presentation files"
 }
