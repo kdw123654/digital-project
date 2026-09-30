@@ -1,0 +1,53 @@
+{
+  "schema": "paper-preparation/1",
+  "base_main_commit": "56728e7d27e76cc901bdc17f41d2fefd4a0b3ebd",
+  "analysis_source_sha256": "74200bd55fdffcce4264046eaa28cb02fad7292e6df750a6a3c2a1a5ea08fa6d",
+  "scope": "Main my_model.ipynb plus executed aggregate model comparison and three-page first manuscript draft; EPF is one comparator",
+  "numerical_results_unchanged": true,
+  "new_training_performed": false,
+  "public_notebook_executed_code_cells": 6,
+  "open_items": [
+    "Harmonize colleague factor analysis cohort/labels/codes/weights with model comparison or distinguish analysis groups",
+    "Confirm causal versus associative wording, references, authorship, ethics text and submission format",
+    "Decide public retraining-code scope; current public package regenerates aggregate tables/figures only"
+  ],
+  "sha256": {
+    ".gitignore": "80d76816846f433613e0631504810303f408880cf056e2060d994d12c9ae625b",
+    "my_model.ipynb": "6b882e8c0145d37646bbb2c006d6376d4b6182815a294a446a8155da9f3477bc",
+    "paper/01_study_definition.md": "339486bc2f24ec93f045e022e569bebef2f3fec6187cd93ff92986e9d430c3f1",
+    "paper/02_model_comparison.md": "7625408e54091e5ca78ee00c2c987895252a28e2c54ba8dda3134825ccb858fe",
+    "paper/03_writing_plan.md": "6b9053936d7aae2b91027f50bb631e96933d1ed164f98cd6ddcfde3c1d6a3f3c",
+    "paper/__pycache__/render_results.cpython-313.pyc": "f19b39d0c184fffefb5f60d750b09b644fcf77c035512a08c9e4c0e8a132ca77",
+    "paper/figures.R": "acfa78d7155365f347f9420c5659b140da3bf2e4d68bec3cd0144da892e243f7",
+    "paper/manuscript.md": "e4d8e3cf9fd99256c974e3ac277b2496d3e29608d474cefbc1a98c38f14ed43c",
+    "paper/manuscript_review.docx": "25677021c8965d7c879ad92e3722d767899d8a718c2f6446a6ef1c4487f333d0",
+    "paper/model_comparison.ipynb": "52a245d1ed4b69965009009629bb410af9a1572b6bfe18fc4f07c5c9a6a4ef39",
+    "paper/render_results.py": "4ac4c6c1cbcf19aba4650cbd337bf3cadb0f3f2a4a4c6c1a6eceacb584ffbc1e",
+    "paper/requirements-results.txt": "ef0f05e50cd94c8064557ba75335ada462304f4e35de2c8ce60b3875af2e2d09",
+    "paper/results/class_ap.csv": "14d8f62f9ed8aea5ed021077ae0142d6de96c11c7852f56d79a90dada74d13d0",
+    "paper/results/comparison_summary.json": "d389d2aedf94b6125073ca9b834625dd947061d24b9245b61ff453f827230444",
+    "paper/results/figures/fig1_pipeline.png": "f13b529aba1b27b337224faceb7191bc8b60e6f21a86edf62aa44297b25066a6",
+    "paper/results/figures/fig2_macro_ap.png": "39996349b9858099901be2628ff42b0081cc4880eb2d60b17f2ef1a398103e28",
+    "paper/results/figures/fig3_class_ap.png": "10bb9a6be81c0b17277d95b947ecd7617e4736ab3f6f01237b4274254e281fc0",
+    "paper/results/metrics.csv": "e89dc511360930dd8886217fc43e67b649a753a87f293b685417cb343933c0d3",
+    "paper/results/model_comparison.png": "16288732c24c045b1a2dbdcb9cc6cbe2c807c3ed731c0f631ed8f4acc1c00e5d",
+    "paper/results/model_table.md": "24f0dd2e193f9c22990554b164b3528d6309b8fd01aa3d7067e097f366bd29a5",
+    "README.md": "e435198abee62d896c09386313e50731995ef84b92045bec65391027c6e0c7bc",
+    "RESEARCH_REPORT.md": "8f8134e404e81f4bf00b27cd01e794c667a9978aead60ffe5f147966cc1b9269"
+  },
+  "main_notebook": "my_model.ipynb",
+  "main_notebook_status": {
+    "primary": true,
+    "original_analysis_rerun": false,
+    "appended_comparison_code_cells_executed": 6,
+    "private_row_previews_removed": true
+  },
+  "manuscript_status": {
+    "kind": "first draft",
+    "pages": 3,
+    "authors": "unconfirmed; anonymous review copy only",
+    "figures": 3,
+    "figure_generator": "R 4.6.1",
+    "unverified_factor_claims_included": false
+  }
+}

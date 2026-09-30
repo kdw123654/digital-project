@@ -24,3 +24,15 @@ env/
 .idea/
 .DS_Store
 Thumbs.db
+
+# 논문 준비 공개 범위: 원자료·개인별 결과·모델 체크포인트 제외
+data/raw/
+private/
+**/private/
+*.sav
+*.npz
+*.joblib
+*.pt
+*.pth
+!paper/results/metrics.csv
+!paper/results/class_ap.csv

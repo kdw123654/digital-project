@@ -1,0 +1,617 @@
+{
+  "schema": "paper-model-comparison-summary/1",
+  "status": "completed internal model comparison",
+  "years": [
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+  ],
+  "age": [
+    20,
+    39
+  ],
+  "cohort": {
+    "strict_19_39": 5229,
+    "strict_20_39": 5055,
+    "nutrition_20_39": 4508,
+    "by_year": {
+      "2020": 851,
+      "2021": 792,
+      "2022": 926,
+      "2023": 965,
+      "2024": 974
+    },
+    "by_class": {
+      "Normal": 2796,
+      "High_BP": 183,
+      "High_Glu": 233,
+      "Dyslipid": 813,
+      "Complex": 483
+    }
+  },
+  "predictors": [
+    "age",
+    "HE_BMI",
+    "HE_wc",
+    "WHtR",
+    "sedentary_hours",
+    "sex",
+    "incm",
+    "edu",
+    "sm_presnt",
+    "dr_month",
+    "pa_aerobic",
+    "living_alone",
+    "solo_dinner",
+    "weight_gain",
+    "no_brush_bed"
+  ],
+  "predictor_count": 15,
+  "encoded_input_columns": 45,
+  "classes": [
+    "Normal",
+    "High_BP",
+    "High_Glu",
+    "Dyslipid",
+    "Complex"
+  ],
+  "state_to_class5": [
+    0,
+    2,
+    1,
+    4,
+    3,
+    4,
+    4,
+    4,
+    3,
+    4,
+    4,
+    4,
+    3,
+    4,
+    4,
+    4
+  ],
+  "weight": "wt_tot; nutrition participants only; mean-one weights for training",
+  "split": "5 year-balanced PSU-group outer folds; inner PSU fit/validation; same people for all models",
+  "tuning": "8 settings per condition, selection seed 42; select by weighted validation macro AP",
+  "final_seeds": [
+    42,
+    43,
+    44
+  ],
+  "model_labels": {
+    "LR": "로지스틱 회귀",
+    "RF": "Random Forest",
+    "XGB": "XGBoost",
+    "LGBM": "LightGBM",
+    "MLP": "MLP",
+    "jLinear": "공동분포 선형 평균 모델",
+    "jMLP": "공동분포 MLP",
+    "jEPF": "EPF (공동분포)"
+  },
+  "metrics": {
+    "LR": {
+      "macro_ap": 0.34428732805564655,
+      "macro_auc": 0.7281991105205098,
+      "macro_f1": 0.27099762667566174,
+      "balanced_accuracy": 0.28586465359151453,
+      "nll": 0.9925549283029003,
+      "brier": 0.493655301628724,
+      "classes": [
+        {
+          "class": "Normal",
+          "n": 2796,
+          "prevalence": 0.606330218802011,
+          "ap": 0.8387992772300211,
+          "auc": 0.792803935455668
+        },
+        {
+          "class": "High_BP",
+          "n": 183,
+          "prevalence": 0.04478088664405882,
+          "ap": 0.07670363891230776,
+          "auc": 0.6722322312266358
+        },
+        {
+          "class": "High_Glu",
+          "n": 233,
+          "prevalence": 0.052696752976815774,
+          "ap": 0.10370210458657789,
+          "auc": 0.6590702756829001
+        },
+        {
+          "class": "Dyslipid",
+          "n": 813,
+          "prevalence": 0.18065695809759105,
+          "ap": 0.3011222950882463,
+          "auc": 0.6772223649611022
+        },
+        {
+          "class": "Complex",
+          "n": 483,
+          "prevalence": 0.11553518347952337,
+          "ap": 0.40110932446107983,
+          "auc": 0.8396667452762427
+        }
+      ],
+      "macro_ap_ci95": [
+        0.33352507590931774,
+        0.35991285418333213
+      ]
+    },
+    "RF": {
+      "macro_ap": 0.3439186446662602,
+      "macro_auc": 0.7267669519829905,
+      "macro_f1": 0.273941238679248,
+      "balanced_accuracy": 0.29308488224801604,
+      "nll": 0.9909813304887153,
+      "brier": 0.4933810265991108,
+      "classes": [
+        {
+          "class": "Normal",
+          "n": 2796,
+          "prevalence": 0.606330218802011,
+          "ap": 0.8365416836184905,
+          "auc": 0.7909675274487976
+        },
+        {
+          "class": "High_BP",
+          "n": 183,
+          "prevalence": 0.04478088664405882,
+          "ap": 0.07438161766345042,
+          "auc": 0.6719818688952264
+        },
+        {
+          "class": "High_Glu",
+          "n": 233,
+          "prevalence": 0.052696752976815774,
+          "ap": 0.11701681944404695,
+          "auc": 0.6565047808909275
+        },
+        {
+          "class": "Dyslipid",
+          "n": 813,
+          "prevalence": 0.18065695809759105,
+          "ap": 0.29407727691189045,
+          "auc": 0.6765296971786987
+        },
+        {
+          "class": "Complex",
+          "n": 483,
+          "prevalence": 0.11553518347952337,
+          "ap": 0.3975758256934229,
+          "auc": 0.8378508855013023
+        }
+      ],
+      "macro_ap_ci95": [
+        0.33238426641540153,
+        0.3604693142667479
+      ]
+    },
+    "XGB": {
+      "macro_ap": 0.34933501557207763,
+      "macro_auc": 0.7334130813058503,
+      "macro_f1": 0.2843021561829419,
+      "balanced_accuracy": 0.30344450388746064,
+      "nll": 0.984219325748843,
+      "brier": 0.4899534377636366,
+      "classes": [
+        {
+          "class": "Normal",
+          "n": 2796,
+          "prevalence": 0.606330218802011,
+          "ap": 0.8396739739705851,
+          "auc": 0.7941802744635779
+        },
+        {
+          "class": "High_BP",
+          "n": 183,
+          "prevalence": 0.04478088664405882,
+          "ap": 0.07295957836097877,
+          "auc": 0.6856394625589444
+        },
+        {
+          "class": "High_Glu",
+          "n": 233,
+          "prevalence": 0.052696752976815774,
+          "ap": 0.10876462626117171,
+          "auc": 0.6622765744294734
+        },
+        {
+          "class": "Dyslipid",
+          "n": 813,
+          "prevalence": 0.18065695809759105,
+          "ap": 0.3117421572680584,
+          "auc": 0.6850756085002752
+        },
+        {
+          "class": "Complex",
+          "n": 483,
+          "prevalence": 0.11553518347952337,
+          "ap": 0.4135347419995942,
+          "auc": 0.8398934865769807
+        }
+      ],
+      "macro_ap_ci95": [
+        0.3372470542693596,
+        0.3655686683333631
+      ]
+    },
+    "LGBM": {
+      "macro_ap": 0.3515183099085008,
+      "macro_auc": 0.7321425035970532,
+      "macro_f1": 0.28239253722209334,
+      "balanced_accuracy": 0.2990699059374065,
+      "nll": 0.9869626079330814,
+      "brier": 0.48980264288967745,
+      "classes": [
+        {
+          "class": "Normal",
+          "n": 2796,
+          "prevalence": 0.606330218802011,
+          "ap": 0.8383249956185675,
+          "auc": 0.7943872409845343
+        },
+        {
+          "class": "High_BP",
+          "n": 183,
+          "prevalence": 0.04478088664405882,
+          "ap": 0.07251498919339606,
+          "auc": 0.6772868085037178
+        },
+        {
+          "class": "High_Glu",
+          "n": 233,
+          "prevalence": 0.052696752976815774,
+          "ap": 0.11376058135727464,
+          "auc": 0.6657888328864127
+        },
+        {
+          "class": "Dyslipid",
+          "n": 813,
+          "prevalence": 0.18065695809759105,
+          "ap": 0.31694404094952433,
+          "auc": 0.6843816508786748
+        },
+        {
+          "class": "Complex",
+          "n": 483,
+          "prevalence": 0.11553518347952337,
+          "ap": 0.4160469424237414,
+          "auc": 0.8388679847319267
+        }
+      ],
+      "macro_ap_ci95": [
+        0.3390175498623014,
+        0.36764461564400197
+      ]
+    },
+    "MLP": {
+      "macro_ap": 0.3487943803224528,
+      "macro_auc": 0.731970051364671,
+      "macro_f1": 0.2731213794917903,
+      "balanced_accuracy": 0.28962531038033024,
+      "nll": 0.9880553618983625,
+      "brier": 0.4919789290321795,
+      "classes": [
+        {
+          "class": "Normal",
+          "n": 2796,
+          "prevalence": 0.606330218802011,
+          "ap": 0.8411442668232432,
+          "auc": 0.7932525272852974
+        },
+        {
+          "class": "High_BP",
+          "n": 183,
+          "prevalence": 0.04478088664405882,
+          "ap": 0.08375526259275808,
+          "auc": 0.6828366570998398
+        },
+        {
+          "class": "High_Glu",
+          "n": 233,
+          "prevalence": 0.052696752976815774,
+          "ap": 0.10334523248302992,
+          "auc": 0.6591332822297861
+        },
+        {
+          "class": "Dyslipid",
+          "n": 813,
+          "prevalence": 0.18065695809759105,
+          "ap": 0.3058022036313348,
+          "auc": 0.6853013291257697
+        },
+        {
+          "class": "Complex",
+          "n": 483,
+          "prevalence": 0.11553518347952337,
+          "ap": 0.40992493608189806,
+          "auc": 0.8393264610826615
+        }
+      ],
+      "macro_ap_ci95": [
+        0.33747874304778136,
+        0.36553850719513625
+      ]
+    },
+    "jEPF": {
+      "macro_ap": 0.3514839561698073,
+      "macro_auc": 0.7354314767465514,
+      "macro_f1": 0.282867875538195,
+      "balanced_accuracy": 0.30923892987541796,
+      "nll": 0.9857247073064787,
+      "brier": 0.4912893485229945,
+      "classes": [
+        {
+          "class": "Normal",
+          "n": 2796,
+          "prevalence": 0.606330218802011,
+          "ap": 0.8438699055697487,
+          "auc": 0.7966675165570011
+        },
+        {
+          "class": "High_BP",
+          "n": 183,
+          "prevalence": 0.04478088664405882,
+          "ap": 0.07816739374464905,
+          "auc": 0.6849125435210077
+        },
+        {
+          "class": "High_Glu",
+          "n": 233,
+          "prevalence": 0.052696752976815774,
+          "ap": 0.09960665220457979,
+          "auc": 0.6608249841550952
+        },
+        {
+          "class": "Dyslipid",
+          "n": 813,
+          "prevalence": 0.18065695809759105,
+          "ap": 0.31958758296648865,
+          "auc": 0.690767642931738
+        },
+        {
+          "class": "Complex",
+          "n": 483,
+          "prevalence": 0.11553518347952337,
+          "ap": 0.41618824636357027,
+          "auc": 0.8439846965679151
+        }
+      ],
+      "macro_ap_ci95": [
+        0.33956597685429735,
+        0.36754064215105803
+      ]
+    },
+    "jMLP": {
+      "macro_ap": 0.34850297929252233,
+      "macro_auc": 0.7357310421170983,
+      "macro_f1": 0.27457943523638084,
+      "balanced_accuracy": 0.3054489000898453,
+      "nll": 0.984972786616005,
+      "brier": 0.4913179728902486,
+      "classes": [
+        {
+          "class": "Normal",
+          "n": 2796,
+          "prevalence": 0.606330218802011,
+          "ap": 0.8447035343732803,
+          "auc": 0.7970111236131404
+        },
+        {
+          "class": "High_BP",
+          "n": 183,
+          "prevalence": 0.04478088664405882,
+          "ap": 0.07591313474795942,
+          "auc": 0.6847272858038526
+        },
+        {
+          "class": "High_Glu",
+          "n": 233,
+          "prevalence": 0.052696752976815774,
+          "ap": 0.10693290093755532,
+          "auc": 0.6604771025482647
+        },
+        {
+          "class": "Dyslipid",
+          "n": 813,
+          "prevalence": 0.18065695809759105,
+          "ap": 0.31394751529643194,
+          "auc": 0.6928927363855824
+        },
+        {
+          "class": "Complex",
+          "n": 483,
+          "prevalence": 0.11553518347952337,
+          "ap": 0.40101781110738466,
+          "auc": 0.8435469622346512
+        }
+      ],
+      "macro_ap_ci95": [
+        0.3368864384710343,
+        0.36444500554988024
+      ]
+    },
+    "jLinear": {
+      "macro_ap": 0.3444126848304719,
+      "macro_auc": 0.737150966409458,
+      "macro_f1": 0.26068018667023535,
+      "balanced_accuracy": 0.28844642010224186,
+      "nll": 0.9885309190992525,
+      "brier": 0.49393813318208085,
+      "classes": [
+        {
+          "class": "Normal",
+          "n": 2796,
+          "prevalence": 0.606330218802011,
+          "ap": 0.8419729591272282,
+          "auc": 0.7933737641638278
+        },
+        {
+          "class": "High_BP",
+          "n": 183,
+          "prevalence": 0.04478088664405882,
+          "ap": 0.08064374391281917,
+          "auc": 0.6951534716273866
+        },
+        {
+          "class": "High_Glu",
+          "n": 233,
+          "prevalence": 0.052696752976815774,
+          "ap": 0.09998194206881789,
+          "auc": 0.6684498092971852
+        },
+        {
+          "class": "Dyslipid",
+          "n": 813,
+          "prevalence": 0.18065695809759105,
+          "ap": 0.3107392238660406,
+          "auc": 0.6881669761796765
+        },
+        {
+          "class": "Complex",
+          "n": 483,
+          "prevalence": 0.11553518347952337,
+          "ap": 0.3887255551774532,
+          "auc": 0.8406108107792137
+        }
+      ],
+      "macro_ap_ci95": [
+        0.33333656549387414,
+        0.3596103150904157
+      ]
+    }
+  },
+  "seed_macro_ap": {
+    "LR": [
+      0.34428732805564655
+    ],
+    "RF": [
+      0.3426329557075325,
+      0.3433273446571212,
+      0.34440710631732907
+    ],
+    "XGB": [
+      0.3467326253230497,
+      0.34868195795018025,
+      0.3503213463585493
+    ],
+    "LGBM": [
+      0.3513250107024396,
+      0.349175541063641,
+      0.3497057278407604
+    ],
+    "MLP": [
+      0.3485339203196604,
+      0.34836388883280184,
+      0.348996566328735
+    ],
+    "jEPF": [
+      0.34904082652780727,
+      0.3499079646517101,
+      0.3487471212897708
+    ],
+    "jMLP": [
+      0.34724229178270155,
+      0.3472377349552248,
+      0.3482875404883952
+    ],
+    "jLinear": [
+      0.344655116078077,
+      0.3442822532220616,
+      0.3442941679973396
+    ]
+  },
+  "costs": {
+    "LR": {
+      "parameter_median": 230.0,
+      "parameter_unit": "trainable",
+      "selected_fit_seconds_median": 0.0440394000033848,
+      "predict_seconds_median": 0.0003490999952191487,
+      "note": "CPU; single seed selected fits, excluding shared anchor preparation; prediction includes p16 audit for joint models"
+    },
+    "RF": {
+      "parameter_median": 37196.0,
+      "parameter_unit": "tree nodes",
+      "selected_fit_seconds_median": 0.29231229999277275,
+      "predict_seconds_median": 0.03685350000159815,
+      "note": "CPU; single seed selected fits, excluding shared anchor preparation; prediction includes p16 audit for joint models"
+    },
+    "XGB": {
+      "parameter_median": 14709.0,
+      "parameter_unit": "tree nodes",
+      "selected_fit_seconds_median": 0.43811899999855086,
+      "predict_seconds_median": 0.002399000004515983,
+      "note": "CPU; single seed selected fits, excluding shared anchor preparation; prediction includes p16 audit for joint models"
+    },
+    "LGBM": {
+      "parameter_median": 3955.0,
+      "parameter_unit": "tree leaves",
+      "selected_fit_seconds_median": 0.21124830000917427,
+      "predict_seconds_median": 0.0029968000017106533,
+      "note": "CPU; single seed selected fits, excluding shared anchor preparation; prediction includes p16 audit for joint models"
+    },
+    "MLP": {
+      "parameter_median": 3632.0,
+      "parameter_unit": "trainable",
+      "selected_fit_seconds_median": 0.5701788000005763,
+      "predict_seconds_median": 0.0006114999996498227,
+      "note": "CPU; single seed selected fits, excluding shared anchor preparation; prediction includes p16 audit for joint models"
+    },
+    "jEPF": {
+      "parameter_median": 3970.0,
+      "parameter_unit": "trainable",
+      "selected_fit_seconds_median": 9.938238599992474,
+      "predict_seconds_median": 2.0089764000003925,
+      "note": "CPU; single seed selected fits, excluding shared anchor preparation; prediction includes p16 audit for joint models"
+    },
+    "jMLP": {
+      "parameter_median": 3947.0,
+      "parameter_unit": "trainable",
+      "selected_fit_seconds_median": 2.6761560999875655,
+      "predict_seconds_median": 1.95476459999918,
+      "note": "CPU; single seed selected fits, excluding shared anchor preparation; prediction includes p16 audit for joint models"
+    },
+    "jLinear": {
+      "parameter_median": 309.0,
+      "parameter_unit": "trainable",
+      "selected_fit_seconds_median": 3.6358978999924148,
+      "predict_seconds_median": 1.8856011999887414,
+      "note": "CPU; single seed selected fits, excluding shared anchor preparation; prediction includes p16 audit for joint models"
+    }
+  },
+  "bootstrap": {
+    "units": 948,
+    "strata": 135,
+    "singleton_strata": 0,
+    "replicates": 2000,
+    "seed": 20261001,
+    "method": "Rao-Wu n_h-1 with replacement, multiplicity*n_h/(n_h-1), within (year, stratum), full survey PSUs, no FPC"
+  },
+  "original_prespecified_contrast": {
+    "comparison": "jEPF minus jMLP",
+    "result": {
+      "epf_minus_other": 0.002980976877284991,
+      "ci95": [
+        -0.00235886792175409,
+        0.008810216239690147
+      ],
+      "p_boot": 0.28
+    }
+  },
+  "limitations": [
+    "Internal post-hoc comparison on previously examined KNHANES; not independent external validation",
+    "Joint models additionally learn continuous measurements; direct-vs-joint differences are not pure architecture effects",
+    "Single-seed tuning; three final seeds; fixed-prediction bootstrap does not include refitting uncertainty",
+    "Corrected feature coding and strict unaware/fasting/pregnancy cohort differ from peer notebook",
+    "No factor discovery, SHAP, causal or clinical-benefit claims"
+  ],
+  "fit_count": 390,
+  "model_fold_units": 40,
+  "source_report_sha256": "74200bd55fdffcce4264046eaa28cb02fad7292e6df750a6a3c2a1a5ea08fa6d"
+}
