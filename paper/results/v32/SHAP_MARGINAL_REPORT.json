@@ -1,0 +1,267 @@
+{
+  "purpose": "Supplementary original-flag explanations for subtype-competition interpretation; not additional primary model comparisons",
+  "audit": [
+    {
+      "year": 2020,
+      "n": 198,
+      "reference_error": 2.220446049250313e-16,
+      "additivity_error": 4.440892098500626e-16,
+      "seconds": 10.85915250000835
+    },
+    {
+      "year": 2021,
+      "n": 191,
+      "reference_error": 1.6653345369377348e-16,
+      "additivity_error": 2.220446049250313e-16,
+      "seconds": 9.55231559999811
+    },
+    {
+      "year": 2022,
+      "n": 200,
+      "reference_error": 1.6653345369377348e-16,
+      "additivity_error": 2.220446049250313e-16,
+      "seconds": 10.001189000002341
+    },
+    {
+      "year": 2023,
+      "n": 186,
+      "reference_error": 1.6653345369377348e-16,
+      "additivity_error": 3.3306690738754696e-16,
+      "seconds": 9.44707360000757
+    },
+    {
+      "year": 2024,
+      "n": 194,
+      "reference_error": 2.220446049250313e-16,
+      "additivity_error": 3.3306690738754696e-16,
+      "seconds": 9.735262500005774
+    }
+  ],
+  "patterns": [
+    {
+      "feature": "dr_month",
+      "flag": "elevated_bp",
+      "mean_shap_difference": 0.013372713100188052,
+      "positive_years": 5,
+      "negative_years": 0,
+      "n_years": 5
+    },
+    {
+      "feature": "dr_month",
+      "flag": "elevated_glucose",
+      "mean_shap_difference": 0.03870593480877659,
+      "positive_years": 5,
+      "negative_years": 0,
+      "n_years": 5
+    },
+    {
+      "feature": "dr_month",
+      "flag": "elevated_tg",
+      "mean_shap_difference": 0.0043748624571666676,
+      "positive_years": 4,
+      "negative_years": 1,
+      "n_years": 5
+    },
+    {
+      "feature": "dr_month",
+      "flag": "low_hdl",
+      "mean_shap_difference": -0.08264089911811255,
+      "positive_years": 0,
+      "negative_years": 5,
+      "n_years": 5
+    },
+    {
+      "feature": "no_brush_bed",
+      "flag": "elevated_bp",
+      "mean_shap_difference": 0.004280174096687252,
+      "positive_years": 5,
+      "negative_years": 0,
+      "n_years": 5
+    },
+    {
+      "feature": "no_brush_bed",
+      "flag": "elevated_glucose",
+      "mean_shap_difference": 0.008045701160444053,
+      "positive_years": 5,
+      "negative_years": 0,
+      "n_years": 5
+    },
+    {
+      "feature": "no_brush_bed",
+      "flag": "elevated_tg",
+      "mean_shap_difference": -0.004253372404807457,
+      "positive_years": 0,
+      "negative_years": 5,
+      "n_years": 5
+    },
+    {
+      "feature": "no_brush_bed",
+      "flag": "low_hdl",
+      "mean_shap_difference": 0.0005380594489382903,
+      "positive_years": 2,
+      "negative_years": 3,
+      "n_years": 5
+    },
+    {
+      "feature": "pa_aerobic",
+      "flag": "elevated_bp",
+      "mean_shap_difference": -0.0018677559329633247,
+      "positive_years": 1,
+      "negative_years": 4,
+      "n_years": 5
+    },
+    {
+      "feature": "pa_aerobic",
+      "flag": "elevated_glucose",
+      "mean_shap_difference": -0.007590847958105879,
+      "positive_years": 0,
+      "negative_years": 5,
+      "n_years": 5
+    },
+    {
+      "feature": "pa_aerobic",
+      "flag": "elevated_tg",
+      "mean_shap_difference": -0.012854475452447736,
+      "positive_years": 0,
+      "negative_years": 5,
+      "n_years": 5
+    },
+    {
+      "feature": "pa_aerobic",
+      "flag": "low_hdl",
+      "mean_shap_difference": -0.02387641059147378,
+      "positive_years": 0,
+      "negative_years": 5,
+      "n_years": 5
+    },
+    {
+      "feature": "sedentary_hours",
+      "flag": "elevated_bp",
+      "mean_shap_difference": 0.0010934719630542613,
+      "positive_years": 3,
+      "negative_years": 2,
+      "n_years": 5
+    },
+    {
+      "feature": "sedentary_hours",
+      "flag": "elevated_glucose",
+      "mean_shap_difference": -0.010513076200060572,
+      "positive_years": 0,
+      "negative_years": 5,
+      "n_years": 5
+    },
+    {
+      "feature": "sedentary_hours",
+      "flag": "elevated_tg",
+      "mean_shap_difference": 0.016847629787279567,
+      "positive_years": 5,
+      "negative_years": 0,
+      "n_years": 5
+    },
+    {
+      "feature": "sedentary_hours",
+      "flag": "low_hdl",
+      "mean_shap_difference": 0.01786322723076575,
+      "positive_years": 5,
+      "negative_years": 0,
+      "n_years": 5
+    },
+    {
+      "feature": "sm_presnt",
+      "flag": "elevated_bp",
+      "mean_shap_difference": 0.014103239693031183,
+      "positive_years": 5,
+      "negative_years": 0,
+      "n_years": 5
+    },
+    {
+      "feature": "sm_presnt",
+      "flag": "elevated_glucose",
+      "mean_shap_difference": 0.025026675755363364,
+      "positive_years": 5,
+      "negative_years": 0,
+      "n_years": 5
+    },
+    {
+      "feature": "sm_presnt",
+      "flag": "elevated_tg",
+      "mean_shap_difference": 0.0825792263535319,
+      "positive_years": 5,
+      "negative_years": 0,
+      "n_years": 5
+    },
+    {
+      "feature": "sm_presnt",
+      "flag": "low_hdl",
+      "mean_shap_difference": 0.03467216683833427,
+      "positive_years": 5,
+      "negative_years": 0,
+      "n_years": 5
+    },
+    {
+      "feature": "solo_dinner",
+      "flag": "elevated_bp",
+      "mean_shap_difference": -0.007741790061185104,
+      "positive_years": 0,
+      "negative_years": 5,
+      "n_years": 5
+    },
+    {
+      "feature": "solo_dinner",
+      "flag": "elevated_glucose",
+      "mean_shap_difference": -0.008075896985252339,
+      "positive_years": 0,
+      "negative_years": 5,
+      "n_years": 5
+    },
+    {
+      "feature": "solo_dinner",
+      "flag": "elevated_tg",
+      "mean_shap_difference": -0.015211547289187588,
+      "positive_years": 0,
+      "negative_years": 5,
+      "n_years": 5
+    },
+    {
+      "feature": "solo_dinner",
+      "flag": "low_hdl",
+      "mean_shap_difference": -0.03112812787802305,
+      "positive_years": 0,
+      "negative_years": 5,
+      "n_years": 5
+    },
+    {
+      "feature": "weight_gain",
+      "flag": "elevated_bp",
+      "mean_shap_difference": 0.007493295473225181,
+      "positive_years": 5,
+      "negative_years": 0,
+      "n_years": 5
+    },
+    {
+      "feature": "weight_gain",
+      "flag": "elevated_glucose",
+      "mean_shap_difference": 0.013119954240037698,
+      "positive_years": 5,
+      "negative_years": 0,
+      "n_years": 5
+    },
+    {
+      "feature": "weight_gain",
+      "flag": "elevated_tg",
+      "mean_shap_difference": 0.015282327504383162,
+      "positive_years": 5,
+      "negative_years": 0,
+      "n_years": 5
+    },
+    {
+      "feature": "weight_gain",
+      "flag": "low_hdl",
+      "mean_shap_difference": -0.0029145930393224507,
+      "positive_years": 2,
+      "negative_years": 3,
+      "n_years": 5
+    }
+  ],
+  "interpretation": "Conditional prediction associations, not intervention effects. Flags overlap; five subtypes are mutually exclusive."
+}

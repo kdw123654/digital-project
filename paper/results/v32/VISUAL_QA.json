@@ -1,0 +1,24 @@
+[
+  {
+    "version": "review",
+    "docx_sha256": "70ceb02c51f4834fe61de96ae3047c2ce9f7573af45e5a5b7aabd4d54bc8250f",
+    "pages": 5,
+    "min_explicit_font_pt": 9.0,
+    "drawings": 5,
+    "sections": 2,
+    "all_pages_visually_inspected": true,
+    "figures_tables_after_references": true,
+    "render": "qa_delivery; figures pages4/5 pixel-identical to previously inspected qa_final"
+  },
+  {
+    "version": "publication",
+    "docx_sha256": "e4ebe18c1ec2319122ef16112f191a66116c0122bb4e41a4edf161b55a9f6f5d",
+    "pages": 5,
+    "min_explicit_font_pt": 9.0,
+    "drawings": 5,
+    "sections": 2,
+    "all_pages_visually_inspected": true,
+    "figures_tables_after_references": true,
+    "render": "qa_delivery; figures pages4/5 pixel-identical to previously inspected qa_final"
+  }
+]

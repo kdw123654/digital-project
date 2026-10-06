@@ -1,0 +1,580 @@
+{
+  "method": "Weighted-background antithetic permutation SHAP on the real EPF ensemble; standard SHAP Explanation storage and official callable audit",
+  "annual": [
+    {
+      "year": 2020,
+      "n_explained": 198,
+      "permutations": 64,
+      "antithetic_pairs": 32,
+      "players": [
+        "age",
+        "HE_BMI",
+        "HE_wc",
+        "WHtR",
+        "sedentary_hours",
+        "sex",
+        "incm",
+        "edu",
+        "sm_presnt",
+        "dr_month",
+        "pa_aerobic",
+        "living_alone",
+        "solo_dinner",
+        "weight_gain",
+        "no_brush_bed"
+      ],
+      "output": "EPF seed42-44 ensemble five-class probabilities",
+      "development_background_only": true,
+      "sampling": "Up to40 random held-out rows per class, inverse-inclusion survey weights for aggregation",
+      "quadrature_order": 64,
+      "audited_prediction_max_error": 3.3306690738754696e-16,
+      "additivity_max_error": 4.996003610813204e-16,
+      "official_shap_callable_additivity_error": 1.6675560710055493e-08,
+      "shap_version": "0.48.0",
+      "seconds": 23.24876960000256,
+      "values_sha256": "eb1314eff234e78689d6eb5d6d3d70e7b18cba547ea0de21711502c5c762b36c"
+    },
+    {
+      "year": 2021,
+      "n_explained": 191,
+      "permutations": 64,
+      "antithetic_pairs": 32,
+      "players": [
+        "age",
+        "HE_BMI",
+        "HE_wc",
+        "WHtR",
+        "sedentary_hours",
+        "sex",
+        "incm",
+        "edu",
+        "sm_presnt",
+        "dr_month",
+        "pa_aerobic",
+        "living_alone",
+        "solo_dinner",
+        "weight_gain",
+        "no_brush_bed"
+      ],
+      "output": "EPF seed42-44 ensemble five-class probabilities",
+      "development_background_only": true,
+      "sampling": "Up to40 random held-out rows per class, inverse-inclusion survey weights for aggregation",
+      "quadrature_order": 64,
+      "audited_prediction_max_error": 2.220446049250313e-16,
+      "additivity_max_error": 3.885780586188048e-16,
+      "official_shap_callable_additivity_error": 8.466299383780296e-09,
+      "shap_version": "0.48.0",
+      "seconds": 22.620948199997656,
+      "values_sha256": "cac01b6d8b87c244a31acdf96d868f99696fa30af885eb5d6aebf723165f9a3c"
+    },
+    {
+      "year": 2022,
+      "n_explained": 200,
+      "permutations": 64,
+      "antithetic_pairs": 32,
+      "players": [
+        "age",
+        "HE_BMI",
+        "HE_wc",
+        "WHtR",
+        "sedentary_hours",
+        "sex",
+        "incm",
+        "edu",
+        "sm_presnt",
+        "dr_month",
+        "pa_aerobic",
+        "living_alone",
+        "solo_dinner",
+        "weight_gain",
+        "no_brush_bed"
+      ],
+      "output": "EPF seed42-44 ensemble five-class probabilities",
+      "development_background_only": true,
+      "sampling": "Up to40 random held-out rows per class, inverse-inclusion survey weights for aggregation",
+      "quadrature_order": 64,
+      "audited_prediction_max_error": 2.220446049250313e-16,
+      "additivity_max_error": 4.440892098500626e-16,
+      "official_shap_callable_additivity_error": 9.220282815025627e-09,
+      "shap_version": "0.48.0",
+      "seconds": 21.10013209999306,
+      "values_sha256": "8ae8d0a4e2d6c2039414a620e202de8c91c313c6e49d2739e66542bc4ba7bd11"
+    },
+    {
+      "year": 2023,
+      "n_explained": 186,
+      "permutations": 64,
+      "antithetic_pairs": 32,
+      "players": [
+        "age",
+        "HE_BMI",
+        "HE_wc",
+        "WHtR",
+        "sedentary_hours",
+        "sex",
+        "incm",
+        "edu",
+        "sm_presnt",
+        "dr_month",
+        "pa_aerobic",
+        "living_alone",
+        "solo_dinner",
+        "weight_gain",
+        "no_brush_bed"
+      ],
+      "output": "EPF seed42-44 ensemble five-class probabilities",
+      "development_background_only": true,
+      "sampling": "Up to40 random held-out rows per class, inverse-inclusion survey weights for aggregation",
+      "quadrature_order": 64,
+      "audited_prediction_max_error": 2.220446049250313e-16,
+      "additivity_max_error": 4.440892098500626e-16,
+      "official_shap_callable_additivity_error": 4.347728205233992e-09,
+      "shap_version": "0.48.0",
+      "seconds": 19.372642700007418,
+      "values_sha256": "9d5ce32d0f901527ea363c4b6876496119dc92170f2b8ec138b09ff39cc1383e"
+    },
+    {
+      "year": 2024,
+      "n_explained": 194,
+      "permutations": 64,
+      "antithetic_pairs": 32,
+      "players": [
+        "age",
+        "HE_BMI",
+        "HE_wc",
+        "WHtR",
+        "sedentary_hours",
+        "sex",
+        "incm",
+        "edu",
+        "sm_presnt",
+        "dr_month",
+        "pa_aerobic",
+        "living_alone",
+        "solo_dinner",
+        "weight_gain",
+        "no_brush_bed"
+      ],
+      "output": "EPF seed42-44 ensemble five-class probabilities",
+      "development_background_only": true,
+      "sampling": "Up to40 random held-out rows per class, inverse-inclusion survey weights for aggregation",
+      "quadrature_order": 64,
+      "audited_prediction_max_error": 2.220446049250313e-16,
+      "additivity_max_error": 5.551115123125783e-16,
+      "official_shap_callable_additivity_error": 2.554194816761779e-08,
+      "shap_version": "0.48.0",
+      "seconds": 19.646070500006317,
+      "values_sha256": "ce39ae88e4f18c50178940bb63fd0ea4f68d812fb85dadb926a9769957f8d0a6"
+    }
+  ],
+  "global_importance": [
+    {
+      "feature": "HE_wc",
+      "mean_abs_shap": 0.04007061970966483,
+      "min": 0.03537608354858114,
+      "max": 0.04285771931278471
+    },
+    {
+      "feature": "WHtR",
+      "mean_abs_shap": 0.03421643352485818,
+      "min": 0.02979464407361456,
+      "max": 0.03826006737763963
+    },
+    {
+      "feature": "age",
+      "mean_abs_shap": 0.024157038260878325,
+      "min": 0.02010900622554539,
+      "max": 0.028455131786592914
+    },
+    {
+      "feature": "HE_BMI",
+      "mean_abs_shap": 0.017149464397191498,
+      "min": 0.014313867274147454,
+      "max": 0.018421716361691095
+    },
+    {
+      "feature": "sex",
+      "mean_abs_shap": 0.016581092552716063,
+      "min": 0.015013991398302954,
+      "max": 0.017736086544742687
+    },
+    {
+      "feature": "dr_month",
+      "mean_abs_shap": 0.01179034596679918,
+      "min": 0.010918069944758843,
+      "max": 0.013398745598646955
+    },
+    {
+      "feature": "sm_presnt",
+      "mean_abs_shap": 0.009428907862272639,
+      "min": 0.008582007349092022,
+      "max": 0.010615789883738808
+    },
+    {
+      "feature": "solo_dinner",
+      "mean_abs_shap": 0.0065008556300698295,
+      "min": 0.005621490521886948,
+      "max": 0.007190543305635648
+    },
+    {
+      "feature": "incm",
+      "mean_abs_shap": 0.0062929447949069215,
+      "min": 0.004770311525451219,
+      "max": 0.007035632716128018
+    },
+    {
+      "feature": "pa_aerobic",
+      "mean_abs_shap": 0.006123818048300588,
+      "min": 0.005402404603831556,
+      "max": 0.006849683804744776
+    },
+    {
+      "feature": "sedentary_hours",
+      "mean_abs_shap": 0.005207379671396275,
+      "min": 0.004595140639021819,
+      "max": 0.005742771775288093
+    },
+    {
+      "feature": "edu",
+      "mean_abs_shap": 0.004043269224628072,
+      "min": 0.003138908465356996,
+      "max": 0.00545862868786347
+    },
+    {
+      "feature": "weight_gain",
+      "mean_abs_shap": 0.0036062020267109106,
+      "min": 0.0029420921531340552,
+      "max": 0.004351999804720881
+    },
+    {
+      "feature": "living_alone",
+      "mean_abs_shap": 0.003476575388384127,
+      "min": 0.0029157366061356455,
+      "max": 0.004534031780153547
+    },
+    {
+      "feature": "no_brush_bed",
+      "mean_abs_shap": 0.002626770936084369,
+      "min": 0.0020582351117687104,
+      "max": 0.00372821723478954
+    }
+  ],
+  "behaviour_patterns": [
+    {
+      "feature": "sedentary_hours",
+      "class": "Normal",
+      "mean_shap_difference": -0.010206199642326068,
+      "years_supported": 5,
+      "positive_years": 0,
+      "negative_years": 5,
+      "same_sign_4_of_5": true
+    },
+    {
+      "feature": "sedentary_hours",
+      "class": "High_BP",
+      "mean_shap_difference": -0.0008336172465503383,
+      "years_supported": 5,
+      "positive_years": 1,
+      "negative_years": 4,
+      "same_sign_4_of_5": true
+    },
+    {
+      "feature": "sedentary_hours",
+      "class": "High_Glu",
+      "mean_shap_difference": -0.010487124977285062,
+      "years_supported": 5,
+      "positive_years": 0,
+      "negative_years": 5,
+      "same_sign_4_of_5": true
+    },
+    {
+      "feature": "sedentary_hours",
+      "class": "Dyslipid",
+      "mean_shap_difference": 0.018265085147010977,
+      "years_supported": 5,
+      "positive_years": 5,
+      "negative_years": 0,
+      "same_sign_4_of_5": true
+    },
+    {
+      "feature": "sedentary_hours",
+      "class": "Complex",
+      "mean_shap_difference": 0.003261856642850419,
+      "years_supported": 5,
+      "positive_years": 5,
+      "negative_years": 0,
+      "same_sign_4_of_5": true
+    },
+    {
+      "feature": "sm_presnt",
+      "class": "Normal",
+      "mean_shap_difference": -0.06805204190762823,
+      "years_supported": 5,
+      "positive_years": 0,
+      "negative_years": 5,
+      "same_sign_4_of_5": true
+    },
+    {
+      "feature": "sm_presnt",
+      "class": "High_BP",
+      "mean_shap_difference": -0.005117502318284036,
+      "years_supported": 5,
+      "positive_years": 0,
+      "negative_years": 5,
+      "same_sign_4_of_5": true
+    },
+    {
+      "feature": "sm_presnt",
+      "class": "High_Glu",
+      "mean_shap_difference": -0.008151350622272823,
+      "years_supported": 5,
+      "positive_years": 0,
+      "negative_years": 5,
+      "same_sign_4_of_5": true
+    },
+    {
+      "feature": "sm_presnt",
+      "class": "Dyslipid",
+      "mean_shap_difference": 0.038761174931026536,
+      "years_supported": 5,
+      "positive_years": 5,
+      "negative_years": 0,
+      "same_sign_4_of_5": true
+    },
+    {
+      "feature": "sm_presnt",
+      "class": "Complex",
+      "mean_shap_difference": 0.04255971969522642,
+      "years_supported": 5,
+      "positive_years": 5,
+      "negative_years": 0,
+      "same_sign_4_of_5": true
+    },
+    {
+      "feature": "dr_month",
+      "class": "Normal",
+      "mean_shap_difference": 0.020455800298040405,
+      "years_supported": 5,
+      "positive_years": 5,
+      "negative_years": 0,
+      "same_sign_4_of_5": true
+    },
+    {
+      "feature": "dr_month",
+      "class": "High_BP",
+      "mean_shap_difference": 0.00665939561752651,
+      "years_supported": 5,
+      "positive_years": 5,
+      "negative_years": 0,
+      "same_sign_4_of_5": true
+    },
+    {
+      "feature": "dr_month",
+      "class": "High_Glu",
+      "mean_shap_difference": 0.02535255218277857,
+      "years_supported": 5,
+      "positive_years": 5,
+      "negative_years": 0,
+      "same_sign_4_of_5": true
+    },
+    {
+      "feature": "dr_month",
+      "class": "Dyslipid",
+      "mean_shap_difference": -0.0635486534451508,
+      "years_supported": 5,
+      "positive_years": 0,
+      "negative_years": 5,
+      "same_sign_4_of_5": true
+    },
+    {
+      "feature": "dr_month",
+      "class": "Complex",
+      "mean_shap_difference": 0.011080905208802786,
+      "years_supported": 5,
+      "positive_years": 5,
+      "negative_years": 0,
+      "same_sign_4_of_5": true
+    },
+    {
+      "feature": "pa_aerobic",
+      "class": "Normal",
+      "mean_shap_difference": 0.028036921524961643,
+      "years_supported": 5,
+      "positive_years": 5,
+      "negative_years": 0,
+      "same_sign_4_of_5": true
+    },
+    {
+      "feature": "pa_aerobic",
+      "class": "High_BP",
+      "mean_shap_difference": 0.0017017263034370214,
+      "years_supported": 5,
+      "positive_years": 4,
+      "negative_years": 1,
+      "same_sign_4_of_5": true
+    },
+    {
+      "feature": "pa_aerobic",
+      "class": "High_Glu",
+      "mean_shap_difference": -0.0007974770047624047,
+      "years_supported": 5,
+      "positive_years": 2,
+      "negative_years": 3,
+      "same_sign_4_of_5": false
+    },
+    {
+      "feature": "pa_aerobic",
+      "class": "Dyslipid",
+      "mean_shap_difference": -0.019729825368660088,
+      "years_supported": 5,
+      "positive_years": 0,
+      "negative_years": 5,
+      "same_sign_4_of_5": true
+    },
+    {
+      "feature": "pa_aerobic",
+      "class": "Complex",
+      "mean_shap_difference": -0.009211345345887958,
+      "years_supported": 5,
+      "positive_years": 0,
+      "negative_years": 5,
+      "same_sign_4_of_5": true
+    },
+    {
+      "feature": "solo_dinner",
+      "class": "Normal",
+      "mean_shap_difference": 0.03968507289774693,
+      "years_supported": 5,
+      "positive_years": 5,
+      "negative_years": 0,
+      "same_sign_4_of_5": true
+    },
+    {
+      "feature": "solo_dinner",
+      "class": "High_BP",
+      "mean_shap_difference": -0.0019296962623795023,
+      "years_supported": 5,
+      "positive_years": 0,
+      "negative_years": 5,
+      "same_sign_4_of_5": true
+    },
+    {
+      "feature": "solo_dinner",
+      "class": "High_Glu",
+      "mean_shap_difference": -0.0007547151739146013,
+      "years_supported": 5,
+      "positive_years": 1,
+      "negative_years": 4,
+      "same_sign_4_of_5": true
+    },
+    {
+      "feature": "solo_dinner",
+      "class": "Dyslipid",
+      "mean_shap_difference": -0.025384940425879087,
+      "years_supported": 5,
+      "positive_years": 0,
+      "negative_years": 5,
+      "same_sign_4_of_5": true
+    },
+    {
+      "feature": "solo_dinner",
+      "class": "Complex",
+      "mean_shap_difference": -0.011615720838649837,
+      "years_supported": 5,
+      "positive_years": 0,
+      "negative_years": 5,
+      "same_sign_4_of_5": true
+    },
+    {
+      "feature": "weight_gain",
+      "class": "Normal",
+      "mean_shap_difference": -0.015771425614463482,
+      "years_supported": 5,
+      "positive_years": 0,
+      "negative_years": 5,
+      "same_sign_4_of_5": true
+    },
+    {
+      "feature": "weight_gain",
+      "class": "High_BP",
+      "mean_shap_difference": 0.001810953759188998,
+      "years_supported": 5,
+      "positive_years": 5,
+      "negative_years": 0,
+      "same_sign_4_of_5": true
+    },
+    {
+      "feature": "weight_gain",
+      "class": "High_Glu",
+      "mean_shap_difference": 0.005048484221283046,
+      "years_supported": 5,
+      "positive_years": 5,
+      "negative_years": 0,
+      "same_sign_4_of_5": true
+    },
+    {
+      "feature": "weight_gain",
+      "class": "Dyslipid",
+      "mean_shap_difference": -0.001462066164173241,
+      "years_supported": 5,
+      "positive_years": 1,
+      "negative_years": 4,
+      "same_sign_4_of_5": true
+    },
+    {
+      "feature": "weight_gain",
+      "class": "Complex",
+      "mean_shap_difference": 0.010374053777559435,
+      "years_supported": 5,
+      "positive_years": 5,
+      "negative_years": 0,
+      "same_sign_4_of_5": true
+    },
+    {
+      "feature": "no_brush_bed",
+      "class": "Normal",
+      "mean_shap_difference": -0.0031130569073542017,
+      "years_supported": 5,
+      "positive_years": 0,
+      "negative_years": 5,
+      "same_sign_4_of_5": true
+    },
+    {
+      "feature": "no_brush_bed",
+      "class": "High_BP",
+      "mean_shap_difference": 0.0016572016773361033,
+      "years_supported": 5,
+      "positive_years": 4,
+      "negative_years": 1,
+      "same_sign_4_of_5": true
+    },
+    {
+      "feature": "no_brush_bed",
+      "class": "High_Glu",
+      "mean_shap_difference": 0.0033976965050558894,
+      "years_supported": 5,
+      "positive_years": 5,
+      "negative_years": 0,
+      "same_sign_4_of_5": true
+    },
+    {
+      "feature": "no_brush_bed",
+      "class": "Dyslipid",
+      "mean_shap_difference": -0.006587393862896318,
+      "years_supported": 5,
+      "positive_years": 0,
+      "negative_years": 5,
+      "same_sign_4_of_5": true
+    },
+    {
+      "feature": "no_brush_bed",
+      "class": "Complex",
+      "mean_shap_difference": 0.004645552552844828,
+      "years_supported": 5,
+      "positive_years": 5,
+      "negative_years": 0,
+      "same_sign_4_of_5": true
+    }
+  ],
+  "interpretation": "Descriptive prediction contributions. Four-of-five direction consistency is a reporting rule, not a significance test or a causal claim. Correlated BMI/waist/WHtR can redistribute attribution; sex also changes the HDL label threshold."
+}

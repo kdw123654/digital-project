@@ -1,0 +1,176 @@
+year,feature,class,mean_shap_difference,high_definition,threshold,n_high,n_low
+2020,sedentary_hours,Normal,-0.014264785768553508,above development weighted mean,9.702650174831707,94,97
+2020,sedentary_hours,High_BP,0.00023092251241561785,above development weighted mean,9.702650174831707,94,97
+2020,sedentary_hours,High_Glu,-0.013279612320089708,above development weighted mean,9.702650174831707,94,97
+2020,sedentary_hours,Dyslipid,0.02239340276466978,above development weighted mean,9.702650174831707,94,97
+2020,sedentary_hours,Complex,0.004920072731832933,above development weighted mean,9.702650174831707,94,97
+2020,sm_presnt,Normal,-0.06128707637336216,coded1 versus coded0,1.0,46,152
+2020,sm_presnt,High_BP,-0.003978718564183411,coded1 versus coded0,1.0,46,152
+2020,sm_presnt,High_Glu,-0.005660554082354556,coded1 versus coded0,1.0,46,152
+2020,sm_presnt,Dyslipid,0.030772678857790538,coded1 versus coded0,1.0,46,152
+2020,sm_presnt,Complex,0.04015367036843735,coded1 versus coded0,1.0,46,152
+2020,dr_month,Normal,0.026829932470182012,coded1 versus coded0,1.0,137,61
+2020,dr_month,High_BP,0.009106111050279007,coded1 versus coded0,1.0,137,61
+2020,dr_month,High_Glu,0.024377516510398805,coded1 versus coded0,1.0,137,61
+2020,dr_month,Dyslipid,-0.06594486201485718,coded1 versus coded0,1.0,137,61
+2020,dr_month,Complex,0.005631301310635618,coded1 versus coded0,1.0,137,61
+2020,pa_aerobic,Normal,0.025794174033329155,coded1 versus coded0,1.0,97,95
+2020,pa_aerobic,High_BP,0.0023852375430401538,coded1 versus coded0,1.0,97,95
+2020,pa_aerobic,High_Glu,0.001398375672475079,coded1 versus coded0,1.0,97,95
+2020,pa_aerobic,Dyslipid,-0.021531294537425177,coded1 versus coded0,1.0,97,95
+2020,pa_aerobic,Complex,-0.00804649260926655,coded1 versus coded0,1.0,97,95
+2020,solo_dinner,Normal,0.03361340356062007,coded1 versus coded0,1.0,40,150
+2020,solo_dinner,High_BP,-0.0027799681300547173,coded1 versus coded0,1.0,40,150
+2020,solo_dinner,High_Glu,0.001774250885872803,coded1 versus coded0,1.0,40,150
+2020,solo_dinner,Dyslipid,-0.021590004387046315,coded1 versus coded0,1.0,40,150
+2020,solo_dinner,Complex,-0.01101768174533197,coded1 versus coded0,1.0,40,150
+2020,weight_gain,Normal,-0.020616390392902025,coded1 versus coded0,1.0,91,107
+2020,weight_gain,High_BP,0.0013193730292650977,coded1 versus coded0,1.0,91,107
+2020,weight_gain,High_Glu,0.004023617561806159,coded1 versus coded0,1.0,91,107
+2020,weight_gain,Dyslipid,0.004257822003492196,coded1 versus coded0,1.0,91,107
+2020,weight_gain,Complex,0.01101557776579003,coded1 versus coded0,1.0,91,107
+2020,no_brush_bed,Normal,-0.0003597972992327398,coded1 versus coded0,1.0,78,119
+2020,no_brush_bed,High_BP,0.0027418220442349075,coded1 versus coded0,1.0,78,119
+2020,no_brush_bed,High_Glu,0.0001367756846747921,coded1 versus coded0,1.0,78,119
+2020,no_brush_bed,Dyslipid,-0.004266840814846609,coded1 versus coded0,1.0,78,119
+2020,no_brush_bed,Complex,0.0017480402862924491,coded1 versus coded0,1.0,78,119
+2021,sedentary_hours,Normal,-0.014699793601068357,above development weighted mean,9.685518197273778,104,83
+2021,sedentary_hours,High_BP,-0.0012349384376633239,above development weighted mean,9.685518197273778,104,83
+2021,sedentary_hours,High_Glu,-0.011055247652898684,above development weighted mean,9.685518197273778,104,83
+2021,sedentary_hours,Dyslipid,0.025039278220105442,above development weighted mean,9.685518197273778,104,83
+2021,sedentary_hours,Complex,0.0019507013663753578,above development weighted mean,9.685518197273778,104,83
+2021,sm_presnt,Normal,-0.074394273258284,coded1 versus coded0,1.0,41,150
+2021,sm_presnt,High_BP,-0.006706118775849855,coded1 versus coded0,1.0,41,150
+2021,sm_presnt,High_Glu,-0.007855994627406899,coded1 versus coded0,1.0,41,150
+2021,sm_presnt,Dyslipid,0.04898890057511775,coded1 versus coded0,1.0,41,150
+2021,sm_presnt,Complex,0.03996748559135345,coded1 versus coded0,1.0,41,150
+2021,dr_month,Normal,0.019666979896172422,coded1 versus coded0,1.0,129,62
+2021,dr_month,High_BP,0.004968854514080099,coded1 versus coded0,1.0,129,62
+2021,dr_month,High_Glu,0.025199056920349308,coded1 versus coded0,1.0,129,62
+2021,dr_month,Dyslipid,-0.059795241949873984,coded1 versus coded0,1.0,129,62
+2021,dr_month,Complex,0.009960350706190491,coded1 versus coded0,1.0,129,62
+2021,pa_aerobic,Normal,0.03206097576863322,coded1 versus coded0,1.0,104,84
+2021,pa_aerobic,High_BP,-0.00037479673721996123,coded1 versus coded0,1.0,104,84
+2021,pa_aerobic,High_Glu,0.0013034541901217282,coded1 versus coded0,1.0,104,84
+2021,pa_aerobic,Dyslipid,-0.02308648301872586,coded1 versus coded0,1.0,104,84
+2021,pa_aerobic,Complex,-0.00990314997179665,coded1 versus coded0,1.0,104,84
+2021,solo_dinner,Normal,0.04599769879066308,coded1 versus coded0,1.0,44,138
+2021,solo_dinner,High_BP,-0.00020228356199161144,coded1 versus coded0,1.0,44,138
+2021,solo_dinner,High_Glu,-0.0033491665142366123,coded1 versus coded0,1.0,44,138
+2021,solo_dinner,Dyslipid,-0.025793990115068336,coded1 versus coded0,1.0,44,138
+2021,solo_dinner,Complex,-0.01665225885212153,coded1 versus coded0,1.0,44,138
+2021,weight_gain,Normal,-0.010934671137328435,coded1 versus coded0,1.0,97,94
+2021,weight_gain,High_BP,0.0026421637404521496,coded1 versus coded0,1.0,97,94
+2021,weight_gain,High_Glu,0.005420955148448169,coded1 versus coded0,1.0,97,94
+2021,weight_gain,Dyslipid,-0.004002109843367732,coded1 versus coded0,1.0,97,94
+2021,weight_gain,Complex,0.006873662122599747,coded1 versus coded0,1.0,97,94
+2021,no_brush_bed,Normal,-0.002106887214400673,coded1 versus coded0,1.0,70,121
+2021,no_brush_bed,High_BP,0.0037965766794679817,coded1 versus coded0,1.0,70,121
+2021,no_brush_bed,High_Glu,0.0028422136457949406,coded1 versus coded0,1.0,70,121
+2021,no_brush_bed,Dyslipid,-0.007474737925979983,coded1 versus coded0,1.0,70,121
+2021,no_brush_bed,Complex,0.0029428348003001942,coded1 versus coded0,1.0,70,121
+2022,sedentary_hours,Normal,-0.004527089180985309,above development weighted mean,9.74253519959567,98,95
+2022,sedentary_hours,High_BP,-0.0008295487671785074,above development weighted mean,9.74253519959567,98,95
+2022,sedentary_hours,High_Glu,-0.011271261984060244,above development weighted mean,9.74253519959567,98,95
+2022,sedentary_hours,Dyslipid,0.015634315280030536,above development weighted mean,9.74253519959567,98,95
+2022,sedentary_hours,Complex,0.0009935843960779853,above development weighted mean,9.74253519959567,98,95
+2022,sm_presnt,Normal,-0.06452096477410343,coded1 versus coded0,1.0,35,165
+2022,sm_presnt,High_BP,-0.00693006684877674,coded1 versus coded0,1.0,35,165
+2022,sm_presnt,High_Glu,-0.007974449919522812,coded1 versus coded0,1.0,35,165
+2022,sm_presnt,Dyslipid,0.03367441413593615,coded1 versus coded0,1.0,35,165
+2022,sm_presnt,Complex,0.04575106720598549,coded1 versus coded0,1.0,35,165
+2022,dr_month,Normal,0.016979612916536917,coded1 versus coded0,1.0,129,71
+2022,dr_month,High_BP,0.00519340735344449,coded1 versus coded0,1.0,129,71
+2022,dr_month,High_Glu,0.02566940533181275,coded1 versus coded0,1.0,129,71
+2022,dr_month,Dyslipid,-0.057799512739181186,coded1 versus coded0,1.0,129,71
+2022,dr_month,Complex,0.009957087043851263,coded1 versus coded0,1.0,129,71
+2022,pa_aerobic,Normal,0.027320983833247853,coded1 versus coded0,1.0,115,78
+2022,pa_aerobic,High_BP,0.002555869990801341,coded1 versus coded0,1.0,115,78
+2022,pa_aerobic,High_Glu,-0.0016188888126091733,coded1 versus coded0,1.0,115,78
+2022,pa_aerobic,Dyslipid,-0.01967175357988776,coded1 versus coded0,1.0,115,78
+2022,pa_aerobic,Complex,-0.008586211284101305,coded1 versus coded0,1.0,115,78
+2022,solo_dinner,Normal,0.04072102201947972,coded1 versus coded0,1.0,44,149
+2022,solo_dinner,High_BP,-0.0023595012789564556,coded1 versus coded0,1.0,44,149
+2022,solo_dinner,High_Glu,-0.0007911293771999078,coded1 versus coded0,1.0,44,149
+2022,solo_dinner,Dyslipid,-0.02474684104991888,coded1 versus coded0,1.0,44,149
+2022,solo_dinner,Complex,-0.012823549972009896,coded1 versus coded0,1.0,44,149
+2022,weight_gain,Normal,-0.016793832745550796,coded1 versus coded0,1.0,91,109
+2022,weight_gain,High_BP,0.0010353454176839755,coded1 versus coded0,1.0,91,109
+2022,weight_gain,High_Glu,0.00516817889865211,coded1 versus coded0,1.0,91,109
+2022,weight_gain,Dyslipid,-0.0012971640313291313,coded1 versus coded0,1.0,91,109
+2022,weight_gain,Complex,0.01188747244124997,coded1 versus coded0,1.0,91,109
+2022,no_brush_bed,Normal,-0.005663011508252412,coded1 versus coded0,1.0,67,131
+2022,no_brush_bed,High_BP,0.00014755950259674413,coded1 versus coded0,1.0,67,131
+2022,no_brush_bed,High_Glu,0.004506601913013228,coded1 versus coded0,1.0,67,131
+2022,no_brush_bed,Dyslipid,-0.005741440622828888,coded1 versus coded0,1.0,67,131
+2022,no_brush_bed,Complex,0.0067502908027472774,coded1 versus coded0,1.0,67,131
+2023,sedentary_hours,Normal,-0.007510646343555081,above development weighted mean,9.65332042778136,83,95
+2023,sedentary_hours,High_BP,-0.002218659489295052,above development weighted mean,9.65332042778136,83,95
+2023,sedentary_hours,High_Glu,-0.007576454303700155,above development weighted mean,9.65332042778136,83,95
+2023,sedentary_hours,Dyslipid,0.015212668014822347,above development weighted mean,9.65332042778136,83,95
+2023,sedentary_hours,Complex,0.002093091999203228,above development weighted mean,9.65332042778136,83,95
+2023,sm_presnt,Normal,-0.0631186915296659,coded1 versus coded0,1.0,41,145
+2023,sm_presnt,High_BP,-0.004849751870673763,coded1 versus coded0,1.0,41,145
+2023,sm_presnt,High_Glu,-0.008082506443449497,coded1 versus coded0,1.0,41,145
+2023,sm_presnt,Dyslipid,0.03457426904385397,coded1 versus coded0,1.0,41,145
+2023,sm_presnt,Complex,0.04147668014151739,coded1 versus coded0,1.0,41,145
+2023,dr_month,Normal,0.00954282497066418,coded1 versus coded0,1.0,124,62
+2023,dr_month,High_BP,0.008077855758277365,coded1 versus coded0,1.0,124,62
+2023,dr_month,High_Glu,0.026379270113419055,coded1 versus coded0,1.0,124,62
+2023,dr_month,Dyslipid,-0.062075411174635595,coded1 versus coded0,1.0,124,62
+2023,dr_month,Complex,0.01807546012739516,coded1 versus coded0,1.0,124,62
+2023,pa_aerobic,Normal,0.028747496026905444,coded1 versus coded0,1.0,106,72
+2023,pa_aerobic,High_BP,0.002692650865964966,coded1 versus coded0,1.0,106,72
+2023,pa_aerobic,High_Glu,-0.00229968682319289,coded1 versus coded0,1.0,106,72
+2023,pa_aerobic,Dyslipid,-0.019722934831616266,coded1 versus coded0,1.0,106,72
+2023,pa_aerobic,Complex,-0.009417525274189431,coded1 versus coded0,1.0,106,72
+2023,solo_dinner,Normal,0.03881808745353697,coded1 versus coded0,1.0,33,145
+2023,solo_dinner,High_BP,-0.003407459543330168,coded1 versus coded0,1.0,33,145
+2023,solo_dinner,High_Glu,-0.0004656963009250652,coded1 versus coded0,1.0,33,145
+2023,solo_dinner,Dyslipid,-0.024973773971911584,coded1 versus coded0,1.0,33,145
+2023,solo_dinner,Complex,-0.009971157321130736,coded1 versus coded0,1.0,33,145
+2023,weight_gain,Normal,-0.017705987016709442,coded1 versus coded0,1.0,72,114
+2023,weight_gain,High_BP,0.0007042252307746063,coded1 versus coded0,1.0,72,114
+2023,weight_gain,High_Glu,0.007370495000588983,coded1 versus coded0,1.0,72,114
+2023,weight_gain,Dyslipid,-0.002377492457572051,coded1 versus coded0,1.0,72,114
+2023,weight_gain,Complex,0.012008759302760495,coded1 versus coded0,1.0,72,114
+2023,no_brush_bed,Normal,-0.006204334900533256,coded1 versus coded0,1.0,75,110
+2023,no_brush_bed,High_BP,0.0019814158445811665,coded1 versus coded0,1.0,75,110
+2023,no_brush_bed,High_Glu,0.0052257539960366365,coded1 versus coded0,1.0,75,110
+2023,no_brush_bed,Dyslipid,-0.008229239409453774,coded1 versus coded0,1.0,75,110
+2023,no_brush_bed,Complex,0.007226404409990591,coded1 versus coded0,1.0,75,110
+2024,sedentary_hours,Normal,-0.010028683317468081,above development weighted mean,9.648408198189685,109,81
+2024,sedentary_hours,High_BP,-0.00011586205103042665,above development weighted mean,9.648408198189685,109,81
+2024,sedentary_hours,High_Glu,-0.009253048625676514,above development weighted mean,9.648408198189685,109,81
+2024,sedentary_hours,Dyslipid,0.013045761455426772,above development weighted mean,9.648408198189685,109,81
+2024,sedentary_hours,Complex,0.006351832720762592,above development weighted mean,9.648408198189685,109,81
+2024,sm_presnt,Normal,-0.07693920360272562,coded1 versus coded0,1.0,36,157
+2024,sm_presnt,High_BP,-0.0031228555319364093,coded1 versus coded0,1.0,36,157
+2024,sm_presnt,High_Glu,-0.011183248038630354,coded1 versus coded0,1.0,36,157
+2024,sm_presnt,Dyslipid,0.04579561204243429,coded1 versus coded0,1.0,36,157
+2024,sm_presnt,Complex,0.04544969516883842,coded1 versus coded0,1.0,36,157
+2024,dr_month,Normal,0.0292596512366465,coded1 versus coded0,1.0,130,63
+2024,dr_month,High_BP,0.005950749411551587,coded1 versus coded0,1.0,130,63
+2024,dr_month,High_Glu,0.025137512037912924,coded1 versus coded0,1.0,130,63
+2024,dr_month,Dyslipid,-0.07212823934720607,coded1 versus coded0,1.0,130,63
+2024,dr_month,Complex,0.011780326855941395,coded1 versus coded0,1.0,130,63
+2024,pa_aerobic,Normal,0.026260977962692555,coded1 versus coded0,1.0,122,68
+2024,pa_aerobic,High_BP,0.0012496698545986075,coded1 versus coded0,1.0,122,68
+2024,pa_aerobic,High_Glu,-0.0027706392506067668,coded1 versus coded0,1.0,122,68
+2024,pa_aerobic,Dyslipid,-0.014636660875645361,coded1 versus coded0,1.0,122,68
+2024,pa_aerobic,Complex,-0.01010334759008585,coded1 versus coded0,1.0,122,68
+2024,solo_dinner,Normal,0.0392751526644348,coded1 versus coded0,1.0,52,133
+2024,solo_dinner,High_BP,-0.0008992687975645592,coded1 versus coded0,1.0,52,133
+2024,solo_dinner,High_Glu,-0.0009418345630842248,coded1 versus coded0,1.0,52,133
+2024,solo_dinner,Dyslipid,-0.02982009260545031,coded1 versus coded0,1.0,52,133
+2024,solo_dinner,Complex,-0.00761395630265505,coded1 versus coded0,1.0,52,133
+2024,weight_gain,Normal,-0.012806246779826712,coded1 versus coded0,1.0,60,133
+2024,weight_gain,High_BP,0.0033536613777691614,coded1 versus coded0,1.0,60,133
+2024,weight_gain,High_Glu,0.0032591744969198084,coded1 versus coded0,1.0,60,133
+2024,weight_gain,Dyslipid,-0.0038913864920894856,coded1 versus coded0,1.0,60,133
+2024,weight_gain,Complex,0.010084797255396924,coded1 versus coded0,1.0,60,133
+2024,no_brush_bed,Normal,-0.0012312536143519273,coded1 versus coded0,1.0,79,111
+2024,no_brush_bed,High_BP,-0.00038136568420028317,coded1 versus coded0,1.0,79,111
+2024,no_brush_bed,High_Glu,0.00427713728575985,coded1 versus coded0,1.0,79,111
+2024,no_brush_bed,Dyslipid,-0.007224710541372339,coded1 versus coded0,1.0,79,111
+2024,no_brush_bed,Complex,0.004560192464893625,coded1 versus coded0,1.0,79,111

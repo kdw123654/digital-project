@@ -1,0 +1,94 @@
+{
+  "schema": "epf-v32-source-package/1",
+  "scope": "Dependency closure for current v32 only; historical experiments not copied",
+  "modules": {
+    "metabolic/__init__.py": {
+      "bytes": 67,
+      "local_source_sha256": "1fa8b88d98da402c975ec79cfba98c072c44b86df17aa80686f1bf5a5e416e40",
+      "git_blob_sha256": "1fa8b88d98da402c975ec79cfba98c072c44b86df17aa80686f1bf5a5e416e40"
+    },
+    "metabolic/clinical_v23_distribution.py": {
+      "bytes": 25501,
+      "local_source_sha256": "5202e1e1e65cf61645d82a59346802c034ce526f24d41aae1d9b238ca5fc3c8a",
+      "git_blob_sha256": "5202e1e1e65cf61645d82a59346802c034ce526f24d41aae1d9b238ca5fc3c8a"
+    },
+    "metabolic/clinical_v24_distribution.py": {
+      "bytes": 12443,
+      "local_source_sha256": "516ee259bfa9e5a4c11771ff20813a53f292a1051e17c59b5b366622bec9abac",
+      "git_blob_sha256": "516ee259bfa9e5a4c11771ff20813a53f292a1051e17c59b5b366622bec9abac"
+    },
+    "metabolic/epf_marginal_shap_v32.py": {
+      "bytes": 4644,
+      "local_source_sha256": "0f218c73e0055642db3931c5d2cae1ce0907e66bf4d8b28e4b207e617319e34d",
+      "git_blob_sha256": "0f218c73e0055642db3931c5d2cae1ce0907e66bf4d8b28e4b207e617319e34d"
+    },
+    "metabolic/epf_shap_math_v32.py": {
+      "bytes": 2005,
+      "local_source_sha256": "c75781863b0df5b6d7fdfca5299c355dd9a918b960a158d9b636383e509ba57f",
+      "git_blob_sha256": "c75781863b0df5b6d7fdfca5299c355dd9a918b960a158d9b636383e509ba57f"
+    },
+    "metabolic/epf_shap_v32.py": {
+      "bytes": 9941,
+      "local_source_sha256": "2120a97990ca3bff2cf7b2296848e8841dac32378c2571269fb7ab01333d6405",
+      "git_blob_sha256": "2120a97990ca3bff2cf7b2296848e8841dac32378c2571269fb7ab01333d6405"
+    },
+    "metabolic/epf_year_v32.py": {
+      "bytes": 22420,
+      "local_source_sha256": "ead2f3939e95e6cad37b285196e3eb34c27e54c8753312a9d072974f443339d8",
+      "git_blob_sha256": "ead2f3939e95e6cad37b285196e3eb34c27e54c8753312a9d072974f443339d8"
+    },
+    "metabolic/event_field_v19.py": {
+      "bytes": 19325,
+      "local_source_sha256": "ace51539e4a44d4b6e635398a16bcdb79a03aa7e4d293303c5eccde787a676d9",
+      "git_blob_sha256": "ace51539e4a44d4b6e635398a16bcdb79a03aa7e4d293303c5eccde787a676d9"
+    },
+    "metabolic/event_field_v21.py": {
+      "bytes": 35494,
+      "local_source_sha256": "08a3660812f4e5320c9e2e2859cfbf85d6a1fde8b9525910afe3ef36d1f187ac",
+      "git_blob_sha256": "08a3660812f4e5320c9e2e2859cfbf85d6a1fde8b9525910afe3ef36d1f187ac"
+    },
+    "metabolic/event_field_v23.py": {
+      "bytes": 20322,
+      "local_source_sha256": "31a4aabbe42cb30fa95156b86f8bc70918dea26f8b845b33349e31d75739a593",
+      "git_blob_sha256": "31a4aabbe42cb30fa95156b86f8bc70918dea26f8b845b33349e31d75739a593"
+    },
+    "metabolic/event_plastic_field.py": {
+      "bytes": 9467,
+      "local_source_sha256": "1b438f9bf934ae82041187db22de10de12911e1db7fa1f05d9c54aa345528c3a",
+      "git_blob_sha256": "1b438f9bf934ae82041187db22de10de12911e1db7fa1f05d9c54aa345528c3a"
+    },
+    "metabolic/peer_comparison_v31.py": {
+      "bytes": 26221,
+      "local_source_sha256": "cbd68b15f84c55810d413696838882d4efea740cd0c0b0bbe87d68736325c6ec",
+      "git_blob_sha256": "cbd68b15f84c55810d413696838882d4efea740cd0c0b0bbe87d68736325c6ec"
+    },
+    "metabolic/v30_common.py": {
+      "bytes": 6405,
+      "local_source_sha256": "53741113bc2ab733d4e6dfe8aaae8e8b178ad30b3d6b9cd1e3f95ba2a1d91b90",
+      "git_blob_sha256": "53741113bc2ab733d4e6dfe8aaae8e8b178ad30b3d6b9cd1e3f95ba2a1d91b90"
+    },
+    "metabolic/v30_data.py": {
+      "bytes": 10061,
+      "local_source_sha256": "2c59feb549d1872e752dd68bce0c864201251fe321d37e3d1ddec1b89d8f2bf7",
+      "git_blob_sha256": "2c59feb549d1872e752dd68bce0c864201251fe321d37e3d1ddec1b89d8f2bf7"
+    },
+    "metabolic/v30_metrics.py": {
+      "bytes": 8793,
+      "local_source_sha256": "7d8ecd66ab619e384024f4186fe5afa45cf0be497c21ae4e0d5ee23d8e3b6c08",
+      "git_blob_sha256": "7d8ecd66ab619e384024f4186fe5afa45cf0be497c21ae4e0d5ee23d8e3b6c08"
+    },
+    "metabolic/v30_models.py": {
+      "bytes": 22216,
+      "local_source_sha256": "f27c52fa0cad8c585b593040ec940249f1406ba3dce768aa8113f8b344b173ce",
+      "git_blob_sha256": "f27c52fa0cad8c585b593040ec940249f1406ba3dce768aa8113f8b344b173ce"
+    },
+    "metabolic/v30_splits.py": {
+      "bytes": 10372,
+      "local_source_sha256": "e955f8225d3e9e2dbba599fa5befb3af2ff0c4d52184b377bb0ce3da63ade2bd",
+      "git_blob_sha256": "e955f8225d3e9e2dbba599fa5befb3af2ff0c4d52184b377bb0ce3da63ade2bd"
+    }
+  },
+  "numerical_refits_unchanged": true,
+  "packaging_changes_record": "AMENDMENTS.md",
+  "hash_note": "local source bytes and Git LF-normalized publication bytes are recorded separately"
+}

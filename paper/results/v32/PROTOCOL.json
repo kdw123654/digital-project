@@ -1,0 +1,453 @@
+{
+  "age": [
+    20,
+    39
+  ],
+  "features": [
+    "age",
+    "HE_BMI",
+    "HE_wc",
+    "WHtR",
+    "sedentary_hours",
+    "sex",
+    "incm",
+    "edu",
+    "sm_presnt",
+    "dr_month",
+    "pa_aerobic",
+    "living_alone",
+    "solo_dinner",
+    "weight_gain",
+    "no_brush_bed"
+  ],
+  "classes": [
+    "Normal",
+    "High_BP",
+    "High_Glu",
+    "Dyslipid",
+    "Complex"
+  ],
+  "cohort": {
+    "strict_19_39": 5229,
+    "strict_20_39": 5055,
+    "nutrition_20_39": 4508,
+    "by_year": {
+      "2020": 851,
+      "2021": 792,
+      "2022": 926,
+      "2023": 965,
+      "2024": 974
+    },
+    "by_class": {
+      "Normal": 2796,
+      "High_BP": 183,
+      "High_Glu": 233,
+      "Dyslipid": 813,
+      "Complex": 483
+    }
+  },
+  "weight": "wt_tot; nutrition participants only; mean-one weights for training",
+  "source_sha256": {
+    "data\\raw\\knhanes\\HN20_ALL(SPSS)\\HN20_all.sav": "70c8dade5dcc5ca1a97c65fa3ae8c8e3ebeb10b837e2ca0b51f23c14258e97a1",
+    "data\\raw\\knhanes\\HN21_ALL(SPSS)\\HN21_all.sav": "26c718585e52f00ff050ab64c0bfd80f0badfd4376657e43f273b9e2a22b9a8f",
+    "data\\raw\\knhanes\\HN22_ALL(SPSS)\\HN22_ALL.sav": "02103297f3a6f06b98cc92634fce3f3a937d2367086bfb6280249c7025f4f798",
+    "data\\raw\\knhanes\\HN23_ALL(SPSS)\\HN23_ALL.sav": "a6ab79f591315bb29eab3db6fd4f9576f74371907b5b488d60b14cf9b538ad9d",
+    "data\\raw\\knhanes\\HN24_ALL(SPSS)\\HN24_ALL.sav": "72ef4df863a2700e593f3bdf734244d5ab3caabd7459c221b1be04ad58fda12b"
+  },
+  "study": "EPF-centred leave-one-year-out v32",
+  "years": [
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+  ],
+  "conditions": [
+    "LR",
+    "RF",
+    "XGB",
+    "LGBM",
+    "MLP",
+    "jEPF",
+    "jMLP",
+    "jLinear"
+  ],
+  "predictor_count": 15,
+  "encoded_columns": 45,
+  "split": "Each year held out once; other four years development",
+  "inner_split": "20% of PSUs per development year for validation; no test-year rows",
+  "tuning": "Eight settings per model, seed42, same weighted validation five-class macro AP",
+  "final_refit": "All four development years; fit encoder/anchors again; selected tree count or neural epoch/LR schedule frozen before held-out predictions",
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "primary_metric": "Arithmetic mean of five test-year weighted macro AP values",
+  "primary_contrast": "jEPF minus LGBM, mean test-year macro AP",
+  "auxiliary_structure_contrast": "jEPF minus jMLP",
+  "bootstrap": "2000 Rao-Wu within-year/stratum full-PSU draws; fixed fitted predictions, no refit",
+  "shap": "EPF ensemble five-class probability output; permutation SHAP on 15 raw inputs; weighted development-only background; same-year held-out explanations",
+  "splits": [
+    {
+      "test_year": 2020,
+      "roles": {
+        "fit": {
+          "n": 2875,
+          "years": [
+            2021,
+            2022,
+            2023,
+            2024
+          ],
+          "class_counts": [
+            1807,
+            107,
+            152,
+            510,
+            299
+          ]
+        },
+        "validation": {
+          "n": 782,
+          "years": [
+            2021,
+            2022,
+            2023,
+            2024
+          ],
+          "class_counts": [
+            516,
+            38,
+            35,
+            125,
+            68
+          ]
+        },
+        "heldout": {
+          "n": 851,
+          "years": [
+            2020
+          ],
+          "class_counts": [
+            473,
+            38,
+            46,
+            178,
+            116
+          ]
+        }
+      },
+      "leakage": {
+        "fit|validation": {
+          "psu_overlap": 0,
+          "household_overlap": 0,
+          "row_overlap": 0
+        },
+        "fit|heldout": {
+          "psu_overlap": 0,
+          "household_overlap": 0,
+          "row_overlap": 0
+        },
+        "validation|heldout": {
+          "psu_overlap": 0,
+          "household_overlap": 0,
+          "row_overlap": 0
+        }
+      }
+    },
+    {
+      "test_year": 2021,
+      "roles": {
+        "fit": {
+          "n": 2998,
+          "years": [
+            2020,
+            2022,
+            2023,
+            2024
+          ],
+          "class_counts": [
+            1889,
+            113,
+            144,
+            542,
+            310
+          ]
+        },
+        "validation": {
+          "n": 718,
+          "years": [
+            2020,
+            2022,
+            2023,
+            2024
+          ],
+          "class_counts": [
+            436,
+            39,
+            38,
+            127,
+            78
+          ]
+        },
+        "heldout": {
+          "n": 792,
+          "years": [
+            2021
+          ],
+          "class_counts": [
+            471,
+            31,
+            51,
+            144,
+            95
+          ]
+        }
+      },
+      "leakage": {
+        "fit|validation": {
+          "psu_overlap": 0,
+          "household_overlap": 0,
+          "row_overlap": 0
+        },
+        "fit|heldout": {
+          "psu_overlap": 0,
+          "household_overlap": 0,
+          "row_overlap": 0
+        },
+        "validation|heldout": {
+          "psu_overlap": 0,
+          "household_overlap": 0,
+          "row_overlap": 0
+        }
+      }
+    },
+    {
+      "test_year": 2022,
+      "roles": {
+        "fit": {
+          "n": 2894,
+          "years": [
+            2020,
+            2021,
+            2023,
+            2024
+          ],
+          "class_counts": [
+            1784,
+            121,
+            136,
+            537,
+            316
+          ]
+        },
+        "validation": {
+          "n": 688,
+          "years": [
+            2020,
+            2021,
+            2023,
+            2024
+          ],
+          "class_counts": [
+            426,
+            18,
+            45,
+            135,
+            64
+          ]
+        },
+        "heldout": {
+          "n": 926,
+          "years": [
+            2022
+          ],
+          "class_counts": [
+            586,
+            44,
+            52,
+            141,
+            103
+          ]
+        }
+      },
+      "leakage": {
+        "fit|validation": {
+          "psu_overlap": 0,
+          "household_overlap": 0,
+          "row_overlap": 0
+        },
+        "fit|heldout": {
+          "psu_overlap": 0,
+          "household_overlap": 0,
+          "row_overlap": 0
+        },
+        "validation|heldout": {
+          "psu_overlap": 0,
+          "household_overlap": 0,
+          "row_overlap": 0
+        }
+      }
+    },
+    {
+      "test_year": 2023,
+      "roles": {
+        "fit": {
+          "n": 2838,
+          "years": [
+            2020,
+            2021,
+            2022,
+            2024
+          ],
+          "class_counts": [
+            1739,
+            119,
+            146,
+            514,
+            320
+          ]
+        },
+        "validation": {
+          "n": 705,
+          "years": [
+            2020,
+            2021,
+            2022,
+            2024
+          ],
+          "class_counts": [
+            436,
+            38,
+            37,
+            110,
+            84
+          ]
+        },
+        "heldout": {
+          "n": 965,
+          "years": [
+            2023
+          ],
+          "class_counts": [
+            621,
+            26,
+            50,
+            189,
+            79
+          ]
+        }
+      },
+      "leakage": {
+        "fit|validation": {
+          "psu_overlap": 0,
+          "household_overlap": 0,
+          "row_overlap": 0
+        },
+        "fit|heldout": {
+          "psu_overlap": 0,
+          "household_overlap": 0,
+          "row_overlap": 0
+        },
+        "validation|heldout": {
+          "psu_overlap": 0,
+          "household_overlap": 0,
+          "row_overlap": 0
+        }
+      }
+    },
+    {
+      "test_year": 2024,
+      "roles": {
+        "fit": {
+          "n": 2789,
+          "years": [
+            2020,
+            2021,
+            2022,
+            2023
+          ],
+          "class_counts": [
+            1690,
+            114,
+            160,
+            512,
+            313
+          ]
+        },
+        "validation": {
+          "n": 745,
+          "years": [
+            2020,
+            2021,
+            2022,
+            2023
+          ],
+          "class_counts": [
+            461,
+            25,
+            39,
+            140,
+            80
+          ]
+        },
+        "heldout": {
+          "n": 974,
+          "years": [
+            2024
+          ],
+          "class_counts": [
+            645,
+            44,
+            34,
+            161,
+            90
+          ]
+        }
+      },
+      "leakage": {
+        "fit|validation": {
+          "psu_overlap": 0,
+          "household_overlap": 0,
+          "row_overlap": 0
+        },
+        "fit|heldout": {
+          "psu_overlap": 0,
+          "household_overlap": 0,
+          "row_overlap": 0
+        },
+        "validation|heldout": {
+          "psu_overlap": 0,
+          "household_overlap": 0,
+          "row_overlap": 0
+        }
+      }
+    }
+  ],
+  "code_sha256": {
+    "metabolic/epf_year_v32.py": "a761813d560504f1295adfcd4b17cfa1afbeb3180d37acddbd41cd8b03601bf3",
+    "metabolic/peer_comparison_v31.py": "cbd68b15f84c55810d413696838882d4efea740cd0c0b0bbe87d68736325c6ec",
+    "metabolic/v30_models.py": "f27c52fa0cad8c585b593040ec940249f1406ba3dce768aa8113f8b344b173ce",
+    "metabolic/event_field_v21.py": "08a3660812f4e5320c9e2e2859cfbf85d6a1fde8b9525910afe3ef36d1f187ac",
+    "metabolic/event_field_v23.py": "31a4aabbe42cb30fa95156b86f8bc70918dea26f8b845b33349e31d75739a593",
+    "metabolic/clinical_v23_distribution.py": "5202e1e1e65cf61645d82a59346802c034ce526f24d41aae1d9b238ca5fc3c8a",
+    "metabolic/epf_shap_v32.py": "f07760bb667162dee6607be4230692d2f72226f46fade2bc722e6fbefd225f6f"
+  },
+  "limitations": [
+    "Retrospective internal year-group validation on previously analysed KNHANES; not prospective external validation",
+    "Joint models use additional continuous measurement supervision; direct-vs-joint contrast is not a pure architecture effect",
+    "Mean year AP and pooled OOF AP are different estimands",
+    "SHAP contributions are associations in predictions, not causal intervention effects",
+    "Strict eligibility and nutrition participation produce n4508, not the previous n6588 cohort"
+  ],
+  "base_protocol_sha256": "945945945890789b8852eaaa5fa33490f9d07b15c96b3d66fd3291f4918742c0",
+  "shap_budget": {
+    "per_class_rows": 40,
+    "permutations": 64,
+    "antithetic_pairs": 32,
+    "sampling": "class-stratified held-out samples; inverse inclusion survey weights",
+    "numeric_tolerance": 0.0001,
+    "audit": "official SHAP callable audit plus quadrature reference and path additivity"
+  }
+}

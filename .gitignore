@@ -36,3 +36,7 @@ private/
 *.pth
 !paper/results/metrics.csv
 !paper/results/class_ap.csv
+
+# Current aggregate tables only
+!paper/results/v32/*.csv
+artifacts/

@@ -1,92 +1,70 @@
-args <- commandArgs(trailingOnly = TRUE)
-root <- normalizePath(if (length(args)) args[1] else '.', mustWork = TRUE)
-dir.create(file.path(root, 'figures'), showWarnings = FALSE)
-metrics <- read.csv(file.path(root, 'metrics.csv'), stringsAsFactors = FALSE)
-classes <- read.csv(file.path(root, 'class_ap.csv'), stringsAsFactors = FALSE)
-if (.Platform$OS.type == 'windows') windowsFonts(Arial = windowsFont('Arial'))
-ink <- '#243241'; blue <- '#235E83'; orange <- '#B76124'; gray <- '#66727E'
-device <- function(name, height) {
-  png(file.path(root, 'figures', paste0(name, '.png')), width = 3.49,
-      height = height, units = 'in', res = 600, type = 'cairo', pointsize = 10)
-  par(family = 'Arial', col = ink, col.axis = ink, col.lab = ink,
-      bg = 'white', las = 1, mgp = c(1.7, .35, 0), tcl = -.2)
+args <- commandArgs(trailingOnly=TRUE)
+root <- normalizePath(if(length(args)) args[1] else '.', mustWork=TRUE)
+figure_dir <- if(length(args)>1) args[2] else file.path(root,'figures')
+dir.create(figure_dir,showWarnings=FALSE,recursive=TRUE)
+if(.Platform$OS.type=='windows') windowsFonts(Arial=windowsFont('Arial'))
+ink <- '#273747'; blue <- '#267099'; purple <- '#75538B'; orange <- '#B86A2F'; grey <- '#7B8792'
+dev <- function(name,h) {
+ png(file.path(figure_dir,paste0(name,'.png')),width=3.49,height=h,units='in',res=600,type='cairo',pointsize=10)
+ par(family='Arial',col=ink,col.axis=ink,col.lab=ink,bg='white',las=1,mgp=c(1.8,.4,0),tcl=-.2)
 }
-
-# Fig. 1: cohort selection and the two training routes. All counts are observed.
-device('fig1_pipeline', 2.46)
-par(mar = c(.1, .1, .1, .1), xaxs = 'i', yaxs = 'i')
-plot.new(); plot.window(xlim = c(0, 1), ylim = c(0, 1))
-box_text <- function(x, y, w, h, label, fill = '#F2F5F7', cex = .93) {
-  rect(x-w/2, y-h/2, x+w/2, y+h/2, col = fill, border = '#A7B3BF', lwd = .7)
-  text(x, y, label, cex = cex)
-}
-arr <- function(x1, y1, x2, y2) arrows(x1, y1, x2, y2, length=.045, lwd=.8, col=gray)
-text(.5, .958, 'KNHANES 2020-2024', font=2, cex=1.04)
-box_text(.5, .83, .92, .17, 'Confirmed status and eligible fasting labs\nAge 19-39: 5,229 / age 20-39: 5,055', cex=.90)
-arr(.5, .743, .5, .698)
-box_text(.5, .622, .92, .15, 'Nutrition participants: 4,508\n15 predictors -> 45 encoded columns', cex=.90)
-arr(.5, .546, .5, .50)
-box_text(.5, .44, .92, .12, 'Shared PSU folds; fit-only preprocessing', '#E9F0F5', .90)
-arr(.33, .379, .27, .326); arr(.67, .379, .73, .326)
-box_text(.26, .232, .45, .182, 'Direct classification\nLR / RF / XGB\nLGBM / MLP', cex=.90)
-box_text(.74, .232, .45, .182, 'Joint distribution\njLinear / jMLP\n/ jEPF', cex=.90)
-arr(.26, .14, .40, .08); arr(.74, .14, .60, .08)
-text(.5, .035, 'Same five groups; weighted OOF evaluation', cex=.90, font=2)
+boxlab <- function(x,y,w,h,text,fill='#F1F5F8',cex=.9) {rect(x-w/2,y-h/2,x+w/2,y+h/2,col=fill,border='#A7B5C1');text(x,y,text,cex=cex)}
+arr <- function(x,y,xx,yy) arrows(x,y,xx,yy,length=.045,col=grey,lwd=.8)
+dev('figure1',2.45);par(mar=rep(.15,4),xaxs='i',yaxs='i');plot.new();plot.window(xlim=c(0,1),ylim=c(0,1))
+text(.5,.95,'KNHANES 2020-2024',font=2,cex=1.02)
+boxlab(.5,.81,.95,.18,'Confirmed eligible ages 20-39: 5,055\nNutrition participants: 4,508\n15 non-invasive inputs / five exclusive groups')
+arr(.5,.71,.5,.65);boxlab(.5,.57,.95,.15,'Hold out one entire year\nOther four years: development',fill='#EAE1F0')
+arr(.5,.49,.5,.43);boxlab(.5,.35,.95,.16,'Tune within development PSU split\nRefit on all four development years')
+arr(.5,.27,.5,.20);boxlab(.5,.12,.95,.14,'Evaluate the held-out year\nRepeat for all five years; report mean AP')
 dev.off()
 
-# Fig. 2: zoomed scale shows the observed differences without hiding intervals.
-device('fig2_macro_ap', 2.49)
-par(mar=c(3.05, 4.0, .35, .45))
-ord <- match(c('LR','RF','XGB','LGBM','MLP','jLinear','jMLP','jEPF'), metrics$model)
-d <- metrics[ord, ]; y <- rev(seq_len(nrow(d)))
-plot(d$macro_ap, y, type='n', axes=FALSE, xlim=c(.328,.373), ylim=c(.5,8.5),
-     xlab='Weighted macro AP', ylab='')
-rect(.328,.5,.373,8.5,col='#FAFBFC',border=NA)
-abline(v=seq(.33,.37,.01), col='#E1E5E9', lwd=.65)
-axis(1, at=seq(.33,.37,.01), labels=sprintf('%.2f',seq(.33,.37,.01)), cex.axis=.95)
-axis(2, at=y, labels=d$model, tick=FALSE, cex.axis=.99)
-segments(d$ci_low,y,d$ci_high,y,col=gray,lwd=1.05)
-segments(d$ci_low,y-.09,d$ci_low,y+.09,col=gray,lwd=.8)
-segments(d$ci_high,y-.09,d$ci_high,y+.09,col=gray,lwd=.8)
-points(d$macro_ap,y,pch=21,bg=blue,col=blue,cex=.85)
-box(col='#CAD2DA',lwd=.6)
+dev('figure2',3.25);par(mar=rep(.15,4),xaxs='i',yaxs='i');plot.new();plot.window(xlim=c(0,1),ylim=c(0,1))
+boxlab(.5,.91,.95,.14,'15 non-invasive inputs\nFit-only encoding to 45 columns')
+arr(.5,.84,.5,.79)
+boxlab(.5,.65,.95,.27,'EPF core / four internal updates\nComplex state z / event trace r\nAntisymmetric plasticity matrix P\nState dimension 12',fill='#EAE1F0')
+arr(.3,.51,.25,.45);arr(.7,.51,.75,.45)
+boxlab(.25,.37,.46,.15,'State summary\nMean residual',cex=.9)
+boxlab(.75,.37,.46,.15,'P -> loading u\nBody -> diagonal d',cex=.9)
+arr(.25,.29,.40,.235);arr(.75,.29,.60,.235)
+boxlab(.5,.18,.95,.10,'Ridge anchor + conditional Gaussian')
+text(.5,.07,'Five measurements -> 16 states -> five groups',cex=.9,font=2)
+text(.5,.015,'Observed lab values supervise training only',cex=.9,col=orange)
 dev.off()
 
-# Fig. 3: every model is shown for each abnormal group. Horizontal jitter is
-# visual only. Dashed baselines are weighted class prevalence, not thresholds.
-device('fig3_class_ap', 2.57)
-par(mar=c(2.7, 3.7, .5, .3))
-cn <- c('High_BP','High_Glu','Dyslipid','Complex')
-labels <- c('BP only','Glucose\nonly','Lipid\nonly','Multiple')
-plot(1:4, rep(0,4), type='n', axes=FALSE, xlim=c(.72,4.28), ylim=c(.025,.47),
-     xlab='', ylab='Weighted class AP')
-rect(.72,.025,4.28,.47,col='#FAFBFC',border=NA)
-abline(h=seq(.1,.4,.1), col='#E1E5E9', lwd=.65)
-axis(1,at=1:4,labels=FALSE,tick=FALSE)
-text(1:4, par('usr')[3]-.018, labels=labels, adj=c(.5,1), xpd=NA, cex=.90)
-axis(2,at=seq(.1,.4,.1),labels=sprintf('%.1f',seq(.1,.4,.1)),cex.axis=.94)
-model_order <- c('LR','RF','XGB','LGBM','MLP','jLinear','jMLP','jEPF')
-jit <- seq(-.11,.11,length.out=8)
-for (i in seq_along(model_order)) {
-  rows <- classes[classes$model==model_order[i], ]
-  values <- rows$ap[match(cn,rows$class)]
-  if (!(model_order[i] %in% c('LR','LGBM','jEPF'))) {
-    points((1:4)+jit[i],values,pch=1,col='#B3BBC3',cex=.62)
-  }
-}
-for (m in c('LR','LGBM','jEPF')) {
-  rows <- classes[classes$model==m, ]; values <- rows$ap[match(cn,rows$class)]
-  i <- match(m,model_order)
-  color <- c(LR=gray,LGBM=blue,jEPF=orange)[m]
-  symbol <- c(LR=15,LGBM=16,jEPF=17)[m]
-  points((1:4)+jit[i],values,pch=symbol,col=color,cex=.83)
-}
-prev <- classes[classes$model=='LR', ]
-prev <- prev$prevalence[match(cn,prev$class)]
-segments((1:4)-.19,prev,(1:4)+.19,prev,col=gray,lty=2,lwd=.9)
-legend('topleft',c('LR','LGBM','jEPF'),pch=c(15,16,17),col=c(gray,blue,orange),
-       horiz=TRUE,bty='n',cex=.90,x.intersp=.65,y.intersp=.8)
-box(col='#CAD2DA',lwd=.6)
+score <- read.csv(file.path(root,'MODEL_COMPARISON.csv'),stringsAsFactors=FALSE)
+ann <- read.csv(file.path(root,'YEAR_COMPARISON.csv'),stringsAsFactors=FALSE)
+dev('figure3',3.85);layout(matrix(c(1,2),2,1),heights=c(1.05,1))
+par(mar=c(3.0,4.4,.5,.4))
+names <- c('jEPF','XGB','LGBM','jMLP','MLP','LR','jLinear','RF');d<-score[match(names,score$model),];y<-rev(seq_along(names))
+plot(d$mean_year_macro_ap,y,type='n',axes=FALSE,xlim=c(.338,.382),ylim=c(.5,8.5),xlab='Mean test-year macro AP',ylab='')
+abline(v=seq(.34,.38,.01),col='#E3E8ED');axis(1,at=seq(.34,.38,.01),labels=sprintf('%.2f',seq(.34,.38,.01)),cex.axis=.9)
+axis(2,at=y,labels=names,tick=FALSE,cex.axis=.9);segments(d$ci_low,y,d$ci_high,y,col=grey,lwd=1)
+points(d$mean_year_macro_ap,y,pch=16,col=ifelse(d$model=='jEPF',purple,blue),cex=.75)
+par(mar=c(2.7,3.7,.4,.4));plot(2020:2024,rep(.35,5),type='n',xlim=c(2019.9,2024.1),ylim=c(.32,.385),axes=FALSE,xlab='Held-out year',ylab='Macro AP')
+abline(h=seq(.32,.38,.02),col='#E3E8ED');axis(1,at=2020:2024,cex.axis=.9);axis(2,at=seq(.32,.38,.02),labels=sprintf('%.2f',seq(.32,.38,.02)),cex.axis=.9)
+for(m in unique(ann$model)){z<-ann[ann$model==m,];lines(z$year,z$macro_ap,col='#CDD3D9',lwd=.7)}
+for(m in c('jEPF','LGBM','jMLP')){z<-ann[ann$model==m,];lines(z$year,z$macro_ap,type='b',pch=c(jEPF=16,LGBM=15,jMLP=17)[m],col=c(jEPF=purple,LGBM=blue,jMLP=orange)[m],lwd=1.15,cex=.65)}
+legend('bottomleft',c('jEPF','LGBM','jMLP'),col=c(purple,blue,orange),pch=c(16,15,17),horiz=TRUE,bty='n',cex=.9)
 dev.off()
-writeLines(c(R.version.string, capture.output(sessionInfo())), file.path(root,'R_SESSION.txt'))
-cat('Saved three publication figures with R\n')
+
+cm <- as.matrix(read.csv(file.path(root,'EPF_CONFUSION.csv'),row.names=1,check.names=FALSE))
+dev('figure4',2.65);par(mar=c(3.4,4.4,.35,.3));plot.new();plot.window(xlim=c(.5,5.5),ylim=c(.5,5.5),xaxs='i',yaxs='i')
+palette<-colorRampPalette(c('#FAFCFE','#6DA2C4','#194D75'))(101)
+for(i in 1:5)for(j in 1:5){v<-cm[i,j];rect(j-.5,6-i-.5,j+.5,6-i+.5,col=palette[1+round(v*100)],border='white');text(j,6-i,sprintf('%.2f',v),col=if(v>.55)'white' else ink,cex=.93)}
+lab<-c('Normal','BP only','Glucose','Lipid','Multiple');axis(1,at=1:5,labels=c('Normal','BP','Glu','Lipid','Multi'),tick=FALSE,cex.axis=.9,gap.axis=0);axis(2,at=5:1,labels=lab,tick=FALSE,cex.axis=.9)
+mtext('Predicted group',side=1,line=1.9,cex=.9);mtext('Observed group',side=2,line=3.65,las=0,cex=.9)
+dev.off()
+
+sh <- read.csv(file.path(root,'SHAP_GLOBAL.csv'),stringsAsFactors=FALSE)
+labels <- c(age='Age',HE_BMI='BMI',HE_wc='Waist circumference',WHtR='Waist / height',sedentary_hours='Sedentary hours',sex='Sex',incm='Income',edu='Education',sm_presnt='Current smoking',dr_month='Monthly alcohol',pa_aerobic='Aerobic activity',living_alone='One-person household',solo_dinner='Solo dinner',weight_gain='Weight gain',no_brush_bed='No bedtime brushing')
+dev('figure5',3.65);par(mar=c(4.1,10,.45,.35));yy<-rev(seq_len(nrow(sh)))
+plot(sh$mean_abs_shap,yy,type='n',xlim=c(0,.046),ylim=c(.4,nrow(sh)+.6),axes=FALSE,xlab='',ylab='')
+mtext('Mean absolute SHAP',side=1,line=1.5,cex=.9)
+mtext('(probability units)',side=1,line=2.5,cex=.9)
+abline(v=seq(0,.04,.01),col='#E3E8ED');axis(1,at=seq(0,.04,.01),labels=sprintf('%.2f',seq(0,.04,.01)),cex.axis=.9);axis(2,at=yy,labels=unname(labels[sh$feature]),tick=FALSE,cex.axis=.9)
+beh<-c('sm_presnt','dr_month','pa_aerobic','sedentary_hours','solo_dinner','weight_gain','no_brush_bed')
+for(i in seq_len(nrow(sh))) rect(0,yy[i]-.30,sh$mean_abs_shap[i],yy[i]+.30,col=if(sh$feature[i]%in%beh)orange else blue,border=NA)
+segments(sh$min,yy,sh$max,yy,col=ink,lwd=.75)
+dev.off()
+writeLines(c(R.version.string,capture.output(sessionInfo())),file.path(root,'R_SESSION.txt'))
+cat('Five EPF paper figures generated in R\n')
