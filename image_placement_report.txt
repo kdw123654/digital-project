@@ -1,0 +1,46 @@
+P0:  | Text: 청년층 대사이상 선별을 위한 다변량 결합확률 기반 EPF 신경망 모델
+P2:  | Text: A Multivariate Joint Probability-Based EPF Neural Network for Screening Metabolic Abnormalities in Young Adults
+P3:  | Text: 김동욱*       김준성*       안홍렬†
+P4:  | Text: 수원대학교 데이터과학부*
+P5:  | Text: 수원대학교 데이터과학부 교수†
+P6:  | Text: Dongwook Kim*, Junseong Kim*, Hongryul Ahn†
+P7:  | Text: Dept. of Data Science, The University of Suwon*
+P8:  | Text: Professor, Dept. of Data Science, The University of Suwon†
+P9:  | Text: kimk123654@naver.com*, junseong2im@gmail.com*, ahn@suwon.ac.kr† (교신저자)
+P11:  | Text: 요   약
+P12:  | Text: 본 연구는 국민건강영양조사(2020–2024년) 미진단 청년 6,588명의 15개 비침습 지표 기반 5대 대사 아형 선별용 다변량 결합확률 EPF 신경망을 제안한다. 2024년 독립 시험셋 평가에서 macro AP 0.3422를 기록하여 LightGBM(0.3220) 대비 우수한 시간적 일반화 성능을 달성하였다. 아울러 제안 모델의 2-Tier XAI를 통해 공통 기저와 행동 트리거를 규명함으로써 청년층 비침습 조기 선별의 유효성을 입증하였다.
+P13:  | Text: 키워드: 대사이상 선별, 비침습적 예측, 결합확률 모델, EPF 신경망, 2-Tier XAI
+P17:  | Text: 1. 서론
+P18:  | Text: 만 20–39세 청년층은 무증상과 낮은 수검률로 대사이상 미인지율이 심각하다. 기존의 비침습 기계학습 연구는 질환을 독립 사건으로 단순화하여 대사증후군 특유의 다변량 생체 공분산 구조를 반영하지 못하며, 예측 확률 간 모순을 초래하는 이론적 한계가 존재한다.
+P19:  | Text: 이에 본 연구는 국민건강영양조사(2020–2024년) 미진단 청년 6,588명을 대상으로 신규 생활습관 4종을 포함한 15개 비침습 지표를 활용하여 상호 배타적 5대 대사 아형을 선별하는 다변량 결합확률 기반 EPF(Energy-Plasticity Function) 신경망을 제안한다. 2024년 최신 독립 시험셋(N=1,278)에 대한 시간적 일반화 검증 결과, 제안 모델 EPF는 macro AP 0.3422를 기록하여 LightGBM(0.3220) 대비 +0.0202의 성능 우위를 달성하였으며, 1,000회 부트스트랩 검증에서도 독립 모델(0.3638) 대비 유의미한 우위(0.3814, p<0.001p < 0.001p<0.001)를 입증하였다. 아울러 제안 모델 자체의 Kernel SHAP을 활용한 2-Tier XAI 분석을 통해 전신 공통 기저(Tier 1)와 질환별 행동 트리거(Tier 2)를 계층적으로 규명하고자 한다.
+P20:  | Text: 2. 연구 방법
+P21:  | Text: 2.1 자료와 대상자
+P22:  | Text: 질병관리청 국민건강영양조사 2020–2024년 원시자료에서 기진단 치료자(167명)를 제외한 미인지 청년 코호트 6,588명을 확정하였다. 결측치는 연속형은 중앙값, 범주형은 최빈값으로 대치하였다. 모델 검증은 신뢰성을 위해 전체 코호트 7:3 층화 분할(훈련 4,611명, 테스트 1,977명)과 2020–2023년(5,310명) 훈련 후 2024년(1,278명) 독립 평가하는 시간적 분할을 병행하였다.
+P24: IMG:media/image5.png | Text: 
+P25:  | Text: Fig. 1. Study population flowchart and analytical framework.
+P26:  | Text: 2.2 목표변수와 비침습적 입력변수
+P27:  | Text: NCEP-ATP III 기준에 따라 공복혈당, 혈압, 중성지방, 저HDL의 4대 소견을 정의하고, 16가지(2⁴) 결합 조합 중 중성지방과 저HDL을 통합하여 5대 상호 배타적 아형으로 분류하였다: 정상(61.7%), 혈압 단독(3.9%), 혈당 단독(5.3%), 지질 단독(17.5%), 복합이상(11.6%).
+P28:  | Text: 모델 입력(X ∈ ℝ¹⁵)은 신체계측 5종(연령, 성별, BMI, 허리둘레, WHtR), 사회인구 6종(소득, 교육, 흡연, 음주, 유산소, 1인가구) 외에, 행동의학적 기전 기반의 좌식시간(BE8_1), 저녁 혼밥(L_DN_TO), 1년 체중증가(BO1_1), 취침 전 미양치(BM1_8) 등 15개 순수 비침습 지표로 한정하였다.
+P29:  | Text: 2.3 제안 모델: 다변량 결합확률 EPF 신경망
+P30: IMG:media/image1.png | Text: 
+P31:  | Text: Fig. 2. Proposed multivariate joint probability-based EPF neural network architecture.
+P32:  | Text: 대사 간 복합 상호작용을 포착하기 위해 EPF 신경망을 제안한다(Fig. 2). 제안 모델은 기본 인코더, 가소성 게이트(p(X)=σ(W_p X)), 에너지 이완층(h₁=Mish(LN(W_E h_p + h₀)))으로 16상태 결합확률을 추정한 후, 임상 투영 행렬 P(16×5)를 통해 5대 아형 확률로 사상한다. 비교 베이스라인으로는 5대 아형 직접 분류 모델(LightGBM, XGBoost, RF, MLP)을 구축하였다.
+P34:  | Text: 2.4 모델 학습 및 통계적 평가
+P35:  | Text: 클래스 불균형 완화를 위해 완만한 가중치(Smoothed Weights)를 적용하였으며, 학습 단계에서는 16상태 결합 정답을 보조 손실로 함께 지도하여 다변량 공분산 수렴을 안정화하였다. 평가지표는 극심한 불균형 환경에서 소수 질환군의 포착력을 가장 엄밀히 평가하는 macro AP를 주 지표로, macro AUROC 및 F1-score를 보조 지표로 사용하였다. 모델 평가는 이원화하여, ① 2020–2023년 학습 후 2024년 독립 시험셋에 대한 시간적 일반화 성능을 평가하고, ② 5개년 전체 코호트 대상 1,000회 부트스트랩 대조 검증을 통해 독립 이진 대비 결합확률 설계의 통계적 우수성(95% CI)을 입증하도록 설계하였다.
+P36:  | Text: 3. 실험 결과
+P37:  | Text: 3.1 전체 성능과 모델 간 차이
+P38:  | Text: 2024년 최신 독립 시험셋(N=1,278)에 대한 시간적 일반화 평가 결과, 제안 모델 EPF는 macro AP 0.3422를 기록하여 가장 강력한 베이스라인인 LightGBM(0.3220) 대비 +0.0202(+2.02%p)의 뚜렷한 성능 우위를 달성하였다. 전체 정확도 역시 68.0%로 LightGBM(53.0%)보다 15.0%p 높았으며, 조기 선별이 시급한 고위험군인 복합 대사이상(Complex)의 F1-score(0.46 vs 0.42)와 이상지질혈증(Dyslipid) 정밀도(0.40 vs 0.31)에서도 실질적인 임상 검출력 우세를 입증하였다.아울러 5개년 전체 코호트 대상 16상태 결합확률(Joint) 설계와 독립 사건을 가정한 이진(Binary) 설계의 1,000회 부트스트랩 대조 검증 결과는 Fig. 3과 같다. 모든 모델 구조에서 결합확률 설계를 적용했을 때 macro AP가 일관되게 상승하였으며, 특히 제안 모델 EPF는 0.3638(Binary)에서 0.3814(Joint)로 +0.0176 향상되어 최고 성능(SOTA)을 달성하였다. 대조 추정 95% 신뢰구간은 [0.0085, 0.0266]으로 0을 완전히 초과하여 통계적으로 매우 유의함(p<0.001)을 확인하였다. 이는 청년층 대사이상 선별에서 단일 질환 중심의 독립적 분류보다 대사 간 상호작용을 포착하는 결합확률 신경망 구조가 필수적이라는 연구 가설(H1)을 완벽히 지지한다.
+P40: IMG:media/image2.png | Text: 
+P42:  | Text: Fig. 3. Performance comparison (Macro AP) between Binary and Joint models.
+P43:  | Text: 3.2 대사 아형별 선별 특성 및 비침습 분류의 유효 경계
+P44:  | Text: 제안 모델 EPF의 정규화 혼동행렬(Fig. 3) 분석 결과, 복합이상(Recall 52%)과 지질이상(Precision 40%)은 비침습 문진으로 우수한 선별력을 보였다. 반면 단독 혈압·혈당군은 낮은 AP(0.04~0.05)를 보여 외형적 비만을 동반하지 않는 초기 단독 질환은 비침습 설문만으로 포착하기 어려운 임상적 유효 경계를 드러냈다.
+P45: IMG:media/image4.png | Text: .
+P46:  | Text: Fig. 4. Normalized confusion matrix of the proposed EPF joint network.
+P47:  | Text: 3.3 대사위험 요인의 2-Tier 계층 구조 및 XAI 분석
+P48:  | Text: 제안 모델 EPF 신경망 자체에서 Kernel SHAP을 직접 산출한 다중 클래스 변수 중요도 분석 결과(Fig. 5), 15개 비침습 요인은 생체기전에 따라 '공통 기저 요인(Tier 1)'과 '아형별 특이 행동 트리거(Tier 2)'로 명확히 계층 분리되었다.Tier 1 (전 아형 공통 기저 요인): 허리둘레(HE_wc, 중요도 1위), 허리둘레/키 비율(WHtR, 2위), 성별(sex, 3위), 연령(age, 4위), 체질량지수(HE_BMI, 6위)는 5개 모든 대사 아형에 공통적으로 깔리는 전신적 체격 및 유전·연령 베이스라인으로 확인되었다.Tier 2 (아형별 특이 행동 트리거): 신체계측 요인을 제외한 아형별 기여도 분석 결과, 음주빈도(dr_month, 5위)가 전반적인 발병을 촉진하는 가운데 아형별 차별적 요인이 규명되었다. 고혈압 단독군에서는 최근 1년 체중증가(weight_gain)와 저녁 혼밥(solo_dinner)이, 공복혈당 장애군에서는 좌식시간(sedentary_hours)과 체중증가가 핵심 위험 인자로 작동하였다. 아울러 이상지질혈증과 복합질환군에서는 음주와 흡연(sm_presnt) 습관이 질환 발현을 직접 촉발하는 결정적 행동 트리거로 식별되었다.
+P49: IMG:media/image3.png | Text: 
+P50:  | Text: Fig. 5. Multi-class Global SHAP feature importance of the proposed EPF network.
+P51:  | Text: 4. 논의 및 결론
+P52:  | Text: 본 연구는 국민건강영양조사(2020–2024년) 미진단 청년 코호트 6,588명을 대상으로 대사이상 간의 다변량 연계성을 고려하는 결합확률 기반 EPF 신경망의 구조적 타당성과 조기 선별력을 입증하였다. 시간적 일반화 평가에서 제안 모델 EPF는 2024년 독립 시험셋에 대해 macro AP 0.3422및 정확도 **68.0%**를 달성하여 강력한 베이스라인인 LightGBM(0.3220, 53.0%) 대비 +0.0202의 우수한 미래 예측력을 실증하였다. 또한 1,000회 부트스트랩 검증에서도 결합확률 설계가 기존 독립 이진 모델 대비 유의미한 성능 향상(0.3814 vs 0.3638, p<0.001p < 0.001p<0.001)을 기록하여 가설(H1)을 확증하였다.아울러 제안 모델 기반의 2-Tier XAI 분석을 통해 복부비만 등 신체계측(Tier 1)이 공통 기저를 이루는 상황에서, 음주·좌식시간·급격한 체중증가(Tier 2)가 특정 대사 아형으로의 발현을 유발하는 결정적 기전임을 밝혔다. 비침습 선별 결과 복합이상과 지질이상은 높은 재현율로 선별 가능했으나, 단독 혈압·혈당 장애는 비침습 문진만으로 포착하기 어려운 임상적 유효 경계를 드러냈다. 본 연구는 횡단면 데이터의 한계를 지니나, 청년층 대사이상의 결합확률을 고려한 구조적 우수성과 비침습 조기 스크리닝의 실질적인 행동 예방 표적을 규명했다는 점에서 중요한 의의를 갖는다.
+P54:  | Text: 참고문헌
+P55:  | Text: [1] S. Kweon et al., “Data Resource Profile: The Korea National Health and Nutrition Examination Survey (KNHANES),” Int. J. Epidemiol., vol. 43, no. 1, pp. 69–77, 2014.[2] S. M. Grundy et al., “Diagnosis and management of the metabolic syndrome: an AHA/NHLBI Scientific Statement,” Circulation, vol. 112, no. 17, pp. 2735–2752, 2005.[3] L. Breiman, “Random Forests,” Mach. Learn., vol. 45, no. 1, pp. 5–32, 2001.[4] T. Chen and C. Guestrin, “XGBoost: A Scalable Tree Boosting System,” in Proc. ACM SIGKDD, pp. 785–794, 2016.[5] G. Ke et al., “LightGBM: A Highly Efficient Gradient Boosting Decision Tree,” in Adv. Neural Inf. Process. Syst., vol. 30, pp. 3146–3154, 2017.[6] T. Saito and M. Rehmsmeier, “The Precision-Recall Plot Is More Informative than the ROC Plot When Evaluating Binary Classifiers on Imbalanced Datasets,” PLOS ONE, vol. 10, no. 3, e0118432, 2015.[7] J. N. K. Rao and C. F. J. Wu, “Resampling Inference with Complex Survey Data,” J. Am. Stat. Assoc., vol. 83, no. 401, pp. 231–241, 1988.[8] S. M. Lundberg and S.-I. Lee, “A Unified Approach to Interpreting Model Predictions,” in Adv. Neural Inf. Process. Syst., vol. 30, pp. 4765–4774, 2017.

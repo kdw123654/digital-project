@@ -1,9 +1,13 @@
 # 대용량 데이터 및 압축 파일 제외 (GitHub 업로드 제한 방지)
 *.sas7bdat
+*.sav
 *.zip
 *.csv
 *.xlsx
 *.parquet
+HN20_ALL*/
+HN24_ALL*/
+
 
 # PDF 이용지침서 등 대용량 문서 제외
 *.pdf
